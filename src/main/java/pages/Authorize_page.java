@@ -1,0 +1,365 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import com.relevantcodes.extentreports.ExtentTest;
+
+import wrappers.ProjectWrapp;
+
+public class Authorize_page extends ProjectWrapp{
+	public Authorize_page(RemoteWebDriver driver, ExtentTest test){
+		this.driver = driver;
+		this.test = test;
+	}
+	public Authorize_page clickAuthorize() throws InterruptedException{
+		LeftMenuFrames();
+		clickByXpathExplict(prop.getProperty("click.authorize.link.xpath"));
+		defaultcontent();
+		return this;
+	}
+	
+	
+	public Authorize_page contentFrame() throws InterruptedException{
+	contentFrames();
+	
+	return this;
+}
+
+	public Authorize_page clickFDAuthorize() throws InterruptedException{
+	
+		clickByXpathExplict(prop.getProperty("click.FD.Authorize"));
+		defaultcontent();
+		return this;
+	}
+	
+	
+	public Authorize_page clickWCDLAuthorize() throws InterruptedException{
+		
+		clickByXpathExplict(prop.getProperty("click.WCDL.authorise"));
+		defaultcontent();
+		return this;
+	}
+	
+	public Authorize_page authrecordFrame() throws InterruptedException{
+	authrecFrames();
+	return this;
+}
+	public Authorize_page Clickback() throws InterruptedException{
+		
+		Thread.sleep(4000);
+		clickByXpathExplict(prop.getProperty("click.back.xpath"));
+		
+		defaultcontent();
+		
+		return this;
+	}
+	
+	
+	public Authorize_page ClickWCDLReport() throws InterruptedException{
+		LeftMenuFrames();
+		clickByXpathExplict(prop.getProperty("click.WCDL.report"));
+		
+		defaultcontent();
+		
+		return this;
+	}
+	
+	
+	public Authorize_page ClickFDReview() throws InterruptedException{
+		
+		LeftMenuFrames();
+		Thread.sleep(10000);
+		clickByXpathExplict(prop.getProperty("click.FD.review"));
+		Thread.sleep(5000);
+		clickByXpathExplict(prop.getProperty("click.FD.review"));
+		
+		defaultcontent();
+		return this;
+	}
+	
+	public Authorize_page filterAuthorize(String compid,String SelectStatus,String Paytype) throws InterruptedException{
+	
+System.out.println(Paytype+" value");
+selectVisibileTextByXPath(prop.getProperty("click.authorize.compid.xpath"),compid);
+selectVisibileTextByXPath(prop.getProperty("auth.selectstatus.xpath"),SelectStatus);
+selectVisibileTextByXPath(prop.getProperty("auth.paytype.xpath"),Paytype);
+
+
+		
+		return this;
+	}
+	
+
+	
+public Authorize_page clickViewLink() throws InterruptedException{	
+	Thread.sleep(6000);
+	clickByXpathExplict(prop.getProperty("click.authorize.view.link.xpath"));
+	Thread.sleep(10000);
+	//defaultcontent();
+	return this;
+
+}
+
+
+public Authorize_page clickWCDLViewLink() throws InterruptedException{	
+	Thread.sleep(6000);
+	contentFrame();
+	clickByXpathExplict(prop.getProperty("click.authorize.view.link.xpath"));
+	Thread.sleep(10000);
+	//defaultcontent();
+	return this;
+
+}
+
+
+public Authorize_page clickreflink(){	
+	
+clickByXpathExplict(prop.getProperty("click.authorize.refnum.link.xpath"));
+	return this;
+
+}
+
+public Authorize_page clickfirstAuthRec(){	
+	
+	clickByXpathExplict(".//input[contains(@onclick,'"+getrefnumer+"')]");
+//clickByXpathExplict(prop.getProperty("select.auth.recone.xpath"));
+	return this;
+
+}
+
+
+public Authorize_page clickAuthVerify(){	
+	
+	scrolltoelementJs(prop.getProperty("click.Onscreen.verify.xpath"));
+	clickByXpathExplict(prop.getProperty("click.Onscreen.verify.xpath"));
+//clickByXpathExplict(prop.getProperty("select.auth.recone.xpath"));
+	return this;
+
+}
+
+public Authorize_page clickfirstFDAuthRec(){	
+	
+	clickByXpathExplict(".//input[contains(@value,'"+getrefnumer+"')])[1]");
+//clickByXpathExplict(prop.getProperty("select.auth.recone.xpath"));
+	return this;
+
+}
+
+
+
+public Authorize_page clickSimulatorAuthRec(String paymenttype){	
+	
+	
+	clickByXpathExplict("(.//input[contains(@onclick,'"+paymenttype+"')])[1]");
+//clickByXpathExplict(prop.getProperty("select.auth.recone.xpath"));
+	return this;
+
+}
+
+
+
+
+public Authorize_page clickrecord(){	
+	
+	clickByXpathExplict(prop.getProperty("click.authrecord.xpath"));
+
+	return this;
+
+}
+
+public Authorize_page submitPwd(String pwd) throws InterruptedException{	
+	
+	
+//	driver.findElement(By.xpath(".//span[text()='Password']")).click();
+
+	clickByXpathExplict(prop.getProperty("click.authpwd.xpath"));
+Thread.sleep(10000);
+	acceptAlert();
+	
+	
+	enterByXpathExplict(prop.getProperty("enter.authpwd.xpath"),pwd);	
+
+clickByXpathExplict(prop.getProperty("click.authsubmit.xpath"));
+
+
+
+
+defaultcontent();
+
+	return this;
+
+}
+
+
+public Authorize_page AuthorizePwd(String pwd) throws InterruptedException{	
+	
+	
+//	driver.findElement(By.xpath(".//span[text()='Password']")).click();
+
+	clickByXpathExplict(prop.getProperty("click.FD>authorize"));
+Thread.sleep(4000);
+	
+	enterByXpathExplict(prop.getProperty("enter.authpwd.xpath"),pwd);	
+
+clickByXpathExplict(prop.getProperty("click.authsubmit.xpath"));
+
+defaultcontent();
+
+	return this;
+
+}
+
+
+
+public Authorize_page defaultcontents(){	
+
+defaultcontent();
+
+	return this;
+
+}
+
+
+public Authorize_page getAuthStatus(String verifyStatus) throws InterruptedException{	
+
+String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+if(status.equalsIgnoreCase(verifyStatus)){
+	statusVerify(status);
+}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+	statusVerify(status);
+}
+else{
+	reportStep(status+ "Status has been displaying" ,"WARN");
+}
+return this;
+
+}
+
+
+public Authorize_page getWCDLAuthStatus(String verifyStatus) throws InterruptedException{	
+
+String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
+if(status.equalsIgnoreCase(verifyStatus)){
+	statusVerify(status);
+}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+	statusVerify(status);
+}
+
+else{
+	reportStep(status+ "Status has been displaying" ,"WARN");
+}
+return this;
+
+}
+
+
+public Authorize_page getFDAuthStatus(String verifyStatus) throws InterruptedException{	
+
+	Thread.sleep(4000);
+String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[1]//following::td[5]");
+if(status.contains(verifyStatus)){
+	
+	reportStep(status+ "Status has been displaying" ,"PASS");
+}
+else{
+	reportStep(status+ "Status has been displaying" ,"WARN");
+}
+return this;
+
+}
+
+public Authorize_page getSimulatorAuthStatus(String paytype ,String verifyStatus) throws InterruptedException{	
+
+String status=getTextByXpath("(.//input[contains(@onclick,'"+paytype+"')]//following::span)[9]");
+if(status.equalsIgnoreCase(verifyStatus)){
+	statusVerify(status);
+}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+	statusVerify(status);
+}
+
+
+else{
+	reportStep(status+ "Status has been displaying" ,"WARN");
+}
+return this;
+
+}
+
+
+public Authorize_page getFinalStatus() throws InterruptedException{	
+Thread.sleep(30000);
+String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+	statusVerify(status);
+}
+
+else{
+	reportStep(status+ "Status has been displaying" ,"FAIL");
+}
+return this;
+
+}
+
+public Authorize_page getWCDLFinalStatus() throws InterruptedException{	
+Thread.sleep(3000);
+String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
+if(status.contains("UP")){
+	reportStep(status+ "Status has been displaying" ,"PASS");
+}
+
+else{
+	reportStep(status+ "Status has been displaying" ,"FAIL");
+}
+return this;
+
+}
+
+
+public Authorize_page getSimulatorFinalStatus(String paytype) throws InterruptedException{	
+Thread.sleep(30000);
+String status=getTextByXpath("(.//input[contains(@onclick,'"+paytype+"')]//following::span)[9]");
+if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+	statusVerify(status);
+}
+
+else{
+	reportStep(status+ "Status has been displaying" ,"FAIL");
+}
+return this;
+
+}
+
+public Authorize_page getFDFinalStatus() throws InterruptedException{	
+Thread.sleep(30000);
+String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[1]//following::td[5]");
+
+System.out.println(status+"actual value");
+if(status.contains("Accepted")){
+	
+	System.out.println("pass");
+	reportStep(status+ "Status has been displaying","PASS");
+}
+
+else{
+	System.out.println("fail");
+	reportStep(status+ "Status has been displaying" ,"FAIL");
+}
+return this;
+
+}
+
+
+	
+
+
+public Authorize_page confirmRecord(){	
+	
+	clickByXpathExplict(prop.getProperty("click.auth.confirm.record.xpath"));
+defaultcontent();
+	return this;
+
+}
+	
+
+}
