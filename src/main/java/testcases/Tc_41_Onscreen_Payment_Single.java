@@ -30,7 +30,6 @@ public class Tc_41_Onscreen_Payment_Single  extends ProjectWrapp {
 		try{
 
 			getnewurl();
-			getnewurl();
 
 			new	HDFC_Login_Page(driver, test)
 .fillCredentials(userid, pwd, groupid)
