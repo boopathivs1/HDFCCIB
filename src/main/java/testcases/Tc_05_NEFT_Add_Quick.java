@@ -22,12 +22,13 @@ public class Tc_05_NEFT_Add_Quick  extends ProjectWrapp {
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
+
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void checkAccSummary(String casename,String userid,String pwd,String groupid,
-			String paymode,String selectformat,String amount,String remarks,String authuserid,
-			String authpwd,String authgroupid,String compid,String SelectStatus,String Paytype,
-			String data1,String data10,String data11,String data12,String data13,String data14,String data15,
-			String data16,String data17,String data20,String data21) throws Exception{
+	public void checkAccSummary(String casename,String userid,String pwd,String groupid,String paymode,
+			String selectcompany,String selectbranch,String selectaccount,String beneneft,String amount,String Remarks,String authuserid,String authpwd,String authgroupid,
+			String compid,String SelectStatus,String Paytype,String data1,String data10,String data11,
+			String data12,String data13,String data14,String data15,
+			String data16) throws Exception{
 		try{
 			getnewurl();
 		new	HDFC_Login_Page(driver, test)
@@ -35,7 +36,7 @@ public class Tc_05_NEFT_Add_Quick  extends ProjectWrapp {
 .clickFundTransfers()
 .clickNEFTRTGSLink()
 .click_AddQuick_NEFT_RTGS_Link()
-.fill_NEFT_Add_Quickform(paymode, selectformat, amount, remarks)
+.fill_NEFT_Add_Quickform(paymode, selectcompany, selectbranch, selectaccount, beneneft,amount, Remarks)
 .getrefnum()
 .clickLogout();		
 

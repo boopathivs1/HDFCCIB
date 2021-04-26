@@ -31,10 +31,22 @@ public class NEFT_Add_Bulk_Page extends ProjectWrapp{
 	
 	
 	
-	public LogoutPages fill_NEFT_RTGS_Add_Bulkform(String paymode,String selectformat,String amount,String remarks) throws InterruptedException{
+	public LogoutPages fill_NEFT_RTGS_Add_Bulkform(String paymode,String beneneft,String amount,String remarks) throws InterruptedException{
 		selectVisibileTextByXPath(prop.getProperty("click.paymode.neftrtgs.xpath"),paymode);
-		selectVisibileTextByXPath(prop.getProperty("click.neft.rtgs.format.select.xpath"),selectformat);
+		//selectVisibileTextByXPath(prop.getProperty("click.neft.rtgs.format.select.xpath"),selectformat);
 
+		getParentWindow();
+		clickByXpathExplict(prop.getProperty("click.neft.search.xpath"));
+	
+		switchToLastWindow();
+		enterByXpathExplict(prop.getProperty("enter.neft.bene.xpath"),beneneft);
+		clickByXpathExplict(prop.getProperty("click.neft.bene.search.xpath"));
+		clickByXpathExplict(".//input[contains(@onclick,'"+beneneft+"')]");
+		clickByXpathExplict(prop.getProperty("click.neft.bene.ok.xpath"));	
+		 Thread.sleep(4000);
+		 switchWindow(parentwindow);
+		 defaultcontent();
+		 contentFrames();
 		enterByXpathExplict(prop.getProperty("enter.addbulk.amount.xpath"),amount);
 		enterByXpathExplict(prop.getProperty("enter.addbulk.narration.xpath"),remarks);
 		

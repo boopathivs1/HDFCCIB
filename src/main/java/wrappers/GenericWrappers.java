@@ -88,7 +88,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
     public static boolean frameStatus;
     public static String SkippedCount=null;
 	public  static Logger log = Logger.getRootLogger();
-
+	public static String parentwindow;
     public static String randomdata1=null;
     public String otpcode="777777";
     public static String deAssigncorporateid=null;
@@ -4037,6 +4037,19 @@ reportStep("New window has opened", "PASS");
 		}
 	}
 
+	
+	
+	
+	
+	public void getParentWindow() {
+		try {
+						
+		 parentwindow=driver.getWindowHandle();
+			
+		} catch (Exception e) {
+			reportStep("The window could not be switched to the first window.", "FAIL");
+		}
+	}
 
 	public void switchToLastWindow() {
 		try {
@@ -4050,8 +4063,35 @@ reportStep("New window has opened", "PASS");
 			reportStep("The window could not be switched to the last window.", "FAIL");
 		}
 	}
+	
+	
+	public void switchToWindowIndex(int index) {
+	    Set<String> windows = driver.getWindowHandles();
+	    int totalWin = windows.size();
+	    String winTitle = null;
+	    for (int i =0; i<= totalWin; i++) {
+	        if (i == index) {
+	            winTitle = windows.toArray()[i].toString();
+	            return;
+	        }
+	        System.out.println(windows.toArray()[i].toString());
 
-
+	    }
+	    driver.switchTo().window(winTitle);
+	    reportStep("Switched to " + driver.getTitle(),"Pass");
+	}
+	
+	public void switchTocurrentWindow() {
+		try {
+			
+			String  currentwindow = driver.getWindowHandle();
+			
+			driver.switchTo().window(currentwindow);
+			
+		} catch (Exception e) {
+			reportStep("The window could not be switched to the last window.", "FAIL");
+		}
+	}
 	public void acceptAlert() {
 		try {
 			driver.switchTo().alert().accept();
