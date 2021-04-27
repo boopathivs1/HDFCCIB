@@ -19,10 +19,22 @@ public class UPI_Collection_Page extends ProjectWrapp{
 	
 	}
 
-	public LogoutPages fill_Upi(String upiformat,String UpiCorpRef,String UpiDesc,String UpiAmt,String Expiry) throws InterruptedException{
+	public LogoutPages fill_Upi(String selectcompany,String selectbranch,String selectaccount,String UpiBene,String SelectCorp,String Remupi,String SelectRemccno,String Remaccno,String UpiCorpRef,String UpiDesc,String UpiAmt,String Expiry) throws InterruptedException{
 
 		contentFrames();
-		selectVisibileTextByXPath(prop.getProperty("select.upi.format.xpath"),upiformat);
+		//selectVisibileTextByXPath(prop.getProperty("select.upi.format.xpath"),upiformat);
+		
+		selectVisibileTextByXPath(prop.getProperty("select.neft.company.xpath"),selectcompany);
+		Thread.sleep(2000);
+		selectVisibileTextByXPath(prop.getProperty("select.neft.branch.xpath"),selectbranch);
+		selectVisibileTextByXPath(prop.getProperty("select.neft.account.xpath"),selectaccount);
+		enterByXpathExplict(prop.getProperty("enter.upi.bene.xpath"),UpiBene);
+		clickByXpathExplict(prop.getProperty("click.upi.search.xpath"));
+		Thread.sleep(2000);
+		selectVisibileTextByXPath(prop.getProperty("select.corp.upi"),SelectCorp);
+		enterByXpathExplict(prop.getProperty("enter.remitter.upi"),Remupi);
+		selectVisibileTextByXPath(prop.getProperty("select.rem.accno"),SelectRemccno);
+		enterByXpathExplict(prop.getProperty("enter.remi.accno"),Remaccno);	
 enterByXpathExplict(prop.getProperty("enter.upi.corp.refnum.xpath"),UpiCorpRef);
 enterByXpathExplict(prop.getProperty("enter.upi.desc.xpath"),UpiDesc);
 enterByXpathExplict(prop.getProperty("enter.upi.amt.xpath"),UpiAmt);

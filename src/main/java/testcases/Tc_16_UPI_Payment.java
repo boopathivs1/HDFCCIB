@@ -24,11 +24,10 @@ public class Tc_16_UPI_Payment  extends ProjectWrapp {
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
 	public void checkAccSummary(String casename,String userid,String pwd,String groupid,
-			String upiformat,String UpiCorpRef,String UpiDesc,String UpiAmt
-			,String Expiry,String authuserid,
+			String selectcompany,String selectbranch,String selectaccount,String UpiBene
+			,String SelectCorp,String Remupi,String SelectRemccno,String Remaccno,String UpiCorpRef,String UpiDesc,String UpiAmt,String Expiry,String authuserid,
 			String authpwd,String authgroupid,String compid,String SelectStatus,String Paytype,
-			String data1,String data10,String data11,String data12,String data15,
-			String datas,String data16,String data17,String data20,String data21) throws Exception{
+			String data1,String data10,String data11) throws Exception{
 		try{
 			getnewurl();	
 		new	HDFC_Login_Page(driver, test)
@@ -36,12 +35,9 @@ public class Tc_16_UPI_Payment  extends ProjectWrapp {
 .clickFundTransfers()
 .click_UPI_Link()
 .clickNew_Upi()
-.fill_Upi(upiformat, UpiCorpRef, UpiDesc, UpiAmt, Expiry)
+.fill_Upi(selectcompany, selectbranch, selectaccount, UpiBene, SelectCorp, Remupi, SelectRemccno, Remaccno, UpiCorpRef, UpiDesc, UpiAmt, Expiry)
 .getrefnum()
 .clickLogout();		
-
-		
-
 		
 		getnewurl();		
 	new	HDFC_Login_Page(driver, test)

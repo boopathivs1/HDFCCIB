@@ -25,9 +25,9 @@ public class Tc_09_RTGS_Add_Bulk  extends ProjectWrapp {
 	@Test(groups={"sanity"},dataProvider="fetch")
 	public void checkAccSummary(String casename,String userid,String pwd,String groupid,
 			String company,String branch,String account,String remarks,
-			String paymode,String selectformat,String amount,String PayRemarks,String authuserid,
-			String authpwd,String authgroupid,String compid,String SelectStatus,String Paytype,
-			String data1,String data10,String data11,String data16,String data17,String data20,String data21) throws Exception{
+			String paymode,String beneneft, String amount,String PayRemarks,String authuserid,
+			String authpwd,String authgroupid,String compid,String SelectStatus,String Paytype,String selectformat,
+			String data1,String data10,String data11,String data16,String data17,String data20) throws Exception{
 		try{
 			getnewurl();
 		new	HDFC_Login_Page(driver, test)
@@ -36,7 +36,7 @@ public class Tc_09_RTGS_Add_Bulk  extends ProjectWrapp {
 .clickNEFTRTGSLink()
 .click_AddBulk_NEFT_RTGS_Link()
 .fill_NEFT_RTGS_Add_Bulk_Submitform(company, branch, account)
-.fill_NEFT_RTGS_Add_Bulkform(paymode, selectformat, amount,PayRemarks)
+.fill_NEFT_RTGS_Add_Bulkform(paymode, beneneft, amount,PayRemarks)
 .getrefnum()
 
 .clickLogout();		

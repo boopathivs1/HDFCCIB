@@ -28,8 +28,8 @@ public class Tc_17_ReliancePayment  extends ProjectWrapp {
 			String authgroupid,String compid,String SelectStatus,String Paytype,String aupwd,String agroupid,
 			String data13,String data17,String data18,String data19, String data20,String data21) throws Exception{
 		try{
-			
-		/*new	HDFC_Login_Page(driver, test)
+			getnewurl();
+		new	HDFC_Login_Page(driver, test)
 .fillCredentials(userid, pwd, groupid)
 .clickFundTransfers()
 .clickAcctoAccLink()
@@ -37,7 +37,7 @@ public class Tc_17_ReliancePayment  extends ProjectWrapp {
 
 .fillReliancepaymentform(company, branch,acc, bene, custcode, toacc, amount)
 .getrefnum()
-.clickLogout();	*/	
+.clickLogout();		
 		
 		getnewurl();
 		new	HDFC_Login_Page(driver, test)
