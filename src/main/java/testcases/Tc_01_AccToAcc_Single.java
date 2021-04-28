@@ -24,12 +24,16 @@ public class Tc_01_AccToAcc_Single  extends ProjectWrapp {
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
 	public void checkAccSummary(String casename,String userid,String pwd,String groupid,
-			String selectformat,String amount,String authuserid,String authpwd,String authgroupid,String compid
-			,String SelectStatus,String Paytype,String data1,String data10,String data11,String data12,String data13,
-			String data14,String data15,String data16,String data17,String data18,String data19,String data20,String data21) throws Exception{
+			String selectformat,String amount,String authuserid,
+			String authpwd,String authgroupid,String compid
+			,String SelectStatus,String Paytype,String compBranch,String accno,
+			String benecode,String data1,String data10,
+			String data11,String data12,String data13,
+			String data14,String data15,String data16,String data17,String dataS17) throws Exception{
 		try{
-
-			getnewurl();
+String accnum=regvalue(accno);
+			
+			//getnewurl();
 			getnewurl();
 
 			new	HDFC_Login_Page(driver, test)
@@ -37,7 +41,7 @@ public class Tc_01_AccToAcc_Single  extends ProjectWrapp {
 .clickFundTransfers()
 .clickAcctoAccLink()
 .clickAccSingleLink()
-.fillAcctoAccSingleform(selectformat, amount)
+.fillAcctoAccSingleform(selectformat,compid,compBranch,accnum,benecode, amount)
 .getrefnum()
 .clickLogout();		
 		getnewurl();		

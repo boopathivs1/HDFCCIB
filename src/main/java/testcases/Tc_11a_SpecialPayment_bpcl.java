@@ -28,7 +28,7 @@ public class Tc_11a_SpecialPayment_bpcl  extends ProjectWrapp {
 			String Paytype,String pd,String group,String id,String Status,String type,
 			String data13,String data17,String data18,String data19, String data20,String data21) throws Exception{
 		try{
-			
+			getnewurl();
 		new	HDFC_Login_Page(driver, test)
 .fillCredentials(userid, pwd, groupid)
 .clickFundTransfers()
