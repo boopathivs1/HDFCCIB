@@ -67,6 +67,7 @@ LeftMenuFrames();
 	LeftMenuFrames();
 
 		clickByXpathExplict(prop.getProperty("click.neft.rtgs.link.xpath"));
+	
 		
 		return this;
 	

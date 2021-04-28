@@ -19,7 +19,9 @@ public class NEFT_RTSG_Add_Single_Form extends ProjectWrapp{
 		contentFrames();
 		selectVisibileTextByXPath(prop.getProperty("click.paymode.neftrtgs.xpath"),paymode);
 		selectVisibileTextByXPath(prop.getProperty("click.neft.rtgs.format.select.xpath"),selectformat);
-
+clickByXpathExplict(".//img[@id='beneidsearch']");
+Thread.sleep(3000);
+acceptAlert();
 		enterByXpathExplict(prop.getProperty("enter.neft.amount.xpath"),amount);
 		enterByXpathExplict(prop.getProperty("enter.neft.remarks.xpath"),remarks);
 		

@@ -924,7 +924,7 @@ return B;
 				if(browser.equalsIgnoreCase("chrome")){
 					//System.setProperty("webdriver.chrome.driver", "./drivers/chromedrivers.exe");
 
-					System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver90.exe");
+					System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver88.exe");
 
 					//System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver85.exe");
 
@@ -4066,7 +4066,7 @@ reportStep("New window has opened", "PASS");
 	
 	public void PressEnterkey() {
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			Robot robot =new Robot();
 			System.out.println("enter");
 			robot.keyPress(KeyEvent.VK_ENTER);

@@ -23,18 +23,36 @@ public class IMPSPaymentPage extends ProjectWrapp{
 		return this;
 	}
 	
-	public LogoutPages fillIMPSpaymentform(String format,String custno,String amount) throws InterruptedException{
-		
-		contentFrames();
-		selectVisibileTextByXPath(prop.getProperty("select.imps.template"),format);
-
-		enterByXpathExplict(prop.getProperty("enter.imps.custno"),custno);
-		
-		enterByXpathExplict(prop.getProperty("enter.imps.amount"),amount);
+	public LogoutPages fillIMPSpaymentform(String format,String custno,String amount,String compid,String compbranch,
+			String accno,String benecode,String beneisfccode,String benename,String beneImpsAccno ) throws InterruptedException{
+				contentFrames();
+				String accnum=regvalue(accno);
+				String impsno=regvalue(beneImpsAccno);
+		String custnumber=regvalue(custno);
+		String impsamount=regvalue(amount);	
+			//		selectVisibileTextByXPath(prop.getProperty("select.imps.template"),format);
+		selectVisibileTextByXPath(prop.getProperty("IMPS.companyname.xpath"),compid);
 	
-		clickByXpathExplict(prop.getProperty("click.imps.save"));
+		selectVisibileTextByXPath(prop.getProperty("select.imps.quickbranch.xpath"),compbranch);
+		selectVisibileTextByXPath(prop.getProperty("select.imps.accno.xpath"),accnum);
+		//selectVisibileTextByXPath(prop.getProperty("Select.acctotacc.benecode.xpath"),benecode);
+//				enterByXpathExplict(prop.getProperty("enter.amount.accsingle.xpath"),amount);
+//				clickByXpathExplict(prop.getProperty("click.addtosingle.save.xpath"));
+		enterByXpathExplict(prop.getProperty("bene.ifsc.code.xpath"),beneisfccode);
+		enterByXpathExplict(prop.getProperty("bene.imps.name.xpath"),benename);
 		
-		PressEnterkey();
+		enterByXpathExplict(prop.getProperty("enter.bene.imps.accno.xpath"),impsno);
+		
+		
+				enterByXpathExplict(prop.getProperty("enter.imps.custno"),custnumber);
+				
+				enterByXpathExplict(prop.getProperty("enter.imps.amount"),impsamount);
+			
+				clickByXpathExplict(prop.getProperty("click.imps.save"));
+				PressEnterkey();
+		
+		
+		
 		
 		return new LogoutPages(driver,test);
 	}

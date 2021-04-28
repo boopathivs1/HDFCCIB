@@ -15,6 +15,8 @@ public class Authorize_page extends ProjectWrapp{
 	public Authorize_page clickAuthorize() throws InterruptedException{
 		LeftMenuFrames();
 		clickByXpathExplict(prop.getProperty("click.authorize.link.xpath"));
+		
+		
 		defaultcontent();
 		return this;
 	}
