@@ -9,48 +9,48 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_01_AccToAcc_Single  extends ProjectWrapp {
+public class Tc_49_SpecialPayment_IOCL  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC01";
-		testDescription="Acc to Acc - Add Single";
+		testCaseName="TC49";
+		testDescription="SpecialPayment_IOCL";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Boopathi.";
-		testKeyword="TC01";
+		authors="Boopathi";
+		testKeyword="TC49";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void checkAccSummary(String casename,String userid,String pwd,String groupid,
-			String selectformat,String amount,String authuserid,
-			String authpwd,String authgroupid,String compid
-			,String SelectStatus,String Paytype,String compBranch,String accno,
-			String benecode,String data1,String data10,
-			String data11,String data12,String data13,
-			String data14,String data15,String data16,String data17,String dataS17) throws Exception{
+	public void checkAccSummary(String casename,String userid,String pwd,String groupid,String Format,String bene,String amount,
+			String remark,String company,String branch,String acc,String statecode,String Prodcode, String authuserid,
+			String authpwd,String authgroupid,String compid,String SelectStatus,String Paytype,String data13,String data17,
+			String data18,String data19, String data20,String data21) throws Exception{
 		try{
-String accnum=regvalue(accno);
-			
-			//getnewurl();
-			getnewurl();
-
-			new	HDFC_Login_Page(driver, test)
+			getnewurl();	
+		new	HDFC_Login_Page(driver, test)
 .fillCredentials(userid, pwd, groupid)
 .clickFundTransfers()
 .clickAcctoAccLink()
-.clickAccSingleLink()
-.fillAcctoAccSingleform(selectformat,compid,compBranch,accnum,benecode, amount)
+.clickSplpaymentLink()
+.fillSplpaymentIOCLform(Format, bene, amount, remark, company, branch, acc, statecode, Prodcode)
 .getrefnum()
 .clickLogout();		
-		getnewurl();		
+		getnewurl();	
 		new	HDFC_Login_Page(driver, test)
 .fillCredentials(authuserid, authpwd, authgroupid)
 .fundTransfersLink()
 .clickAuthorize()
 .contentFrame()
 .filterAuthorize(compid, SelectStatus, Paytype)
+.clickViewLink()
+.authrecordFrame()
+.clickreflink()
+.clickfirstAuthRec()
+.clickAuthVerify()
+.defaultcontents()
+.contentFrame()	
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
