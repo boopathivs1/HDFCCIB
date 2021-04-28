@@ -17,6 +17,7 @@ public class sample {
 			if(Character.isDigit(c))
 			{
 				finalvalue=finalvalue+c;
+				System.out.println(expected);
 			}
 	}
 		expected="FT"+finalvalue;
