@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_10_ECMSPayment  extends ProjectWrapp {
+public class Tc_53_Onscreen_Payment_ECMSPayment  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC10";
-		testDescription="ECMSPayment";
+		testCaseName="TC53";
+		testDescription="Onscreen_Payment_ECMSPayment";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC10";
+		testKeyword="TC53";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
@@ -46,6 +46,13 @@ public class Tc_10_ECMSPayment  extends ProjectWrapp {
 .clickAuthorize()
 .contentFrame()
 .filterAuthorize(compid, SelectStatus, Paytype)
+.clickViewLink()
+.authrecordFrame()
+.clickreflink()
+.clickfirstAuthRec()
+.clickAuthVerify()
+.defaultcontents()
+.contentFrame()	
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()

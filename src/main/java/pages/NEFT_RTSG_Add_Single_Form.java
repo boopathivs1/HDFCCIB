@@ -41,7 +41,7 @@ public class NEFT_RTSG_Add_Single_Form extends ProjectWrapp{
 		 contentFrames();
 		enterByXpathExplict(prop.getProperty("enter.neft.amount.xpath"),amount);
 		enterByXpathExplict(prop.getProperty("enter.neft.remarks.xpath"),remarks);
-		
+		scrolltoelementJs(prop.getProperty("click.addtosingle.save.xpath"));
 		clickByXpathExplict(prop.getProperty("click.addtosingle.save.xpath"));
 	
 		
