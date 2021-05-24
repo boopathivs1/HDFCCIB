@@ -176,9 +176,12 @@ public Authorize_page submitPwd(String pwd) throws InterruptedException{
 //	driver.findElement(By.xpath(".//span[text()='Password']")).click();
 
 	clickByXpathExplict(prop.getProperty("click.authpwd.xpath"));
-Thread.sleep(10000);
+
+	Thread.sleep(7000);
 	acceptAlert();
+	Thread.sleep(3000);
 	
+	scrolltoelementJs(prop.getProperty("enter.authpwd.xpath"));
 	
 	enterByXpathExplict(prop.getProperty("enter.authpwd.xpath"),pwd);	
 
