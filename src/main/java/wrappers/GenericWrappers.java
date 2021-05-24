@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -16,8 +18,14 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Clock;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -146,6 +154,28 @@ public class GenericWrappers extends Reporter implements Wrappers {
 
 	}
 	
+	public String substring_value(int a,int b,String value){
+		String files=value.substring(a,b);
+		return files;		
+	}
+	
+	
+	
+	
+	public String filename_final(String a,String randomnumber,String filepath){
+String file_format="";
+	String file=dateMonth()+"."+a+randomnumber;
+	//System.out.println(ranNumber);	
+	System.out.println(file);
+	System.out.println("************");
+	System.out.println(filepath+file);
+	System.out.println("************");
+	file_format=filepath+file;
+	return file_format;		
+}
+
+	
+	
 	
 	public void readywithtime(String xpathVal) throws InterruptedException{
 		for(int i=1;i<180;i++){
@@ -223,7 +253,15 @@ catch(Exception e){
 }
 	
 	}	
+	public static String gettwoRandomNumberString() {
+	    // It will generate 6 digit random Number.
+	    // from 0 to 999999
+	    Random rnd = new Random();
+	    int number = rnd.nextInt(99);
 
+	    // this will convert any number sequence into 6 character.
+	    return String.format("%02d", number);
+	}
 	
 	public static String getRandomNumberString() {
 	    // It will generate 6 digit random Number.
@@ -926,7 +964,7 @@ return B;
 				if(browser.equalsIgnoreCase("chrome")){
 					//System.setProperty("webdriver.chrome.driver", "./drivers/chromedrivers.exe");
 
-					System.setProperty("webdriver.chrome.driver", "./drivers/chromedrivers89.exe");
+					System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver89.exe");
 
 					//System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver85.exe");
 
@@ -1518,6 +1556,96 @@ public void statusVerify(String Status){
 	}	
 }
 	
+
+public static String getfilename(String location)
+{
+String 	filename = null;
+	String Folderpath=location;
+	File folder = new File(Folderpath);
+	File [] files = folder.listFiles();
+	
+	for(File file :files)
+	{
+		if(file.isFile())
+		{
+			filename=file.getName();
+			System.out.println(file.getName()+"actualname");
+		}
+	}
+	return filename;
+}
+
+
+
+public String getfilename_one(String filename)
+{
+	String filename1;
+
+	String file1=fileurl+filename;
+	filename1=getfilename(file1);
+
+	
+	
+	return filename1;
+}
+
+
+public String renamed_filename_one(String filesname1,int a,int b,String serial_startnumber)
+{
+	String finalfilenaming;
+
+String filename2=filesname1.substring(a,b);			
+String ranNumber=gettwoRandomNumberString();
+finalfilenaming=filename_final(serial_startnumber,ranNumber, filename2);
+//System.out.println(finalfilenaming);
+
+return finalfilenaming;
+}
+
+public void convention(String actualname,String Renamed_file_name){
+
+File oldfile = new File(actualname);
+File newfile = new File(Renamed_file_name);
+
+if(oldfile.renameTo(newfile)) {
+   System.out.println("File name changed succesful");
+} else {
+   System.out.println("Rename failed");
+} 
+}
+
+
+
+
+public String getfilesName_Location(String location)
+
+{
+	String aname = null;
+
+
+
+File folder = new File(location);
+File[] listOfFiles = folder.listFiles();
+
+for (int i = 0; i < listOfFiles.length; i++) {
+  if (listOfFiles[i].isFile()) {
+	  aname= listOfFiles[i].getName();
+    System.out.println("File " + listOfFiles[i].getName());
+  } 
+}
+
+return aname;
+
+
+}
+
+
+
+
+
+
+
+
 public void clickByXpathExplict(String xpathVal){
 //		if(frameStatus){
 //			
@@ -2311,6 +2439,136 @@ public void AttributesVerifyxpath(String xpath, String value,String valtext) {
 		reportStep("The element with xpath: "+xpath+" returned attribute", "FAIL");
 	}
 	
+}
+
+public String dateMonth(){
+	
+	String M="";
+	String actualdate="";
+LocalDate currentdate = LocalDate.now();
+int currentDay = currentdate.getDayOfMonth();
+int month =currentdate.getMonthValue();
+if(month <=9)
+{
+		M ="0"+month;
+
+}
+actualdate=currentDay+M;
+System.out.println(M+currentDay);
+return actualdate;
+
+	
+}
+
+
+public String dateMonthSlash(){
+DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+Date date = new Date();
+String expected = dateFormat.format(date);
+System.out.println(expected);
+
+return expected;
+
+
+}
+
+
+
+
+
+
+public  String filespecific_text(int line_no,int value_index ,String filelocation) {
+	String strAr[];
+	String value = null;	
+//	int n =line_no; // The line number
+int a;  
+  try{
+    //String line = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (8)/RBAU0904.701")).get(n);
+    String line = Files.readAllLines(Paths.get(filelocation)).get(line_no);
+    System.out.println(line);
+	   String strMain =line;
+	   String[] arrSplit = strMain.split(",");
+	   //23
+System.out.println(arrSplit[value_index].toString());
+value=arrSplit[value_index].toString();
+System.out.println(value);
+//modifyFile("C:/Users/Boopathi/Desktop/New folder (8)/ACHDBCR2ACHCR090421.600",date, "12/40/021");
+
+  } 
+  catch(IOException e){
+    System.out.println(e);
+  }
+return value;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public void modifyFile(String filePath, String oldString, String newString)
+{
+    File fileToBeModified = new File(filePath);
+     
+    String oldContent = "";
+     
+    BufferedReader reader = null;
+     
+    FileWriter writer = null;
+     
+    try
+    {
+        reader = new BufferedReader(new FileReader(fileToBeModified));
+         
+        //Reading all the lines of input text file into oldContent
+         
+        String line = reader.readLine();
+         
+        while (line != null) 
+        {
+            oldContent = oldContent + line + System.lineSeparator();
+             
+            line = reader.readLine();
+        }
+         
+        //Replacing oldString with newString in the oldContent
+         
+        String newContent = oldContent.replaceAll(oldString, newString);
+         
+        //Rewriting the input text file with newContent
+         
+        writer = new FileWriter(fileToBeModified);
+         
+        writer.write(newContent);
+    }
+    catch (IOException e)
+    {
+        e.printStackTrace();
+    }
+    finally
+    {
+        try
+        {
+            //Closing the resources
+             
+            reader.close();
+             
+            writer.close();
+        } 
+        catch (IOException e) 
+        {
+            e.printStackTrace();
+        }
+    }
+
+
+
 }
 
 
