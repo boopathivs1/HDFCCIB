@@ -57,6 +57,10 @@ public class Tc_04_NEFT_Add_Single  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+.checkStatus();
+
+/*
+
 .clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
@@ -69,7 +73,7 @@ public class Tc_04_NEFT_Add_Single  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 

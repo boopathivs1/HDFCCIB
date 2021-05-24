@@ -58,6 +58,10 @@ public class Tc_09_RTGS_Add_Bulk  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+
+.checkStatus();
+
+/*
 .clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
@@ -70,7 +74,7 @@ public class Tc_09_RTGS_Add_Bulk  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 

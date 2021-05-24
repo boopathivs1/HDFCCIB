@@ -57,6 +57,9 @@ public class Tc_07_RTGS_Add_Single  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+.checkStatus();
+
+		/*
 .clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
@@ -70,6 +73,7 @@ public class Tc_07_RTGS_Add_Single  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getFinalStatus();
+*/
 defaultcontent();		
 clickLogoutLink();
 

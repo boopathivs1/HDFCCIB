@@ -56,6 +56,8 @@ public class Tc_17_ReliancePayment  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+.checkStatus();
+/*
 .clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
@@ -68,7 +70,7 @@ public class Tc_17_ReliancePayment  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 

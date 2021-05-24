@@ -58,6 +58,10 @@ public class Tc_05_NEFT_Add_Quick  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+
+.checkStatus();
+
+/*
 .clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
@@ -70,7 +74,7 @@ public class Tc_05_NEFT_Add_Quick  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 

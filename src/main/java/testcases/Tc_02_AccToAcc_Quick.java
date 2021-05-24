@@ -55,6 +55,9 @@ public class Tc_02_AccToAcc_Quick  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+.checkStatus();
+
+/*
 .clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
@@ -68,7 +71,10 @@ public class Tc_02_AccToAcc_Quick  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getFinalStatus();
-defaultcontent();		
+*/
+
+defaultcontent();	
+	
 clickLogoutLink();
 
 		

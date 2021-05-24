@@ -55,6 +55,11 @@ public class Tc_11a_SpecialPayment_bpcl  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+
+
+.checkStatus();
+
+/*
 .clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
@@ -67,7 +72,7 @@ public class Tc_11a_SpecialPayment_bpcl  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 

@@ -57,6 +57,12 @@ public class Tc_08_RTGS_Add_Quick  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+
+
+.checkStatus();
+
+/*
+
 .clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
@@ -69,7 +75,7 @@ public class Tc_08_RTGS_Add_Quick  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 

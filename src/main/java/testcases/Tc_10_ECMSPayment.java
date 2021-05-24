@@ -56,6 +56,10 @@ public class Tc_10_ECMSPayment  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+.checkStatus();
+
+/*
+
 .clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
@@ -68,7 +72,7 @@ public class Tc_10_ECMSPayment  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 

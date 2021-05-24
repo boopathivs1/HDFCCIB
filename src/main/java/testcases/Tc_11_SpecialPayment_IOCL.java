@@ -54,6 +54,8 @@ public class Tc_11_SpecialPayment_IOCL  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+.checkStatus();
+/*
 .clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
@@ -66,7 +68,7 @@ public class Tc_11_SpecialPayment_IOCL  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 

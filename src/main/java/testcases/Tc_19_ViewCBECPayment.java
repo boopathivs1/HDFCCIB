@@ -55,6 +55,11 @@ public class Tc_19_ViewCBECPayment  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+.checkStatus();
+
+
+/*
+
 .clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
@@ -67,7 +72,7 @@ public class Tc_19_ViewCBECPayment  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 

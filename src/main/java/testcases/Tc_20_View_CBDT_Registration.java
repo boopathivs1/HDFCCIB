@@ -58,6 +58,10 @@ public class Tc_20_View_CBDT_Registration  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+.checkStatus();
+
+/*
+
 .clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
@@ -70,7 +74,7 @@ public class Tc_20_View_CBDT_Registration  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 

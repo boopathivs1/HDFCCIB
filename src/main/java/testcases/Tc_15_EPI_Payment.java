@@ -59,6 +59,10 @@ public class Tc_15_EPI_Payment  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.getAuthStatus("A")
+	.checkStatus();
+
+/*	
+	
 	.clickfirstAuthRec()
 	.confirmRecord()
 	.contentFrame()
@@ -72,6 +76,8 @@ public class Tc_15_EPI_Payment  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.getFinalStatus();
+	
+	*/
 	defaultcontent();		
 	clickLogoutLink();
 
