@@ -1512,7 +1512,9 @@ public void statusVerify(String Status){
 	case "Q": reportStep(Status+ " Status has been displaying" ,"PASS");
 	break;  
 	//Default case statement  
-	default:reportStep(Status+ " Status has displaying", "WARN");  
+	
+	default:System.out.println(Status);
+		reportStep(Status+ " Status has displaying", "WARN");  
 	}	
 }
 	

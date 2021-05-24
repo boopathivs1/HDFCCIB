@@ -109,6 +109,7 @@ public Authorize_page clickWCDLViewLink() throws InterruptedException{
 	contentFrame();
 	clickByXpathExplict(prop.getProperty("click.authorize.view.link.xpath"));
 	Thread.sleep(10000);
+	clickByXpathExplict(prop.getProperty("click.authorize.view.link.xpath"));
 	//defaultcontent();
 	return this;
 
@@ -270,6 +271,7 @@ return this;
 public Authorize_page getAuthStatus(String verifyStatus) throws InterruptedException{	
 
 String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+System.out.println(status);
 if(status.equalsIgnoreCase(verifyStatus)){
 	statusVerify(status);
 }else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
@@ -282,9 +284,11 @@ return this;
 
 }
 
+
+
 public Authorize_page checkWCDLStatus() throws InterruptedException{
 	String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
-	if(status.equalsIgnoreCase("A")){
+	if(status.contains("A")){
 	
 //new Authorize_page(driver, test)		
 //		.
@@ -307,8 +311,9 @@ public Authorize_page checkWCDLStatus() throws InterruptedException{
 public Authorize_page getWCDLAuthStatus(String verifyStatus) throws InterruptedException{	
 
 String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
-if(status.equalsIgnoreCase(verifyStatus)){
-	statusVerify(status);
+if(status.contains(verifyStatus)){
+	
+	reportStep(status+ "Status has been displaying" ,"PASS");
 }else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
 	statusVerify(status);
 }
@@ -399,9 +404,11 @@ return this;
 public Authorize_page getWCDLFinalStatus() throws InterruptedException{	
 Thread.sleep(3000);
 String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
+scrolltoelementJs("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
+System.out.println(status);
 if(status.contains("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.contains("U")){
 	
-	statusVerify(status);
+	reportStep(status+ "Status has been displaying" ,"PASS");
 }
 
 else{
@@ -434,7 +441,7 @@ System.out.println(status+"actual value");
 
 	if(status.contains("Accepted")||status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.contains("U")){
 	
-			statusVerify(status);
+		reportStep(status+ "Status has been displaying" ,"PASS");
 		}
 else{
 	System.out.println("fail");
