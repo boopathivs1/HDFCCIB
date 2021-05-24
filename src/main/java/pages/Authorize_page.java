@@ -282,6 +282,27 @@ return this;
 
 }
 
+public Authorize_page checkWCDLStatus() throws InterruptedException{
+	String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+	if(status.equalsIgnoreCase("A")){
+	
+//new Authorize_page(driver, test)		
+//		.
+		clickfirstAuthRec()
+		.confirmRecord()
+		.contentFrame()
+		.Clickback()
+		.ClickWCDLReport()
+		.clickWCDLViewLink()
+		.getWCDLFinalStatus();
+	}
+	else{
+		getWCDLFinalStatus();
+		//getFinalStatus();		
+			
+	}
+	return this;
+}
 
 public Authorize_page getWCDLAuthStatus(String verifyStatus) throws InterruptedException{	
 
@@ -320,7 +341,7 @@ public Authorize_page getSimulatorAuthStatus(String paytype ,String verifyStatus
 String status=getTextByXpath("(.//input[contains(@onclick,'"+paytype+"')]//following::span)[9]");
 if(status.equalsIgnoreCase(verifyStatus)){
 	statusVerify(status);
-}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
 	statusVerify(status);
 }
 
@@ -332,6 +353,34 @@ return this;
 
 }
 
+
+
+public Authorize_page checkSimulatorStatus(String paytype) throws InterruptedException{
+	String status=getTextByXpath("(.//input[contains(@onclick,'"+paytype+"')]//following::span)[9]");
+	if(status.equalsIgnoreCase("A")){
+	
+//new Authorize_page(driver, test)		
+//		.
+		clickSimulatorAuthRec(paytype)
+		.confirmRecord()
+		.contentFrame()
+		.clickViewLink()
+		.authrecordFrame()
+		.clickreflink()
+		.getSimulatorAuthStatus(paytype,"UP")
+		.defaultcontents()
+		.contentFrame()		
+		.clickViewLink()
+		.authrecordFrame()
+		.clickreflink()
+		.getSimulatorFinalStatus(paytype);
+	}
+	else{
+		getSimulatorFinalStatus(paytype);
+		//getFinalStatus();			
+	}
+	return this;
+	}
 
 public Authorize_page getFinalStatus() throws InterruptedException{	
 Thread.sleep(30000);
@@ -366,7 +415,7 @@ return this;
 public Authorize_page getSimulatorFinalStatus(String paytype) throws InterruptedException{	
 Thread.sleep(30000);
 String status=getTextByXpath("(.//input[contains(@onclick,'"+paytype+"')]//following::span)[9]");
-if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
 	statusVerify(status);
 }
 

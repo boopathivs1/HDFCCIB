@@ -1,15 +1,27 @@
 package testcases;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
 
 import org.hamcrest.core.IsNull;
 
 public class sample {
 	
 	private static String filename="";
+	
+	private static String finalrep;
+	private static String fword;
 	
 //	public static void main(String[] args)
 //	{
@@ -47,7 +59,7 @@ public class sample {
 			if(file.isFile())
 			{
 				filename=file.getName();
-				System.out.println(file.getName()+"actualname");
+				//System.out.println(file.getName()+"actualname");
 			}
 		}
 		return filename;
@@ -67,23 +79,110 @@ public class sample {
 //		
 //	}
 	
-	public static void main(String[] args) {
+//	public static void main(String[] args) {
+//		
+//		String M="";
+//		String actualdate="";
+//		 LocalDate currentdate = LocalDate.now();
+//		 int currentDay = currentdate.getDayOfMonth();
+//		 int month =currentdate.getMonthValue();
+//		 if(month <=9)
+//		 {
+//			M ="0"+month;
+//			 
+//		 }
+//		 System.out.println(M+currentDay);
+//			 
+//	}
+//	
+	
+	//public static String GetReplaceWord() throws IOException 
+	public static String  GetReplacevalue() throws IOException {
 		
-		String M="";
-		String actualdate="";
-		 LocalDate currentdate = LocalDate.now();
-		 int currentDay = currentdate.getDayOfMonth();
-		 int month =currentdate.getMonthValue();
-		 if(month <=9)
-		 {
-			M ="0"+month;
-			 
-		 }
-		 System.out.println(M+currentDay);
+	
+	   {
+		String rep;
+		//String finalrep;
 		
-		
-		 
+		String replaced;
+		getfilename();
+	   
+	      FileReader f1=new FileReader("./data/files/26FTLA/"+filename+"");
+BufferedReader br = new BufferedReader(f1);
+String line;
+
+while((line = br.readLine())!= null)
+{
+	//System.out.println(line);
+	
+	rep = line.replaceAll(",","");  
+	finalrep = rep .replaceAll("\\s","");
+	
+	//System.out.println(finalrep);
+	
+}
+//System.out.println(finalrep);
+fword = finalrep.substring(267,277);
+//replaced = finalrep.replace(fword, "24/05/2021");
+
+//System.out.println(fword);
+
+
+f1.close();
+br.close();
+//return fword;
+	     
+	   }
+	return fword;
 	}
+
+
+
+	
+	
+	public static void main(String[] args) throws IOException {
+		
+		getfilename();
+		FileReader f1=new FileReader("./data/files/26FTLA/"+filename+"");
+		BufferedReader br = new BufferedReader(f1);
+		String line;
+		String Finalvalue;
+		String rep;
+		String frep;
+
+		System.out.println(filename+ "file");
+		while((line = br.readLine())!= null)
+		{
+			
+			//System.out.println(line);
+			GetReplacevalue();
+			//System.out.println(GetReplacevalue());
+			//System.out.println(fword+"actual value");
+			DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+			Date date = new Date();
+			String expected = dateFormat.format(date);
+			rep = line.replaceAll(fword,expected);
+			System.out.println(rep);
+			 
+			//System.out.println(rep);
+			
+			//System.out.println(finalrep);
+			
+		}
+		f1.close();
+		br.close();
+		
+		
+		
+	}
+	}
+
 	
 
-}
+	
+	
+		
+	
+
+			
+				    	
