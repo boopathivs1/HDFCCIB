@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Testsss" thread-count="1" parallel="classes">
+  
+    <classes>
+     
+     
+      <class name="testcases.Tc_24_Current_Date_TLA"/>
+      <class name="testcases.Tc_25_Current_Date_FLA"/>
+        <class name="testcases.Tc_26_Current_Date_FTLA"/>
+      <class name="testcases.Tc_27_FLA_IFSC_Code_Conversion"/>
+     
+      <class name="testcases.Tc_28_FLA_ECMS_Payment"/>
+      <class name="testcases.Tc_29_Salary_Payment_Type"/>
+         <class name="testcases.Tc_30_Brokerpayout_Paymenttype"/>
+     
+      <class name="testcases.Tc_31_FLA_Adapter_Collection_Type"/>
+       <class name="testcases.Tc_32_FLA_Adapter_A2A_Paymenttype"/>
+      <class name="testcases.Tc_33_FLA_Adapter_Bulk_Chq_DD"/>
+      <class name="testcases.Tc_34a_ACH_Payment_type_Debit"/>
+     
+      <class name="testcases.Tc_34b_ACH_Payment_type_Credit"/>
+     
+      <class name="testcases.Tc_35_ECH_Payment_type"/>
+       <class name="testcases.Tc_36_CBDT_Upload_Payment"/>
+      
+            <class name="testcases.Tc_37_CBEC_Upload_Payment"/>
+
+
+       </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

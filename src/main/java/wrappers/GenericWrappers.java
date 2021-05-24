@@ -1498,10 +1498,10 @@ public void statusVerify(String Status){
 	//Case statements  
 	case "A":reportStep(Status+ " Status has been displaying" ,"PASS"); 
 	break;  
-	case "U": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"WARN");  
+	case "U": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"PASS");  
 	break;  
 	case "C": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"PASS");  
-	break;  
+	break;	
 	case "UP":reportStep(Status+ " Status has been displayging  and E (or) R Status has not been displaying" ,"PASS"); 
 	break;
 	case "E":reportStep(Status+ " Status has been displaying","PASS");
@@ -4158,7 +4158,7 @@ reportStep("New window has opened", "PASS");
 		} catch (WebDriverException e) {
 			reportStep("Screenshot not Support", "INFO");
 		} catch (IOException e) {
-			reportStep("The snapshot could not be taken", "FAIL");
+			reportStep("The snapshot could not be taken","INFO");
 		}
 		return number;
 	}

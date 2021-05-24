@@ -176,9 +176,12 @@ public Authorize_page submitPwd(String pwd) throws InterruptedException{
 //	driver.findElement(By.xpath(".//span[text()='Password']")).click();
 
 	clickByXpathExplict(prop.getProperty("click.authpwd.xpath"));
-Thread.sleep(10000);
+
+	Thread.sleep(7000);
 	acceptAlert();
+	Thread.sleep(3000);
 	
+	scrolltoelementJs(prop.getProperty("enter.authpwd.xpath"));
 	
 	enterByXpathExplict(prop.getProperty("enter.authpwd.xpath"),pwd);	
 
@@ -228,7 +231,7 @@ public Authorize_page getAuthStatus(String verifyStatus) throws InterruptedExcep
 String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
 if(status.equalsIgnoreCase(verifyStatus)){
 	statusVerify(status);
-}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
 	statusVerify(status);
 }
 else{
@@ -292,7 +295,7 @@ return this;
 public Authorize_page getFinalStatus() throws InterruptedException{	
 Thread.sleep(30000);
 String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
-if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
 	statusVerify(status);
 }
 

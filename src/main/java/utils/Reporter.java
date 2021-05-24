@@ -59,7 +59,7 @@ public abstract class Reporter {
 
 	public ExtentReports startResult(){
 
-		extent = new ExtentReports("./reports/Ajman_CIB_Automation_Report.html",true);
+		extent = new ExtentReports("./reports/HDFC_CIB_Automation_Report.html",true);
 		extent.loadConfig(new File("./src/main/resources/extent-config.xml"));
 
 		return extent;

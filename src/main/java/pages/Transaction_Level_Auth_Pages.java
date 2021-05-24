@@ -38,7 +38,7 @@ Thread.sleep(8000);
 		String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
 		if(status.equalsIgnoreCase(verifyStatus)){
 			statusVerify(status);
-		}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+		}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
 			statusVerify(status);
 		}
 
@@ -83,7 +83,7 @@ defaultcontent();
 		String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
 		
 //		(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]
-		if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+		if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
 			statusVerify(status);
 		}
 
