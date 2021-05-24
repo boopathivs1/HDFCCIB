@@ -17,22 +17,19 @@ import javax.sound.sampled.Line;
 	class Readspecific {
 		public static String strAr[];
 	    public static void main( String args[] ) {
-	      int n =2; // The line number
+	      int n =3; // The line number
 	int a;  
 	      try{
 	        //String line = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (8)/RBAU0904.701")).get(n);
-	        String line = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (8)/ACHDBCR2ACHCR090421.600")).get(n);
-	        
-	        
-	        
-	    	  System.out.println(line);
+	        String line = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (8)/RBAU0904.701")).get(n);
+	        System.out.println(line);
 			   String strMain =line;
 			   String[] arrSplit = strMain.split(",");
 System.out.println(arrSplit[22].toString());
-String date=arrSplit[22].toString();
+String date=arrSplit[22];
 	System.out.println(date);    	  
 //modifyFile("C:/Users/Boopathi/Desktop/New folder (8)/RBAU0904.701",date, "12/40/021");
-	modifyFile("C:/Users/Boopathi/Desktop/New folder (8)/ACHDBCR2ACHCR090421.600",date, "12/40/021");
+	//modifyFile("C:/Users/Boopathi/Desktop/New folder (8)/ACHDBCR2ACHCR090421.600",date, "12/40/021");
 	
 	      } 
 	      catch(IOException e){
