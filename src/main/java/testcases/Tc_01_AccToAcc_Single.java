@@ -44,6 +44,8 @@ String accnum=regvalue(accno);
 .fillAcctoAccSingleform(selectformat,compid,compBranch,accnum,benecode, amount)
 .getrefnum()
 .clickLogout();		
+			
+			
 		getnewurl();		
 		new	HDFC_Login_Page(driver, test)
 .fillCredentials(authuserid, authpwd, authgroupid)
@@ -60,20 +62,28 @@ String accnum=regvalue(accno);
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
+
+
 .getAuthStatus("A")
-.clickfirstAuthRec()
-.confirmRecord()
-.contentFrame()
-.clickViewLink()
-.authrecordFrame()
-.clickreflink()
-.getAuthStatus("UP")
-.defaultcontents()
-.contentFrame()		
-.clickViewLink()
-.authrecordFrame()
-.clickreflink()
-.getFinalStatus();
+.checkStatus();
+
+
+
+//.clickfirstAuthRec()
+//.confirmRecord()
+//.contentFrame()
+//.clickViewLink()
+//.authrecordFrame()
+//.clickreflink()
+//.getAuthStatus("UP")
+//.defaultcontents()
+//.contentFrame()		
+//.clickViewLink()
+//.authrecordFrame()
+//.clickreflink()
+//.getFinalStatus();
+		
+		
 defaultcontent();		
 clickLogoutLink();
 

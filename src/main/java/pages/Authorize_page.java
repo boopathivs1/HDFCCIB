@@ -225,6 +225,46 @@ defaultcontent();
 
 }
 
+public String getStatus(){
+	String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+	
+	
+return status;	
+	
+}
+public Authorize_page checkStatus() throws InterruptedException{
+	String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+	if(status.equalsIgnoreCase("A")){
+	
+//new Authorize_page(driver, test)		
+//		.
+		clickfirstAuthRec()
+		.confirmRecord()
+		.contentFrame()
+		.clickViewLink()
+		.authrecordFrame()
+		.clickreflink()
+		.getAuthStatus("UP")
+		.defaultcontents()
+		.contentFrame()		
+		.clickViewLink()
+		.authrecordFrame()
+		.clickreflink()
+		.getFinalStatus();		
+	}
+	else{
+		getFinalStatus();		
+		
+		
+	}
+	
+	
+	
+return this;	
+	
+}
+
+
 
 public Authorize_page getAuthStatus(String verifyStatus) throws InterruptedException{	
 
