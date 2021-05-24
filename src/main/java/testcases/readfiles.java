@@ -11,7 +11,7 @@ public static String a;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		File folder = new File("C:/Users/Boopathi/Desktop/New folder (22)/data/files/34b_ACH_Pay_Credit");
+		File folder = new File("C:/Users/Boopathi/Desktop/New folder (8)");
 		File[] listOfFiles = folder.listFiles();
 
 		for (int i = 0; i < listOfFiles.length; i++) {
@@ -24,13 +24,8 @@ public static String a;
 		}
 
 		System.out.println(a);
-//		 File oldName =
-//		         new File("C:/Users/Boopathi/Desktop/New folder (22)/data/files/34b_ACH_Pay_Credit/ACHDBCR2ACHCR090421.600");
-//		        File newName = 
-//		         new File("C:/Users/Boopathi/Desktop/New folder (22)/data/files/34b_ACH_Pay_Credit/GeeksforGeeks.txt");
-//		  
-		        File oldfile = new File("C:/Users/Boopathi/Desktop/New folder (22)/data/files/34b_ACH_Pay_Credit/"+a+"");
-			      File newfile = new File("C:/Users/Boopathi/Desktop/New folder (22)/data/files/34b_ACH_Pay_Credit/ACHDBCR2ACHCR090421.611");
+		        File oldfile = new File("C:/Users/Boopathi/Desktop/New folder (8)/"+a+"");
+			      File newfile = new File("C:/Users/Boopathi/Desktop/New folder (8)/ACHDBCR2ACHCR090421.604");
 
 			      if(oldfile.renameTo(newfile)) {
 			         System.out.println("File name changed succesful");
@@ -38,11 +33,13 @@ public static String a;
 			         System.out.println("Rename failed");
 			      } 
 			      
-			      modifyFile("C:/Users/Boopathi/Desktop/New folder (22)/data/files/34b_ACH_Pay_Credit/ACHDBCR2ACHCR090421.611", "1233000000000000000000000200120052021", "1233000000000000000000000200120052022");
-			      modifyFile("C:/Users/Boopathi/Desktop/New folder (22)/data/files/34b_ACH_Pay_Credit/ACHDBCR2ACHCR090421.611", "UMRN1421245634575481", "UMRN1421245634575482");
-			      
-			      
+			    //  modifyFile("C:/Users/Boopathi/Desktop/New folder (22)/data/files/34b_ACH_Pay_Credit/ACHDBCR2ACHCR090421.611", "1233000000000000000000000200120052021", "1233000000000000000000000200120052022");
+			    //  modifyFile("C:/Users/Boopathi/Desktop/New folder (22)/data/files/34b_ACH_Pay_Credit/ACHDBCR2ACHCR090421.611", "UMRN1421245634575481", "UMRN1421245634575482");
+			  		      
 	}
+	
+	
+	
 	static void modifyFile(String filePath, String oldString, String newString)
     {
         File fileToBeModified = new File(filePath);

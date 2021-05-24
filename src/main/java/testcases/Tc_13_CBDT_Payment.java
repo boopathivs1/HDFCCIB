@@ -58,6 +58,8 @@ public class Tc_13_CBDT_Payment  extends ProjectWrapp {
 	.clickViewLink()
 	.authrecordFrame()
 	.clickreflink()
+	
+	
 	.getSimulatorAuthStatus(Paytype,"A")
 	.clickSimulatorAuthRec(Paytype)
 	.confirmRecord()
@@ -72,6 +74,9 @@ public class Tc_13_CBDT_Payment  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.getSimulatorFinalStatus(Paytype);
+			
+			
+			
 	defaultcontent();		
 	clickLogoutLink();
 

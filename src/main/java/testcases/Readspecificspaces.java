@@ -14,7 +14,7 @@ import java.util.List;
 
 import javax.sound.sampled.Line;
 
-	class Readspecific {
+	class Readspecificspaces {
 		public static String strAr[];
 	    public static void main( String args[] ) {
 	      int n =2; // The line number
@@ -27,12 +27,12 @@ import javax.sound.sampled.Line;
 	        
 	    	  System.out.println(line);
 			   String strMain =line;
-			   String[] arrSplit = strMain.split(",");
-System.out.println(arrSplit[22].toString());
-String date=arrSplit[22].toString();
+			   String[] arrSplit = strMain.split("\\s+");
+System.out.println(arrSplit[5].toString());
+String date=arrSplit[5].toString();
 	System.out.println(date);    	  
 //modifyFile("C:/Users/Boopathi/Desktop/New folder (8)/RBAU0904.701",date, "12/40/021");
-	modifyFile("C:/Users/Boopathi/Desktop/New folder (8)/ACHDBCR2ACHCR090421.600",date, "12/40/021");
+	modifyFile("C:/Users/Boopathi/Desktop/New folder (8)/ACHDBCR2ACHCR090421.600",date, "wows");
 	
 	      } 
 	      catch(IOException e){
