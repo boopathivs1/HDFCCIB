@@ -926,7 +926,7 @@ return B;
 				if(browser.equalsIgnoreCase("chrome")){
 					//System.setProperty("webdriver.chrome.driver", "./drivers/chromedrivers.exe");
 
-					System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver90.exe");
+					System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver89.exe");
 
 					//System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver85.exe");
 

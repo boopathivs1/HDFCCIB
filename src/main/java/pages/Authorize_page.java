@@ -253,7 +253,8 @@ public Authorize_page checkStatus() throws InterruptedException{
 		.getFinalStatus();		
 	}
 	else{
-		getFinalStatus();		
+		getAuthStatus("UP");
+		//getFinalStatus();		
 		
 		
 	}
