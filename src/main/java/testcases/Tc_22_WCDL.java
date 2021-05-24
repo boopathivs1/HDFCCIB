@@ -53,13 +53,17 @@ public class Tc_22_WCDL  extends ProjectWrapp {
 .Clickback()
 .clickWCDLViewLink()
 .getAuthStatus("A")
-.clickfirstAuthRec()
-.confirmRecord()
-.contentFrame()
-.Clickback()
-.ClickWCDLReport()
-.clickWCDLViewLink()
-.getWCDLFinalStatus();
+.checkWCDLStatus();
+
+//.clickfirstAuthRec()
+//.confirmRecord()
+//.contentFrame()
+//.Clickback()
+//.ClickWCDLReport()
+//.clickWCDLViewLink()
+//.getWCDLFinalStatus();
+
+defaultcontent();		
 clickLogoutLink();
 
 		

@@ -56,20 +56,27 @@ public class Tc_12_GST_Payment  extends ProjectWrapp {
 	.clickViewLink()
 	.authrecordFrame()
 	.clickreflink()
+	
+	
 	.getSimulatorAuthStatus(Paytype,"A")
-	.clickSimulatorAuthRec(Paytype)
-	.confirmRecord()
-	.contentFrame()
-	.clickViewLink()
-	.authrecordFrame()
-	.clickreflink()
-	.getSimulatorAuthStatus(Paytype,"U")
-	.defaultcontents()
-	.contentFrame()		
-	.clickViewLink()
-	.authrecordFrame()
-	.clickreflink()
-	.getSimulatorFinalStatus(Paytype);
+	.checkSimulatorStatus(Paytype);
+	
+//	.clickSimulatorAuthRec(Paytype)
+//	.confirmRecord()
+//	.contentFrame()
+//	.clickViewLink()
+//	.authrecordFrame()
+//	.clickreflink()
+//	.getSimulatorAuthStatus(Paytype,"U")
+//	.defaultcontents()
+//	.contentFrame()		
+//	.clickViewLink()
+//	.authrecordFrame()
+//	.clickreflink()
+//	.getSimulatorFinalStatus(Paytype);
+//			
+			
+			
 	defaultcontent();		
 	clickLogoutLink();
 

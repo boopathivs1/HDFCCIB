@@ -59,19 +59,22 @@ public class Tc_13_CBDT_Payment  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.getSimulatorAuthStatus(Paytype,"A")
-	.clickSimulatorAuthRec(Paytype)
-	.confirmRecord()
-	.contentFrame()
-	.clickViewLink()
-	.authrecordFrame()
-	.clickreflink()
-	.getSimulatorAuthStatus(Paytype,"UP")
-	.defaultcontents()
-	.contentFrame()		
-	.clickViewLink()
-	.authrecordFrame()
-	.clickreflink()
-	.getSimulatorFinalStatus(Paytype);
+	.checkSimulatorStatus(Paytype);
+			
+//	.clickSimulatorAuthRec(Paytype)
+//	.confirmRecord()
+//	.contentFrame()
+//	.clickViewLink()
+//	.authrecordFrame()
+//	.clickreflink()
+//	.getSimulatorAuthStatus(Paytype,"UP")
+//	.defaultcontents()
+//	.contentFrame()		
+//	.clickViewLink()
+//	.authrecordFrame()
+//	.clickreflink()
+//	.getSimulatorFinalStatus(Paytype);
+			
 	defaultcontent();		
 	clickLogoutLink();
 
