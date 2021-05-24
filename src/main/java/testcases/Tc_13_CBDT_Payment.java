@@ -104,7 +104,7 @@ import pages.CBDT_Payment_SimulatorPage;
 import pages.EPI_Payment_SimulatorPage;
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_13_CBDT_Payment  extends ProjectWrapp {
+public class Tc_13CBDTPayment  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC13";
