@@ -228,7 +228,7 @@ public Authorize_page getAuthStatus(String verifyStatus) throws InterruptedExcep
 String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
 if(status.equalsIgnoreCase(verifyStatus)){
 	statusVerify(status);
-}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
 	statusVerify(status);
 }
 else{
@@ -292,7 +292,7 @@ return this;
 public Authorize_page getFinalStatus() throws InterruptedException{	
 Thread.sleep(30000);
 String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
-if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
 	statusVerify(status);
 }
 
@@ -306,8 +306,9 @@ return this;
 public Authorize_page getWCDLFinalStatus() throws InterruptedException{	
 Thread.sleep(3000);
 String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
-if(status.contains("UP")){
-	reportStep(status+ "Status has been displaying" ,"PASS");
+if(status.contains("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.contains("U")){
+	
+	statusVerify(status);
 }
 
 else{
@@ -337,12 +338,11 @@ Thread.sleep(30000);
 String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[1]//following::td[5]");
 
 System.out.println(status+"actual value");
-if(status.contains("Accepted")){
-	
-	System.out.println("pass");
-	reportStep(status+ "Status has been displaying","PASS");
-}
 
+	if(status.contains("Accepted")||status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.contains("U")){
+	
+			statusVerify(status);
+		}
 else{
 	System.out.println("fail");
 	reportStep(status+ "Status has been displaying" ,"FAIL");

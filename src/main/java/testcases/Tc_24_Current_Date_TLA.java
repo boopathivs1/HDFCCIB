@@ -29,7 +29,7 @@ public class Tc_24_Current_Date_TLA  extends ProjectWrapp {
 		String authuserid,String authpwd,String authdomain,String Compname,String accno,String paytype,String otpcode,
 			
 			
-			
+		
 			
 			String uploadtype,String datas0,String data1,String data10,String data11,
 			String data12,String data14,String data15,

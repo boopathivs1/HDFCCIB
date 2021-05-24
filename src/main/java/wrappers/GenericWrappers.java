@@ -1498,7 +1498,7 @@ public void statusVerify(String Status){
 	//Case statements  
 	case "A":reportStep(Status+ " Status has been displaying" ,"PASS"); 
 	break;  
-	case "U": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"WARN");  
+	case "U": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"PASS");  
 	break;  
 	case "C": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"PASS");  
 	break;  
