@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_18_IMPSPayment  extends ProjectWrapp {
+public class Tc_90_Onscreen_IMPSPayment_Without_confirm  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC18";
-		testDescription="IMPSPayment";
+		testCaseName="TC90";
+		testDescription="Onscreen_IMPSPayment_Without_confirm ";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Boopathi";
-		testKeyword="TC18";
+		authors="Sreejith";
+		testKeyword="TC90";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
@@ -54,18 +54,25 @@ public class Tc_18_IMPSPayment  extends ProjectWrapp {
 		.authrecordFrame()
 		.clickreflink()
 		.clickfirstAuthRec()
+		.clickAuthVerify()
+		.defaultcontents()
+		.contentFrame()	
+		.clickViewLink()
+		.authrecordFrame()
+		.clickreflink()
+		.clickfirstAuthRec()
 		.submitPwd(pwd)
 		.contentFrame()
 		.clickViewLink()
 		.authrecordFrame()
 		.clickreflink()
-		.getAuthStatus("A")
-		.clickfirstAuthRec()
-		.confirmRecord()
-		.contentFrame()
-		.clickViewLink()
-		.authrecordFrame()
-		.clickreflink()
+//		.getAuthStatus("A")
+//		.clickfirstAuthRec()
+//		.confirmRecord()
+//		.contentFrame()
+//		.clickViewLink()
+//		.authrecordFrame()
+//		.clickreflink()
 		.getAuthStatus("UP")
 		.defaultcontents()
 		.contentFrame()		

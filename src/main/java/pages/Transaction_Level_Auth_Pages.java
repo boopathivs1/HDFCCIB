@@ -101,7 +101,7 @@ defaultcontent();
 		String status=getTextByXpath("(.//input[contains(@onclick,'"+filename+"')])[1]//following::span[13]");
 		
 //		(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]
-		if(status.contains("UP")){
+		if(status.contains("UP")||status.contains("U")){
 			reportStep(status+ " Status has been displaying" ,"PASS");
 		}
 

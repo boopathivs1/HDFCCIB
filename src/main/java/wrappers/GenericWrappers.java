@@ -1,4 +1,5 @@
 
+
 package wrappers;
 
 import java.awt.Robot;
@@ -1501,7 +1502,7 @@ public void statusVerify(String Status){
 	case "U": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"PASS");  
 	break;  
 	case "C": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"PASS");  
-	break;	
+	break;  
 	case "UP":reportStep(Status+ " Status has been displayging  and E (or) R Status has not been displaying" ,"PASS"); 
 	break;
 	case "E":reportStep(Status+ " Status has been displaying","PASS");
@@ -4158,7 +4159,7 @@ reportStep("New window has opened", "PASS");
 		} catch (WebDriverException e) {
 			reportStep("Screenshot not Support", "INFO");
 		} catch (IOException e) {
-			reportStep("The snapshot could not be taken","INFO");
+			reportStep("The snapshot could not be taken", "FAIL");
 		}
 		return number;
 	}
@@ -4977,6 +4978,7 @@ catch (Exception e) {
 
 
 }		
+}
 
 
 
@@ -4995,11 +4997,5 @@ catch (Exception e) {
 //      return driver.findElement(locator);
 //    }
 //  });
-}
 
-		
-	
-
-			
-		
 	
