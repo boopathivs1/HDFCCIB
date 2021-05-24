@@ -35,7 +35,8 @@ public class CBDT_Payment_SimulatorPage extends ProjectWrapp{
 	
 	public LogoutPages SubmitCBDTForm(String company, String Branch,String acc,String Tax ) throws InterruptedException{
 		
-		contentFrames();
+		Thread.sleep(5000);
+		
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.comp.xpath"),company);
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.branch.xpath"), Branch);
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.acc.xpath"), acc);
