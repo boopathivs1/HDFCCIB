@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Testsss" thread-count="1" parallel="classes">
+  
+    <classes>
+     
+<class name="testcases.Tc_01_AccToAcc_Single"/>
+      <class name="testcases.Tc_02_AccToAcc_Quick"/>
+      <class name="testcases.Tc_03_AccToAcc_Bulk"/>
+      <class name="testcases.Tc_04_NEFT_Add_Single"/>
+      <class name="testcases.Tc_05_NEFT_Add_Quick"/>
+     
+      <class name="testcases.Tc_06_NEFT_Add_Bulk"/>
+     
+     
+      <class name="testcases.Tc_07_RTGS_Add_Single"/>
+     
+     
+     
+      <class name="testcases.Tc_08_RTGS_Add_Quick"/>
+     
+      <class name="testcases.Tc_09_RTGS_Add_Bulk"/>
+     
+     
+     
+      <class name="testcases.Tc_10_ECMSPayment"/>
+     
+      <class name="testcases.Tc_11_SpecialPayment_IOCL"/>
+     
+       <class name="testcases.Tc_11a_SpecialPayment_bpcl"/>
+          <class name="testcases.Tc_12_GST_Payment"/>
+        <class name="testcases.Tc_13_CBDT_Payment"/>
+     
+      <class name="testcases.Tc_15_EPI_Payment"/>
+      <class name="testcases.Tc_16_UPI_Payment"/>
+      <class name="testcases.Tc_17_ReliancePayment"/>
+     
+     
+      <class name="testcases.Tc_18_IMPSPayment"/>
+     
+      <class name="testcases.Tc_19_ViewCBECPayment"/>
+     
+      <class name="testcases.Tc_20_View_CBDT_Registration"/>
+      <class name="testcases.Tc_21_FixedDeposit"/>
+     
+      <class name="testcases.Tc_22_WCDL"/>
+     
+                </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
