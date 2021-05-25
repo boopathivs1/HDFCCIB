@@ -13,10 +13,11 @@ public class EPI_Payment_SimulatorPage extends ProjectWrapp{
 	}
 
 	
-	public EPI_Payment_SimulatorPage FillEPISimulator(String MerchantNo,String date){
+	public EPI_Payment_SimulatorPage FillEPISimulator(String MerchantNo, String date){
 	
-		enterByXpathExplict(prop.getProperty("enter.epi.simu.merchantNo"), MerchantNo);
-		enterByXpathExplict(prop.getProperty("enter.epi.simu.date.xpath"), date);
+		 
+		enterByXpathExplict(prop.getProperty("enter.epi.simu.merchantNo"), MerchantNo+gettwoRandomNumberString());
+		enterByXpathExplict(prop.getProperty("enter.epi.simu.date.xpath"), GetTodayFoematDate()+" "+"12:30:45");
 		clickByXpathExplict(prop.getProperty("click.epi.submit.xpath"));
 		
 	return this;

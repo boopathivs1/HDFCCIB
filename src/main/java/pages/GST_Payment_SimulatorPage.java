@@ -15,10 +15,11 @@ public class GST_Payment_SimulatorPage extends ProjectWrapp{
 	
 	public GST_Payment_SimulatorPage FillGSTSimulator(String TransID,String challonNo,String amount,String expirydate){
 	
-		enterByXpathExplict(prop.getProperty("enter.gst.transactionid.xpath"), TransID);
-		enterByXpathExplict(prop.getProperty("enter.gst.challon.no.xpath"), challonNo);
+		
+		enterByXpathExplict(prop.getProperty("enter.gst.transactionid.xpath"), TransID+gettwoRandomNumberString());
+		enterByXpathExplict(prop.getProperty("enter.gst.challon.no.xpath"), challonNo+gettwoRandomNumberString());
 		//enterByXpathExplict(prop.getProperty("enter.gst.amt.xpath"), amount);
-		enterByXpathExplict(prop.getProperty("enter.gst.expirydate.xpath"), expirydate);
+		enterByXpathExplict(prop.getProperty("enter.gst.expirydate.xpath"), GetTodayFoematDate());
 		clickByXpathExplict(prop.getProperty("enter.gst.submit.xpath"));
 		acceptAlert();
 		
