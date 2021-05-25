@@ -2130,6 +2130,31 @@ public void loadendtimecalc(String xpath,String loadmsg) throws InterruptedExcep
 
 		}
 	}
+	
+	
+	public static String GetTodayDate()
+	{
+		String M="";
+		String Fromdate="";
+		 LocalDate currentdate = LocalDate.now();
+		 int currentDay = currentdate.getDayOfMonth();
+		 int month =currentdate.getMonthValue();
+		 int year = currentdate.getYear();
+		 if(month <=9)
+		 {
+			M ="0"+month;
+			 
+		 }
+		 return Fromdate =currentDay+M+year;
+	}
+	
+	public static String GetTodayFoematDate()
+	{
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		Date date = new Date();
+		String expected = dateFormat.format(date);
+		return expected;
+	}
 
 	public void fileUploadByXpathExplict(String xpathVal, String data) {
 	//	WebDriverWait wait;

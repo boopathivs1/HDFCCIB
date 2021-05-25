@@ -1,5 +1,7 @@
 package pages;
 
+import java.time.LocalDate;
+
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.relevantcodes.extentreports.ExtentTest;
@@ -13,10 +15,9 @@ public class CBDT_Payment_SimulatorPage extends ProjectWrapp{
 	}
 
 	
-	public CBDT_Payment_SimulatorPage FillCBDTSimulator(String Fromdate){
+	public CBDT_Payment_SimulatorPage FillCBDTSimulator(){
 	
-		
-		enterByXpathExplict(prop.getProperty("enter.transdate.xpath"), Fromdate);
+		enterByXpathExplict(prop.getProperty("enter.transdate.xpath"), GetTodayDate());
 		clickByXpathExplict(prop.getProperty("click.cbdt.go"));
 		
 	return this;
@@ -35,11 +36,11 @@ public class CBDT_Payment_SimulatorPage extends ProjectWrapp{
 	
 	public LogoutPages SubmitCBDTForm(String company, String Branch,String acc,String Tax ) throws InterruptedException{
 		
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		
-		selectVisibileTextByXPath(prop.getProperty("select.cbdt.comp.xpath"),company);
-		selectVisibileTextByXPath(prop.getProperty("select.cbdt.branch.xpath"), Branch);
-		selectVisibileTextByXPath(prop.getProperty("select.cbdt.acc.xpath"), acc);
+		selectVisibileTextByXPath(prop.getProperty("select.cbdt.sim.xpath"),company);
+		selectVisibileTextByXPath(prop.getProperty("select.cbdt.sim.branch.xpath"), Branch);
+		selectVisibileTextByXPath(prop.getProperty("select.cbdt.sim.acc.xpath"), acc);
 		enterByXpathExplict(prop.getProperty("enter.cbdt.tax.xpath"),Tax);
 		clickByXpathExplict(prop.getProperty("click.cbdt.confirm"));
 		acceptAlert();

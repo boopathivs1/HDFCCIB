@@ -37,7 +37,7 @@ public class Tc_13_CBDTPayment  extends ProjectWrapp {
 		try{
 			getSimulatorUrl();
 			new CBDT_Payment_SimulatorPage(driver, test)
-			.FillCBDTSimulator(Fromdate)
+			.FillCBDTSimulator()
 			.fillCredentials(userid, pwd, groupid)
 			.SubmitCBDTForm(company, Branch, acc, amount)
 			.clickCBDTSimulatorLogout();	
