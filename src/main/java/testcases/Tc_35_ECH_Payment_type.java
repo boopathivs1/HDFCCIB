@@ -32,20 +32,38 @@ public class Tc_35_ECH_Payment_type  extends ProjectWrapp {
 		try{
 			
 			String filesname1=getfilename_one(filename);
-			System.out.println("Actual filename is "+filesname1);
+			
 			int startindex=0;
 			int endindex=13;
 			String  serial_startnumber="1";
-			String renamedfilename=renamed_filename_one(filesname1,startindex,endindex, serial_startnumber);
-			System.out.println(renamedfilename);
+			String renamedfilename=renamed_filename_year(filesname1,startindex,endindex, serial_startnumber);
+			
 			String actualfilename=fileurl+filename+filesname1;
 			String Renamedfilename_loc=fileurl+filename+renamedfilename;
-			System.out.println("++++++++++++");
-			System.out.println(Renamedfilename_loc);
-			System.out.println("++++++++++++");
-			convention(actualfilename,Renamedfilename_loc);
 			
-			String currentdate=dateMonthSlash();
+			convention(actualfilename,Renamedfilename_loc);
+	
+			
+			
+			
+			String value1 =filespecific_cont(0, 5,Renamedfilename_loc);
+			String value2=removeLastString_index(value1,8);
+			String value3=value2+GetTodayDate();
+		modifyFile(Renamedfilename_loc,value1,value3);
+
+			
+
+			
+	content_check(1,6,Renamedfilename_loc);
+	content_check(2,6,Renamedfilename_loc);
+		content_check(3,6,Renamedfilename_loc);
+		content_check(4,6,Renamedfilename_loc);
+		content_check(5,6,Renamedfilename_loc);
+		content_check(6,6,Renamedfilename_loc);
+		
+			
+			
+//			String currentdate=dateMonthSlash();
 //			int li_no=2;
 //			int va_in=22;
 //			String value =filespecific_text(li_no, va_in,Renamedfilename_loc);

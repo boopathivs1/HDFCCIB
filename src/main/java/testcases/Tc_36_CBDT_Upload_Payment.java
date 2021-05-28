@@ -30,7 +30,27 @@ public class Tc_36_CBDT_Upload_Payment  extends ProjectWrapp {
 			String data12,String data14,String data15,
 			String data16,String data17,String data20,String data21,String data22,String data23) throws Exception{
 		try{
-		
+			String filesname1=getfilename_one(filename);
+			System.out.println("Actual filename is "+filesname1);
+			int startindex=0;
+			int endindex=9;
+			String  serial_startnumber="1";
+			String renamedfilename=renamed_filename_one(filesname1,startindex,endindex, serial_startnumber);
+			System.out.println(renamedfilename);
+			String actualfilename=fileurl+filename+filesname1;
+			String Renamedfilename_loc=fileurl+filename+renamedfilename;
+			System.out.println("++++++++++++");
+			System.out.println(Renamedfilename_loc);
+			System.out.println("++++++++++++");
+			convention(actualfilename,Renamedfilename_loc);
+			String currentdate=dateMonthSlash();
+			int li_no=2;
+			int va_in=6;
+			String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
+			System.out.println(value);
+			System.out.println("oooooooooooo");
+			modifyFile(Renamedfilename_loc,value,currentdate);
+
 			getnewurl();
 		new	HDFC_Login_Page(driver, test)
 .fillCredentials(userid, pwd, domain)

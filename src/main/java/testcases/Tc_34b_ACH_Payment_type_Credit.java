@@ -31,18 +31,38 @@ public class Tc_34b_ACH_Payment_type_Credit  extends ProjectWrapp {
 			String data16,String data17,String data20,String data21,String data22,String data23) throws Exception{
 		try{
 			String filesname1=getfilename_one(filename);
-			System.out.println("Actual filename is "+filesname1);
 			int startindex=0;
 			int endindex=13;
 			String  serial_startnumber="6";
-			String renamedfilename=renamed_filename_one(filesname1,startindex,endindex, serial_startnumber);
-			System.out.println(renamedfilename);
+			String renamedfilename=renamed_filename_year(filesname1,startindex,endindex, serial_startnumber);
 			String actualfilename=fileurl+filename+filesname1;
 			String Renamedfilename_loc=fileurl+filename+renamedfilename;
-			System.out.println("++++++++++++");
-			System.out.println(Renamedfilename_loc);
-			System.out.println("++++++++++++");
 			convention(actualfilename,Renamedfilename_loc);
+
+			
+			
+			
+			String value1 =filespecific_cont(0, 3,Renamedfilename_loc);
+			String value2=removeLastString_index(value1,8);
+			String value3=value2+GetTodayDate();
+
+		modifyFile(Renamedfilename_loc,value1,value3);
+
+			
+
+			
+	content_check(1,5,Renamedfilename_loc);
+	content_check(2,5,Renamedfilename_loc);
+		content_check(3,5,Renamedfilename_loc);
+		content_check(4,5,Renamedfilename_loc);
+		content_check(5,5,Renamedfilename_loc);
+		content_check(6,5,Renamedfilename_loc);
+		content_check(7,5,Renamedfilename_loc);
+		content_check(8,5,Renamedfilename_loc);
+		content_check(9,5,Renamedfilename_loc);
+		content_check(10,5,Renamedfilename_loc);
+
+			
 			
 //			String currentdate=dateMonthSlash();
 //			int li_no=2;

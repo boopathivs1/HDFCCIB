@@ -31,23 +31,49 @@ public class Tc_34a_ACH_Payment_type_Debit  extends ProjectWrapp {
 			String data16,String data17,String data20,String data21,String data22,String data23) throws Exception{
 		try{
 			String filesname1=getfilename_one(filename);
-			System.out.println("Actual filename is "+filesname1);
+			//System.out.println("Actual filename is "+filesname1);
 			int startindex=0;
 			int endindex=13;
 			String  serial_startnumber="4";
-			String renamedfilename=renamed_filename_one(filesname1,startindex,endindex, serial_startnumber);
-			System.out.println(renamedfilename);
+			String renamedfilename=renamed_filename_year(filesname1,startindex,endindex, serial_startnumber);
+		
 			String actualfilename=fileurl+filename+filesname1;
 			String Renamedfilename_loc=fileurl+filename+renamedfilename;
-			System.out.println("++++++++++++");
-			System.out.println(Renamedfilename_loc);
-			System.out.println("++++++++++++");
 			convention(actualfilename,Renamedfilename_loc);
 
-	String currentdate=dateMonthSlash();
-//			int li_no=2;
-//			int va_in=22;
-//			String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
+//	String currentdate=dateMonthSlash();
+			int li_no=0;
+			int va_in=3;
+			String value1 =filespecific_cont(li_no, va_in,Renamedfilename_loc);
+	String value2=value1.substring(0,26);
+		String accno_date=value2+GetTodayDate();
+		modifyFile(Renamedfilename_loc,value1,accno_date);
+
+			
+
+			
+	content_check(1,10,Renamedfilename_loc);
+	content_check(2,8,Renamedfilename_loc);
+		content_check(3,10,Renamedfilename_loc);
+		content_check(4,8,Renamedfilename_loc);
+		content_check(5,9,Renamedfilename_loc);
+		content_check(6,9,Renamedfilename_loc);
+		content_check(7,9,Renamedfilename_loc);
+		content_check(8,8,Renamedfilename_loc);
+		content_check(9,8,Renamedfilename_loc);
+		content_check(10,12,Renamedfilename_loc);
+
+//		String value3 =filespecific_cont(1,10,Renamedfilename_loc);
+//		String value4=removeLastTwoString(value3);
+//		String final_row_1=value4+gettwoRandomNumberString();					
+//		modifyFile(Renamedfilename_loc,value3,final_row_1);
+
+		
+		
+		//		
+		
+			
+			
 //			System.out.println(value);
 //			System.out.println("oooooooooooo");
 //			modifyFile(Renamedfilename_loc,value,currentdate);
