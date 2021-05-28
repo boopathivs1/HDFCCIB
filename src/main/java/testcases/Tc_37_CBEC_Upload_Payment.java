@@ -86,15 +86,16 @@ public class Tc_37_CBEC_Upload_Payment  extends ProjectWrapp {
 		.clickfilenameSort()
 
 		.getAuthStatus("A")
-		.clickFla_ConfirmRecord(filename)
-		.defaultFlaLink()
+//		.clickFla_ConfirmRecord(filename)
+//		.defaultFlaLink()
+//
+//
+//.clickFLA_Link()
+//		.filter_FileLevelAuth_Record(clientcode,transtype)
+//		.clickfilenameSort()		
+//		.getFinalStatus();
 
-
-.clickFLA_Link()
-		.filter_FileLevelAuth_Record(clientcode,transtype)
-		.clickfilenameSort()		
-		.getFinalStatus();
-
+		.authorize_CheckStatus_FLA(filename,clientcode,transtype);
 
 
 
