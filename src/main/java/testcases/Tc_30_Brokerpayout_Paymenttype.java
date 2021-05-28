@@ -89,11 +89,11 @@ public class Tc_30_Brokerpayout_Paymenttype  extends ProjectWrapp {
 		.filter_FileLevelAuth_Record(clientcode,transtype)
 		.clickfilenameSort()
 
+		
+		
 		.getAuthStatus("A")
 		.clickSalary_ConfirmRecord(filename) 
 		.defaultFlaLink()
-
-
 .clickFLA_Link()
 		.filter_FileLevelAuth_Record(clientcode,transtype)
 		.clickfilenameSort()		

@@ -105,8 +105,6 @@ public class Tc_35_ECH_Payment_type  extends ProjectWrapp {
 		.getAuthStatus("A")
 		.clickSalary_ConfirmRecord(filename) 
 		.defaultFlaLink()
-
-
 .clickFLA_Link()
 		.filter_FileLevelAuth_Record(clientcode,paytype)
 		.clickfilenameSort()		

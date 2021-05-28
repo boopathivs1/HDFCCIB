@@ -106,8 +106,6 @@ public class Tc_34b_ACH_Payment_type_Credit  extends ProjectWrapp {
 		.getAuthStatus("A")
 		.clickSalary_ConfirmRecord(filename) 
 		.defaultFlaLink()
-
-
 .clickFLA_Link()
 		.filter_FileLevelAuth_Record(clientcode,"All")
 		.clickfilenameSort()		
