@@ -63,7 +63,7 @@ modifyFile(Renamedfilename_loc,value,currentdate);
 .clickDisbursementLink()
 .clickUploadLink()
 
-.CMSUploadFormSubmit(clientcode, totalIns, totalamt, transtype,true,fileurl+filename)
+.CMSUploadFormSubmit(clientcode, totalIns, totalamt, transtype,true,Renamedfilename_loc)
 .getrefnum()
 .click_File_Level_View_Link()
 .filter_FileLevel_Record(clientcode,transtype)
@@ -80,7 +80,7 @@ modifyFile(Renamedfilename_loc,value,currentdate);
 		
 		.filter_FileLevelAuth_Record(clientcode,transtype)
 		.clickfilenameSort()
-		.authorizeflaRecord(filename,otp)
+		.authorizeflaRecord(renamedfilename,otp)
 		.clickBackButton()
 
 
@@ -98,7 +98,7 @@ modifyFile(Renamedfilename_loc,value,currentdate);
 //		.getFinalStatus();
 //
 
-		.authorize_CheckStatus_FLA(filename,clientcode,transtype);
+		.authorize_CheckStatus_FLA(renamedfilename,clientcode,transtype);
 
 
 		clickLogoutLink();

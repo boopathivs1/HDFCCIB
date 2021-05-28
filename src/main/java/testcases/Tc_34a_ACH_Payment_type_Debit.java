@@ -86,7 +86,7 @@ public class Tc_34a_ACH_Payment_type_Debit  extends ProjectWrapp {
 .clickCashManageServiceLink()
 .clickDisbursementLink()
 .clickUploadLink()
-.CMSUploadFormSubmit(clientcode, totalIns, totalamt, transtype,false,fileurl+filename)
+.CMSUploadFormSubmit(clientcode, totalIns, totalamt, transtype,false,Renamedfilename_loc)
 .getrefnumAch(0,23)
 .click_File_Level_View_Link()
 .filter_FileLevel_Record(clientcode,paytype)
@@ -103,7 +103,7 @@ public class Tc_34a_ACH_Payment_type_Debit  extends ProjectWrapp {
 		
 		.filter_FileLevelAuth_Record(clientcode,paytype)
 		.clickfilenameSort()
-		.authorizeflaRecord(filename,otp)
+		.authorizeflaRecord(renamedfilename,otp)
 		.clickBackButton()
 
 
@@ -111,13 +111,15 @@ public class Tc_34a_ACH_Payment_type_Debit  extends ProjectWrapp {
 		.clickfilenameSort()
 
 		.getAuthStatus("A")
-		.clickSalary_ConfirmRecord(filename) 
-		.defaultFlaLink()
-.clickFLA_Link()
-		.filter_FileLevelAuth_Record(clientcode,paytype)
-		.clickfilenameSort()		
-		.getFinalStatus();
+		.bulkAuth_Status(renamedfilename, clientcode, transtype);
 
+//		.clickSalary_ConfirmRecord(renamedfilename) 
+//		.defaultFlaLink()
+//.clickFLA_Link()
+//		.filter_FileLevelAuth_Record(clientcode,paytype)
+//		.clickfilenameSort()		
+//		.getFinalStatus();
+//
 
 
 

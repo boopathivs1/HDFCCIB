@@ -82,7 +82,7 @@ public class Tc_31_FLA_Adapter_Collection_Type  extends ProjectWrapp {
 .clickDisbursementLink()
 .clickUploadLink()
 
-.CMSUploadFormSubmit(clientcode, totalIns, totalamt, transtype,true,fileurl+filename)
+.CMSUploadFormSubmit(clientcode, totalIns, totalamt, transtype,true,Renamedfilename_loc)
 .getrefnum()
 .click_File_Level_View_Link()
 .filter_FileLevel_Record(clientcode,transtype)
@@ -99,7 +99,7 @@ public class Tc_31_FLA_Adapter_Collection_Type  extends ProjectWrapp {
 		
 		.filter_FileLevelAuth_Record(clientcode,transtype)
 		.clickfilenameSort()
-		.authorizeflaRecord(filename,otp)
+		.authorizeflaRecord(renamedfilename,otp)
 		.clickBackButton()
 
 
@@ -107,7 +107,7 @@ public class Tc_31_FLA_Adapter_Collection_Type  extends ProjectWrapp {
 		.clickfilenameSort()
 
 		.getAuthStatus("A")
-		.authorize_CheckStatus_FLA(filename,clientcode,transtype);
+		.authorize_CheckStatus_FLA(renamedfilename,clientcode,transtype);
 
 		
 		
