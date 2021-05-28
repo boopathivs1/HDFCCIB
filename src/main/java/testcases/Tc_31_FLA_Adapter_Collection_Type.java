@@ -33,8 +33,8 @@ public class Tc_31_FLA_Adapter_Collection_Type  extends ProjectWrapp {
 			String filesname1=getfilename_one(filename);
 			System.out.println("Actual filename is "+filesname1);
 			int startindex=0;
-			int endindex=4;
-			String  serial_startnumber="7";
+			int endindex=5;
+			String  serial_startnumber="1";
 			String renamedfilename=renamed_filename_one(filesname1,startindex,endindex, serial_startnumber);
 			System.out.println(renamedfilename);
 			String actualfilename=fileurl+filename+filesname1;
@@ -42,15 +42,38 @@ public class Tc_31_FLA_Adapter_Collection_Type  extends ProjectWrapp {
 			System.out.println("++++++++++++");
 			System.out.println(Renamedfilename_loc);
 			System.out.println("++++++++++++");
-			convention(actualfilename,Renamedfilename_loc);
-			String currentdate=dateMonthSlash();
-			int li_no=2;
-			int va_in=22;
+			convention(actualfilename,Renamedfilename_loc);			
+			int li_no=0;
+			int va_in=1;
 			String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
 			System.out.println(value);
 			System.out.println("oooooooooooo");
-			modifyFile(Renamedfilename_loc,value,currentdate);
+		modifyFile(Renamedfilename_loc,value,"     "+renamedfilename);
+		int line_no=1;
+		int se_in=5;
+		String se_value =filespecific_text(line_no, se_in,Renamedfilename_loc);
+		String value1=se_value.substring(0,6);
+		String value2=se_value.substring(0,4);
+		String SerialVal=value2+gettwoRandomNumberString();			
+		modifyFile(Renamedfilename_loc,value1,SerialVal);
 
+		
+			
+			
+			
+			
+//			String currentdate=dateMonthSlash();
+//			int li_no=2;
+//			int va_in=22;
+//			String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
+//			System.out.println(value);
+//			System.out.println("oooooooooooo");
+//		modifyFile(Renamedfilename_loc,value,currentdate);
+
+		
+		
+		
+		
 
 			getnewurl();
 		new	HDFC_Login_Page(driver, test)

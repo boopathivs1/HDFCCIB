@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Testsss" thread-count="1" parallel="classes">
+ 
+<classes>
+  <class name="testcases.Tc_01_AccToAcc_Single"/>
+      <class name="testcases.Tc_02_AccToAcc_Quick"/>
+      <class name="testcases.Tc_03_AccToAcc_Bulk"/>
+      <class name="testcases.Tc_04_NEFT_Add_Single"/>
+      <class name="testcases.Tc_05_NEFT_Add_Quick"/>
+     
+      <class name="testcases.Tc_06_NEFT_Add_Bulk"/>
+     
+     
+      <class name="testcases.Tc_07_RTGS_Add_Single"/>
+     
+     
+     
+      <class name="testcases.Tc_08_RTGS_Add_Quick"/>
+     
+      <class name="testcases.Tc_09_RTGS_Add_Bulk"/>
+     
+     
+     
+      <class name="testcases.Tc_10_ECMSPayment"/>
+     
+      <class name="testcases.Tc_11_SpecialPayment_IOCL"/>
+     
+       <class name="testcases.Tc_11a_SpecialPayment_bpcl"/>
+          <class name="testcases.Tc_12_GST_Payment"/>
+        <class name="testcases.Tc_13_CBDT_Payment"/>
+     
+      <class name="testcases.Tc_15_EPI_Payment"/>
+      <class name="testcases.Tc_16_UPI_Payment"/>
+      <class name="testcases.Tc_17_ReliancePayment"/>
+     
+     
+      <class name="testcases.Tc_18_IMPSPayment"/>
+     
+      <class name="testcases.Tc_19_ViewCBECPayment"/>
+     
+      <class name="testcases.Tc_20_View_CBDT_Registration"/>
+      <class name="testcases.Tc_21_FixedDeposit"/>
+     
+      <class name="testcases.Tc_22_WCDL"/>
+     
+     
+      <class name="testcases.Tc_24_Current_Date_TLA"/>
+      <class name="testcases.Tc_25_Current_Date_FLA"/>
+        <class name="testcases.Tc_26_Current_Date_FTLA"/>
+      <class name="testcases.Tc_27_FLA_IFSC_Code_Conversion"/>
+     
+      <class name="testcases.Tc_28_FLA_ECMS_Payment"/>
+      <class name="testcases.Tc_29_Salary_Payment_Type"/>
+         <class name="testcases.Tc_30_Brokerpayout_Paymenttype"/>
+     
+      <class name="testcases.Tc_31_FLA_Adapter_Collection_Type"/>
+       <class name="testcases.Tc_32_FLA_Adapter_A2A_Paymenttype"/>
+      <class name="testcases.Tc_33_FLA_Adapter_Bulk_Chq_DD"/>
+      <class name="testcases.Tc_34a_ACH_Payment_type_Debit"/>
+     
+      <class name="testcases.Tc_34b_ACH_Payment_type_Credit"/>
+     
+      <class name="testcases.Tc_35_ECH_Payment_type"/>
+       <class name="testcases.Tc_36_CBDT_Upload_Payment"/>
+      
+            <class name="testcases.Tc_37_CBEC_Upload_Payment"/>
+
+
+
+
+     
+  </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

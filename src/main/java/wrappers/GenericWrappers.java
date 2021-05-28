@@ -174,7 +174,17 @@ String file_format="";
 	return file_format;		
 }
 
-	
+	public String filename_final_year(String a,String randomnumber,String filepath){
+String file_format="";
+	String file=dateMonth()+21+"."+a+randomnumber;
+	//System.out.println(ranNumber);	
+	System.out.println(file);
+	System.out.println("************");
+	System.out.println(filepath+file);
+	System.out.println("************");
+	file_format=filepath+file;
+	return file_format;		
+}	
 	
 	
 	public void readywithtime(String xpathVal) throws InterruptedException{
@@ -1602,6 +1612,20 @@ finalfilenaming=filename_final(serial_startnumber,ranNumber, filename2);
 return finalfilenaming;
 }
 
+
+public String renamed_filename_year(String filesname1,int a,int b,String serial_startnumber)
+{
+	String finalfilenaming;
+
+String filename2=filesname1.substring(a,b);			
+String ranNumber=gettwoRandomNumberString();
+finalfilenaming=filename_final_year(serial_startnumber,ranNumber, filename2);
+//System.out.println(finalfilenaming);
+
+return finalfilenaming;
+}
+
+
 public void convention(String actualname,String Renamed_file_name){
 
 File oldfile = new File(actualname);
@@ -2528,6 +2552,29 @@ return value;
 
 
 
+public  String filespecific_cont(int line_no,int value_index ,String filelocation) {
+	String strAr[];
+	String value = null;	
+//	int n =line_no; // The line number
+int a;  
+  try{
+    //String line = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (8)/RBAU0904.701")).get(n);
+    String line = Files.readAllLines(Paths.get(filelocation)).get(line_no);
+    System.out.println(line);
+	   String strMain =line;
+	   String[] arrSplit = strMain.split("\\s+");
+	   //23
+System.out.println(arrSplit[value_index].toString());
+value=arrSplit[value_index].toString();
+System.out.println(value);
+//modifyFile("C:/Users/Boopathi/Desktop/New folder (8)/ACHDBCR2ACHCR090421.600",date, "12/40/021");
+
+  } 
+  catch(IOException e){
+    System.out.println(e);
+  }
+return value;
+}
 
 
 
@@ -2598,6 +2645,57 @@ public void modifyFile(String filePath, String oldString, String newString)
 
 
 
+
+public void content_check(int linenum, int index,String Renamedfilename_loc){
+try{
+String value3 =filespecific_cont(linenum,index,Renamedfilename_loc);
+String value4=removeLastTwoString(value3);
+String final_row_1=value4+gettwoRandomNumberString();
+
+modifyFile(Renamedfilename_loc,value3,final_row_1);
+}
+catch (Exception e) {
+	// TODO: handle exception
+}
+
+}
+
+
+public String removeLastTwoString(String a){
+	  String s = "";
+
+	try{
+		  s=a.substring(0, a.length() - 2);
+      System.out.println(a.substring(0, a.length() - 2)  +"vvvvvvvvvvv");
+    
+	}
+	catch (Exception e) {
+		// TODO: handle exception
+	}
+	return s;
+      
+    
+	
+	
+}
+
+public String removeLastString_index(String a,int b){
+	  String s = "";
+
+	try{
+		  s=a.substring(0, a.length() - b);
+    System.out.println(a.substring(0, a.length() - b)  +"vvvvvvvvvvv");
+  
+	}
+	catch (Exception e) {
+		// TODO: handle exception
+	}
+	return s;
+    
+  
+	
+	
+}
 public void verifybyAttributesPresentxpath(String xpath, String attributes ,String compText) throws InterruptedException {
 	try {
 		readywithtime(xpath);
