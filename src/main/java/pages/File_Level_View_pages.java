@@ -42,6 +42,9 @@ public LogoutPages filter_FileLevel_Record(String clientcode,String trantype) th
 		Thread.sleep(5000);
 		acceptAlert();
 	Thread.sleep(5000);
+	
+	clickLogoutLink();
+	
 		reportStep("Status not matching and files downloaded","FAIL");	
 	
 	}
