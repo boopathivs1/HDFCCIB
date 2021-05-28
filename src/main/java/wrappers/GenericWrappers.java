@@ -266,11 +266,20 @@ catch(Exception e){
 	public static String gettwoRandomNumberString() {
 	    // It will generate 6 digit random Number.
 	    // from 0 to 999999
-	    Random rnd = new Random();
-	    int number = rnd.nextInt(99);
+	   
+		 int min = 10;
+		    int max = 99;
 
-	    // this will convert any number sequence into 6 character.
-	    return String.format("%02d", number);
+		    int num = (int) (Math.random() * (max - min + 1)) + min;
+	
+		    String s=Integer.toString(num);
+		  	
+		
+//	    Random rnd = new Random();
+//	    int number = rnd.nextInt(99);
+//
+//	    // this will convert any number sequence into 6 character.
+	    return s;
 	}
 	
 	public static String getRandomNumberString() {
