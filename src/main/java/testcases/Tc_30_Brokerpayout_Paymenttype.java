@@ -82,7 +82,7 @@ public class Tc_30_Brokerpayout_Paymenttype  extends ProjectWrapp {
 		
 		.filter_FileLevelAuth_Record(clientcode,transtype)
 		.clickfilenameSort()
-		.authorizeflaRecord(filename,otp)
+		.authorizeflaRecord(renamedfilename,otp)
 		.clickBackButton()
 
 
@@ -92,12 +92,14 @@ public class Tc_30_Brokerpayout_Paymenttype  extends ProjectWrapp {
 		
 		
 		.getAuthStatus("A")
-		.clickSalary_ConfirmRecord(filename) 
-		.defaultFlaLink()
-.clickFLA_Link()
-		.filter_FileLevelAuth_Record(clientcode,transtype)
-		.clickfilenameSort()		
-		.getFinalStatus();
+		.bulkAuth_Status(renamedfilename, clientcode, transtype);
+		
+//		.clickSalary_ConfirmRecord(renamedfilename) 
+//		.defaultFlaLink()
+//.clickFLA_Link()
+//		.filter_FileLevelAuth_Record(clientcode,transtype)
+//		.clickfilenameSort()		
+//		.getFinalStatus();
 
 
 

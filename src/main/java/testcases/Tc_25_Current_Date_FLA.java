@@ -137,7 +137,7 @@ new	HDFC_Login_Page(driver, test)
 
 .filter_FileLevelAuth_Record(clientcode,transtype)
 .clickfilenameSort()
-.authorizeflaRecord(filename,otp)
+.authorizeflaRecord(renamedfilename,otp)
 .clickBackButton()
 
 
@@ -145,7 +145,7 @@ new	HDFC_Login_Page(driver, test)
 .clickfilenameSort()
 
 .getAuthStatus("A")
-.authorize_CheckStatus_FLA(filename,clientcode,transtype);
+.authorize_CheckStatus_FLA(renamedfilename,clientcode,transtype);
 
 
 //

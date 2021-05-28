@@ -78,7 +78,7 @@ public class Tc_28_FLA_ECMS_Payment  extends ProjectWrapp {
 		
 		.filter_FileLevelAuth_Record(clientcode,transtype)
 		.clickfilenameSort()
-		.authorizeflaRecord(filename,otp)
+		.authorizeflaRecord(renamedfilename,otp)
 		.clickBackButton()
 
 
@@ -87,7 +87,7 @@ public class Tc_28_FLA_ECMS_Payment  extends ProjectWrapp {
 
 		.getAuthStatus("A")
 		
-		.authorize_CheckStatus_FLA(filename,clientcode,transtype);
+		.authorize_CheckStatus_FLA(renamedfilename,clientcode,transtype);
 
 
 		
