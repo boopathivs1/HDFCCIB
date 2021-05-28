@@ -4393,7 +4393,7 @@ reportStep("New window has opened", "PASS");
 	
 	public void PressEnterkey() {
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			Robot robot =new Robot();
 			System.out.println("enter");
 			robot.keyPress(KeyEvent.VK_ENTER);

@@ -69,7 +69,7 @@ public LogoutPages getrefnumber() throws InterruptedException{
 	}
 	
 	public LogoutPages clickCBDTSimulatorLogout() throws InterruptedException{
-		Thread.sleep(2000);
+		Thread.sleep(6000);
 		clickByXpathExplict(prop.getProperty("click.cbdt.simulator.logout"));
 		defaultcontent();
 		return this;
