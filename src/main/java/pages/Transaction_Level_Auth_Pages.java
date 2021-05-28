@@ -68,7 +68,7 @@ public class Transaction_Level_Auth_Pages extends ProjectWrapp{
 		
 		
 		selectVisibileTextByXPath(prop.getProperty("select.tla.paytype.xpath"),paytype);
-Thread.sleep(8000);		
+Thread.sleep(4000);		
 //		defaultcontent();
 		clickByXpathExplict(prop.getProperty("click.fla.view.xpath"));
 		
@@ -120,8 +120,8 @@ Thread.sleep(8000);
 		pageScroll1400("(.//input[contains(@onclick,'"+renamedfilename+"')])[1]//following::span[13]");
 		String status=getTextByXpath("(.//input[contains(@onclick,'"+renamedfilename+"')])[1]//following::span[13]");
 		
-		if(status.equalsIgnoreCase("A")){
-		new Transaction_Level_Auth_Pages(driver,test);
+		if(status.contains("A")){
+		//new Transaction_Level_Auth_Pages(driver,test);
 			clickFtla_ConfirmRecord()
 			.clickTLA_Link()
 			.filter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,renamedfilename,paytype)
