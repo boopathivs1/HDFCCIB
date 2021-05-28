@@ -113,8 +113,6 @@ public class Tc_34a_ACH_Payment_type_Debit  extends ProjectWrapp {
 		.getAuthStatus("A")
 		.clickSalary_ConfirmRecord(filename) 
 		.defaultFlaLink()
-
-
 .clickFLA_Link()
 		.filter_FileLevelAuth_Record(clientcode,paytype)
 		.clickfilenameSort()		

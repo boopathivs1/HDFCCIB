@@ -77,7 +77,7 @@ Thread.sleep(8000);
 			}
 	
 	public Transaction_Level_Auth_Pages getAuthStatus(String verifyStatus) throws InterruptedException{	
-
+scrolltoelementJs("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
 		String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
 		if(status.equalsIgnoreCase(verifyStatus)){
 			statusVerify(status);
@@ -159,7 +159,8 @@ defaultcontent();
 
 	
 	public Transaction_Level_Auth_Pages getFinalStatus() throws InterruptedException{	
-		Thread.sleep(30000);
+		Thread.sleep(15000);
+		scrolltoelementJs("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
 		String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
 		
 //		(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]

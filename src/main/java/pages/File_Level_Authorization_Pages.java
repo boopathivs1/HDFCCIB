@@ -138,6 +138,30 @@ acceptAlert();
 		return this;
 
 		}
+	public File_Level_Authorization_Pages ifsc_Auth_Status(String renamedfilename,String clientcode,String transtype) throws InterruptedException{	
+
+		String status=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[7]");
+		if(status.equalsIgnoreCase("A")){
+		new File_Level_Authorization_Pages(driver, test)
+			.clickSalary_ConfirmRecord(renamedfilename)
+//			.clickFla_ConfirmRecord(filename)
+			.defaultFlaLink()
+
+
+	.clickFLA_Link()
+			.filter_FileLevelAuth_Record(clientcode,transtype)
+			.clickfilenameSort()		
+			.getFinalStatus();
+
+
+			
+		}
+		else{
+			getAuthStatus("UP");
+		}
+		return this;
+
+		}
 		
 	
 	public File_Level_Authorization_Pages authorize_CheckStatus_FLA(String filename,String clientcode,String transtype) throws InterruptedException{

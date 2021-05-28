@@ -79,7 +79,7 @@ public class Tc_27_FLA_IFSC_Code_Conversion  extends ProjectWrapp {
 		
 		.filter_FileLevelAuth_Record(clientcode,transtype)
 		.clickfilenameSort()
-		.authorizeflaRecord(filename,otp)
+		.authorizeflaRecord(renamedfilename,otp)
 		.clickBackButton()
 
 
@@ -87,17 +87,18 @@ public class Tc_27_FLA_IFSC_Code_Conversion  extends ProjectWrapp {
 		.clickfilenameSort()
 
 		.getAuthStatus("A")
-		.clickSalary_ConfirmRecord(filename)
-//		.clickFla_ConfirmRecord(filename)
-		.defaultFlaLink()
-
-
-.clickFLA_Link()
-		.filter_FileLevelAuth_Record(clientcode,transtype)
-		.clickfilenameSort()		
-		.getFinalStatus();
-
-
+		.ifsc_Auth_Status(renamedfilename, clientcode, transtype);
+	
+//		.clickSalary_ConfirmRecord(renamedfilename)
+////		.clickFla_ConfirmRecord(filename)
+//		.defaultFlaLink()
+//
+//
+//.clickFLA_Link()
+//		.filter_FileLevelAuth_Record(clientcode,transtype)
+//		.clickfilenameSort()		
+//		.getFinalStatus();
+//
 
 
 		clickLogoutLink();
