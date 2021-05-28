@@ -114,6 +114,40 @@ Thread.sleep(8000);
 		}
 
 	
+
+	public Transaction_Level_Auth_Pages AuthorizeFTLAStatus(String renamedfilename, String Compname,String clientcode,String accno,String paytype, String uploadtype) throws InterruptedException{	
+
+		pageScroll1400("(.//input[contains(@onclick,'"+renamedfilename+"')])[1]//following::span[13]");
+		String status=getTextByXpath("(.//input[contains(@onclick,'"+renamedfilename+"')])[1]//following::span[13]");
+		
+		if(status.equalsIgnoreCase("A")){
+		new Transaction_Level_Auth_Pages(driver,test);
+			clickFtla_ConfirmRecord()
+			.clickTLA_Link()
+			.filter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,renamedfilename,paytype)
+			.clickTransNoSort()
+			.getftlaAuthStatus(uploadtype,"C")
+			.defaultcontent_Switch()
+
+			.clickTLA_Link()
+			.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,renamedfilename,paytype)
+			.clickTransNoSort()
+			.getftlaAuthStatus(uploadtype,"C")
+
+			.defaultcontent_Switch()
+
+			.filter_TransLevelAuth_Record(Compname,"ALL", clientcode, accno,renamedfilename, paytype)
+			.clickTransNoSort()
+			.getFTLAFinalStatus(uploadtype);
+		}
+		else{
+			getFTLAFinalStatus(uploadtype);
+			reportStep(status+ "Status has been displaying" ,"WARN");
+		}
+		return this;
+
+		}
+	
 	
 	
 	
@@ -141,13 +175,13 @@ defaultcontent();
 		}
 	
 	public Transaction_Level_Auth_Pages getFTLAFinalStatus(String filename) throws InterruptedException{	
-		Thread.sleep(30000);
+		Thread.sleep(10000);
 		
 		pageScroll1400("(.//input[contains(@onclick,'"+filename+"')])[1]//following::span[13]");
 		String status=getTextByXpath("(.//input[contains(@onclick,'"+filename+"')])[1]//following::span[13]");
 		
 //		(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]
-		if(status.contains("UP")||status.contains("U")){
+		if(status.contains("UP")||status.contains("U")||status.contains("C")){
 			reportStep(status+ " Status has been displaying" ,"PASS");
 		}
 

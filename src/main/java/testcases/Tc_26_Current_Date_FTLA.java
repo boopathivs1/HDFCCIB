@@ -89,23 +89,24 @@ public class Tc_26_Current_Date_FTLA  extends ProjectWrapp {
 		.filter_TransLevelAuth_Record(Compname,"Authorised",clientcode,accno,renamedfilename,paytype)
 		.clickTransNoSort()
 		.getftlaAuthStatus(uploadtype,"A")
-		.clickFtla_ConfirmRecord()
-		.clickTLA_Link()
-		.filter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,renamedfilename,paytype)
-		.clickTransNoSort()
-		.getftlaAuthStatus(uploadtype,"C")
-		.defaultcontent_Switch()
-
-		.clickTLA_Link()
-		.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,renamedfilename,paytype)
-		.clickTransNoSort()
-		.getftlaAuthStatus(uploadtype,"C")
-
-		.defaultcontent_Switch()
-
-		.filter_TransLevelAuth_Record(Compname,"ALL", clientcode, accno,renamedfilename, paytype)
-		.clickTransNoSort()
-		.getFTLAFinalStatus(uploadtype);
+		.AuthorizeFTLAStatus(filename, Compname, clientcode, accno, paytype, uploadtype);
+//		.clickFtla_ConfirmRecord()
+//		.clickTLA_Link()
+//		.filter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,renamedfilename,paytype)
+//		.clickTransNoSort()
+//		.getftlaAuthStatus(uploadtype,"C")
+//		.defaultcontent_Switch()
+//
+//		.clickTLA_Link()
+//		.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,renamedfilename,paytype)
+//		.clickTransNoSort()
+//		.getftlaAuthStatus(uploadtype,"C")
+//
+//		.defaultcontent_Switch()
+//
+//		.filter_TransLevelAuth_Record(Compname,"ALL", clientcode, accno,renamedfilename, paytype)
+//		.clickTransNoSort()
+//		.getFTLAFinalStatus(uploadtype);
 
 		clickLogoutLink();
 
