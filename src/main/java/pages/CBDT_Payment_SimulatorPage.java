@@ -44,9 +44,9 @@ public class CBDT_Payment_SimulatorPage extends ProjectWrapp{
 		enterByXpathExplict(prop.getProperty("enter.cbdt.tax.xpath"),Tax);
 		clickByXpathExplict(prop.getProperty("click.cbdt.confirm"));
 		//PressEnterkey();
-		Thread.sleep(7000);
-		acceptAlert();
 		Thread.sleep(3000);
+		acceptAlert();
+		
 	
 		verifyElementpresentByXpathExplicitwait("//center[contains(.,'sucessfully')]");
 		
