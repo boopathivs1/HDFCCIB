@@ -140,4 +140,36 @@ acceptAlert();
 		}
 		
 	
+	public File_Level_Authorization_Pages authorize_CheckStatus_FLA(String filename,String clientcode,String transtype) throws InterruptedException{
+		String status=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[7]");
+
+//		String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+		if(status.equalsIgnoreCase("A")){
+			clickFla_ConfirmRecord(filename)
+			.defaultFlaLink()
+
+
+			.clickFLA_Link()
+			.filter_FileLevelAuth_Record(clientcode,transtype)
+			.clickfilenameSort()		
+			.getFinalStatus();
+
+		}
+		else{
+			getAuthStatus("UP");
+			//getFinalStatus();		
+			
+			
+		}
+		
+		
+		
+	return this;	
+		
+	}
+
+
+	
+	
+	
 }

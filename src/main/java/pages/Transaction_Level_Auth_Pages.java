@@ -12,7 +12,50 @@ public class Transaction_Level_Auth_Pages extends ProjectWrapp{
 		this.test = test;
 	}
 
-	
+	public Transaction_Level_Auth_Pages 
+	authorize_CheckStatus_TLA(String Compname,String clientcode,String accno,String uploadtype,String paytype) throws InterruptedException{
+		String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
+
+		if(status.equalsIgnoreCase("A")){
+
+			
+			new Transaction_Level_Auth_Pages(driver, test)
+			.clicktla_ConfirmRecord()
+			.clickTLA_Link()
+			.filter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,uploadtype,paytype)
+			.clickTransNoSort()
+			.getAuthStatus("C")
+			.defaultcontent_Switch()
+
+			.clickTLA_Link()
+			.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
+			.clickTransNoSort()
+			.getAuthStatus("C")
+			.defaultcontent_Switch()
+			
+			.filter_TransLevelAuth_Record(Compname,"ALL", clientcode, accno,uploadtype, paytype)
+			.clickTransNoSort()
+			.getFinalStatus();
+
+		
+		
+		
+		}
+		else{
+			getAuthStatus("C");
+			//getFinalStatus();		
+			
+			
+		}
+		
+		
+		
+		
+	return this;	
+		
+	}
+
+
 	
 	public Transaction_Level_Auth_Pages filter_TransLevelAuth_Record(String compname,String status,String clientcode,String accno,String uploadtype,String paytype) throws InterruptedException{
 		contentFrames();
@@ -71,6 +114,9 @@ Thread.sleep(8000);
 		}
 
 	
+	
+	
+	
 	public Transaction_Level_Auth_Pages defaultcontent_Switch() throws InterruptedException{	
 defaultcontent();
 		return this;
@@ -83,7 +129,7 @@ defaultcontent();
 		String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
 		
 //		(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]
-		if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
+		if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("C")){
 			statusVerify(status);
 		}
 

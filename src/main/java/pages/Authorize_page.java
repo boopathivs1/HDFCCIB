@@ -236,8 +236,7 @@ return status;
 public Authorize_page checkStatus() throws InterruptedException{
 	String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
 	if(status.equalsIgnoreCase("A")){
-	
-//new Authorize_page(driver, test)		
+	//new Authorize_page(driver, test)		
 //		.
 		clickfirstAuthRec()
 		.confirmRecord()
