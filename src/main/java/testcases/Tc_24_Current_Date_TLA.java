@@ -99,27 +99,30 @@ new	HDFC_Login_Page(driver, test)
 
 .clickTransNoSort()
 .getAuthStatus("A")
-.clicktla_ConfirmRecord()
-.clickTLA_Link()
-.filter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,uploadtype,paytype)
-.clickTransNoSort()
-.getAuthStatus("C")
-.defaultcontent_Switch()
 
-.clickTLA_Link()
-.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
-.clickTransNoSort()
-.getAuthStatus("C")
+.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
 
-.defaultcontent_Switch()
-
-
-
-.filter_TransLevelAuth_Record(Compname,"ALL", clientcode, accno,uploadtype, paytype)
-.clickTransNoSort()
-.getFinalStatus();
-
-
+//.clicktla_ConfirmRecord()
+//.clickTLA_Link()
+//.filter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,uploadtype,paytype)
+//.clickTransNoSort()
+//.getAuthStatus("C")
+//.defaultcontent_Switch()
+//
+//.clickTLA_Link()
+//.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
+//.clickTransNoSort()
+//.getAuthStatus("C")
+//
+//.defaultcontent_Switch()
+//
+//
+//
+//.filter_TransLevelAuth_Record(Compname,"ALL", clientcode, accno,uploadtype, paytype)
+//.clickTransNoSort()
+//.getFinalStatus();
+//
+//
 
 
 clickLogoutLink();

@@ -145,14 +145,18 @@ new	HDFC_Login_Page(driver, test)
 .clickfilenameSort()
 
 .getAuthStatus("A")
-.clickFla_ConfirmRecord(filename)
-.defaultFlaLink()
+.authorize_CheckStatus_FLA(filename,clientcode,transtype);
 
 
-.clickFLA_Link()
-.filter_FileLevelAuth_Record(clientcode,transtype)
-.clickfilenameSort()		
-.getFinalStatus();
+//
+//.clickFla_ConfirmRecord(filename)
+//.defaultFlaLink()
+//
+//
+//.clickFLA_Link()
+//.filter_FileLevelAuth_Record(clientcode,transtype)
+//.clickfilenameSort()		
+//.getFinalStatus();
 
 
 
