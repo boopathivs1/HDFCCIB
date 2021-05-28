@@ -36,22 +36,23 @@ public class CBDT_Payment_SimulatorPage extends ProjectWrapp{
 	
 	public LogoutPages SubmitCBDTForm(String company, String Branch,String acc,String Tax ) throws InterruptedException{
 		
-		Thread.sleep(6000);
+		
 		
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.sim.xpath"),company);
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.sim.branch.xpath"), Branch);
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.sim.acc.xpath"), acc);
 		enterByXpathExplict(prop.getProperty("enter.cbdt.tax.xpath"),Tax);
-		clickByXpathExplict(prop.getProperty("click.cbdt.confirm"));
+		//clickByXpathExplict(prop.getProperty("click.cbdt.confirm"));
 		//PressEnterkey();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
+		
+		clickByXpathNoSnap(prop.getProperty("click.cbdt.confirm"));
+		Thread.sleep(2000);
 		acceptAlert();
-		
-	
-		verifyElementpresentByXpathExplicitwait("//center[contains(.,'sucessfully')]");
-		
-		
-		return new  LogoutPages(driver, test);
+		//verifyElementpresentByXpathExplicitwait("//center[contains(.,'sucessfully')]");
+		Thread.sleep(8000);
+		VerifyElementPresent(".//div[@id='result']/center", "form submitted","form not submitted");
+				return new  LogoutPages(driver, test);
 	}
 	
 	
