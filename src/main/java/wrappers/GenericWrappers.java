@@ -4486,14 +4486,18 @@ reportStep("New window has opened", "PASS");
 			reportStep("The window could not be switched to the last window.", "FAIL");
 		}
 	}
+	
+	
 	public void acceptAlert() {
 		try {
 			driver.switchTo().alert().accept();
+			
 			reportStep("The alert has been accepted.", "PASS",false);
 
 		}  catch (Exception e) {
 		//	reportStep("The alert could not be accepted.", "FAIL",false);
 		}
+
 
 	}
 
