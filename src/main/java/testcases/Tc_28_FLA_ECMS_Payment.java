@@ -86,15 +86,18 @@ public class Tc_28_FLA_ECMS_Payment  extends ProjectWrapp {
 		.clickfilenameSort()
 
 		.getAuthStatus("A")
-		.clickFla_ConfirmRecord(filename)
-		.defaultFlaLink()
+		
+		.authorize_CheckStatus_FLA(filename,clientcode,transtype);
 
 
-.clickFLA_Link()
-		.filter_FileLevelAuth_Record(clientcode,transtype)
-		.clickfilenameSort()		
-		.getFinalStatus();
-
+		
+//		.clickFla_ConfirmRecord(filename)
+//		.defaultFlaLink()
+//.clickFLA_Link()
+//		.filter_FileLevelAuth_Record(clientcode,transtype)
+//		.clickfilenameSort()		
+//		.getFinalStatus();
+//
 
 
 

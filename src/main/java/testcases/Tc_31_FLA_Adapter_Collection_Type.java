@@ -107,14 +107,16 @@ public class Tc_31_FLA_Adapter_Collection_Type  extends ProjectWrapp {
 		.clickfilenameSort()
 
 		.getAuthStatus("A")
-		.clickFla_ConfirmRecord(filename)
-		.defaultFlaLink()
+		.authorize_CheckStatus_FLA(filename,clientcode,transtype);
 
-
-.clickFLA_Link()
-		.filter_FileLevelAuth_Record(clientcode,transtype)
-		.clickfilenameSort()		
-		.getFinalStatus();
+		
+		
+//		.clickFla_ConfirmRecord(filename)
+//		.defaultFlaLink()
+//.clickFLA_Link()
+//		.filter_FileLevelAuth_Record(clientcode,transtype)
+//		.clickfilenameSort()		
+//		.getFinalStatus();
 
 
 
