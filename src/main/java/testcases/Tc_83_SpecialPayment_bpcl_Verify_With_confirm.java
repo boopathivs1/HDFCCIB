@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_79b_SpecialPayment_bpcl_Verify_With_confirm  extends ProjectWrapp {
+public class Tc_83_SpecialPayment_bpcl_Verify_With_confirm  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC50";
-		testDescription="SpecialPayment_bpcl";
+		testCaseName="TC83";
+		testDescription="SpecialPayment_bpcl_Verify_With_confirm";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC50";
+		testKeyword="TC83";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}

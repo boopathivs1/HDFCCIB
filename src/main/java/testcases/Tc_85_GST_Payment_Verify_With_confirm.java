@@ -51,7 +51,7 @@ public class Tc_85_GST_Payment_Verify_With_confirm  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.clickfirstAuthRec()
-	.getAuthVerifyStatus("VP")
+	.getSimulatorAuthVerifyStatus(Paytype,"VP")
 	.CheckVerifyStatus()
 	.defaultcontents()
 	.contentFrame()	
