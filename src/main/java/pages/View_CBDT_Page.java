@@ -38,10 +38,11 @@ public class View_CBDT_Page extends ProjectWrapp{
 			
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.comp.xpath"),compid);
 		Thread.sleep(2000);
-		WebElement ele = driver.findElement(By.xpath("//select[contains(@id,'branch')]"));
-		System.out.println(ele.isDisplayed()+"value is displaying");
+		//WebElement ele = driver.findElement(By.xpath("//select[contains(@id,'branch')]"));
+		
+		//System.out.println(ele.isDisplayed()+"value is displaying");
 		//clickByXpathExplict(prop.getProperty("select.cbdt.branch.xpath"));
-		selectVisibileTextByXPath(prop.getProperty("select.cbdt.branch.xpath"),branch);
+		selectVisibileTextByXPath(prop.getProperty("select.cbdt.branch.xpath"),"759, #ITC CENTREANNA SALAI, Opp T.V.S.");
 		Thread.sleep(2000);
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.accnum.xpath"),accno);
 		

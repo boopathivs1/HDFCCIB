@@ -9,11 +9,11 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_86_Onscreen_Payment_Quick  extends ProjectWrapp {
+public class Tc_86_Onscreen_Paymen_Verify_Without_confirm_Quick  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC86";
-		testDescription="Onscreen without confirm Verification-,Quick";
+		testDescription="Onscreen without confirm Verification Quick";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

@@ -1560,7 +1560,7 @@ public void statusVerify(String Status){
 	break;  
 	case "C": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"PASS");  
 	break;  
-	case "UP":reportStep(Status+ " Status has been displayging  and E (or) R Status has not been displaying" ,"PASS"); 
+	case "UP":reportStep(Status+ " Status has been displaying  and E (or) R Status has not been displaying" ,"PASS"); 
 	break;
 	case "E":reportStep(Status+ " Status has been displaying","PASS");
 	break;
