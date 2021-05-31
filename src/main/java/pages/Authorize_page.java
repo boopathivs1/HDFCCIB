@@ -302,7 +302,7 @@ return this;
 public Authorize_page getAuthStatus(String verifyStatus) throws InterruptedException{	
 
 String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
-System.out.println(status);
+//System.out.println(status);
 if(status.equalsIgnoreCase(verifyStatus)){
 	statusVerify(status);
 }
