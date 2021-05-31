@@ -165,6 +165,7 @@ public Authorize_page CheckVerifyStatus() throws InterruptedException{
 		
 		clickAuthVerify();	
 	}
+	
 	return this;
 
 	}
