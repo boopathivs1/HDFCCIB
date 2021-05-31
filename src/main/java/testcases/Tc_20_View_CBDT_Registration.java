@@ -29,12 +29,17 @@ public class Tc_20_View_CBDT_Registration  extends ProjectWrapp {
 			String data12,String data14,String data15,
 			String data16,String data17,String data20,String data21) throws Exception{
 		try{
+System.out.println("aaaaa");
+
+System.out.println(branch);
+System.out.println("aaaaaa");
 			getnewurl();
 		new	HDFC_Login_Page(driver, test)
 .fillCredentials(userid, pwd, domain)
 .clickFundTransfers()
 .click_View_CBDT_Link()
 .intiate_CBDT(Challanno, recordno)
+
 .fill_CBDT(compid,branch,accno,taxnum)
 .getrefnum();
 
