@@ -40,39 +40,39 @@ public class Tc_26_Current_Date_FTLA  extends ProjectWrapp {
 			int endindex=4;
 			String  serial_startnumber="1";
 			String renamedfilename=renamed_filename_one(filesname1,startindex,endindex, serial_startnumber);
-//			System.out.println("rename");
-//			System.out.println(renamedfilename);
-//			System.out.println("rename");
-//			String actualfilename=fileurl+filename+filesname1;
-//			String Renamedfilename_loc=fileurl+filename+renamedfilename;
-//			System.out.println("++++++++++++");
-//			System.out.println(Renamedfilename_loc);
-//			System.out.println("++++++++++++");
-//			convention(actualfilename,Renamedfilename_loc);
-//			String currentdate=dateMonthSlash();
-//			int li_no=1;
-//			int va_in=22;
-//			String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
-//			System.out.println(value);
-//			System.out.println("oooooooooooo");
-//			modifyFile(Renamedfilename_loc,value,currentdate);
-//
-//			
-//			
-//			
-//			getnewurl();
-//			new	HDFC_Login_Page(driver, test)
-//		.fillCredentials(userid, pwd, domain)
-//		.clickCashManageServiceLink()
-//		.clickDisbursementLink()
-//		.clickUploadLink()
-//
-//		.CMSUploadFormSubmit(clientcode, totalIns, totalamt, transtype, false,Renamedfilename_loc)
-//		.getrefnum()
-//		.click_File_Level_View_Link()
-//		.filter_FileLevel_Record(clientcode,transtype)
-//		.clickLogoutLink();
-//
+			System.out.println("rename");
+			System.out.println(renamedfilename);
+			System.out.println("rename");
+			String actualfilename=fileurl+filename+filesname1;
+			String Renamedfilename_loc=fileurl+filename+renamedfilename;
+			System.out.println("++++++++++++");
+			System.out.println(Renamedfilename_loc);
+			System.out.println("++++++++++++");
+			convention(actualfilename,Renamedfilename_loc);
+			String currentdate=dateMonthSlash();
+			int li_no=1;
+			int va_in=22;
+			String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
+			System.out.println(value);
+			System.out.println("oooooooooooo");
+			modifyFile(Renamedfilename_loc,value,currentdate);
+
+			
+			
+			
+			getnewurl();
+			new	HDFC_Login_Page(driver, test)
+		.fillCredentials(userid, pwd, domain)
+		.clickCashManageServiceLink()
+		.clickDisbursementLink()
+		.clickUploadLink()
+
+		.CMSUploadFormSubmit(clientcode, totalIns, totalamt, transtype, false,Renamedfilename_loc)
+		.getrefnum()
+		.click_File_Level_View_Link()
+		.filter_FileLevel_Record(clientcode,transtype)
+		.clickLogoutLink();
+
 
 				getnewurl();
 		new	HDFC_Login_Page(driver, test)

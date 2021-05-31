@@ -36,9 +36,9 @@ public class Tc_20_View_CBDT_Registration  extends ProjectWrapp {
 .click_View_CBDT_Link()
 .intiate_CBDT(Challanno, recordno)
 .fill_CBDT(compid,branch,accno,taxnum)
-		.getrefnum();
+.getrefnum();
 
-		clickLogoutLink();
+clickLogoutLink();
 
 
 		getnewurl();		

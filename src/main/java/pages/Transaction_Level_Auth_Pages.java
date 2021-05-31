@@ -68,7 +68,7 @@ public class Transaction_Level_Auth_Pages extends ProjectWrapp{
 		
 		
 		selectVisibileTextByXPath(prop.getProperty("select.tla.paytype.xpath"),paytype);
-Thread.sleep(4000);		
+Thread.sleep(8000);		
 //		defaultcontent();
 		clickByXpathExplict(prop.getProperty("click.fla.view.xpath"));
 		

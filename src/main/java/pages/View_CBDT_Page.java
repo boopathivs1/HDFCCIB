@@ -1,5 +1,7 @@
 package pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.relevantcodes.extentreports.ExtentTest;
@@ -35,8 +37,12 @@ public class View_CBDT_Page extends ProjectWrapp{
 	
 			
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.comp.xpath"),compid);
-		
+		Thread.sleep(2000);
+		WebElement ele = driver.findElement(By.xpath("//select[contains(@id,'branch')]"));
+		System.out.println(ele.isDisplayed()+"value is displaying");
+		//clickByXpathExplict(prop.getProperty("select.cbdt.branch.xpath"));
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.branch.xpath"),branch);
+		Thread.sleep(2000);
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.accnum.xpath"),accno);
 		
 		enterByXpathExplict(prop.getProperty("enter.cbdt.tax.num.xpath"),taxnum);
