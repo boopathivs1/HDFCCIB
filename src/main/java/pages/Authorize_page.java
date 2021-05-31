@@ -305,8 +305,7 @@ String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//f
 //System.out.println(status);
 if(status.equalsIgnoreCase(verifyStatus)){
 	statusVerify(status);
-}
-else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("UP")){
+}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("U")){
 	statusVerify(status);
 }
 else{
@@ -389,6 +388,24 @@ else{
 return this;
 
 }
+
+public Authorize_page getSimulatorAuthVerifyStatus(String paytype ,String verifyStatus) throws InterruptedException{	
+
+String status=getTextByXpath("(.//input[contains(@onclick,'"+paytype+"')]//following::span)[9]");
+if(status.equalsIgnoreCase(verifyStatus)){
+	statusVerify(status);
+}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("P")){
+	statusVerify(status);
+}
+
+
+else{
+	reportStep(status+ "Status has been displaying" ,"WARN");
+}
+return this;
+
+}
+
 
 
 
