@@ -50,7 +50,8 @@ public class Tc_86_Onscreen_Payment_Quick  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.clickAuthVerify()
+.getAuthVerifyStatus("VP")
+.CheckVerifyStatus()
 .defaultcontents()
 .contentFrame()	
 .clickViewLink()
@@ -63,20 +64,21 @@ public class Tc_86_Onscreen_Payment_Quick  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+.checkStatus();
 
 //.clickfirstAuthRec()
 //.confirmRecord()
-.contentFrame()
-.clickViewLink()
-.authrecordFrame()
-.clickreflink()
-.getAuthStatus("UP")
-.defaultcontents()
-.contentFrame()		
-.clickViewLink()
-.authrecordFrame()
-.clickreflink()
-.getFinalStatus();
+//.contentFrame()
+//.clickViewLink()
+//.authrecordFrame()
+//.clickreflink()
+//.getAuthStatus("UP")
+//.defaultcontents()
+//.contentFrame()		
+//.clickViewLink()
+//.authrecordFrame()
+//.clickreflink()
+//.getFinalStatus();
 defaultcontent();		
 clickLogoutLink();
 

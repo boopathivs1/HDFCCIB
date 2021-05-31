@@ -41,9 +41,9 @@ System.out.println("aaaaaa");
 .intiate_CBDT(Challanno, recordno)
 
 .fill_CBDT(compid,branch,accno,taxnum)
-		.getrefnum();
+.getrefnum();
 
-		clickLogoutLink();
+clickLogoutLink();
 
 
 		getnewurl();		

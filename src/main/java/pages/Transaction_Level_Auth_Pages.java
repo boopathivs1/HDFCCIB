@@ -120,8 +120,8 @@ scrolltoelementJs("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following:
 		pageScroll1400("(.//input[contains(@onclick,'"+renamedfilename+"')])[1]//following::span[13]");
 		String status=getTextByXpath("(.//input[contains(@onclick,'"+renamedfilename+"')])[1]//following::span[13]");
 		
-		if(status.equalsIgnoreCase("A")){
-		new Transaction_Level_Auth_Pages(driver,test);
+		if(status.contains("A")){
+		//new Transaction_Level_Auth_Pages(driver,test);
 			clickFtla_ConfirmRecord()
 			.clickTLA_Link()
 			.filter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,renamedfilename,paytype)

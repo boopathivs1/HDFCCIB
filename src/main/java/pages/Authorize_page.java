@@ -141,6 +141,38 @@ public Authorize_page clickAuthVerify(){
 
 }
 
+public Authorize_page getAuthVerifyStatus(String verifyStatus) throws InterruptedException{	
+
+	String status=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[9]");
+	if(status.equalsIgnoreCase(verifyStatus)){
+		statusVerify(status);
+	}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("P")){
+		statusVerify(status);
+	}
+
+
+	else{
+		reportStep(status+ "Status has been displaying" ,"WARN");
+	}
+	return this;
+
+	}
+
+public Authorize_page CheckVerifyStatus() throws InterruptedException{	
+
+	String status=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[9]");
+	if(status.contains("VP")){
+		
+		clickAuthVerify();	
+	}
+	
+	return this;
+
+	}
+
+
+
+
 public Authorize_page clickfirstFDAuthRec(){	
 	
 	clickByXpathExplict(".//input[contains(@value,'"+getrefnumer+"')])[1]");

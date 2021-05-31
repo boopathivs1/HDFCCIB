@@ -1568,6 +1568,10 @@ public void statusVerify(String Status){
 	break;
 	case "Q": reportStep(Status+ " Status has been displaying" ,"PASS");
 	break;  
+	case "VP": reportStep(Status+ " Status has been displaying" ,"PASS");
+	break; 
+	case "P": reportStep(Status+ " Status has been displaying" ,"PASS");
+	break;
 	//Default case statement  
 	
 	default:System.out.println(Status);
