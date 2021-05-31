@@ -30,19 +30,20 @@ public class View_CBDT_Page extends ProjectWrapp{
 //click.view.cbdt.link.xpath=.//span[contains(text(),'View')]
 //click.cbdt.record.xpath=.//input[contains(@onclick,'280')]
 //click.cbdt.initiate.xpath=.//span[contains(text(),'InitiatePayment')]
+		
+	defaultcontent();
 		return this;
 	
 	
 	}
 	public LogoutPages fill_CBDT(String compid,String branch,String accno,String taxnum) throws InterruptedException{
 	
-			
+		contentFrames();
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.comp.xpath"),compid);
 		Thread.sleep(2000);
-		WebElement ele = driver.findElement(By.xpath("//select[contains(@id,'branch')]"));
-		System.out.println(ele.isDisplayed()+"value is displaying");
-		//clickByXpathExplict(prop.getProperty("select.cbdt.branch.xpath"));
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.branch.xpath"),branch);
+		
+		
 		Thread.sleep(2000);
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.accnum.xpath"),accno);
 		

@@ -24,9 +24,11 @@ public class Tc_56_Onscreen_Payment_Single_Without_verify  extends ProjectWrapp 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
 	public void checkAccSummary(String casename,String userid,String pwd,String groupid,
-			String selectformat,String amount,String authuserid,String authpwd,String authgroupid,String compid
-			,String SelectStatus,String Paytype,String compBranch,String accno,String benecode,String data12,String data13,
-			String data14,String data15,String data16,String data17,String data18,String data19,String data20,String data21) throws Exception{
+			String selectformat,String amount,String authuserid,String authpwd,String authgroupid,
+			String compid,String SelectStatus,String Paytype,String compBranch,String accno,String benecode,
+			String data12,String data13,
+			String data14,String data15,String data16,String data17,String data18,String data19,String data20,
+			String data21) throws Exception{
 		
 		
 		try{

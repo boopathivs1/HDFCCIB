@@ -162,7 +162,7 @@ public Authorize_page CheckVerifyStatus() throws InterruptedException{
 
 	String status=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[9]");
 	if(status.contains("VP")){
-		
+		reportStep(status+"Status has been dispalying","PASS");
 		clickAuthVerify();	
 	}
 	

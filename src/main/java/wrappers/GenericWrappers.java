@@ -4327,6 +4327,30 @@ Thread.sleep(2000);
 			reportStep("The value: "+value+" could not be selected.", "FAIL");
 		}
 	}
+	public void selectValueByxpath(String element, String value) {
+		try{
+			
+			
+			//new Select(driver.findElement(By.xpath(element))).selectByIndex(value);
+			
+			Select se = new Select(driver.findElement(By.xpath(element)));
+			 
+			// Select the option with value "6"
+			se.selectByValue(value);
+			reportStep("The element with id: "+element+" is selected with index :"+value, "PASS");
+		} 
+		
+
+		
+		
+		
+		catch (Exception e) {
+			reportStep("The index: "+value+" could not be selected.", "FAIL");
+		}
+	}
+	
+	
+	
 	public void selectIndexByxpath(String element, int value) {
 		try{
 			new Select(driver.findElement(By.xpath(element))).selectByIndex(value);
