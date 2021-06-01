@@ -32,7 +32,7 @@ public class AcctoAccBulk extends ProjectWrapp{
 		
 		clickByXpathExplict(prop.getProperty("click.bulk.ok.xpath"));
 		
-		
+		Thread.sleep(40000);
 		
 		clickByXpathExplict(prop.getProperty("click.quick.save.xpath"));
 		
