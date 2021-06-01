@@ -48,20 +48,41 @@ public class Tc_34b_ACH_Payment_type_Credit  extends ProjectWrapp {
 
 		modifyFile(Renamedfilename_loc,value1,value3);
 
-			
 
-			
-	content_check(1,5,Renamedfilename_loc);
-	content_check(2,5,Renamedfilename_loc);
-		content_check(3,5,Renamedfilename_loc);
-		content_check(4,5,Renamedfilename_loc);
-		content_check(5,5,Renamedfilename_loc);
-		content_check(6,5,Renamedfilename_loc);
-		content_check(7,5,Renamedfilename_loc);
-		content_check(8,5,Renamedfilename_loc);
-		content_check(9,5,Renamedfilename_loc);
-		content_check(10,5,Renamedfilename_loc);
+		
+		int sub_a=0;
+		int sub_b=82;
+		int sub_c=87;
+		int sub_d=143;
+		int ran_a=10000;
+		int ran_b=99999;
+		ach_content_check(1,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(2,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(3,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(4,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(5,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(6,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(7,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(8,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(9,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(10,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
 
+		
+
+		
+		
+//			
+//	content_check(1,5,Renamedfilename_loc);
+//	content_check(2,5,Renamedfilename_loc);
+//		content_check(3,5,Renamedfilename_loc);
+//		content_check(4,5,Renamedfilename_loc);
+//		content_check(5,5,Renamedfilename_loc);
+//		content_check(6,5,Renamedfilename_loc);
+//		content_check(7,5,Renamedfilename_loc);
+//		content_check(8,5,Renamedfilename_loc);
+//		content_check(9,5,Renamedfilename_loc);
+//		content_check(10,5,Renamedfilename_loc);
+//
 			
 			
 //			String currentdate=dateMonthSlash();

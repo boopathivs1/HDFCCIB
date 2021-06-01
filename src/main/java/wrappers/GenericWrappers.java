@@ -281,6 +281,27 @@ catch(Exception e){
 //	    // this will convert any number sequence into 6 character.
 	    return s;
 	}
+
+	
+	public static String gettwoRandomNumber_range_String(int a, int b) {
+	    // It will generate 6 digit random Number.
+	    // from 0 to 999999
+	   
+		 int min = a;
+		    int max = b;
+
+		    int num = (int) (Math.random() * (max - min + 1)) + min;
+	
+		    String s=Integer.toString(num);
+		  	
+		
+//	    Random rnd = new Random();
+//	    int number = rnd.nextInt(99);
+//
+//	    // this will convert any number sequence into 6 character.
+	    return s;
+	}
+
 	
 	public static String getRandomNumberString() {
 	    // It will generate 6 digit random Number.
@@ -2171,20 +2192,51 @@ public void loadendtimecalc(String xpath,String loadmsg) throws InterruptedExcep
 	
 	public static String GetTodayDate()
 	{
+		String Fromdate="";		
+		
+		String D="";
+		
 		String M="";
-		String Fromdate="";
-		 LocalDate currentdate = LocalDate.now();
-		 int currentDay = currentdate.getDayOfMonth();
-		 int month =currentdate.getMonthValue();
-		 int year = currentdate.getYear();
-		 if(month <=9)
-		 {
-			M ="0"+month;
-			 
-		 }
-		 return Fromdate =currentDay+M+year;
+		String actualdate="";
+	LocalDate currentdate = LocalDate.now();
+	int currentDay = currentdate.getDayOfMonth();
+	int month =currentdate.getMonthValue();
+	String year =Integer.toString(currentdate.getYear()); 
+	if(currentDay <=9)
+	{
+			D ="0"+currentDay;
+
 	}
+	else{
+		D=Integer.toString(currentDay);
+
+	}
+
+
+
+	if(month <=9)
+	{
+			M ="0"+month;
+
+	}else{
+		M=Integer.toString(month);
+
+	}
+	actualdate=D+M;
+	System.out.println(M+currentDay);
+	 return Fromdate =D+M+year;
+		
+	}
+
 	
+	
+	////////////////////
+		
+		
+		
+		
+		
+
 	public static String GetTodayFoematDate()
 	{
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -2504,18 +2556,35 @@ public void AttributesVerifyxpath(String xpath, String value,String valtext) {
 }
 
 public String dateMonth(){
+	String D="";
 	
 	String M="";
 	String actualdate="";
 LocalDate currentdate = LocalDate.now();
 int currentDay = currentdate.getDayOfMonth();
 int month =currentdate.getMonthValue();
+
+if(currentDay <=9)
+{
+		D ="0"+currentDay;
+
+}
+else{
+	D=Integer.toString(currentDay);
+
+}
+
+
+
 if(month <=9)
 {
 		M ="0"+month;
 
+}else{
+	M=Integer.toString(month);
+
 }
-actualdate=currentDay+M;
+actualdate=D+M;
 System.out.println(M+currentDay);
 return actualdate;
 
@@ -2658,6 +2727,27 @@ public void modifyFile(String filePath, String oldString, String newString)
 
 
 
+public void ach_content_check(int linenum, int index,String Renamedfilename_loc,int sub_a,int sub_b,int sub_c,int sub_d,int ran_a,int ran_b){
+try{
+String value3 =filespecific_cont(linenum,index,Renamedfilename_loc);
+
+
+String value4=removemiddle_String(value3,sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+
+//String value4=removeLastTwoString(value3);
+String final_row_1=value4;
+//+gettwoRandomNumberString();
+
+modifyFile(Renamedfilename_loc,value3,final_row_1);
+}
+catch (Exception e) {
+	// TODO: handle exception
+}
+
+}
+
+
+
 
 public void content_check(int linenum, int index,String Renamedfilename_loc){
 try{
@@ -2691,6 +2781,52 @@ public String removeLastTwoString(String a){
 	
 	
 }
+
+public String removemiddle_String(String value,int sub_a,int sub_b,int sub_c,int sub_d,int ran_a,int ran_b){
+	
+//	try{
+//		  s=a.substring(0, a.length() - 2);
+//    System.out.println(a.substring(0, a.length() - 2)  +"vvvvvvvvvvv");
+//  
+//	}
+//	catch (Exception e) {
+//		// TODO: handle exception
+//	}
+//	return s;
+    
+  
+	
+	
+	String value1 = value;
+String ss1 = null;
+String ss2=null;
+String finalval=null;	
+String randomnumber=null;
+try{
+//		  s=a.substring(0, a.length() - 2);
+
+		  ss1=value1.substring(sub_a,sub_b);
+		 ss2=value1.substring(sub_c,sub_d);
+		
+		System.out.println(ss1);
+  System.out.println(ss2);
+
+   randomnumber=gettwoRandomNumber_range_String(ran_a,ran_b);
+  System.out.println(randomnumber);
+finalval=ss1+randomnumber+ss2;
+
+
+}
+catch (Exception e) {
+
+}
+	
+	
+return finalval;	
+}
+
+
+
 
 public String removeLastString_index(String a,int b){
 	  String s = "";
