@@ -59,7 +59,7 @@ public class Tc_36_CBDT_Upload_Payment  extends ProjectWrapp {
 .clickUploadLink()
 
 .UploadFormSubmit(clientcode, totalIns, totalamt, transtype,true,Renamedfilename_loc)
-.getrefnum()
+.getrefnumAch(0,17)
 .click_File_Level_View_Link()
 .filter_FileLevel_Record(clientcode,transtype)
 .clickLogoutLink();
