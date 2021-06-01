@@ -51,8 +51,24 @@ public class Tc_35_ECH_Payment_type  extends ProjectWrapp {
 			String value3=value2+GetTodayDate();
 		modifyFile(Renamedfilename_loc,value1,value3);
 
-			
 
+		
+		int sub_a=0;
+		int sub_b=8;
+		int sub_c=12;
+		int sub_d=26;
+		int ran_a=1000;
+		int ran_b=9999;
+		ach_content_check(1,6, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(2,6, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(3,6, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(4,6, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(5,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		ach_content_check(6,6, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+
+		
+		
+/*
 			
 	content_check(1,6,Renamedfilename_loc);
 	content_check(2,6,Renamedfilename_loc);
@@ -61,7 +77,7 @@ public class Tc_35_ECH_Payment_type  extends ProjectWrapp {
 		content_check(5,6,Renamedfilename_loc);
 		content_check(6,6,Renamedfilename_loc);
 		
-			
+	*/		
 			
 //			String currentdate=dateMonthSlash();
 //			int li_no=2;

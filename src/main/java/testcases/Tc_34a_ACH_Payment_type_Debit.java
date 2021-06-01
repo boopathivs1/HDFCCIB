@@ -42,27 +42,39 @@ public class Tc_34a_ACH_Payment_type_Debit  extends ProjectWrapp {
 			convention(actualfilename,Renamedfilename_loc);
 
 //	String currentdate=dateMonthSlash();
+
+			
+			
 			int li_no=0;
 			int va_in=3;
 			String value1 =filespecific_cont(li_no, va_in,Renamedfilename_loc);
 	String value2=value1.substring(0,26);
 		String accno_date=value2+GetTodayDate();
+	
+		System.out.println(accno_date);
+		
 		modifyFile(Renamedfilename_loc,value1,accno_date);
+int sub_a=0;
+int sub_b=39;
+int sub_c=44;
+int sub_d=56;
+int ran_a=10000;
+int ran_b=99999;
+ach_content_check(1,9, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+ach_content_check(2,7, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+ach_content_check(3,9, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+ach_content_check(4,7, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+ach_content_check(5,8, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+ach_content_check(6,8, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+ach_content_check(7,8, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+ach_content_check(8,7, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+ach_content_check(9,7, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+ach_content_check(10,11, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
 
-			
 
-			
-	content_check(1,10,Renamedfilename_loc);
-	content_check(2,8,Renamedfilename_loc);
-		content_check(3,10,Renamedfilename_loc);
-		content_check(4,8,Renamedfilename_loc);
-		content_check(5,9,Renamedfilename_loc);
-		content_check(6,9,Renamedfilename_loc);
-		content_check(7,9,Renamedfilename_loc);
-		content_check(8,8,Renamedfilename_loc);
-		content_check(9,8,Renamedfilename_loc);
-		content_check(10,12,Renamedfilename_loc);
 
+	
+	
 //		String value3 =filespecific_cont(1,10,Renamedfilename_loc);
 //		String value4=removeLastTwoString(value3);
 //		String final_row_1=value4+gettwoRandomNumberString();					

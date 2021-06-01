@@ -4,6 +4,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -37,10 +38,15 @@ public class View_CBDT_Page extends ProjectWrapp{
 	
 	}
 	public LogoutPages fill_CBDT(String compid,String branch,String accno,String taxnum) throws InterruptedException{
-	
+		Thread.sleep(10000);
+		
 		contentFrames();
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.comp.xpath"),compid);
-		Thread.sleep(2000);
+		Thread.sleep(10000);
+		
+
+		
+		
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.branch.xpath"),branch);
 		
 		
