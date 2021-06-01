@@ -25,6 +25,7 @@ import java.text.SimpleDateFormat;
 import java.time.Clock;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -109,6 +110,8 @@ public class GenericWrappers extends Reporter implements Wrappers {
 
 	public static Boolean LogoutStatus=null;
 	public static String usertype=null;
+	
+	public static int Graceperiod=2;
 	public GenericWrappers() {
 		
 		Properties prop = new Properties();
@@ -2592,6 +2595,7 @@ return actualdate;
 }
 
 
+
 public String dateMonthSlash(){
 DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 Date date = new Date();
@@ -2602,6 +2606,28 @@ return expected;
 
 
 }
+
+
+public static String GetFuturedate(int d)
+{
+	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+Date currentDate = new Date();
+  Calendar c = Calendar.getInstance();
+    c.setTime(currentDate);
+c.add(Calendar.DATE, d); 
+ Date currentDatePlusOne = c.getTime();
+    
+    String Futuredate=dateFormat.format(currentDatePlusOne);
+
+    System.out.println(Futuredate);
+    
+    return Futuredate;
+
+}
+
+
+			
+	
 
 
 

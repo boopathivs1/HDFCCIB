@@ -267,6 +267,7 @@ return status;
 }
 public Authorize_page checkStatus() throws InterruptedException{
 	String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+	
 	if(status.equalsIgnoreCase("A")){
 	//new Authorize_page(driver, test)		
 //		.
@@ -291,8 +292,47 @@ public Authorize_page checkStatus() throws InterruptedException{
 		
 	}
 	
+
+return this;	
 	
+}
+
+
+
+
+public Authorize_page checkGraceStatus() throws InterruptedException{
+	String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+	if(status.equalsIgnoreCase("A")){
+	//new Authorize_page(driver, test)		
+//		.
+		
+		clickfirstAuthRec()
+		.confirmRecord()
+		.contentFrame()
+		.clickViewLink()
+		.authrecordFrame()
+		.clickreflink()
+		.getAuthStatus("UP")
+		.defaultcontents()
+		.contentFrame()		
+		.clickViewLink()
+		.authrecordFrame()
+		.clickreflink()
+		.getFinalStatus()
+		.getAuthorizeddate();
+		
+		
+	}
+	else{
+		getAuthStatus("UP")
+		.getAuthorizeddate();
+		
+		//getFinalStatus();		
+		
+		
+	}
 	
+
 return this;	
 	
 }
@@ -315,6 +355,59 @@ return this;
 
 }
 
+
+public Authorize_page getValuedate() throws InterruptedException{	
+
+String Valuedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[11]");
+
+
+//System.out.println(status);
+if(Valuedate.equalsIgnoreCase(dateMonthSlash())){
+
+	reportStep(Valuedate+ "Expected Bookingdate has been displaying" ,"PASS");
+}
+else{
+	reportStep(Valuedate+ "Expected Bookingdate has  not been displaying" ,"FAIL");
+}
+return this;
+
+}
+
+public Authorize_page getGracedate(int d) throws InterruptedException{	
+
+String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[12]");
+
+
+//System.out.println(status);
+if(Gracedate.equalsIgnoreCase(GetFuturedate(d))){
+
+	reportStep(Gracedate+ "Expected  Gracedate has been displaying" ,"PASS");
+}
+else{
+	reportStep(Gracedate+ "Expected  Gracedate has  not been displaying" ,"FAIL");
+}
+return this;
+
+}
+
+
+
+public Authorize_page getAuthorizeddate() throws InterruptedException{	
+
+String Valuedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[12]");
+
+
+//System.out.println(status);
+if(Valuedate.equalsIgnoreCase(dateMonthSlash())){
+
+	reportStep(Valuedate+ "Expected Authorizeddate has been displaying" ,"PASS");
+}
+else{
+	reportStep(Valuedate+ "Expected Authorizeddate has  not been displaying" ,"FAIL");
+}
+return this;
+
+}
 
 
 public Authorize_page checkWCDLStatus() throws InterruptedException{
