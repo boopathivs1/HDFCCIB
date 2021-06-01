@@ -8,16 +8,26 @@ public class DateWithoutSlash {
 		// TODO Auto-generated method stub
 //			
 			String M="";
+			String D="";
 			String actualdate="";
 	 LocalDate currentdate = LocalDate.now();
  int currentDay = currentdate.getDayOfMonth();
  int month =currentdate.getMonthValue();
- if(month <=9)
+ if(month <=9 && currentDay<=9)
  {
 				M ="0"+month;
+				D="0"+currentDay;
+				actualdate= M+D;
+				System.out.println(actualdate);
  
  }
-	 System.out.println(M+currentDay);
+ else
+ {
+	 System.out.println(actualdate);
+
+ }
+ 
+	 
  
 		}
 
