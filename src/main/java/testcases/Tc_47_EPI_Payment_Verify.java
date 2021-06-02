@@ -10,11 +10,11 @@ import com.relevantcodes.extentreports.ExtentTest;
 import pages.EPI_Payment_SimulatorPage;
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_47_EPI_Payment  extends ProjectWrapp {
+public class Tc_47_EPI_Payment_Verify  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC47";
-		testDescription="UPI Payment";
+		testDescription="EPI_Payment_Verify ";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

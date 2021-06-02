@@ -13,7 +13,7 @@ public class Tc_67_Onscreen_Payment_CBECPayment_without_verification  extends Pr
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC67";
-		testDescription="Onscreen_Payment_CBECPayment";
+		testDescription="Onscreen_Payment_CBECPayment_without_verification";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

@@ -9,37 +9,39 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_74_Onscreen_Payment_NEFT  extends ProjectWrapp {
+public class Tc_41_Onscreen_Payment_Verification_Single  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC74";
-		testDescription="Onscreen_Payment_NEFT";
+		testCaseName="TC41";
+		testDescription="Onscreen_Payment_Verification_Single ";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Boopathi";
-		testKeyword="TC74";
+		authors="Sreejith";
+		testKeyword="TC41";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void checkAccSummary(String casename,String userid,String pwd,String groupid,String paymode,
-			String selectcompany,String selectbranch,String selectaccount,String beneneft,String amount,String Remarks,String authuserid,String authpwd,String authgroupid,
-			String compid,String SelectStatus,String Paytype,String data1,String data10,String data11,
-			String data12,String data13,String data14,String data15,
-			String data16) throws Exception{
+	public void checkAccSummary(String casename,String userid,String pwd,String groupid,
+			String selectformat,String amount,String authuserid,String authpwd,String authgroupid,String compid
+			,String SelectStatus,String Paytype,String compBranch,String accno,String benecode,String data12,String data13,
+			String data14,String data15,String data16,String data17,String data18,String data19,String data20,String data21) throws Exception{
+		
+		
 		try{
-
+			String accnum=regvalue(accno);
 			getnewurl();
-		new	HDFC_Login_Page(driver, test)
+
+			new	HDFC_Login_Page(driver, test)
 .fillCredentials(userid, pwd, groupid)
 .clickFundTransfers()
-.clickNEFTRTGSLink()
-.clickNEFTRTGS_Add_Link()
-.fill_NEFT_RTGS_Singleform(paymode, selectcompany, selectbranch, selectaccount, beneneft,amount, Remarks)
+.clickAcctoAccLink()
+.clickAccSingleLink()
+.fillAcctoAccSingleform(selectformat,compid,compBranch,accnum,benecode, amount)
+//.fillAcctoAccSingleform(selectformat, amount)
 .getrefnum()
 .clickLogout();		
-	//getrefnumer="FT103267653347";
 		getnewurl();		
 		new	HDFC_Login_Page(driver, test)
 .fillCredentials(authuserid, authpwd, authgroupid)
@@ -51,7 +53,8 @@ public class Tc_74_Onscreen_Payment_NEFT  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.clickAuthVerify()
+.getAuthVerifyStatus("VP")
+.CheckVerifyStatus()
 .defaultcontents()
 .contentFrame()	
 .clickViewLink()
@@ -64,19 +67,22 @@ public class Tc_74_Onscreen_Payment_NEFT  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
-.clickfirstAuthRec()
-.confirmRecord()
-.contentFrame()
-.clickViewLink()
-.authrecordFrame()
-.clickreflink()
-.getAuthStatus("UP")
-.defaultcontents()
-.contentFrame()		
-.clickViewLink()
-.authrecordFrame()
-.clickreflink()
-.getFinalStatus();
+.checkStatus();
+		
+//.clickfirstAuthRec()
+//.confirmRecord()
+//.contentFrame()
+//.clickViewLink()
+//.authrecordFrame()
+//.clickreflink()
+//.getAuthStatus("UP")
+//.defaultcontents()
+//.contentFrame()		
+//.clickViewLink()
+//.authrecordFrame()
+//.clickreflink()
+//.getFinalStatus();
+
 defaultcontent();		
 clickLogoutLink();
 

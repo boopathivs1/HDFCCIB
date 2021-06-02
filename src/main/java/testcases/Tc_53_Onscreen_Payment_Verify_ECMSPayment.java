@@ -9,41 +9,39 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_51_Onscreen_Payment_CBDT  extends ProjectWrapp {
+public class Tc_53_Onscreen_Payment_Verify_ECMSPayment  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC51";
-		testDescription="Onscreen_Payment_CBDT";
+		testCaseName="TC53";
+		testDescription="Onscreen_Payment_Verify_ECMSPayment";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC51";
+		testKeyword="TC53";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void checkAccSummary(String casename,String userid,String pwd,String domain,String Challanno,String recordno,
-			String compid,String branch,String accno,String taxnum,	String authuserid,String authpwd,String authdomain,
-			String SelectStatus,String Paytype,String data1,String data10,String data11,
-			String data12,String data14,String data15,
-			String data16,String data17,String data20,String data21) throws Exception{
+	public void checkAccSummary(String casename,String userid,String pwd,String groupid,String company,
+			String branch,String acc,String bene,String amount, String authuserid,String authpwd,
+			String authgroupid,String compid,String SelectStatus,String Paytype,String remarks,String data13,String data14,String data15,
+			String data16,String data17,String data18,String data19, String data20,String data21) throws Exception{
 		try{
 			getnewurl();
 		new	HDFC_Login_Page(driver, test)
-.fillCredentials(userid, pwd, domain)
+.fillCredentials(userid, pwd, groupid)
 .clickFundTransfers()
-.click_View_CBDT_Link()
-.intiate_CBDT(Challanno, recordno)
-.fill_CBDT(compid,branch,accno,taxnum)
-		.getrefnum();
-
-		clickLogoutLink();
-
-
-		getnewurl();		
+.clickAcctoAccLink()
+.clickECMSLink()
+.fillECSform(company, branch, acc, bene, amount)
+.getrefnumber()
+.clickLogout();	
+		
+		getnewurl();	
+		
 		new	HDFC_Login_Page(driver, test)
-		.fillCredentials(authuserid, authpwd,authdomain)
+.fillCredentials(authuserid, authpwd, authgroupid)
 .fundTransfersLink()
 .clickAuthorize()
 .contentFrame()
@@ -96,39 +94,3 @@ clickLogoutLink();
 
 	}
 	}
-
-
-/*		
-getnewurl();
-new	HDFC_Login_Page(driver, test)
-.fillCredentials(authuserid, authpwd,authdomain)
-.fundTransfersLink()
-.clickAuthorize()
-.filterAuthorize(compid, SelectStatus, Paytype)
-.clickViewLink()
-.clickreflink()
-.submitPwd(pwd)
-.clickViewLink()
-.clickreflink()
-.getAuthStatus("A")
-.confirmRecord()
-.clickViewLink()
-.clickreflink()
-.getAuthStatus("UP")
-.clickViewLink()
-.clickreflink()
-.getFinalStatus();
-
-clickLogoutLink();
-
-
-}
-catch (Exception e) {
-clickLogoutLink();
-throw new Exception();
-
-// TODO: handle exception
-}
-
-}
-}*/

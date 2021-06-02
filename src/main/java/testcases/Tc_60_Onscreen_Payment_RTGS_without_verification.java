@@ -12,13 +12,13 @@ import wrappers.ProjectWrapp;
 public class Tc_60_Onscreen_Payment_RTGS_without_verification  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC45";
-		testDescription="Onscreen_Payment_RTGS";
+		testCaseName="TC60";
+		testDescription="Onscreen_Payment_RTGS_without_verification ";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC45";
+		testKeyword="TC60";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}

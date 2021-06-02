@@ -13,7 +13,7 @@ public class Tc_68_SpecialPayment_bpcl_without_verification  extends ProjectWrap
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC68";
-		testDescription="SpecialPayment_bpcl";
+		testDescription="SpecialPayment_bpcl_without_verification";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

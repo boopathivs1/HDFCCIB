@@ -13,7 +13,7 @@ public class Tc_58_Onscreen_Payment_Bulk2_without_verification  extends ProjectW
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC58";
-		testDescription="Onscreen_Payment_Bulk";
+		testDescription="Onscreen_Payment_Bulk2_without_verification ";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

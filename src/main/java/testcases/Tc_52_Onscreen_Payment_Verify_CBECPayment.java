@@ -9,38 +9,38 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_50_SpecialPayment_bpcl2  extends ProjectWrapp {
+public class Tc_52_Onscreen_Payment_Verify_CBECPayment  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC50";
-		testDescription="SpecialPayment_bpcl";
+		testCaseName="TC52";
+		testDescription="Onscreen_Payment_Verify_CBECPayment";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Boopathi";
-		testKeyword="TC50";
+		authors="Sreejith";
+		testKeyword="TC52";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void checkAccSummary(String casename,String userid,String pwd,String groupid,String Format,String Appformat,
-			String amount,String remark,String authuserid,String authpwd,String authgroupid,String compid,String SelectStatus, 
-			String Paytype,String pd,String group,String id,String Status,String type,
-			String data13,String data17,String data18,String data19, String data20,String data21) throws Exception{
+	public void checkAccSummary(String casename,String userid,String pwd,String groupid,String paytype,String company,
+			String branch,String acc, String acccode,String amount,String authuserid,String authpwd,String authgroupid,String compid,String SelectStatus,String Paytype, 
+			String aid,String apwd,String autid,String cid,String Status,
+			String type,String data13,String data17,String data18) throws Exception{
 		try{
+			
 			getnewurl();
 		new	HDFC_Login_Page(driver, test)
 .fillCredentials(userid, pwd, groupid)
 .clickFundTransfers()
-.clickAcctoAccLink()
-.clickSplpaymentLink()
-.fillSplpaymentBPCLform(Format, Appformat, amount, remark)
-.getrefnum()
-.clickLogout();		
+.clickCBECLink()
+.fillCBECpaymentform(paytype, company, branch, acc, acccode, amount)
+.getrefnumber()
+.clickLogoutLink();		
 		
-		getnewurl();	
+		getnewurl();		
 		new	HDFC_Login_Page(driver, test)
-.fillCredentials(authuserid, authpwd, authgroupid)
+		.fillCredentials(authuserid, authpwd,authgroupid)
 .fundTransfersLink()
 .clickAuthorize()
 .contentFrame()

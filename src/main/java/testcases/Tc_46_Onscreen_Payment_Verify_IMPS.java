@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_76_Onscreen_IMPSPayment  extends ProjectWrapp {
+public class Tc_46_Onscreen_Payment_Verify_IMPS  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC76";
-		testDescription="Onscreen_IMPSPayment";
+		testCaseName="TC46";
+		testDescription="Onscreen_Payment_Verify_IMPS";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Boopathi";
-		testKeyword="TC76";
+		authors="Sreejith";
+		testKeyword="TC46";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
@@ -54,7 +54,8 @@ public class Tc_76_Onscreen_IMPSPayment  extends ProjectWrapp {
 		.authrecordFrame()
 		.clickreflink()
 		.clickfirstAuthRec()
-		.clickAuthVerify()
+		.getAuthVerifyStatus("VP")
+		.CheckVerifyStatus()
 		.defaultcontents()
 		.contentFrame()	
 		.clickViewLink()
@@ -67,19 +68,22 @@ public class Tc_76_Onscreen_IMPSPayment  extends ProjectWrapp {
 		.authrecordFrame()
 		.clickreflink()
 		.getAuthStatus("A")
-		.clickfirstAuthRec()
-		.confirmRecord()
-		.contentFrame()
-		.clickViewLink()
-		.authrecordFrame()
-		.clickreflink()
-		.getAuthStatus("UP")
-		.defaultcontents()
-		.contentFrame()		
-		.clickViewLink()
-		.authrecordFrame()
-		.clickreflink()
-		.getFinalStatus();
+		.checkStatus();
+				
+		//.clickfirstAuthRec()
+		//.confirmRecord()
+		//.contentFrame()
+		//.clickViewLink()
+		//.authrecordFrame()
+		//.clickreflink()
+		//.getAuthStatus("UP")
+		//.defaultcontents()
+		//.contentFrame()		
+		//.clickViewLink()
+		//.authrecordFrame()
+		//.clickreflink()
+		//.getFinalStatus();
+
 		defaultcontent();		
 		clickLogoutLink();
 

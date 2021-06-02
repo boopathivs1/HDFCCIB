@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_59_Onscreen_Payment_NEFT_without_verification  extends ProjectWrapp {
+public class Tc_74_Onscreen_Payment_NEFT_Verify_With_Confirm  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC59";
-		testDescription="Onscreen_Payment_NEFT_without_verification";
+		testCaseName="TC74";
+		testDescription="Onscreen_Payment_NEFT";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Sreejith";
-		testKeyword="TC59";
+		authors="Boopathi";
+		testKeyword="TC74";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
@@ -51,58 +51,6 @@ public class Tc_59_Onscreen_Payment_NEFT_without_verification  extends ProjectWr
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-
-
-.getAuthVerifyStatus("VP")
-.CheckVerifyStatus()
-.defaultcontents()
-.contentFrame()	
-.clickViewLink()
-.authrecordFrame()
-.clickreflink()
-.clickfirstAuthRec()
-.submitPwd(pwd)
-.contentFrame()
-.clickViewLink()
-.authrecordFrame()
-.clickreflink()
-.getAuthStatus("A")
-.checkStatus();
-		
-//.clickfirstAuthRec()
-//.confirmRecord()
-//.contentFrame()
-//.clickViewLink()
-//.authrecordFrame()
-//.clickreflink()
-//.getAuthStatus("UP")
-//.defaultcontents()
-//.contentFrame()		
-//.clickViewLink()
-//.authrecordFrame()
-//.clickreflink()
-//.getFinalStatus();
-		
-defaultcontent();		
-clickLogoutLink();
-
-		
-		}
-	catch (Exception e) {
-clickLogoutLink();
-		throw new Exception();
-		
-		// TODO: handle exception
-	}
-
-	}
-	}
-
-
-/*
-
-
-
 .clickAuthVerify()
 .defaultcontents()
 .contentFrame()	
@@ -142,4 +90,4 @@ clickLogoutLink();
 	}
 
 	}
-	}*/
+	}

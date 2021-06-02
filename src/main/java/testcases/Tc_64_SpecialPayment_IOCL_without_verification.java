@@ -13,7 +13,7 @@ public class Tc_64_SpecialPayment_IOCL_without_verification  extends ProjectWrap
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC64";
-		testDescription="SpecialPayment_IOCL";
+		testDescription="SpecialPayment_IOCL_without_verification";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

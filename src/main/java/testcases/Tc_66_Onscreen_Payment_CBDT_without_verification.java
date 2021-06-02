@@ -13,7 +13,7 @@ public class Tc_66_Onscreen_Payment_CBDT_without_verification  extends ProjectWr
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC66";
-		testDescription="Onscreen_Payment_CBDT";
+		testDescription="Onscreen_Payment_CBDT_without_verification";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

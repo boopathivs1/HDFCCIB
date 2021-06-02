@@ -12,13 +12,13 @@ import wrappers.ProjectWrapp;
 public class Tc_61_Onscreen_IMPSPayment_without_verification  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC46";
-		testDescription="Onscreen_IMPSPayment";
+		testCaseName="TC61";
+		testDescription="Onscreen_IMPSPayment_without_verification";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC46";
+		testKeyword="TC61";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}

@@ -13,13 +13,13 @@ import wrappers.ProjectWrapp;
 public class Tc_62_EPI_Payment_without_verification  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC47";
-		testDescription="UPI Payment";
+		testCaseName="TC62";
+		testDescription="EPI_Payment_without_verification ";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC47";
+		testKeyword="TC62";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 		SimulatorFileName="15EPIService.html";

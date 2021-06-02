@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_45_Onscreen_Payment_RTGS  extends ProjectWrapp {
+public class Tc_75_Onscreen_Payment_RTGS_Verify_With_Confirm  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC45";
-		testDescription="Onscreen_Payment_RTGS";
+		testCaseName="TC75";
+		testDescription="Onscreen_Payment_RTGS_Verify_With_Confirm";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Sreejith";
-		testKeyword="TC45";
+		authors="Boopathi";
+		testKeyword="TC75";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
@@ -51,8 +51,7 @@ public class Tc_45_Onscreen_Payment_RTGS  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.getAuthVerifyStatus("VP")
-.CheckVerifyStatus()
+.clickAuthVerify()
 .defaultcontents()
 .contentFrame()	
 .clickViewLink()
@@ -65,22 +64,19 @@ public class Tc_45_Onscreen_Payment_RTGS  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
-.checkStatus();
-		
-//.clickfirstAuthRec()
-//.confirmRecord()
-//.contentFrame()
-//.clickViewLink()
-//.authrecordFrame()
-//.clickreflink()
-//.getAuthStatus("UP")
-//.defaultcontents()
-//.contentFrame()		
-//.clickViewLink()
-//.authrecordFrame()
-//.clickreflink()
-//.getFinalStatus();
-
+.clickfirstAuthRec()
+.confirmRecord()
+.contentFrame()
+.clickViewLink()
+.authrecordFrame()
+.clickreflink()
+.getAuthStatus("UP")
+.defaultcontents()
+.contentFrame()		
+.clickViewLink()
+.authrecordFrame()
+.clickreflink()
+.getFinalStatus();
 defaultcontent();		
 clickLogoutLink();
 

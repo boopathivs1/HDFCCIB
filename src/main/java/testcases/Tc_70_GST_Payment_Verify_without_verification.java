@@ -15,7 +15,7 @@ public class Tc_70_GST_Payment_Verify_without_verification  extends ProjectWrapp
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC70";
-		testDescription="GST_Payment_Verify";
+		testDescription="GST_Payment_Verify_without_verification";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

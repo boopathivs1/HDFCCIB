@@ -9,38 +9,38 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_44_Onscreen_Payment_NEFT  extends ProjectWrapp {
+public class Tc_43_Onscreen_Payment_Verify_Bulk  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC44";
-		testDescription="Onscreen_Payment_NEFT";
+		testCaseName="TC43";
+		testDescription="Onscreen_Payment_Verify_Bulk ";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC44";
+		testKeyword="TC43";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void checkAccSummary(String casename,String userid,String pwd,String groupid,String paymode,
-			String selectcompany,String selectbranch,String selectaccount,String beneneft,String amount,String Remarks,String authuserid,String authpwd,String authgroupid,
-			String compid,String SelectStatus,String Paytype,String data1,String data10,String data11,
-			String data12,String data13,String data14,String data15,
-			String data16) throws Exception{
+	public void checkAccSummary(String casename,String userid,String pwd,String groupid,String company,String branch,String acc,
+			String bene,String amount,String remarks, String authuserid,String authpwd,String authgroupid,String compid,
+			String SelectStatus,String Paytype,String data13,String data14,String data15,String data16,String data17,
+			String data18,String data19, String data20,String data21) throws Exception{
 		try{
-
+			
 			getnewurl();
+			getnewurl();
+			
 		new	HDFC_Login_Page(driver, test)
 .fillCredentials(userid, pwd, groupid)
 .clickFundTransfers()
-.clickNEFTRTGSLink()
-.clickNEFTRTGS_Add_Link()
-.fill_NEFT_RTGS_Singleform(paymode, selectcompany, selectbranch, selectaccount, beneneft,amount, Remarks)
+.clickAcctoAccLink()
+.clickAccBulkLink()
+.fillAcctoAccBulkkform(company, branch, acc, bene, amount, remarks)
 .getrefnum()
 .clickLogout();		
-	//getrefnumer="FT103267653347";
-		getnewurl();		
+		getnewurl();	
 		new	HDFC_Login_Page(driver, test)
 .fillCredentials(authuserid, authpwd, authgroupid)
 .fundTransfersLink()

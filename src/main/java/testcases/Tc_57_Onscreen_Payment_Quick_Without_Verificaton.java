@@ -13,7 +13,7 @@ public class Tc_57_Onscreen_Payment_Quick_Without_Verificaton  extends ProjectWr
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC57";
-		testDescription="Onscreen_Payment_Quick";
+		testDescription="Onscreen_Payment_Quick_Without_Verificaton";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
