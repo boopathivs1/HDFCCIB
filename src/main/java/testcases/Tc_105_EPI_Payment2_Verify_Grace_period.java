@@ -13,13 +13,13 @@ import wrappers.ProjectWrapp;
 public class Tc_105_EPI_Payment2_Verify_Grace_period  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC47";
-		testDescription="UPI Payment";
+		testCaseName="TC105";
+		testDescription="EPI_Payment2_Verify_Grace_period";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC47";
+		testKeyword="TC105";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 		SimulatorFileName="15EPIService.html";
@@ -63,24 +63,14 @@ public class Tc_105_EPI_Payment2_Verify_Grace_period  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.clickfirstAuthRec()
-	.getAuthVerifyStatus("VP")
-	.CheckVerifyStatus()
-	//.clickAuthVerify()
-	.defaultcontents()
-	.contentFrame()	
-	.clickViewLink()
-	.authrecordFrame()
-	.clickreflink()
-	.clickfirstAuthRec()
 	.submitPwd(pwd)
 	.contentFrame()
 	.clickViewLink()
 	.authrecordFrame()
 	.clickreflink()
-	.getValuedate()
-	.getGracedate(Graceperiod)
+	.getValuedate()	.
+	getGracedate(Graceperiod)
 	.getAuthStatus("A")
-	.checkStatus()
 	.checkGraceStatus();
 	/*.clickfirstAuthRec()
 	.confirmRecord()

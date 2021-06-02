@@ -50,7 +50,8 @@ public class Tc_94_Onscreen_Payment_ECMSPayment_Without_confirm  extends Project
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.clickAuthVerify()
+.getAuthVerifyStatus("VP")
+.CheckVerifyStatus()
 .defaultcontents()
 .contentFrame()	
 .clickViewLink()
@@ -60,13 +61,14 @@ public class Tc_94_Onscreen_Payment_ECMSPayment_Without_confirm  extends Project
 .submitPwd(pwd)
 .contentFrame()
 .clickViewLink()
-//.authrecordFrame()
-//.clickreflink()
-//.getAuthStatus("A")
+.authrecordFrame()
+.clickreflink()
+.getAuthStatus("A")
+.checkStatus();
 //.clickfirstAuthRec()
 //.confirmRecord()
-//.contentFrame()
-//.clickViewLink()
+/*.contentFrame()
+.clickViewLink()
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("UP")
@@ -75,7 +77,8 @@ public class Tc_94_Onscreen_Payment_ECMSPayment_Without_confirm  extends Project
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
+
 defaultcontent();		
 clickLogoutLink();
 

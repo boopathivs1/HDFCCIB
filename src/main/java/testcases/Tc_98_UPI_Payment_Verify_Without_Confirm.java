@@ -50,7 +50,8 @@ public class Tc_98_UPI_Payment_Verify_Without_Confirm  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.clickAuthVerify()
+.getAuthVerifyStatus("VP")
+.CheckVerifyStatus()
 .defaultcontents()
 .contentFrame()	
 .clickViewLink()
@@ -59,13 +60,14 @@ public class Tc_98_UPI_Payment_Verify_Without_Confirm  extends ProjectWrapp {
 .clickfirstAuthRec()
 .submitPwd(pwd)
 .contentFrame()
-//.clickViewLink()
-//.authrecordFrame()
-//.clickreflink()
-//.getAuthStatus("A")
+.clickViewLink()
+.authrecordFrame()
+.clickreflink()
+.getAuthStatus("A")
+.checkStatus();
 //.clickfirstAuthRec()
 //.confirmRecord()
-//.contentFrame()
+/*.contentFrame()
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
@@ -75,7 +77,8 @@ public class Tc_98_UPI_Payment_Verify_Without_Confirm  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
+
 defaultcontent();		
 clickLogoutLink();
 

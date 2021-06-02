@@ -67,7 +67,6 @@ public class Tc_102_Onscreen_Payment_NEFT_verify_Grace_period  extends ProjectWr
 .getValuedate()
 .getGracedate(Graceperiod)
 .getAuthStatus("A")
-.checkStatus()
 .checkGraceStatus();
 /*.clickfirstAuthRec()
 .confirmRecord()

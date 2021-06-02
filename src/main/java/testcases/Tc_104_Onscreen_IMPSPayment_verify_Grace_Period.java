@@ -12,13 +12,13 @@ import wrappers.ProjectWrapp;
 public class Tc_104_Onscreen_IMPSPayment_verify_Grace_Period  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC76";
-		testDescription="Onscreen_IMPSPayment";
+		testCaseName="TC104";
+		testDescription="Onscreen_IMPSPayment_verify_Grace_Period";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Boopathi";
-		testKeyword="TC76";
+		authors="Sreejith";
+		testKeyword="TC104";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
@@ -73,7 +73,6 @@ public class Tc_104_Onscreen_IMPSPayment_verify_Grace_Period  extends ProjectWra
 		.getValuedate()
 		.getGracedate(Graceperiod)
 		.getAuthStatus("A")
-		.checkStatus()
 		.checkGraceStatus();
 		/*.clickfirstAuthRec()
 		.confirmRecord()

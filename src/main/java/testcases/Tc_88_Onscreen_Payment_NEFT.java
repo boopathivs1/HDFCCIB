@@ -51,7 +51,8 @@ public class Tc_88_Onscreen_Payment_NEFT  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.clickAuthVerify()
+.getAuthVerifyStatus("VP")
+.CheckVerifyStatus()
 .defaultcontents()
 .contentFrame()	
 .clickViewLink()
@@ -64,9 +65,10 @@ public class Tc_88_Onscreen_Payment_NEFT  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+.checkStatus();
 //.clickfirstAuthRec()
 //.confirmRecord()
-.contentFrame()
+/*.contentFrame()
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
@@ -76,7 +78,7 @@ public class Tc_88_Onscreen_Payment_NEFT  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 

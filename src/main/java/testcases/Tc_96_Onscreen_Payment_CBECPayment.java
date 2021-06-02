@@ -49,7 +49,8 @@ public class Tc_96_Onscreen_Payment_CBECPayment  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.clickAuthVerify()
+.getAuthVerifyStatus("VP")
+.CheckVerifyStatus()
 .defaultcontents()
 .contentFrame()	
 .clickViewLink()
@@ -62,9 +63,10 @@ public class Tc_96_Onscreen_Payment_CBECPayment  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
+.checkStatus();
 //.clickfirstAuthRec()
 //.confirmRecord()
-.contentFrame()
+/*.contentFrame()
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
@@ -74,7 +76,8 @@ public class Tc_96_Onscreen_Payment_CBECPayment  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
+
 defaultcontent();		
 clickLogoutLink();
 

@@ -48,7 +48,8 @@ public class Tc_93_SpecialPayment_IOCL_Without_confirm  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.clickAuthVerify()
+.getAuthVerifyStatus("VP")
+.CheckVerifyStatus()
 .defaultcontents()
 .contentFrame()	
 .clickViewLink()
@@ -58,13 +59,14 @@ public class Tc_93_SpecialPayment_IOCL_Without_confirm  extends ProjectWrapp {
 .submitPwd(pwd)
 .contentFrame()
 .clickViewLink()
-//.authrecordFrame()
-//.clickreflink()
-//.getAuthStatus("A")
+.authrecordFrame()
+.clickreflink()
+.getAuthStatus("A")
+.checkStatus();
 //.clickfirstAuthRec()
 //.confirmRecord()
-//.contentFrame()
-//.clickViewLink()
+/*.contentFrame()
+.clickViewLink()
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("UP")
@@ -73,7 +75,8 @@ public class Tc_93_SpecialPayment_IOCL_Without_confirm  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
+
 defaultcontent();		
 clickLogoutLink();
 

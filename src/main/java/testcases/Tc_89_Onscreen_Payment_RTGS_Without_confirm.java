@@ -51,7 +51,8 @@ public class Tc_89_Onscreen_Payment_RTGS_Without_confirm  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.clickAuthVerify()
+.getAuthVerifyStatus("VP")
+.CheckVerifyStatus()
 .defaultcontents()
 .contentFrame()	
 .clickViewLink()
@@ -63,7 +64,11 @@ public class Tc_89_Onscreen_Payment_RTGS_Without_confirm  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.contentFrame()
+.getAuthStatus("A")
+.checkStatus();
+//.clickfirstAuthRec()
+//.confirmRecord()
+/*.contentFrame()
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
@@ -73,7 +78,7 @@ public class Tc_89_Onscreen_Payment_RTGS_Without_confirm  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 

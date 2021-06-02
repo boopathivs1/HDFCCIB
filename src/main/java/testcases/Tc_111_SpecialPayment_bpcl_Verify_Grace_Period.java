@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_93a_SpecialPayment_bpcl_Without_Confirm  extends ProjectWrapp {
+public class Tc_111_SpecialPayment_bpcl_Verify_Grace_Period  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC53a";
-		testDescription="SpecialPayment_bpcl_Without_Confirm";
+		testCaseName="TC111";
+		testDescription="SpecialPayment_bpcl_Verify_Grace_Period";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC93a";
+		testKeyword="TC111";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
@@ -51,6 +51,7 @@ public class Tc_93a_SpecialPayment_bpcl_Without_Confirm  extends ProjectWrapp {
 .clickfirstAuthRec()
 .getAuthVerifyStatus("VP")
 .CheckVerifyStatus()
+//.clickAuthVerify()
 .defaultcontents()
 .contentFrame()	
 .clickViewLink()
@@ -62,11 +63,13 @@ public class Tc_93a_SpecialPayment_bpcl_Without_Confirm  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
+.getValuedate()	.
+getGracedate(Graceperiod)
 .getAuthStatus("A")
-.checkStatus();
-//.clickfirstAuthRec()
-//.confirmRecord()
-/*.contentFrame()
+.checkGraceStatus();
+/*.clickfirstAuthRec()
+.confirmRecord()
+.contentFrame()
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
@@ -77,7 +80,6 @@ public class Tc_93a_SpecialPayment_bpcl_Without_Confirm  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getFinalStatus();*/
-
 defaultcontent();		
 clickLogoutLink();
 

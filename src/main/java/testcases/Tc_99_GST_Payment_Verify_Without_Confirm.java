@@ -51,7 +51,8 @@ public class Tc_99_GST_Payment_Verify_Without_Confirm  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.clickfirstAuthRec()
-	.clickAuthVerify()
+	.getAuthVerifyStatus("VP")
+	.CheckVerifyStatus()
 	.defaultcontents()
 	.contentFrame()	
 	.clickViewLink()
@@ -60,23 +61,26 @@ public class Tc_99_GST_Payment_Verify_Without_Confirm  extends ProjectWrapp {
 	.clickSimulatorAuthRec(Paytype)
 	.submitPwd(pwd)
 	.contentFrame()
-//	.clickViewLink()
-//	.authrecordFrame()
-//	.clickreflink()
-//	.getSimulatorAuthStatus(Paytype,"A")
+	.clickViewLink()
+	.authrecordFrame()
+	.clickreflink()
+	.getSimulatorAuthStatus(Paytype,"A")
+	.checkSimulatorStatus(Paytype);
+	
 //	.clickSimulatorAuthRec(Paytype)
 //	.confirmRecord()
 //	.contentFrame()
-	.clickViewLink()
-	.authrecordFrame()
-	.clickreflink()
-	.getSimulatorAuthStatus(Paytype,"U")
-	.defaultcontents()
-	.contentFrame()		
-	.clickViewLink()
-	.authrecordFrame()
-	.clickreflink()
-	.getSimulatorFinalStatus(Paytype);
+//	.clickViewLink()
+//	.authrecordFrame()
+//	.clickreflink()
+//	.getSimulatorAuthStatus(Paytype,"U")
+//	.defaultcontents()
+//	.contentFrame()		
+//	.clickViewLink()
+//	.authrecordFrame()
+//	.clickreflink()
+//	.getSimulatorFinalStatus(Paytype);
+//			
 	defaultcontent();		
 	clickLogoutLink();
 
