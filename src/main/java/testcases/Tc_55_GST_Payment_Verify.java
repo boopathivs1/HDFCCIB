@@ -51,7 +51,8 @@ public class Tc_55_GST_Payment_Verify  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.clickfirstAuthRec()
-	.clickAuthVerify()
+	.getAuthVerifyStatus("VP")
+	.CheckVerifyStatus()
 	.defaultcontents()
 	.contentFrame()	
 	.clickViewLink()
@@ -64,19 +65,7 @@ public class Tc_55_GST_Payment_Verify  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.getSimulatorAuthStatus(Paytype,"A")
-	.clickSimulatorAuthRec(Paytype)
-	.confirmRecord()
-	.contentFrame()
-	.clickViewLink()
-	.authrecordFrame()
-	.clickreflink()
-	.getSimulatorAuthStatus(Paytype,"U")
-	.defaultcontents()
-	.contentFrame()		
-	.clickViewLink()
-	.authrecordFrame()
-	.clickreflink()
-	.getSimulatorFinalStatus(Paytype);
+	.get_gst_AuthStatus(Paytype);
 	defaultcontent();		
 	clickLogoutLink();
 

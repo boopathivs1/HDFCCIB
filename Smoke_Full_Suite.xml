@@ -29,8 +29,7 @@
      
        <class name="testcases.Tc_11a_SpecialPayment_bpcl"/>
           <class name="testcases.Tc_12_GST_Payment"/>
-        <class name="testcases.Tc_13_CBDT_Payment"/>
-     
+ <class name="testcases.Tc_13_CBDTPayment"/>     
       <class name="testcases.Tc_15_EPI_Payment"/>
       <class name="testcases.Tc_16_UPI_Payment"/>
       <class name="testcases.Tc_17_ReliancePayment"/>

@@ -50,7 +50,8 @@ public class Tc_54_UPI_Payment_Verify  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.clickAuthVerify()
+.getAuthVerifyStatus("VP")
+.CheckVerifyStatus()
 .defaultcontents()
 .contentFrame()	
 .clickViewLink()
@@ -63,30 +64,33 @@ public class Tc_54_UPI_Payment_Verify  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .getAuthStatus("A")
-.clickfirstAuthRec()
-.confirmRecord()
-.contentFrame()
-.clickViewLink()
-.authrecordFrame()
-.clickreflink()
-.getAuthStatus("UP")
-.defaultcontents()
-.contentFrame()		
-.clickViewLink()
-.authrecordFrame()
-.clickreflink()
-.getFinalStatus();
+.checkStatus();
+		
+//.clickfirstAuthRec()
+//.confirmRecord()
+//.contentFrame()
+//.clickViewLink()
+//.authrecordFrame()
+//.clickreflink()
+//.getAuthStatus("UP")
+//.defaultcontents()
+//.contentFrame()		
+//.clickViewLink()
+//.authrecordFrame()
+//.clickreflink()
+//.getFinalStatus();
+
 defaultcontent();		
 clickLogoutLink();
 
-	
-	}
-catch (Exception e) {
+		
+		}
+	catch (Exception e) {
 clickLogoutLink();
-	throw new Exception();
-	
-	// TODO: handle exception
-}
+		throw new Exception();
+		
+		// TODO: handle exception
+	}
 
-}
-}
+	}
+	}
