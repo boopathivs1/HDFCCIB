@@ -482,6 +482,53 @@ return this;
 
 }
 
+
+
+public Authorize_page get_gst_AuthStatus(String paytype) throws InterruptedException{	
+
+String status=getTextByXpath("(.//input[contains(@onclick,'"+paytype+"')]//following::span)[9]");
+if(status.equalsIgnoreCase("A")){
+	
+	clickSimulatorAuthRec(paytype)
+	.confirmRecord()
+	.contentFrame()
+	.clickViewLink()
+	.authrecordFrame()
+	.clickreflink()
+	.getSimulatorAuthStatus(paytype,"U")
+	.defaultcontents()
+	.contentFrame()		
+	.clickViewLink()
+	.authrecordFrame()
+	.clickreflink()
+	.getSimulatorFinalStatus(paytype);
+
+	
+	
+	
+//	statusVerify(status);
+}
+
+else{
+	getAuthStatus("UP");
+	//getFinalStatus();		
+	
+	
+}
+
+
+
+
+
+return this;
+
+}
+
+
+
+
+
+
 public Authorize_page getSimulatorAuthVerifyStatus(String paytype ,String verifyStatus) throws InterruptedException{	
 
 String status=getTextByXpath("(.//input[contains(@onclick,'"+paytype+"')]//following::span)[9]");

@@ -54,7 +54,8 @@ public class Tc_46_Onscreen_IMPSPayment  extends ProjectWrapp {
 		.authrecordFrame()
 		.clickreflink()
 		.clickfirstAuthRec()
-		.clickAuthVerify()
+		.getAuthVerifyStatus("VP")
+		.CheckVerifyStatus()
 		.defaultcontents()
 		.contentFrame()	
 		.clickViewLink()
@@ -67,19 +68,22 @@ public class Tc_46_Onscreen_IMPSPayment  extends ProjectWrapp {
 		.authrecordFrame()
 		.clickreflink()
 		.getAuthStatus("A")
-		.clickfirstAuthRec()
-		.confirmRecord()
-		.contentFrame()
-		.clickViewLink()
-		.authrecordFrame()
-		.clickreflink()
-		.getAuthStatus("UP")
-		.defaultcontents()
-		.contentFrame()		
-		.clickViewLink()
-		.authrecordFrame()
-		.clickreflink()
-		.getFinalStatus();
+		.checkStatus();
+				
+		//.clickfirstAuthRec()
+		//.confirmRecord()
+		//.contentFrame()
+		//.clickViewLink()
+		//.authrecordFrame()
+		//.clickreflink()
+		//.getAuthStatus("UP")
+		//.defaultcontents()
+		//.contentFrame()		
+		//.clickViewLink()
+		//.authrecordFrame()
+		//.clickreflink()
+		//.getFinalStatus();
+
 		defaultcontent();		
 		clickLogoutLink();
 
