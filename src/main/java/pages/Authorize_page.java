@@ -417,11 +417,11 @@ public Authorize_page checkWCDLStatus() throws InterruptedException{
 Boolean a=VerifyElementpresentreturn("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
 			
 			if(a){
-				System.out.println("enters a");
+				
 				VerifyWCDLstatus();			
 			}
 			else{
-				System.out.println("enters b");
+				
 				defaultcontent();
 				ClickWCDLReport();
 				clickWCDLViewLink();
@@ -434,8 +434,6 @@ Boolean a=VerifyElementpresentreturn("(.//input[contains(@onclick,'"+getrefnumer
 }
 
 public Authorize_page getWCDLAuthStatus(String verifyStatus) throws InterruptedException{	
-
-
 
 Boolean a=VerifyElementpresentreturn("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
 
