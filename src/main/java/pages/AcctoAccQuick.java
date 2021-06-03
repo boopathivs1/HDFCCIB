@@ -27,6 +27,23 @@ public class AcctoAccQuick extends ProjectWrapp{
 		return new LogoutPages(driver, test);
 	}
 	
+	public LogoutPages fillAcctoAccQuickform_Future_Date(String selectformat,String amount,String paymentdetail) throws InterruptedException{
+		contentFrames();
+		selectVisibileTextByXPath(prop.getProperty("select.format.singleacc.xpath"),selectformat);
+		
+//futuredate=GetFuturedate(1);		
+		
+	enterByXpathExplict(prop.getProperty("enter.qucik.date.xpath"),GetFuturedate(1));
+		
+	
+	enterByXpathExplict(prop.getProperty("enter.amount.accsingle.xpath"),amount);
+		
+		enterByXpathExplict(prop.getProperty("enter.payment.detail.xpath"),paymentdetail);
+		
+		clickByXpathExplict(prop.getProperty("click.quick.save.xpath"));
+		
+		return new LogoutPages(driver, test);
+	}
 	
 			
 			

@@ -94,6 +94,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
     public static String fileurl=null;
     public String StatementBalanceAmount;
     public String finalBalanceAmount;
+    public static String futuredate;
     public static String SIrefnumer=null;
     public static String SIpayDate=null;
     public static boolean frameStatus;
@@ -112,6 +113,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
 	public static String usertype=null;
 	
 	public static int Graceperiod=2;
+	public static int F=2;
 	public GenericWrappers() {
 		
 		Properties prop = new Properties();
@@ -2114,6 +2116,8 @@ element.click();
 
 		}
 	}
+
+
 	
 public void loadendtimecalc(String xpath,String loadmsg) throws InterruptedException {
 	int loadtime = 0;
