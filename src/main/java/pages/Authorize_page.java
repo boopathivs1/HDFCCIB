@@ -399,18 +399,19 @@ String Bookingdate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"'
 String Futuredate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[12]");
 
 
-reportStep("Booking date before authorization"+Bookingdate,"PASS");
+reportStep("Reference number for Booking date and Future date "+getrefnumer,"PASS");
+reportStep("Booking date before authorization"+Bookingdate,"INFO");
 
-reportStep("Value date before authorization"+Futuredate,"PASS");
+reportStep("Value date before authorization with grace Period "+Futuredate+ "" ,"INFO");
 
 
-////System.out.println(status);
-//if(Gracedate.equalsIgnoreCase(GetFuturedate(1))){
-//
-//	reportStep(Gracedate+ "Expected  Gracedate has been displaying" ,"PASS");
+//////System.out.println(status);
+//if(Futuredate.equalsIgnoreCase(GetFuturedate(futuredate))){
+////
+//	reportStep(Futuredate+ "Expected  Futuredate has been displaying" ,"PASS");
 //}
 //else{
-//	reportStep(Gracedate+ "Expected  Gracedate has  not been displaying" ,"FAIL");
+//	reportStep(Bookingdate+ "Expected  Futuredate has  not been displaying" ,"FAIL");
 //}
 return this;
 
@@ -419,21 +420,21 @@ public Authorize_page getBooked_Futuredate() throws InterruptedException{
 
 String Bookingdate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[11]");
 
-String Futuredate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[12]");
+String Futudate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[12]");
 
 
-reportStep("Booking date after authorization"+Bookingdate,"PASS");
+reportStep("Booking date after authorization "+Bookingdate,"PASS");
 
-reportStep("Value date after authorization"+Futuredate,"PASS");
+reportStep("Value date after authorization "+Futudate,"PASS");
 
 
 
-if(Futuredate.equalsIgnoreCase(GetFuturedate(1))){
+if(Futudate.equalsIgnoreCase(GetFuturedate(futuredate))){
 
-	reportStep(Futuredate+ "Expected  Future date has been displaying" ,"PASS");
+	reportStep(Futudate+ "Expected  Future date has been displaying" ,"PASS");
 }
 else{
-	reportStep(Futuredate+ "Expected  Future date has  not been displaying" ,"FAIL");
+	reportStep(Futudate+ "Expected  Future date has  not been displaying" ,"FAIL");
 }
 return this;
 

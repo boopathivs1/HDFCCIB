@@ -33,7 +33,7 @@ public class AcctoAccQuick extends ProjectWrapp{
 		
 //futuredate=GetFuturedate(1);		
 		
-	enterByXpathExplict(prop.getProperty("enter.qucik.date.xpath"),GetFuturedate(1));
+	enterByXpathExplict(prop.getProperty("enter.qucik.date.xpath"),GetFuturedate(futuredate));
 		
 	
 	enterByXpathExplict(prop.getProperty("enter.amount.accsingle.xpath"),amount);

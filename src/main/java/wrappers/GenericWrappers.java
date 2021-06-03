@@ -94,7 +94,9 @@ public class GenericWrappers extends Reporter implements Wrappers {
     public static String fileurl=null;
     public String StatementBalanceAmount;
     public String finalBalanceAmount;
-    public static String futuredate;
+    public static int futuredate=1;
+    public static int todaydate=0;
+    
     public static String SIrefnumer=null;
     public static String SIpayDate=null;
     public static boolean frameStatus;

@@ -22,26 +22,31 @@ import javax.sound.sampled.Line;
 	int a;  
 	      try{
 	        //String line = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (8)/RBAU0904.701")).get(n);
-	        String line = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (26)/ACHDBCR2ACHDB270521.420")).get(n);
+	        String line = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (3)/ACHDBCR2ACHCR010621.653")).get(n);
 	        
-	        
+
 	        
 	    	  System.out.println(line);
 			   String strMain =line;
 			   String[] arrSplit = strMain.split("\\s+");
 //System.out.println(arrSplit[3].toString());
-String date=arrSplit[3].toString();
+String date=arrSplit[4].toString();
 	System.out.println(date);
 	
-	String f=date.substring(0,26);
+	String f=date.substring(0,34);
+	
+	String fa=date.substring(36,61);
+	
 System.out.println(f);	
+System.out.println(fa);	
+
 System.out.println(GetTodayDate());
 
 String b=f+GetTodayDate();
 System.out.println(b);
 
 //modifyFile("C:/Users/Boopathi/Desktop/New folder (8)/RBAU0904.701",date, "12/40/021");
-modifyFile("C:/Users/Boopathi/Desktop/New folder (26)/ACHDBCR2ACHDB270521.420",date,b);
+//modifyFile("C:/Users/Boopathi/Desktop/New folder (26)/ACHDBCR2ACHDB270521.420",date,b);
 
 
 
@@ -52,31 +57,32 @@ modifyFile("C:/Users/Boopathi/Desktop/New folder (26)/ACHDBCR2ACHDB270521.420",d
 
 
 
-
-
-String lines = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (26)/ACHDBCR2ACHDB270521.420")).get(1);
-
-
-
-System.out.println(lines);
- String str =lines;
-
-
-
-String[] arr = str.split("\\s+");
-//System.out.println(arrSplit[3].toString());
-String dat=arr[10].toString();
-System.out.println(dat);
-
-String fs=dat.substring(0,35);
-System.out.println(fs);	
-//System.out.println(GetTodayDate());
-//
-//String bk=fh+GetTodayDate();
-//System.out.println(bk);
+//String lines = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (3)/ACHDBCR2ACHCR010621.653")).get(n);
 //
 //
-//modifyFile("C:/Users/Boopathi/Desktop/New folder (26)/ACHDBCR2ACHDB270521.420",dat,bk);
+//
+//
+//
+//
+//System.out.println(lines);
+// String str =lines;
+//
+//
+//
+//String[] arr = str.split("\\s+");
+////System.out.println(arrSplit[3].toString());
+//String dat=arr[10].toString();
+//System.out.println(dat);
+//
+//String fs=dat.substring(0,35);
+//System.out.println(fs);	
+////System.out.println(GetTodayDate());
+////
+////String bk=fh+GetTodayDate();
+////System.out.println(bk);
+////
+////
+////modifyFile("C:/Users/Boopathi/Desktop/New folder (26)/ACHDBCR2ACHDB270521.420",dat,bk);
 
 
 

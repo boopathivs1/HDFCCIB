@@ -40,6 +40,37 @@ public class SpecialPaymentPage extends ProjectWrapp{
 	}
 	
 	
+	public LogoutPages fillSplpaymentIOCLform_future_Date(String Format,String bene,String amount,String remark,String company,String branch,String acc,String statecode,String Prodcode) throws InterruptedException{
+		
+		contentFrames();
+		selectVisibileTextByXPath(prop.getProperty("select.splpayment.format.xpath"),Format);
+		
+		selectVisibileTextByXPath(prop.getProperty("select.bene.dropdown.xpath"),bene);
+		
+		enterByXpathExplict(prop.getProperty("enter.amount.bulk.xpath"),amount);
+		
+		
+		
+		
+		enterByXpathExplict(prop.getProperty("enter.iocl.spl.futuredate.xpath"),GetFuturedate(futuredate));
+		
+		
+		enterByXpathExplict(prop.getProperty("enter.spl.remarks.xpath"),remark);
+		
+		selectVisibileTextByXPath(prop.getProperty("select.company.dropdown.xpath"),company);
+		
+		selectVisibileTextByXPath(prop.getProperty("select.branch.dropdown.xpath"),branch);
+		
+		selectVisibileTextByXPath(prop.getProperty("select.acc.dropdown.xpath"),acc);
+		
+		selectVisibileTextByXPath(prop.getProperty("select.xtatecode.xpath"),statecode);
+	
+		selectVisibileTextByXPath(prop.getProperty("select.Prodcode.xpath"),Prodcode);
+	
+		clickByXpathExplict(prop.getProperty("click.spl.save.xpath"));
+		
+		return new LogoutPages(driver,test);
+	}
 			
 			
 public LogoutPages fillSplpaymentBPCLform(String Format,String Appformat,String amount,String remark) throws InterruptedException{

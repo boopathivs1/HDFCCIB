@@ -56,6 +56,8 @@ public class Tc_34b_ACH_Payment_type_Credit  extends ProjectWrapp {
 		int sub_d=143;
 		int ran_a=10000;
 		int ran_b=99999;
+		ach_content_check(0,4, Renamedfilename_loc, 0,34,36,61,10,99);
+
 		ach_content_check(1,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
 		ach_content_check(2,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
 		ach_content_check(3,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
