@@ -80,7 +80,10 @@ acceptAlert();
 	}
 	public File_Level_Authorization_Pages clickFla_ConfirmRecord(String filename) throws InterruptedException{
 		//Thread.sleep(20000);
-		clickByXpathExplict("(.//input[contains(@value,'"+getrefnumer+"')])[2]");
+		
+		clickByXpathExplict("(.//input[contains(@value,'"+getrefnumer+"')][contains(@onclick,'"+getrefnumer+"')])[1]");
+		
+//		clickByXpathExplict("(.//input[contains(@value,'"+getrefnumer+"')])[2]");
 		clickByXpathExplict(prop.getProperty("click.fla.confirm.button.xpath"));
 		
 	

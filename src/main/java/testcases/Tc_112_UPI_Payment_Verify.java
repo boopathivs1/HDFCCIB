@@ -9,20 +9,19 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_16_UPI_Payment  extends ProjectWrapp {
+public class Tc_112_UPI_Payment_Verify  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC16";
-		testDescription="UPI Payment";
+		testCaseName="TC54";
+		testDescription="UPI_Payment_Verify";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Boopathi";
-		testKeyword="TC16";
+		authors="Sreejith";
+		testKeyword="TC54";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
-
 	@Test(groups={"sanity"},dataProvider="fetch")
 	public void checkAccSummary(String casename,String userid,String pwd,String groupid,
 			String selectcompany,String selectbranch,String selectaccount,String UpiBene
@@ -40,13 +39,21 @@ public class Tc_16_UPI_Payment  extends ProjectWrapp {
 .getrefnum()
 .clickLogout();		
 		
-getnewurl();		
+		getnewurl();		
 	new	HDFC_Login_Page(driver, test)
 .fillCredentials(authuserid, authpwd, authgroupid)
 .fundTransfersLink()
 .clickAuthorize()
 .contentFrame()
 .filterAuthorize(compid, SelectStatus, Paytype)
+.clickViewLink()
+.authrecordFrame()
+.clickreflink()
+.clickfirstAuthRec()
+.getAuthVerifyStatus("VP")
+.CheckVerifyStatus()
+.defaultcontents()
+.contentFrame()	
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
@@ -58,34 +65,32 @@ getnewurl();
 .clickreflink()
 .getAuthStatus("A")
 .checkStatus();
+		
+//.clickfirstAuthRec()
+//.confirmRecord()
+//.contentFrame()
+//.clickViewLink()
+//.authrecordFrame()
+//.clickreflink()
+//.getAuthStatus("UP")
+//.defaultcontents()
+//.contentFrame()		
+//.clickViewLink()
+//.authrecordFrame()
+//.clickreflink()
+//.getFinalStatus();
 
-	/*
-	
-.clickfirstAuthRec()
-.confirmRecord()
-.contentFrame()
-.clickViewLink()
-.authrecordFrame()
-.clickreflink()
-.getAuthStatus("UP")
-.defaultcontents()
-.contentFrame()		
-.clickViewLink()
-.authrecordFrame()
-.clickreflink()
-.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 
-	
-	}
-catch (Exception e) {
+		
+		}
+	catch (Exception e) {
 clickLogoutLink();
-	throw new Exception();
-	
-	// TODO: handle exception
-}
+		throw new Exception();
+		
+		// TODO: handle exception
+	}
 
-}
-
-}
+	}
+	}

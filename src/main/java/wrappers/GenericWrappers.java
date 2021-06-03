@@ -1007,7 +1007,7 @@ return B;
 				if(browser.equalsIgnoreCase("chrome")){
 					//System.setProperty("webdriver.chrome.driver", "./drivers/chromedrivers.exe");
 
-					System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver89.exe");
+					System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 
 					//System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver85.exe");
 
@@ -1590,7 +1590,7 @@ public void statusVerify(String Status){
 	break;
 	case "R": reportStep(Status+ " Status has been displaying" ,"PASS");
 	break;
-	case "Q": reportStep(Status+ " Status has been displaying" ,"PASS");
+	case "Q": reportStep(Status+ " Status has been displaying" ,"FAIL");
 	break;  
 	case "VP": reportStep(Status+ " Status has been displaying" ,"PASS");
 	break; 
