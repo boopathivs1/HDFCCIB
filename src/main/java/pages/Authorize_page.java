@@ -346,7 +346,7 @@ String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//f
 //System.out.println(status);
 if(status.equalsIgnoreCase(verifyStatus)){
 	statusVerify(status);
-}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("UP")){
+}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("Q")){
 	statusVerify(status);
 }
 else{
