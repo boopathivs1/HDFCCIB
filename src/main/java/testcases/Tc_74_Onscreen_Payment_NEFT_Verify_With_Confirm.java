@@ -13,7 +13,7 @@ public class Tc_74_Onscreen_Payment_NEFT_Verify_With_Confirm  extends ProjectWra
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC74";
-		testDescription="Onscreen_Payment_NEFT";
+		testDescription="Onscreen_Payment_NEFT_Verify_With_Confirm";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
