@@ -110,6 +110,7 @@ public Authorize_page clickWCDLViewLink() throws InterruptedException{
 	clickByXpathExplict(prop.getProperty("click.authorize.view.link.xpath"));
 	Thread.sleep(10000);
 	clickByXpathExplict(prop.getProperty("click.authorize.view.link.xpath"));
+	
 	//defaultcontent();
 	return this;
 
@@ -425,6 +426,8 @@ public Authorize_page checkWCDLStatus() throws InterruptedException{
 		.getWCDLFinalStatus();
 	}
 	else{
+		ClickWCDLReport();
+		clickWCDLViewLink();
 		getWCDLFinalStatus();
 		//getFinalStatus();		
 			
