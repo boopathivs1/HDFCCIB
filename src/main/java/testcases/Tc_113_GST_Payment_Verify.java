@@ -14,13 +14,13 @@ import wrappers.ProjectWrapp;
 public class Tc_113_GST_Payment_Verify  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC55";
+		testCaseName="TC113";
 		testDescription="GST_Payment_Verify";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC55";
+		testKeyword="TC113";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 		SimulatorFileName="12GSTN_Simulator_3_INTER.html";
@@ -64,8 +64,10 @@ public class Tc_113_GST_Payment_Verify  extends ProjectWrapp {
 	.clickViewLink()
 	.authrecordFrame()
 	.clickreflink()
+	.getValuedate()
+	.getGracedate(Graceperiod)
 	.getSimulatorAuthStatus(Paytype,"A")
-	.get_gst_AuthStatus(Paytype);
+	.get_gst_AuthStatus_grace_date(Paytype);
 	defaultcontent();		
 	clickLogoutLink();
 

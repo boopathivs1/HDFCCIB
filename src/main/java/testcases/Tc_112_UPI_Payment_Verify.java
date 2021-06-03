@@ -12,13 +12,13 @@ import wrappers.ProjectWrapp;
 public class Tc_112_UPI_Payment_Verify  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC54";
+		testCaseName="TC112";
 		testDescription="UPI_Payment_Verify";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC54";
+		testKeyword="TC112";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
@@ -63,8 +63,14 @@ public class Tc_112_UPI_Payment_Verify  extends ProjectWrapp {
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
+
+
+
+.getValuedate()
+.getGracedate(Graceperiod)
 .getAuthStatus("A")
-.checkStatus();
+.checkGraceStatus();
+
 		
 //.clickfirstAuthRec()
 //.confirmRecord()

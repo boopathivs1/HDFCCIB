@@ -392,6 +392,52 @@ return this;
 }
 
 
+public Authorize_page getBooking_Futuredate() throws InterruptedException{	
+
+String Bookingdate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[11]");
+
+String Futuredate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[12]");
+
+
+reportStep("Booking date before authorization"+Bookingdate,"PASS");
+
+reportStep("Value date before authorization"+Futuredate,"PASS");
+
+
+////System.out.println(status);
+//if(Gracedate.equalsIgnoreCase(GetFuturedate(1))){
+//
+//	reportStep(Gracedate+ "Expected  Gracedate has been displaying" ,"PASS");
+//}
+//else{
+//	reportStep(Gracedate+ "Expected  Gracedate has  not been displaying" ,"FAIL");
+//}
+return this;
+
+}
+public Authorize_page getBooked_Futuredate() throws InterruptedException{	
+
+String Bookingdate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[11]");
+
+String Futuredate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[12]");
+
+
+reportStep("Booking date after authorization"+Bookingdate,"PASS");
+
+reportStep("Value date after authorization"+Futuredate,"PASS");
+
+
+
+if(Futuredate.equalsIgnoreCase(GetFuturedate(1))){
+
+	reportStep(Futuredate+ "Expected  Future date has been displaying" ,"PASS");
+}
+else{
+	reportStep(Futuredate+ "Expected  Future date has  not been displaying" ,"FAIL");
+}
+return this;
+
+}
 
 public Authorize_page getAuthorizeddate() throws InterruptedException{	
 
@@ -485,7 +531,45 @@ return this;
 
 }
 
+public Authorize_page get_gst_AuthStatus_grace_date(String paytype) throws InterruptedException{	
 
+String status=getTextByXpath("(.//input[contains(@onclick,'"+paytype+"')]//following::span)[9]");
+if(status.equalsIgnoreCase("A")){
+	
+	clickSimulatorAuthRec(paytype)
+	.confirmRecord()
+	.contentFrame()
+	.clickViewLink()
+	.authrecordFrame()
+	.clickreflink()
+	.getSimulatorAuthStatus(paytype,"U")
+	.defaultcontents()
+	.contentFrame()		
+	.clickViewLink()
+	.authrecordFrame()
+	.clickreflink()
+	.getSimulatorFinalStatus(paytype);
+	getAuthorizeddate();
+	
+	
+	
+//	statusVerify(status);
+}
+
+else{
+	getAuthStatus("UP");
+	//getFinalStatus();		
+	getAuthorizeddate();
+	
+}
+
+
+
+
+
+return this;
+
+}
 
 public Authorize_page get_gst_AuthStatus(String paytype) throws InterruptedException{	
 
@@ -505,7 +589,7 @@ if(status.equalsIgnoreCase("A")){
 	.authrecordFrame()
 	.clickreflink()
 	.getSimulatorFinalStatus(paytype);
-
+//	getAuthorizeddate();
 	
 	
 	
@@ -515,7 +599,7 @@ if(status.equalsIgnoreCase("A")){
 else{
 	getAuthStatus("UP");
 	//getFinalStatus();		
-	
+//	getAuthorizeddate();
 	
 }
 
