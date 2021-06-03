@@ -412,11 +412,67 @@ return this;
 
 
 public Authorize_page checkWCDLStatus() throws InterruptedException{
+	
+	
+Boolean a=VerifyElementpresentreturn("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+			
+			if(a){
+				System.out.println("enters a");
+				VerifyWCDLstatus();			
+			}
+			else{
+				System.out.println("enters b");
+				defaultcontent();
+				ClickWCDLReport();
+				clickWCDLViewLink();
+				getWCDLFinalStatus();
+			}
+				
+//			}
+	
+	return this;
+}
+
+public Authorize_page getWCDLAuthStatus(String verifyStatus) throws InterruptedException{	
+
+
+
+Boolean a=VerifyElementpresentreturn("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
+
+if(a){
+	GetWcdlsatus(verifyStatus);
+}
+else{
+	
+	reportStep("record has been moved" ,"PASS");
+	}
+	
+return this;
+
+}
+
+
+public Authorize_page GetWcdlsatus(String verifyStatus)
+
+{
+	String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
+	if(status.contains(verifyStatus)){
+		
+		reportStep(status+ "Status has been displaying" ,"PASS");
+	}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+		statusVerify(status);
+	}
+	return this;
+	
+}
+
+
+public Authorize_page VerifyWCDLstatus() throws InterruptedException
+{
+	
 	String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
 	if(status.contains("A")){
-	
-//new Authorize_page(driver, test)		
-//		.
+		
 		clickfirstAuthRec()
 		.confirmRecord()
 		.contentFrame()
@@ -425,31 +481,8 @@ public Authorize_page checkWCDLStatus() throws InterruptedException{
 		.clickWCDLViewLink()
 		.getWCDLFinalStatus();
 	}
-	else{
-		ClickWCDLReport();
-		clickWCDLViewLink();
-		getWCDLFinalStatus();
-		//getFinalStatus();		
-			
-	}
 	return this;
-}
-
-public Authorize_page getWCDLAuthStatus(String verifyStatus) throws InterruptedException{	
-
-String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
-if(status.contains(verifyStatus)){
 	
-	reportStep(status+ "Status has been displaying" ,"PASS");
-}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
-	statusVerify(status);
-}
-
-else{
-	reportStep(status+ "Status has been displaying" ,"WARN");
-}
-return this;
-
 }
 
 
