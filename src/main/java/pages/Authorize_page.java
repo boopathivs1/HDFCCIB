@@ -845,11 +845,10 @@ String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[1]/
 
 System.out.println(status+"actual value");
 
-<<<<<<< HEAD
-	if(status.contains("A")||status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.contains("U")){
-=======
+
+
 	if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
->>>>>>> branch 'master' of https://github.com/boopathivs1/HDFCCIB
+
 	
 		reportStep(status+ "Status has been displaying" ,"PASS");
 		}
