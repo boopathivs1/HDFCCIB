@@ -13,7 +13,7 @@ public class Tc_114_Onscreen_Payment_Verify_Quick  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC114";
-		testDescription="Onscreen_Payment_Verify_Quick";
+		testDescription="Onscreen future value date Verification-,Quick";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

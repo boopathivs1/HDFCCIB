@@ -13,7 +13,7 @@ public class Tc_107_SpecialPayment_IOCL  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC107";
-		testDescription="SpecialPayment_IOCL";
+		testDescription="Onscreen grace period Verification-Special Payments";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

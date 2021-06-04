@@ -13,7 +13,7 @@ public class Tc_108_Onscreen_Payment_ECMSPayment  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC108";
-		testDescription="Onscreen_Payment_ECMSPayment";
+		testDescription="Onscreen grace period Verification-Ecms";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
