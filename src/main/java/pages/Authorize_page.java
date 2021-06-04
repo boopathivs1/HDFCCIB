@@ -22,6 +22,16 @@ public class Authorize_page extends ProjectWrapp{
 	}
 	
 	
+	
+
+	public Authorize_page clickBillpayView() throws InterruptedException{
+		clickByXpathExplict(prop.getProperty("click.span.view.xpath"));
+	
+		
+		return this;
+	
+	}
+	
 	public Authorize_page contentFrame() throws InterruptedException{
 	contentFrames();
 	
@@ -92,6 +102,16 @@ selectVisibileTextByXPath(prop.getProperty("auth.paytype.xpath"),Paytype);
 		return this;
 	}
 	
+	
+
+	public Authorize_page filterBilpayAuthorize(String Selectstatus,String name) throws InterruptedException{
+		
+		contentFrames();
+		selectVisibileTextByXPath(prop.getProperty("select.bill.status.xpath"),Selectstatus);
+		selectVisibileTextByXPath(prop.getProperty("select.bill.name.xpath"),name);
+	
+				return this;
+			}
 
 	
 public Authorize_page clickViewLink() throws InterruptedException{	
@@ -132,6 +152,13 @@ public Authorize_page clickfirstAuthRec(){
 
 }
 
+public Authorize_page clickBillpayfirstAuthRec(){	
+	
+	clickByXpathExplict(".//td//input[contains(@value,'"+getrefnumer+"')]");
+//clickByXpathExplict(prop.getProperty("select.auth.recone.xpath"));
+	return this;
+
+}
 
 public Authorize_page clickAuthVerify(){	
 	
@@ -289,10 +316,39 @@ public Authorize_page checkStatus() throws InterruptedException{
 	else{
 		getAuthStatus("UP");
 		//getFinalStatus();		
+			
 		
+	}
+	return this;
 		
 	}
 	
+	public Authorize_page checkBillpayStatus() throws InterruptedException{
+		String status=getTextByXpath("(.//td//input[contains(@value,'"+getrefnumer+"')]//following::span)[6]");
+		
+		if(status.equalsIgnoreCase("A")){
+		//new Authorize_page(driver, test)		
+//			.
+			clickBillpayfirstAuthRec()
+			.confirmRecord()
+			.contentFrame()
+			.clickViewLink()
+			//.authrecordFrame()
+			//.clickreflink()
+			.getBillpayAuthStatus("UP")
+			.defaultcontents()
+			.contentFrame()		
+			.clickViewLink()
+			//.authrecordFrame()
+			//.clickreflink()
+			.getBillpayFinalStatus();		
+		}
+		else{
+			getBillpayAuthStatus("UP");
+			//getFinalStatus();		
+			
+			
+		}
 
 return this;	
 	
@@ -343,6 +399,23 @@ return this;
 public Authorize_page getAuthStatus(String verifyStatus) throws InterruptedException{	
 
 String status=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+//System.out.println(status);
+if(status.equalsIgnoreCase(verifyStatus)){
+	statusVerify(status);
+}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("Q")){
+	statusVerify(status);
+}
+else{
+	reportStep(status+ "Status has been displaying" ,"WARN");
+}
+return this;
+
+}
+
+
+public Authorize_page getBillpayAuthStatus(String verifyStatus) throws InterruptedException{	
+
+String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[6]");
 //System.out.println(status);
 if(status.equalsIgnoreCase(verifyStatus)){
 	statusVerify(status);
@@ -713,6 +786,22 @@ return this;
 
 }
 
+
+
+public Authorize_page getBillpayFinalStatus() throws InterruptedException{	
+Thread.sleep(30000);
+String status=getTextByXpath("(.//td//input[contains(@value,'"+getrefnumer+"')]//following::span)[6]");
+if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
+	statusVerify(status);
+}
+
+else{
+	reportStep(status+ "Status has been displaying" ,"FAIL");
+}
+return this;
+
+}
+
 public Authorize_page getWCDLFinalStatus() throws InterruptedException{	
 Thread.sleep(3000);
 String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
@@ -774,6 +863,7 @@ defaultcontent();
 	return this;
 
 }
+
 	
 
 }

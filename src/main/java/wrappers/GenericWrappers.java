@@ -4508,9 +4508,6 @@ Thread.sleep(2000);
 			reportStep("The element with id: "+element+" is selected with index :"+value, "PASS");
 		} 
 		
-
-		
-		
 		
 		catch (Exception e) {
 			reportStep("The index: "+value+" could not be selected.", "FAIL");

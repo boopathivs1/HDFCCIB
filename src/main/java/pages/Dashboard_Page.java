@@ -42,6 +42,14 @@ public class Dashboard_Page  extends ProjectWrapp{
 	
 	}
 	
+	public BillPay_Page clickBillpay() throws InterruptedException{
+		topFrames();
+		clickByXpathExplict(prop.getProperty("click.billpay.xpath"));
+		defaultcontent();
+		
+		return new BillPay_Page(driver, test);
+	
+	}
 
 	
 
