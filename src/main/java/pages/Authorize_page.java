@@ -807,10 +807,15 @@ Thread.sleep(3000);
 String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
 scrolltoelementJs("(.//input[contains(@value,'"+getrefnumer+"')]//following::span)[9]");
 System.out.println(status);
-if(status.contains("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.contains("U")){
+if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
 	
 	reportStep(status+ "Status has been displaying" ,"PASS");
 }
+else if(status.contains("UP")||status.contains("U")){
+	
+	reportStep(status+ "Status has been displaying" ,"WARN");
+}
+
 
 else{
 	reportStep(status+ "Status has been displaying" ,"FAIL");
@@ -840,10 +845,20 @@ String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[1]/
 
 System.out.println(status+"actual value");
 
+<<<<<<< HEAD
 	if(status.contains("A")||status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.contains("U")){
+=======
+	if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")){
+>>>>>>> branch 'master' of https://github.com/boopathivs1/HDFCCIB
 	
 		reportStep(status+ "Status has been displaying" ,"PASS");
 		}
+	else if(status.contains("A")||status.contains("Accepted")||status.equalsIgnoreCase("UP")||status.contains("U")){
+		reportStep(status+ "Status has been displaying" ,"WARN");
+		
+		
+	}
+    	
 else{
 	System.out.println("fail");
 	reportStep(status+ "Status has been displaying" ,"FAIL");
