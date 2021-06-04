@@ -15,7 +15,7 @@ public class Tc_113_GST_Payment_Verify  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC113";
-		testDescription="GST_Payment_Verify";
+		testDescription="Onscreen grace period Verification-GST";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

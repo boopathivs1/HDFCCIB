@@ -13,7 +13,7 @@ public class Tc_90_Onscreen_IMPSPayment_Without_confirm  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC90";
-		testDescription="Onscreen_IMPSPayment_Without_confirm ";
+		testDescription="Onscreen without confirm Verification-IMPS";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

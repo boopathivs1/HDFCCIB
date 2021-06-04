@@ -13,7 +13,7 @@ public class Tc_118_Onscreen_Payment_Verify_IMPS  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC118";
-		testDescription="Onscreen_Payment_Verify_IMPS";
+		testDescription="Onscreen future value date Verification-IMPS";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

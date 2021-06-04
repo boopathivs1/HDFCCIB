@@ -13,7 +13,7 @@ public class Tc_110_Onscreen_Payment_CBECPayment_Verify_Grace_Period  extends Pr
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC110";
-		testDescription="Onscreen_Payment_CBECPayment_Verify_Grace_Period";
+		testDescription="Onscreen grace period Verification-CBEC ";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

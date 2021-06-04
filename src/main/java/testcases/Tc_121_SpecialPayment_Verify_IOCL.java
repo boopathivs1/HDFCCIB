@@ -13,7 +13,7 @@ public class Tc_121_SpecialPayment_Verify_IOCL  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC121";
-		testDescription="SpecialPayment_Verify_IOCL";
+		testDescription="Onscreen future value date Verification-Special Payments-IOCL";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

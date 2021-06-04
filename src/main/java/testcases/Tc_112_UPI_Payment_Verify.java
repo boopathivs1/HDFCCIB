@@ -13,7 +13,7 @@ public class Tc_112_UPI_Payment_Verify  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC112";
-		testDescription="UPI_Payment_Verify";
+		testDescription="Onscreen grace period Verification-UPI";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
