@@ -115,7 +115,7 @@ acceptAlert();
 	public File_Level_Authorization_Pages getFinalStatus() throws InterruptedException{	
 		Thread.sleep(20000);
 		String status=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[7]");
-		if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
+		if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("C")){
 			statusVerify(status);
 		}
 		else{
@@ -130,7 +130,7 @@ acceptAlert();
 		String status=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[7]");
 		if(status.equalsIgnoreCase(verifyStatus)){
 			statusVerify(status);
-		}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("UP")){
+		}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("C")){
 			statusVerify(status);
 		}
 

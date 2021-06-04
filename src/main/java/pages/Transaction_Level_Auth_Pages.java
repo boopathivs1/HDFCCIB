@@ -81,7 +81,7 @@ scrolltoelementJs("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following:
 		String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
 		if(status.equalsIgnoreCase(verifyStatus)){
 			statusVerify(status);
-		}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
+		}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("C")){
 			statusVerify(status);
 		}
 
@@ -101,7 +101,7 @@ scrolltoelementJs("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following:
 		
 		if(status.equalsIgnoreCase(verifyStatus)){
 			statusVerify(status);
-		}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
+		}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("C")){
 			statusVerify(status);
 		}
 

@@ -1584,11 +1584,11 @@ public void statusVerify(String Status){
 	//Case statements  
 	case "A":reportStep(Status+ " Status has been displaying" ,"PASS"); 
 	break;  
-	case "U": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"PASS");  
+	case "U": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"WARN"); 
 	break;  
-	case "C": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"PASS");  
+	case "C": reportStep(Status+ " Status has been displaying and E (or) R Status has not been displaying" ,"WARN");   
 	break;  
-	case "UP":reportStep(Status+ " Status has been displaying  and E (or) R Status has not been displaying" ,"PASS"); 
+	case "UP":reportStep(Status+ " Status has been displaying  and E (or) R Status has not been displaying" ,"WARN"); 
 	break;
 	case "E":reportStep(Status+ " Status has been displaying","PASS");
 	break;
