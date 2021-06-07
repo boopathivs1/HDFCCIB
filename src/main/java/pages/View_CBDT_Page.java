@@ -37,6 +37,12 @@ public class View_CBDT_Page extends ProjectWrapp{
 	
 	
 	}
+	
+	
+	
+	
+	
+	
 	public LogoutPages fill_CBDT(String compid,String branch,String accno,String taxnum) throws InterruptedException{
 		Thread.sleep(10000);
 		
@@ -66,6 +72,32 @@ public class View_CBDT_Page extends ProjectWrapp{
 		
 	
 	
+	public LogoutPages fill_CBDT_future_date(String compid,String branch,String accno,String taxnum) throws InterruptedException{
+		Thread.sleep(4000);
+		
+		contentFrames();
+		selectVisibileTextByXPath(prop.getProperty("select.cbdt.comp.xpath"),compid);
+		Thread.sleep(4000);
+		
+enterByXpathExplict(prop.getProperty("enter.cbdt.date.xpath"),GetFuturedate(futuredate));
+
+		
+		selectVisibileTextByXPath(prop.getProperty("select.cbdt.branch.xpath"),branch);
+		
+		
+		Thread.sleep(2000);
+		selectVisibileTextByXPath(prop.getProperty("select.cbdt.accnum.xpath"),accno);
+		
+		enterByXpathExplict(prop.getProperty("enter.cbdt.tax.num.xpath"),taxnum);
+		
+		clickByXpathExplict(prop.getProperty("click.cbdt.form.submit.xpath"));
+		Thread.sleep(4000);
+		acceptAlert();
+		
+		return new LogoutPages(driver, test);
+	
+	
+	}
 	
 }
 
