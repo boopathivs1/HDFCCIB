@@ -54,16 +54,16 @@ public LogoutPages fillAcctoAccBulkkformFuturedate(String company,String branch,
 	
 		enterByXpathExplict(prop.getProperty("enter.amount.bulk.xpath"),amount);
 		
-		enterByXpathExplict(prop.getProperty("enter.bulk.date.xpath"),GetFuturedate(futuredate));
+		//enterByXpathExplict(prop.getProperty("enter.bulk.date.xpath"),GetFuturedate(futuredate));
+		enterByXpathExplict(prop.getProperty("enter.bulk.date.xpath"),("07/06/2021"));
 		
-		
-		enterByXpathExplict(prop.getProperty("enter.bulk.remarks.xpath"),remarks);
-		
-		clickByXpathExplict(prop.getProperty("click.bulk.ok.xpath"));
-		
-		Thread.sleep(40000);
-		
-		clickByXpathExplict(prop.getProperty("click.quick.save.xpath"));
+//		enterByXpathExplict(prop.getProperty("enter.bulk.remarks.xpath"),remarks);
+//		
+//		clickByXpathExplict(prop.getProperty("click.bulk.ok.xpath"));
+//		
+//		Thread.sleep(40000);
+//		
+//		clickByXpathExplict(prop.getProperty("click.quick.save.xpath"));
 		
 		return new LogoutPages(driver, test);
 	}
