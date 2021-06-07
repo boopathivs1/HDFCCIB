@@ -94,7 +94,7 @@ new	HDFC_Login_Page(driver, test)
 .authorizeTlaRecord(otpcode)
 
 .clickTLA_Link()
-.filter_TransLevelAuth_Record(Compname,"Authorised",clientcode,accno,uploadtype,paytype)
+.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
 
 
 .clickTransNoSort()

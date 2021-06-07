@@ -86,7 +86,7 @@ public class Tc_26_Current_Date_FTLA  extends ProjectWrapp {
 		.authorizeFTlaRecord(otpcode)
 
 		.clickTLA_Link()
-		.filter_TransLevelAuth_Record(Compname,"Authorised",clientcode,accno,renamedfilename,paytype)
+		.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,renamedfilename,paytype)
 		.clickTransNoSort()
 		.getftlaAuthStatus(renamedfilename,"A")
 		.AuthorizeFTLAStatus(renamedfilename, Compname, clientcode, accno, paytype,renamedfilename);
