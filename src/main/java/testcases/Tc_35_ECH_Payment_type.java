@@ -58,15 +58,21 @@ public class Tc_35_ECH_Payment_type  extends ProjectWrapp {
 		int sub_c=12;
 		int sub_d=26;
 		int ran_a=1000;
-		int ran_b=9999;
+		int ran_b=9999;		
+	
+		ach_content_check(0,3, Renamedfilename_loc,0,7,9,13,10,99);
+
 		ach_content_check(1,6, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+		
+		
+		
 		ach_content_check(2,6, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
 		ach_content_check(3,6, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
 		ach_content_check(4,6, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
 		ach_content_check(5,5, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
 		ach_content_check(6,6, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
 
-		
+///////////		
 		
 /*
 			
@@ -97,7 +103,7 @@ public class Tc_35_ECH_Payment_type  extends ProjectWrapp {
 .CMSUploadFormSubmit(clientcode, totalIns, totalamt, transtype,false,Renamedfilename_loc)
 .getrefnumAch(0,23)
 .click_File_Level_View_Link()
-.filter_FileLevel_Record(clientcode,transtype)
+.filter_FileLevel_Record(clientcode,paytype)
 .clickLogoutLink();
 
 //getrefnumer="RBAU2703.128";

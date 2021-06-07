@@ -22,7 +22,7 @@ import javax.sound.sampled.Line;
 	int a;  
 	      try{
 	        //String line = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (8)/RBAU0904.701")).get(n);
-	        String line = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (3)/ACHDBCR2ACHCR010621.653")).get(n);
+	        String line = Files.readAllLines(Paths.get("C:/Users/Boopathi/Desktop/New folder (5)/ECSDBCR2ECSDB070621.157")).get(n);
 	        
 
 	        
@@ -30,15 +30,16 @@ import javax.sound.sampled.Line;
 			   String strMain =line;
 			   String[] arrSplit = strMain.split("\\s+");
 //System.out.println(arrSplit[3].toString());
-String date=arrSplit[4].toString();
+String date=arrSplit[3].toString();
 	System.out.println(date);
 	
-	String f=date.substring(0,34);
+	String f=date.substring(0,7);
 	
-	String fa=date.substring(36,61);
+	String fa=date.substring(9,13);
 	
 System.out.println(f);	
 System.out.println(fa);	
+System.out.println("000000000");
 
 System.out.println(GetTodayDate());
 
