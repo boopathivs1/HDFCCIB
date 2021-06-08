@@ -94,7 +94,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
     public static String fileurl=null;
     public String StatementBalanceAmount;
     public String finalBalanceAmount;
-    public static int futuredate=1;
+    public static int futuredate=2;
     public static int todaydate=0;
     
     public static String SIrefnumer=null;
@@ -1600,6 +1600,10 @@ public void statusVerify(String Status){
 	break; 
 	case "P": reportStep(Status+ " Status has been displaying" ,"PASS");
 	break;
+	case "Z": reportStep(Status+ " Status has been displaying" ,"FAIL");
+	break;
+	case "J": reportStep(Status+ " Status has been displaying" ,"FAIL");
+	break;
 	//Default case statement  
 	
 	default:System.out.println(Status);
@@ -1753,6 +1757,34 @@ element.click();
 	
 	
 	
+public void clickByXpathExplict_clear(String xpathVal){
+	try {
+		jqueryload();
+	} catch (InterruptedException e1) {
+}
+//	
+	
+	
+	WebDriverWait wait;
+	//waitForElement(xpathVal,2);
+	try{
+	
+		Thread.sleep(1000);
+
+		WebElement element = driver.findElement(By.xpath(xpathVal));
+
+	    // waits until Home link is visible on the web page
+
+	  wait = new WebDriverWait(driver,50);
+	    wait.until(ExpectedConditions.elementToBeClickable(element));
+element.clear();
+//element.click();
+		reportStep("The element with xpath: "+xpathVal+" is clicked.", "PASS");
+	} 	
+	catch (Exception e) {
+		reportStep("The element with xpath: "+xpathVal+" could not be clicked.Because Element not found Exception has occured", "FAIL");
+	}
+}
 	
 	
 public void clickByXpathExplictWithouScreenShot(String xpathVal){
@@ -2182,6 +2214,38 @@ public void loadendtimecalc(String xpath,String loadmsg) throws InterruptedExcep
 			
 			WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathVal)));
 			element.clear();
+			element.sendKeys(data);
+			
+			reportStep("The element with xpath: "+xpathVal+" is entered.", "PASS");
+		}
+		
+		
+		catch (Exception e) {
+		
+			
+			//	reportStep("The data: "+xpathVal+" could not be entered in the field :"+xpathVal, "FAIL");
+
+				reportStep("The data: "+xpathVal+" could not be entered in the field.Because No suchelement exception has occured :", "FAIL");
+
+		}
+	}
+	
+	public void enterByXpathExplict_noclear(String xpathVal, String data) {
+		
+		try {
+			readywithtime(xpathVal);
+			readystate();
+			jqueryload();
+		} catch (InterruptedException e1) {
+		}
+		//waitForElement(xpathVal,2);
+		WebDriverWait wait;
+		try{
+			Thread.sleep(2000);
+			 wait = new WebDriverWait(driver,60);
+			
+			WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathVal)));
+		//	element.clear();
 			element.sendKeys(data);
 			
 			reportStep("The element with xpath: "+xpathVal+" is entered.", "PASS");
@@ -4481,18 +4545,10 @@ Thread.sleep(2000);
 			reportStep("The element with xpath: "+xpath+" is selected with value :"+value, "PASS");
 		} 
 		
-		catch (NoSuchElementException e) {
-			reportStep("The element with xpath: "+xpath+" could not be found.Because NO Such Element Exception has occured", "FAIL");
-			
-		}
-		
-		catch (TimeoutException e) {
-			reportStep("The element with xpath: "+xpath+" could not be found.Because TimeOut Exception has occured", "FAIL");
-		}
 		
 		
 		catch (Exception e) {
-			reportStep("The value: "+value+" could not be selected.", "FAIL");
+		reportStep("The value: "+value+" could not be selected.", "FAIL");
 		}
 	}
 	public void selectValueByxpath(String element, String value) {

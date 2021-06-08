@@ -60,6 +60,7 @@ public class Tc_123_Onscreen_Payment_CBDT_Verify_Future_Date  extends ProjectWra
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
+.getBooking_Futuredate()
 .clickfirstAuthRec()
 .submitPwd(pwd)
 .contentFrame()
@@ -69,7 +70,8 @@ public class Tc_123_Onscreen_Payment_CBDT_Verify_Future_Date  extends ProjectWra
 .getValuedate()	.
 getGracedate(Graceperiod)
 .getAuthStatus("A")
-.checkGraceStatus();
+.checkGraceStatus()
+.getBooked_Futuredate();
 /*.clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()

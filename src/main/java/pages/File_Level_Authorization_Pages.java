@@ -40,13 +40,14 @@ public class File_Level_Authorization_Pages extends ProjectWrapp{
 //	clickByXpathExplict(prop.getProperty("click.authorize.flapages.xpath"));
 	clickByXpathExplictWithouScreenShot(prop.getProperty("click.authorize.flapages.xpath"));
 	
-	Thread.sleep(10000);
+	Thread.sleep(6000);
 acceptAlert();
 //	dismissAlert();
 	
 	enterByXpathExplict(prop.getProperty("enter.authorize.flapages.pwd.xpath"),otp);	
 	clickByXpathExplict(prop.getProperty("click.fla.auth.submit.xpath"));
-	
+	//Thread.sleep(5000);
+	//acceptAlert();
 
 					return this;
 }

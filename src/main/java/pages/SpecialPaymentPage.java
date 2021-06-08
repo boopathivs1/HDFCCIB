@@ -49,10 +49,18 @@ public class SpecialPaymentPage extends ProjectWrapp{
 		
 		enterByXpathExplict(prop.getProperty("enter.amount.bulk.xpath"),amount);
 		
+		clickByXpathExplict_clear(prop.getProperty("enter.iocl.spl.futuredate.xpath"));	
 		
+		Thread.sleep(7000);
+		acceptAlert();
 		
+		enterByXpathExplict_noclear(prop.getProperty("enter.iocl.spl.futuredate.xpath"),GetFuturedate(futuredate));
 		
-		enterByXpathExplict(prop.getProperty("enter.iocl.spl.futuredate.xpath"),GetFuturedate(futuredate));
+		Thread.sleep(2000);
+
+		clickByXpathExplict(prop.getProperty("enter.iocl.spl.futuredate.xpath"));	
+
+enterByXpathExplict_noclear(prop.getProperty("enter.iocl.spl.futuredate.xpath"),GetFuturedate(futuredate));
 		
 		
 		enterByXpathExplict(prop.getProperty("enter.spl.remarks.xpath"),remark);
@@ -79,6 +87,14 @@ public LogoutPages fillSplpaymentBPCLform(String Format,String Appformat,String 
 		selectVisibileTextByXPath(prop.getProperty("select.splpayment.format.xpath"),Format);
 		
 		selectVisibileTextByXPath(prop.getProperty("select.spl.applyformat.xpath"),Appformat);
+		enterByXpathExplict(prop.getProperty("enter.reliance.amt"),amount);
+		System.out.println("11111111111");
+		System.out.println(GetFuturedate(futuredate));
+		System.out.println("11111111111");	
+		enterByXpathExplict(prop.getProperty("enter.iocl.date.trans.xpath"),GetFuturedate(futuredate));
+		
+		//enterByXpathExplict(prop.getProperty("enter.iocl.date.trans.xpath"),"09/06/2021");
+		
 		
 		enterByXpathExplict(prop.getProperty("enter.reliance.amt"),amount);
 		

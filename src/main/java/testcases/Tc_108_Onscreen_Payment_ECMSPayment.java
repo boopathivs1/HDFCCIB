@@ -17,7 +17,7 @@ public class Tc_108_Onscreen_Payment_ECMSPayment  extends ProjectWrapp {
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Sreejith";
+		authors="Boopathi";
 		testKeyword="TC108";
 		LogoutStatus=true;	
 		usertype="CIBUser";

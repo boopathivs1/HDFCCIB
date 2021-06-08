@@ -115,18 +115,14 @@ public class Tc_35_ECH_Payment_type  extends ProjectWrapp {
 		.clickFLA_AuthLink()
 	
 		
-		.filter_FileLevelAuth_Record(clientcode,paytype)
+		.filter_FileLevelAuth_Record(clientcode,"All")
 		.clickfilenameSort()
 		.authorizeflaRecord(renamedfilename,otp)
 		.clickBackButton()
-
-
-		.filter_FileLevelAuth_Record(clientcode,paytype)
+		.filter_FileLevelAuth_Record(clientcode,"All")
 		.clickfilenameSort()
-
 		.getAuthStatus("A")
-		
-		.bulkAuth_Status(renamedfilename, clientcode, transtype);
+		.bulkAuth_Status(renamedfilename, clientcode,"All");
 		
 //		.clickSalary_ConfirmRecord(renamedfilename) 
 //		.defaultFlaLink()
@@ -134,12 +130,7 @@ public class Tc_35_ECH_Payment_type  extends ProjectWrapp {
 //		.filter_FileLevelAuth_Record(clientcode,transtype)
 //		.clickfilenameSort()		
 //		.getFinalStatus();
-
-
-
-
-
-		clickLogoutLink();
+        clickLogoutLink();
 
 
 		}

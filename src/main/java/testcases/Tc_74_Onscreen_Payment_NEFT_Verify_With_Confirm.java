@@ -51,7 +51,9 @@ public class Tc_74_Onscreen_Payment_NEFT_Verify_With_Confirm  extends ProjectWra
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.clickAuthVerify()
+.getAuthVerifyStatus("VP")
+.CheckVerifyStatus()
+//
 .defaultcontents()
 .contentFrame()	
 .clickViewLink()
@@ -59,6 +61,14 @@ public class Tc_74_Onscreen_Payment_NEFT_Verify_With_Confirm  extends ProjectWra
 .clickreflink()
 .clickfirstAuthRec()
 .submitPwd(pwd)
+.contentFrame()
+.clickViewLink()
+.authrecordFrame()
+.clickreflink()
+.getAuthStatus("A")
+.checkStatus();
+
+/*
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()
@@ -76,7 +86,7 @@ public class Tc_74_Onscreen_Payment_NEFT_Verify_With_Confirm  extends ProjectWra
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
-.getFinalStatus();
+.getFinalStatus();*/
 defaultcontent();		
 clickLogoutLink();
 
