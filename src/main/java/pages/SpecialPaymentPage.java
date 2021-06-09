@@ -88,6 +88,33 @@ public LogoutPages fillSplpaymentBPCLform(String Format,String Appformat,String 
 		
 		selectVisibileTextByXPath(prop.getProperty("select.spl.applyformat.xpath"),Appformat);
 		enterByXpathExplict(prop.getProperty("enter.reliance.amt"),amount);
+//		System.out.println("11111111111");
+//		System.out.println(GetFuturedate(futuredate));
+//		System.out.println("11111111111");	
+//		enterByXpathExplict(prop.getProperty("enter.iocl.date.trans.xpath"),GetFuturedate(futuredate));
+//		
+		//enterByXpathExplict(prop.getProperty("enter.iocl.date.trans.xpath"),"09/06/2021");
+		
+		
+		enterByXpathExplict(prop.getProperty("enter.reliance.amt"),amount);
+		
+		enterByXpathExplict(prop.getProperty("enter.bpcl.remark"),remark);
+		
+		clickByXpathExplict(prop.getProperty("click.spl.save.xpath"));
+		
+		return new LogoutPages(driver,test);
+	}
+	
+
+
+
+public LogoutPages fillSplpaymentBPCLform_futuredate(String Format,String Appformat,String amount,String remark) throws InterruptedException{
+		
+		contentFrames();
+		selectVisibileTextByXPath(prop.getProperty("select.splpayment.format.xpath"),Format);
+		
+		selectVisibileTextByXPath(prop.getProperty("select.spl.applyformat.xpath"),Appformat);
+		enterByXpathExplict(prop.getProperty("enter.reliance.amt"),amount);
 		System.out.println("11111111111");
 		System.out.println(GetFuturedate(futuredate));
 		System.out.println("11111111111");	
@@ -104,9 +131,6 @@ public LogoutPages fillSplpaymentBPCLform(String Format,String Appformat,String 
 		
 		return new LogoutPages(driver,test);
 	}
-	
-
-
 	
 	
 }

@@ -34,7 +34,7 @@ public class Tc_125_SpecialPayment_bpcl_Verify_future_Date  extends ProjectWrapp
 .clickFundTransfers()
 .clickAcctoAccLink()
 .clickSplpaymentLink()
-.fillSplpaymentBPCLform(Format, Appformat, amount, remark)
+.fillSplpaymentBPCLform_futuredate(Format, Appformat, amount, remark)
 .getrefnum()
 .clickLogout();		
 		
