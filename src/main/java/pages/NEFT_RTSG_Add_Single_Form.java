@@ -54,7 +54,45 @@ public class NEFT_RTSG_Add_Single_Form extends ProjectWrapp{
 		return new LogoutPages(driver, test);
 	}
 	
+	public LogoutPages fill_NEFT_RTGS_Future_Singleform(String paymode,String selectcompany,String selectbranch,String selectaccount,String beneneft,String amount,String remarks) throws InterruptedException{
+		contentFrames();
+		selectVisibileTextByXPath(prop.getProperty("click.paymode.neftrtgs.xpath"),paymode);
+		//selectVisibileTextByXPath(prop.getProperty("click.neft.rtgs.format.select.xpath"),selectformat);
+		Thread.sleep(6000);
+//		selectVisibileTextByXPath(prop.getProperty("select.neft.company.xpath"),"AUTOMATIONHDFC");
+
 		
+		selectVisibileTextByXPath(prop.getProperty("select.neft.company.xpath"),selectcompany);
+		Thread.sleep(2000);
+		selectVisibileTextByXPath(prop.getProperty("select.neft.branch.xpath"),selectbranch);
+	//	Thread.sleep(6000);
+		selectVisibileTextByXPath(prop.getProperty("select.neft.account.xpath"),selectaccount);
+		
+		getParentWindow();
+		clickByXpathExplict(prop.getProperty("click.neft.search.xpath"));
+	
+		switchToLastWindow();
+		enterByXpathExplict(prop.getProperty("enter.neft.bene.xpath"),beneneft);
+		clickByXpathExplict(prop.getProperty("click.neft.bene.search.xpath"));
+		clickByXpathExplict(".//input[contains(@onclick,'"+beneneft+"')]");
+		clickByXpathExplict(prop.getProperty("click.neft.bene.ok.xpath"));	
+		 Thread.sleep(4000);
+		 switchWindow(parentwindow);
+		 defaultcontent();
+		 contentFrames();
+		enterByXpathExplict(prop.getProperty("enter.neft.amount.xpath"),amount);
+		enterByXpathExplict(prop.getProperty("enter.neft.future.date.xpath"),GetFuturedate(futuredate));
+		//enterByXpathExplict(prop.getProperty("enter.neft.future.date.xpath"),GetFuturedate(futuredate));
+		enterByXpathExplict(prop.getProperty("enter.neft.remarks.xpath"),remarks);
+		scrolltoelementJs(prop.getProperty("click.addtosingle.save.xpath"));
+		clickByXpathExplict(prop.getProperty("click.addtosingle.save.xpath"));
+	
+		
+		Thread.sleep(5000);
+		acceptAlert();
+		return new LogoutPages(driver, test);
+	}
+	
 }
 
 

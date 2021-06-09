@@ -17,7 +17,7 @@ public class Tc_123_Onscreen_Payment_CBDT_Verify_Future_Date  extends ProjectWra
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Sreejith";
+		authors="Boopathi";
 		testKeyword="TC123";
 		LogoutStatus=true;	
 		usertype="CIBUser";

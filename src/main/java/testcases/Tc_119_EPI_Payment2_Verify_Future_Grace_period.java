@@ -37,7 +37,7 @@ public class Tc_119_EPI_Payment2_Verify_Future_Grace_period  extends ProjectWrap
 			
 			getSimulatorUrl();
 			new EPI_Payment_SimulatorPage(driver, test)
-			.FillEPISimulator(MerchantNo, Fromdate)
+			.FillEPIFutureSimulator(MerchantNo, Fromdate)
 			.fillCredentials(userid, pwd, groupid)
 			.SubmitEPIForm(company, Branch, acc, amount)
 			.getrefnum()

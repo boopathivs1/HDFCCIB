@@ -180,6 +180,15 @@ public Authorize_page clickfirstAuthRec(){
 
 }
 
+public Authorize_page clickEPIPCSfirstAuthRec(String paytye){	
+	
+	clickByXpathExplict(".//input[contains(@onclick,'"+paytye+"')]");
+//clickByXpathExplict(prop.getProperty("select.auth.recone.xpath"));
+	return this;
+
+}
+
+
 public Authorize_page clickBillpayfirstAuthRec(){	
 	
 	clickByXpathExplict(".//td//input[contains(@value,'"+getrefnumer+"')]");
@@ -214,6 +223,23 @@ public Authorize_page getAuthVerifyStatus(String verifyStatus) throws Interrupte
 
 	}
 
+
+public Authorize_page getAuthEPIPCSVerifyStatus(String verifyStatus,String Paytype) throws InterruptedException{	
+
+	String status=getTextByXpath(".//input[contains(@onclick,'"+Paytype+"')]/following::span[9]");
+	if(status.equalsIgnoreCase(verifyStatus)){
+		statusVerify(status);
+	}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("P")){
+		statusVerify(status);
+	}
+
+
+	else{
+		reportStep(status+ "Status has been displaying" ,"WARN");
+	}
+	return this;
+
+	}
 public Authorize_page CheckVerifyStatus() throws InterruptedException{	
 
 	String status=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[9]");
@@ -226,6 +252,18 @@ public Authorize_page CheckVerifyStatus() throws InterruptedException{
 
 	}
 
+
+public Authorize_page CheckEPIPCSVerifyStatus(String paytype) throws InterruptedException{	
+
+	String status=getTextByXpath(".//input[contains(@onclick,'"+paytype+"')]/following::span[9]");
+	if(status.contains("VP")){
+		reportStep(status+"Status has been dispalying","PASS");
+		clickAuthVerify();	
+	}
+	
+	return this;
+
+	}
 
 
 
@@ -333,7 +371,7 @@ public Authorize_page checkStatus() throws InterruptedException{
 		.clickViewLink()
 		.authrecordFrame()
 		.clickreflink()
-		.getAuthStatus("UP")
+		.getAuthVerifyStatus("UP")
 		.defaultcontents()
 		.contentFrame()		
 		.clickViewLink()
@@ -342,7 +380,37 @@ public Authorize_page checkStatus() throws InterruptedException{
 		.getFinalStatus();		
 	}
 	else{
-		getAuthStatus("UP");
+		getAuthVerifyStatus("UP");
+		//getFinalStatus();		
+			
+		
+	}
+	return this;
+		
+	}
+
+public Authorize_page checkEPIPCSStatus(String Paytype) throws InterruptedException{
+	String status=getTextByXpath("(.//input[contains(@onclick,'"+Paytype+"')]//following::span)[9]");
+	
+	if(status.equalsIgnoreCase("A")){
+	//new Authorize_page(driver, test)		
+//		.
+		clickEPIPCSfirstAuthRec(Paytype)
+		.confirmRecord()
+		.contentFrame()
+		.clickViewLink()
+		.authrecordFrame()
+		.clickreflink()
+		.getAuthEPIPCSVerifyStatus("UP",Paytype)
+		.defaultcontents()
+		.contentFrame()		
+		.clickViewLink()
+		.authrecordFrame()
+		.clickreflink()
+		.getEPIPCSFinalStatus(Paytype);		
+	}
+	else{
+		getAuthEPIPCSVerifyStatus("UP",Paytype);
 		//getFinalStatus();		
 			
 		
@@ -814,6 +882,21 @@ return this;
 
 }
 
+
+
+public Authorize_page getEPIPCSFinalStatus(String paytye) throws InterruptedException{	
+Thread.sleep(30000);
+String status=getTextByXpath("(.//input[contains(@onclick,'"+paytye+"')]//following::span)[9]");
+if(status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
+	statusVerify(status);
+}
+
+else{
+	reportStep(status+ "Status has been displaying" ,"FAIL");
+}
+return this;
+
+}
 
 
 public Authorize_page getBillpayFinalStatus() throws InterruptedException{	

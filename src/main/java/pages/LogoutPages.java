@@ -68,6 +68,15 @@ public LogoutPages getrefnumber() throws InterruptedException{
 		return this;
 	}
 	
+	
+	public LogoutPages clickEPIPCSSimulatorLogout() throws InterruptedException{
+		Thread.sleep(2000);
+		topEPIPCSFrames();
+		clickByXpathExplict(prop.getProperty("click.epipcs.logout.xpath"));
+		defaultcontent();
+		return this;
+	}
+	
 	public LogoutPages clickCBDTSimulatorLogout() throws InterruptedException{
 		Thread.sleep(6000);
 		clickByXpathExplict(prop.getProperty("click.cbdt.simulator.logout"));

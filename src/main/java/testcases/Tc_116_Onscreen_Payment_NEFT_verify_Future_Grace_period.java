@@ -35,7 +35,7 @@ public class Tc_116_Onscreen_Payment_NEFT_verify_Future_Grace_period  extends Pr
 .clickFundTransfers()
 .clickNEFTRTGSLink()
 .clickNEFTRTGS_Add_Link()
-.fill_NEFT_RTGS_Singleform(paymode, selectcompany, selectbranch, selectaccount, beneneft,amount, Remarks)
+.fill_NEFT_RTGS_Future_Singleform(paymode, selectcompany, selectbranch, selectaccount, beneneft,amount, Remarks)
 .getrefnum()
 .clickLogout();		
 	//getrefnumer="FT103267653347";

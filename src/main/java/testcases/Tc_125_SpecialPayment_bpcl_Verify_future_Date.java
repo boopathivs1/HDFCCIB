@@ -17,7 +17,7 @@ public class Tc_125_SpecialPayment_bpcl_Verify_future_Date  extends ProjectWrapp
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Sreejith";
+		authors="Boopathi";
 		testKeyword="TC125";
 		LogoutStatus=true;	
 		usertype="CIBUser";

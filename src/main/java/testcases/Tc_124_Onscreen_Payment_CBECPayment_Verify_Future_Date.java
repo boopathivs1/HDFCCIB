@@ -17,7 +17,7 @@ public class Tc_124_Onscreen_Payment_CBECPayment_Verify_Future_Date  extends Pro
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Sreejith";
+		authors="Boopathi";
 		testKeyword="TC124";
 		LogoutStatus=true;	
 		usertype="CIBUser";
