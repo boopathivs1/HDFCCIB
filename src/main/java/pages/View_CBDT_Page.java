@@ -49,10 +49,10 @@ public class View_CBDT_Page extends ProjectWrapp{
 		contentFrames();
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.comp.xpath"),compid);
 		Thread.sleep(10000);
-		
 
-		
-		
+		System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+
+				
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.branch.xpath"),branch);
 		
 		
@@ -77,18 +77,21 @@ public class View_CBDT_Page extends ProjectWrapp{
 		
 		contentFrames();
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.comp.xpath"),compid);
-		Thread.sleep(4000);
+		Thread.sleep(10000);
 		
-enterByXpathExplict(prop.getProperty("enter.cbdt.date.xpath"),GetFuturedate(futuredate));
 
 		
-		selectVisibileTextByXPath(prop.getProperty("select.cbdt.branch.xpath"),branch);
+		//selectVisibileTextByXPath(prop.getProperty("select.cbdt.branch.xpath"),branch);
+	//	selectVisibileTextByXPath(prop.getProperty("select.cbdt.branch.xpath"),"759, #ITC CENTREANNA SALAI, Opp T.V.S.");
 		
+		selectValueByxpath(prop.getProperty("select.cbdt.branch.xpath"),"0004");
 		
+//		value="0004"
 		Thread.sleep(2000);
 		selectVisibileTextByXPath(prop.getProperty("select.cbdt.accnum.xpath"),accno);
 		
 		enterByXpathExplict(prop.getProperty("enter.cbdt.tax.num.xpath"),taxnum);
+		enterByXpathExplict(prop.getProperty("enter.cbdt.date.xpath"),GetFuturedate(futuredate));
 		
 		clickByXpathExplict(prop.getProperty("click.cbdt.form.submit.xpath"));
 		Thread.sleep(4000);

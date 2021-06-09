@@ -14,7 +14,7 @@ public class Tc_105_EPI_Payment2_Verify_Grace_period  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC105";
-		testDescription="EPI_Payment2_Verify_Grace_period";
+		testDescription="EPI_Payment_Verify_Grace_period";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

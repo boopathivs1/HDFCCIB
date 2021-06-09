@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="testcases.Tc_41_Onscreen_Payment_Verification_Single"/>
+
+      <class name="testcases.Tc_42_Onscreen_Payment_Verify_Quick"/>
+
+      <class name="testcases.Tc_43_Onscreen_Payment_Verify_Bulk"/>
+
+      <class name="testcases.Tc_44_Onscreen_Payment_Verify_NEFT"/>
+      <class name="testcases.Tc_45_Onscreen_Payment_Verify_RTGS"/>
+
+      <class name="testcases.Tc_46_Onscreen_Payment_Verify_IMPS"/>
+
+      <class name="testcases.Tc_47_EPI_Payment_Verify"/>
+
+      <class name="testcases.Tc_49_SpecialPayment_Verify_IOCL"/>
+
+      <class name="testcases.Tc_50_SpecialPayment_Verify_bpcl"/>
+      <class name="testcases.Tc_51_Onscreen_Payment_Verify_CBDT"/>
+
+
+      <class name="testcases.Tc_52_Onscreen_Payment_Verify_CBECPayment"/>
+
+
+      <class name="testcases.Tc_53_Onscreen_Payment_Verify_ECMSPayment"/>
+      <class name="testcases.Tc_54_UPI_Payment_Verify"/>
+      <class name="testcases.Tc_55_GST_Payment_Verify"/>
+
+      <class name="testcases.Tc_56_Onscreen_Payment_Single_Without_verify"/>
+
+      <class name="testcases.Tc_57_Onscreen_Payment_Quick_Without_Verificaton"/>
+
+
+      <class name="testcases.Tc_58_Onscreen_Payment_Bulk2_without_verification"/>
+      <class name="testcases.Tc_59_Onscreen_Payment_NEFT_without_verification"/>
+      <class name="testcases.Tc_60_Onscreen_Payment_RTGS_without_verification"/>
+
+      <class name="testcases.Tc_61_Onscreen_IMPSPayment_without_verification"/>
+
+      <class name="testcases.Tc_62_EPI_Payment_without_verification"/>
+
+      <class name="testcases.Tc_66_Onscreen_Payment_CBDT_without_verification"/>
+
+
+      <class name="testcases.Tc_64_SpecialPayment_IOCL_without_verification"/>
+      <class name="testcases.Tc_65_Onscreen_Payment_ECMSPayment_without_verification"/>
+
+      <class name="testcases.Tc_67_Onscreen_Payment_CBECPayment_without_verification"/>
+
+      <class name="testcases.Tc_68_SpecialPayment_bpcl_without_verification"/>
+
+      <class name="testcases.Tc_69_UPI_Payment_Without_Verification"/>
+
+      <class name="testcases.Tc_70_GST_Payment_Verify_without_verification"/>
+
+      <class name="testcases.Tc_71_Onscreen_Payment_Single_verify_With_confirm"/>
+      <class name="testcases.Tc_72_Onscreen_Payment_Quick_Verify_With_confirm"/>
+      <class name="testcases.Tc_73_Onscreen_Payment_Bulk_Verify_With_confirm"/>
+
+      <class name="testcases.Tc_74_Onscreen_Payment_NEFT_Verify_With_Confirm"/>
+
+      <class name="testcases.Tc_75_Onscreen_Payment_RTGS_Verify_With_Confirm"/>
+
+
+
+      <class name="testcases.Tc_76_Onscreen_IMPSPayment_Verify_With_Confirm"/>
+
+      <class name="testcases.Tc_77_EPI_Payment2_Verify_with_confirm"/>
+      <class name="testcases.Tc_79_SpecialPayment_IOCL_Verify_With_Confirm"/>
+
+      <class name="testcases.Tc_80_Onscreen_Payment_ECMSPayment_Verify_with_confirm"/>
+
+      <class name="testcases.Tc_81_Onscreen_Payment_CBDT_Verify_With_Confirm"/>
+      <class name="testcases.Tc_82_Onscreen_Payment_CBECPayment_Verify_With_Confirm"/>
+
+
+      <class name="testcases.Tc_83_SpecialPayment_bpcl_Verify_With_confirm"/>
+
+      <class name="testcases.Tc_84_UPI_Payment_Verify_With_Confirm"/>
+
+      <class name="testcases.Tc_85_GST_Payment_Verify_With_confirm"/>
+      <class name="testcases.Tc_86_Onscreen_Paymen_Verify_Without_confirm_Quick"/>
+      <class name="testcases.Tc_87_Onscreen_Payment_Bulk"/>
+
+      <class name="testcases.Tc_88_Onscreen_Payment_NEFT"/>
+
+      <class name="testcases.Tc_89_Onscreen_Payment_RTGS_Without_confirm"/>
+
+
+      <class name="testcases.Tc_90_Onscreen_IMPSPayment_Without_confirm"/>
+
+
+      <class name="testcases.Tc_91_EPI_Payment_Without_confirm"/>
+
+
+      <class name="testcases.Tc_93_SpecialPayment_IOCL_Without_confirm"/>
+
+      <class name="testcases.Tc_93a_SpecialPayment_bpcl_Without_Confirm"/>
+      <class name="testcases.Tc_94_Onscreen_Payment_ECMSPayment_Without_confirm"/>
+      <class name="testcases.Tc_95_Onscreen_Payment_CBDT"/>
+
+
+      <class name="testcases.Tc_96_Onscreen_Payment_CBECPayment"/>
+      <class name="testcases.Tc_97_SpecialPayment_bpcl"/>
+
+      <class name="testcases.Tc_98_UPI_Payment_Verify_Without_Confirm"/>
+
+      <class name="testcases.Tc_99_GST_Payment_Verify_Without_Confirm"/>
+
+
+
+      <class name="testcases.Tc_100_Onscreen_grace_period_Verification_Quick"/>
+      <class name="testcases.Tc_101_Onscreen_Payment_Bulk_Verify_Grace_Period"/>
+
+      <class name="testcases.Tc_102_Onscreen_Payment_NEFT_verify_Grace_period"/>
+
+      <class name="testcases.Tc_103_Onscreen_Payment_RTGS_verify_Grace_Period"/>
+      <class name="testcases.Tc_104_Onscreen_IMPSPayment_verify_Grace_Period"/>
+
+      <class name="testcases.Tc_105_EPI_Payment2_Verify_Grace_period"/>
+
+
+      <class name="testcases.Tc_107_SpecialPayment_IOCL"/>
+
+
+      <class name="testcases.Tc_108_Onscreen_Payment_ECMSPayment"/>
+      <class name="testcases.Tc_109_Onscreen_Payment_CBDT_Verify_Grace_Period"/>
+      <class name="testcases.Tc_110_Onscreen_Payment_CBECPayment_Verify_Grace_Period"/>
+
+      <class name="testcases.Tc_111_SpecialPayment_bpcl_Verify_Grace_Period"/>
+
+
+
+      <class name="testcases.Tc_112_UPI_Payment_Verify"/>
+      <class name="testcases.Tc_113_GST_Payment_Verify"/>
+      <class name="testcases.Tc_114_Onscreen_Payment_Verify_Quick"/>
+
+
+      <class name="testcases.Tc_115_Onscreen_Payment_Bulk_Future_Grace_Period"/>
+      <class name="testcases.Tc_116_Onscreen_Payment_NEFT_verify_Future_Grace_period"/>
+      <class name="testcases.Tc_117_Onscreen_Payment_RTGS_verify_Future_Grace_Period"/>
+
+      <class name="testcases.Tc_118_Onscreen_Payment_Verify_IMPS"/>
+
+      <class name="testcases.Tc_119_EPI_Payment2_Verify_Future_Grace_period"/>
+      <class name="testcases.Tc_121_SpecialPayment_Verify_IOCL"/>
+
+      <class name="testcases.Tc_122_Onscreen_Payment_ECMSPayment_Future_date"/>
+
+      <class name="testcases.Tc_123_Onscreen_Payment_CBDT_Verify_Future_Date"/>
+
+      <class name="testcases.Tc_124_Onscreen_Payment_CBECPayment_Verify_Future_Date"/>
+      <class name="testcases.Tc_125_SpecialPayment_bpcl_Verify_future_Date"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -103,7 +103,35 @@ selectVisibileTextByXPath(prop.getProperty("auth.paytype.xpath"),Paytype);
 	}
 	
 	
+	public Authorize_page filterAuthorize_entervalue_Date(String compid,String SelectStatus,String Paytype) throws InterruptedException{
+		
+		System.out.println(Paytype+" value");
+		selectVisibileTextByXPath(prop.getProperty("click.authorize.compid.xpath"),compid);
+		selectVisibileTextByXPath(prop.getProperty("auth.selectstatus.xpath"),SelectStatus);
+		selectVisibileTextByXPath(prop.getProperty("auth.paytype.xpath"),Paytype);
 
+
+		
+
+
+
+		clickByXpathExplict_clear(prop.getProperty("enter.future.value.date.xpath"));	
+		
+		Thread.sleep(7000);
+		acceptAlert();
+		
+		enterByXpathExplict_noclear(prop.getProperty("enter.future.value.date.xpath"),GetFuturedate(futuredate));
+		
+		Thread.sleep(2000);
+
+		clickByXpathExplict(prop.getProperty("enter.future.value.date.xpath"));	
+
+enterByXpathExplict_noclear(prop.getProperty("enter.future.value.date.xpath"),GetFuturedate(futuredate));
+
+				
+				return this;
+			}
+			
 	public Authorize_page filterBilpayAuthorize(String Selectstatus,String name) throws InterruptedException{
 		
 		contentFrames();

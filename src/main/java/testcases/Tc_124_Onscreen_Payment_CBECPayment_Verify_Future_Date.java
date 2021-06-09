@@ -27,8 +27,10 @@ public class Tc_124_Onscreen_Payment_CBECPayment_Verify_Future_Date  extends Pro
 			String branch,String acc, String acccode,String amount,String authuserid,String authpwd,String authgroupid,String compid,String SelectStatus,String Paytype, 
 			String aid,String apwd,String autid,String cid,String Status,
 			String type,String data13,String data17,String data18) throws Exception{
+	
+		
 		try{
-			
+		
 			getnewurl();
 		new	HDFC_Login_Page(driver, test)
 .fillCredentials(userid, pwd, groupid)
@@ -37,14 +39,15 @@ public class Tc_124_Onscreen_Payment_CBECPayment_Verify_Future_Date  extends Pro
 .fillCBECpaymentform_future_Dates(paytype, company, branch, acc, acccode, amount)
 .getrefnumber()
 .clickLogoutLink();		
-		
-		getnewurl();		
+			
+			
+	getnewurl();		
 		new	HDFC_Login_Page(driver, test)
 		.fillCredentials(authuserid, authpwd,authgroupid)
 .fundTransfersLink()
 .clickAuthorize()
 .contentFrame()
-.filterAuthorize(compid, SelectStatus, Paytype)
+.filterAuthorize_entervalue_Date(compid, SelectStatus, Paytype)
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
@@ -57,6 +60,7 @@ public class Tc_124_Onscreen_Payment_CBECPayment_Verify_Future_Date  extends Pro
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
+.getBooking_Futuredate()
 .clickfirstAuthRec()
 .submitPwd(pwd)
 .contentFrame()
@@ -66,7 +70,8 @@ public class Tc_124_Onscreen_Payment_CBECPayment_Verify_Future_Date  extends Pro
 .getValuedate()	.
 getGracedate(Graceperiod)
 .getAuthStatus("A")
-.checkGraceStatus();
+.checkGraceStatus()
+.getBooked_Futuredate();
 /*.clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()

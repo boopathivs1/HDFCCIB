@@ -34,10 +34,34 @@ public LogoutPages fillCBECpaymentform_future_Dates(String paytype,String compan
 		selectVisibileTextByXPath(prop.getProperty("select.cbec.branch.xpath"),branch);
 		
 		selectVisibileTextByXPath(prop.getProperty("select.cbec.account.xpath"),acc);
+
+//		System.out.println("111111111");
+//		System.out.println(GetFuturedate(futuredate));
+//		System.out.println("111111111");		
+//		String futudate=GetFuturedate(futuredate).toString();
+
+		////
 		
+	clickByXpathExplict_clear(prop.getProperty("enter.cbec.date.xpath"));	
+		
+		Thread.sleep(7000);
+		acceptAlert();
+		
+		enterByXpathExplict_noclear(prop.getProperty("enter.cbec.date.xpath"),GetFuturedate(futuredate));
+		
+		Thread.sleep(2000);
+
+		clickByXpathExplict(prop.getProperty("enter.cbec.date.xpath"));	
+
+enterByXpathExplict_noclear(prop.getProperty("enter.cbec.date.xpath"),GetFuturedate(futuredate));
+
+		
+		
+		////
+		
+//		enterByXpathExplict(prop.getProperty("enter.cbec.date.xpath"),futudate);
+
 		selectVisibileTextByXPath(prop.getProperty("select.cbec.acccode.xpath"),acccode);
-		
-		enterByXpathExplict(prop.getProperty("enter.cbec.date.xpath"), GetFuturedate(futuredate));
 
 		
 		

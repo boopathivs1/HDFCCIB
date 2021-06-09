@@ -86,8 +86,26 @@ public class IMPSPaymentPage extends ProjectWrapp{
 				
 				enterByXpathExplict(prop.getProperty("enter.imps.amount"),impsamount);
 				enterByXpathExplict(prop.getProperty("enter.imps.amount"),impsamount);
-				enterByXpathExplict(prop.getProperty("enter.imps.date.xpath"),GetFuturedate(futuredate));
+//				enterByXpathExplict(prop.getProperty("enter.imps.date.xpath"),GetFuturedate(futuredate));
 				
+				
+				
+				
+				
+				clickByXpathExplict_clear(prop.getProperty("enter.imps.date.xpath"));	
+				
+				Thread.sleep(7000);
+				acceptAlert();
+				
+				enterByXpathExplict_noclear(prop.getProperty("enter.imps.date.xpath"),GetFuturedate(futuredate));
+				
+				Thread.sleep(2000);
+
+				clickByXpathExplict(prop.getProperty("enter.imps.date.xpath"));	
+
+		enterByXpathExplict_noclear(prop.getProperty("enter.imps.date.xpath"),GetFuturedate(futuredate));
+
+
 				
 							
 				clickByXpathExplict(prop.getProperty("click.imps.save"));

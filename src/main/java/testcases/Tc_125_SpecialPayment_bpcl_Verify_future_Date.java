@@ -57,6 +57,7 @@ public class Tc_125_SpecialPayment_bpcl_Verify_future_Date  extends ProjectWrapp
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
+.getBooking_Futuredate()
 .clickfirstAuthRec()
 .submitPwd(pwd)
 .contentFrame()
@@ -66,7 +67,8 @@ public class Tc_125_SpecialPayment_bpcl_Verify_future_Date  extends ProjectWrapp
 .getValuedate()	.
 getGracedate(Graceperiod)
 .getAuthStatus("A")
-.checkGraceStatus();
+.checkGraceStatus()
+.getBooked_Futuredate();
 /*.clickfirstAuthRec()
 .confirmRecord()
 .contentFrame()
