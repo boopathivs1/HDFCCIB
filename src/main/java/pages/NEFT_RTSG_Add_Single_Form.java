@@ -81,7 +81,19 @@ public class NEFT_RTSG_Add_Single_Form extends ProjectWrapp{
 		 defaultcontent();
 		 contentFrames();
 		enterByXpathExplict(prop.getProperty("enter.neft.amount.xpath"),amount);
-		enterByXpathExplict(prop.getProperty("enter.neft.future.date.xpath"),GetFuturedate(futuredate));
+		//enterByXpathExplict(prop.getProperty("enter.neft.future.date.xpath"),GetFuturedate(futuredate));
+clickByXpathExplict_clear(prop.getProperty("enter.neft.future.date.xpath"));	
+		
+		Thread.sleep(7000);
+		acceptAlert();
+		
+		enterByXpathExplict_noclear(prop.getProperty("enter.neft.future.date.xpath"),GetFuturedate(futuredate));
+		
+		Thread.sleep(2000);
+
+		clickByXpathExplict(prop.getProperty("enter.neft.future.date.xpath"));	
+
+enterByXpathExplict_noclear(prop.getProperty("enter.neft.future.date.xpath"),GetFuturedate(futuredate));
 		//enterByXpathExplict(prop.getProperty("enter.neft.future.date.xpath"),GetFuturedate(futuredate));
 		enterByXpathExplict(prop.getProperty("enter.neft.remarks.xpath"),remarks);
 		scrolltoelementJs(prop.getProperty("click.addtosingle.save.xpath"));
