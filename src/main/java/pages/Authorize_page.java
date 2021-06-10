@@ -152,7 +152,7 @@ enterByXpathExplict_noclear(prop.getProperty("enter.future.value.date.xpath"),Ge
 		Thread.sleep(7000);
 		acceptAlert();
 		
-		enterByXpathExplict_noclear(prop.getProperty("enter.future.value.date.xpath"),GetFuturedate(futuredate));
+		enterByXpathExplict_noclear(prop.getProperty("enter.future.value.date.xpath"),GetFuturedate(14));
 		
 		Thread.sleep(2000);
 
