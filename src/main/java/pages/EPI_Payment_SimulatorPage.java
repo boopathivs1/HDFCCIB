@@ -36,7 +36,7 @@ public class EPI_Payment_SimulatorPage extends ProjectWrapp{
 	public EPI_Payment_SimulatorPage FillEPIPCSSimulator(String MerchantNo){
 		
 		 
-		enterByXpathExplict(prop.getProperty("enter.epipcs.merchantno.xpath"), MerchantNo+getRandomNumString());
+		enterByXpathExplict(prop.getProperty("enter.epipcs.merchantno.xpath"), MerchantNo+gettwoRandomNumberString());
 		
 		clickByXpathExplict(prop.getProperty("click.epi.submit.xpath"));
 		

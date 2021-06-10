@@ -56,11 +56,7 @@ public LogoutPages fillAcctoAccBulkkformFuturedate(String company,String branch,
 		
 		//enterByXpathExplict(prop.getProperty("enter.bulk.date.xpath"),GetFuturedate(futuredate));
 	//	enterByXpathExplict(prop.getProperty("enter.bulk.date.xpath"),("07/06/2021"));
-		
-		
-		
-		
-		
+			
 	clickByXpathExplict_clear(prop.getProperty("enter.bulk.date.xpath"));	
 		
 		Thread.sleep(4000);

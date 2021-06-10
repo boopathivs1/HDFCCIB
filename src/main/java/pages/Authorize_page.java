@@ -240,6 +240,7 @@ public Authorize_page getAuthEPIPCSVerifyStatus(String verifyStatus,String Payty
 	return this;
 
 	}
+
 public Authorize_page CheckVerifyStatus() throws InterruptedException{	
 
 	String status=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[9]");
@@ -545,11 +546,90 @@ return this;
 
 }
 
+public Authorize_page getNoREfValuedate(String Paytype) throws InterruptedException{	
+
+String Valuedate=getTextByXpath("(.//input[contains(@onclick,'"+Paytype+"')]//following::span)[11]");
+
+
+reportStep("Reference number for Booking date and Value date "+Paytype,"PASS");
+reportStep("Booking date before authorization"+Valuedate,"INFO");
+//System.out.println(status);
+//if(Valuedate.equalsIgnoreCase(dateMonthSlash())){
+//
+//	reportStep(Valuedate+ "Expected Bookingdate has been displaying" ,"PASS");
+//}
+//else{
+//	reportStep(Valuedate+ "Expected Bookingdate has  not been displaying" ,"FAIL");
+//}
+return this;
+
+}
+
+
+public Authorize_page getGSTValuedate(String Paytype) throws InterruptedException{	
+
+String Valuedate=getTextByXpath("(.//input[contains(@onclick,'"+Paytype+"')]//following::span)[11]");
+
+
+reportStep("Reference number for Booking date and Value date "+Paytype,"PASS");
+reportStep("Booking date before authorization"+Valuedate,"INFO");
+//System.out.println(status);
+//if(Valuedate.equalsIgnoreCase(dateMonthSlash())){
+//
+//	reportStep(Valuedate+ "Expected Bookingdate has been displaying" ,"PASS");
+//}
+//else{
+//	reportStep(Valuedate+ "Expected Bookingdate has  not been displaying" ,"FAIL");
+//}
+return this;
+
+}
+
 public Authorize_page getGracedate(int d) throws InterruptedException{	
 
 String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[12]");
 
 reportStep("Reference number for Booking date and Grace date "+getrefnumer,"PASS");
+reportStep("Booking date before authorization"+Gracedate,"INFO");
+
+//System.out.println(status);
+//if(Gracedate.equalsIgnoreCase(GetFuturedate(d))){
+//
+//	reportStep(Gracedate+ "Expected  Gracedate has been displaying" ,"PASS");
+//}
+//else{
+//	reportStep(Gracedate+ "Expected  Gracedate has  not been displaying" ,"FAIL");
+//}
+return this;
+
+}
+
+
+public Authorize_page getGSTGracedate(String paytype) throws InterruptedException{	
+
+String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+paytype+"')]//following::span)[12]");
+
+reportStep("Reference number for Booking date and Grace date "+paytype,"PASS");
+reportStep("Booking date before authorization"+Gracedate,"INFO");
+
+//System.out.println(status);
+//if(Gracedate.equalsIgnoreCase(GetFuturedate(d))){
+//
+//	reportStep(Gracedate+ "Expected  Gracedate has been displaying" ,"PASS");
+//}
+//else{
+//	reportStep(Gracedate+ "Expected  Gracedate has  not been displaying" ,"FAIL");
+//}
+return this;
+
+}
+
+
+public Authorize_page getEPCSGracedate(String paytype) throws InterruptedException{	
+
+String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+paytype+"')]//following::span)[12]");
+
+reportStep("Reference number for Booking date and Grace date "+paytype,"PASS");
 reportStep("Booking date before authorization"+Gracedate,"INFO");
 
 //System.out.println(status);
@@ -573,6 +653,32 @@ String Futuredate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')
 
 
 reportStep("Reference number for Booking date and Future date "+getrefnumer,"PASS");
+reportStep("Booking date before authorization"+Bookingdate,"INFO");
+
+reportStep("Value date before authorization with grace Period "+Futuredate+ "" ,"INFO");
+
+
+//////System.out.println(status);
+//if(Futuredate.equalsIgnoreCase(GetFuturedate(futuredate))){
+////
+//	reportStep(Futuredate+ "Expected  Futuredate has been displaying" ,"PASS");
+//}
+//else{
+//	reportStep(Bookingdate+ "Expected  Futuredate has  not been displaying" ,"FAIL");
+//}
+return this;
+
+}
+
+
+public Authorize_page getNoREfBooking_Futuredate(String Paytype) throws InterruptedException{	
+
+String Bookingdate=getTextByXpath("(.//input[contains(@onclick,'"+Paytype+"')]//following::span)[11]");
+
+String Futuredate=getTextByXpath("(.//input[contains(@onclick,'"+Paytype+"')]//following::span)[12]");
+
+
+reportStep("Reference number for Booking date and Future date "+Paytype,"PASS");
 reportStep("Booking date before authorization"+Bookingdate,"INFO");
 
 reportStep("Value date before authorization with grace Period "+Futuredate+ "" ,"INFO");
@@ -613,9 +719,53 @@ return this;
 
 }
 
+public Authorize_page getNorefBooked_Futuredate(String Paytype) throws InterruptedException{	
+
+String Bookingdate=getTextByXpath("(.//input[contains(@onclick,'"+Paytype+"')]//following::span)[11]");
+
+String Futudate=getTextByXpath("(.//input[contains(@onclick,'"+Paytype+"')]//following::span)[12]");
+
+
+reportStep("Booking date after authorization "+Bookingdate,"PASS");
+
+reportStep("Value date after authorization "+Futudate,"PASS");
+
+
+
+if(Futudate.equalsIgnoreCase(GetFuturedate(futuredate))){
+
+	reportStep(Futudate+ "Expected  Future date has been displaying" ,"PASS");
+}
+else{
+	reportStep(Futudate+ "Expected  Future date has  not been displaying" ,"FAIL");
+}
+return this;
+
+}
+
+
+
 public Authorize_page getAuthorizeddate() throws InterruptedException{	
 
 String Valuedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[12]");
+
+
+//System.out.println(status);
+if(Valuedate.equalsIgnoreCase(dateMonthSlash())){
+
+	reportStep(Valuedate+ "Expected Authorizeddate has been displaying" ,"PASS");
+}
+else{
+	reportStep(Valuedate+ "Expected Authorizeddate has  not been displaying" ,"FAIL");
+}
+return this;
+
+}
+
+
+public Authorize_page getNoREFAuthorizeddate(String Paytype) throws InterruptedException{	
+
+String Valuedate=getTextByXpath("(.//input[contains(@onclick,'"+Paytype+"')]//following::span)[12]");
 
 
 //System.out.println(status);

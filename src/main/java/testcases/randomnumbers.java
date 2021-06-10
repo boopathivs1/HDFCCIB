@@ -4,15 +4,23 @@ import java.util.Random;
 
 public class randomnumbers {
 	public static void main(String[] args) {
-		getRandomNumberString();
-	System.out.println(getRandomNumberString());
+		getRandomNumString();
+	System.out.println(getRandomNumString());
 	}
-	public static String getRandomNumberString() {
+	
+
+	public static String getRandomNumString() {
 	    // It will generate 6 digit random Number.
 	    // from 0 to 999999
-	    Random rnd = new Random();
-	    int number = rnd.nextInt(99);
+		 int min = 1;
+		    int max = 9999999;
 
+		      int num = (int) (Math.random() * (max - min + 1)) + min;
+		      String expected = String.valueOf(num).substring(2);
+		      System.out.println(expected.length()-2);
+		    
 	    // this will convert any number sequence into 6 character.
-	    return String.format("%02d", number);
-	}}
+	    return expected;
+	}
+	
+}
