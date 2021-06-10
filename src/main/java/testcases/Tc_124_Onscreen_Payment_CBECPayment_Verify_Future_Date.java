@@ -47,7 +47,7 @@ public class Tc_124_Onscreen_Payment_CBECPayment_Verify_Future_Date  extends Pro
 .fundTransfersLink()
 .clickAuthorize()
 .contentFrame()
-.filterAuthorize_entervalue_Date(compid, SelectStatus, Paytype)
+.filterAuthorize_entervalue_Date_cbec(compid, SelectStatus, Paytype)
 .clickViewLink()
 .authrecordFrame()
 .clickreflink()
