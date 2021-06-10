@@ -9,7 +9,7 @@ import java.util.Date;
 public class Datanumber {
 public static void main(String[] args) {
 
-	GetFuturedate(1);
+	GetFuturedate(40);
 }
 
 public static String GetFuturedate(int d)
