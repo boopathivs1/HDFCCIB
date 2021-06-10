@@ -42,20 +42,13 @@ public class Tc_77_EPI_Payment2_Verify_with_confirm  extends ProjectWrapp {
 			.getrefnum()
 			.clickSimulatorLogout();	
 			
-			getnewurl();		
+			getnewurl();	
 			new	HDFC_Login_Page(driver, test)
 	.fillCredentials(authuserid, authpwd, authgroupid)
 	.fundTransfersLink()
 	.clickAuthorize()
 	.contentFrame()
 	.filterAuthorize(compid, SelectStatus, Paytype)
-	.clickViewLink()
-	.authrecordFrame()
-	.clickreflink()
-	.clickfirstAuthRec()
-	.clickAuthVerify()
-	.defaultcontents()
-	.contentFrame()	
 	.clickViewLink()
 	.authrecordFrame()
 	.clickreflink()

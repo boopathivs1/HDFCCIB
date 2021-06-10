@@ -12,13 +12,13 @@ import wrappers.ProjectWrapp;
 public class Tc_96_Onscreen_Payment_CBECPayment  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC52";
+		testCaseName="TC96";
 		testDescription="Onscreen_Payment_CBECPayment";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC52";
+		testKeyword="TC96";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}

@@ -12,13 +12,13 @@ import wrappers.ProjectWrapp;
 public class Tc_97_SpecialPayment_bpcl  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC50";
+		testCaseName="TC97";
 		testDescription="SpecialPayment_bpcl";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC50";
+		testKeyword="TC97";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}

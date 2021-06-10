@@ -61,13 +61,6 @@ public class Tc_91_EPI_Payment_Without_confirm  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.clickfirstAuthRec()
-	.clickAuthVerify()
-	.defaultcontents()
-	.contentFrame()	
-	.clickViewLink()
-	.authrecordFrame()
-	.clickreflink()
-	.clickfirstAuthRec()
 	.submitPwd(pwd)
 	.contentFrame()
 	.clickViewLink()
@@ -88,7 +81,6 @@ public class Tc_91_EPI_Payment_Without_confirm  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.getFinalStatus();*/
-
 	defaultcontent();		
 	clickLogoutLink();
 
