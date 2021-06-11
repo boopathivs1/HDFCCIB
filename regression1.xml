@@ -15,7 +15,9 @@
       <class name="testcases.Tc_46_Onscreen_Payment_Verify_IMPS"/>
 
       <class name="testcases.Tc_47_EPI_Payment_Verify"/>
+           <class name="testcases.Tc_48_Onscreen_Payment_Verification_EPI_PCS"/>
 
+      
       <class name="testcases.Tc_49_SpecialPayment_Verify_IOCL"/>
 
       <class name="testcases.Tc_50_SpecialPayment_Verify_bpcl"/>
@@ -41,12 +43,15 @@
       <class name="testcases.Tc_61_Onscreen_IMPSPayment_without_verification"/>
 
       <class name="testcases.Tc_62_EPI_Payment_without_verification"/>
+      
 
-      <class name="testcases.Tc_66_Onscreen_Payment_CBDT_without_verification"/>
-
+      <class name="testcases.Tc_63_Onscreen_without_Payment_Verification_EPI_PCS"/>
 
       <class name="testcases.Tc_64_SpecialPayment_IOCL_without_verification"/>
       <class name="testcases.Tc_65_Onscreen_Payment_ECMSPayment_without_verification"/>
+
+      <class name="testcases.Tc_66_Onscreen_Payment_CBDT_without_verification"/>
+
 
       <class name="testcases.Tc_67_Onscreen_Payment_CBECPayment_without_verification"/>
 
@@ -69,6 +74,8 @@
       <class name="testcases.Tc_76_Onscreen_IMPSPayment_Verify_With_Confirm"/>
 
       <class name="testcases.Tc_77_EPI_Payment2_Verify_with_confirm"/>
+  <class name="testcases.Tc_78_Onscreen_with_confirm_Verification_EPIPCS"/>
+
       <class name="testcases.Tc_79_SpecialPayment_IOCL_Verify_With_Confirm"/>
 
       <class name="testcases.Tc_80_Onscreen_Payment_ECMSPayment_Verify_with_confirm"/>
@@ -94,6 +101,8 @@
 
 
       <class name="testcases.Tc_91_EPI_Payment_Without_confirm"/>
+      <class name="testcases.Tc_92_Onscreen_without_confirm_Verification_EPI_PCS"/>
+
 
 
       <class name="testcases.Tc_93_SpecialPayment_IOCL_Without_confirm"/>
@@ -121,7 +130,7 @@
       <class name="testcases.Tc_104_Onscreen_IMPSPayment_verify_Grace_Period"/>
 
       <class name="testcases.Tc_105_EPI_Payment2_Verify_Grace_period"/>
-
+<class name="testcases.Tc_106_Onscreen_grace_period_Verification_EPIPCS"/>
 
       <class name="testcases.Tc_107_SpecialPayment_IOCL"/>
 
@@ -155,6 +164,9 @@
       <class name="testcases.Tc_124_Onscreen_Payment_CBECPayment_Verify_Future_Date"/>
       <class name="testcases.Tc_125_SpecialPayment_bpcl_Verify_future_Date"/>
 
+ <class name="testcases.Tc_126_UPI_Payment_Verify_Future_Graceperiod"/>
+ <class name="testcases.Tc_127_GST_Payment_Verify_Future_date"/>
+      
 
 
 

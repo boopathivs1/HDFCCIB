@@ -15,7 +15,7 @@ public class Dashboard_Page  extends ProjectWrapp{
 	public FundTransfers_Page clickFundTransfers() throws InterruptedException{
 		//Thread.sleep(20000);
 		topFrames();
-		clickByXpathExplict(prop.getProperty("click.fundtrans.menu.xpath"));
+		clickByXpathExplict(prop.getProperty("click.fundtdddddrans.menu.xpath"));
 		defaultcontent();
 		return new FundTransfers_Page(driver, test);
 	

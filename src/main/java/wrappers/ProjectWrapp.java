@@ -72,7 +72,7 @@ public class ProjectWrapp extends GenericWrappers{
 	@AfterSuite(groups={"common"})
 	public void afterSuite() throws Exception{
 
-		endResult();
+//		endResult();
 	
 		//zip();
 	}
@@ -99,7 +99,10 @@ public class ProjectWrapp extends GenericWrappers{
 		endTestcase();
 //closeAllBrowsers();
 	closeBrowser();
-//	reportStep("Application has logged out Successfully", "PASS");
+
+	endResult();
+
+	//	reportStep("Application has logged out Successfully", "PASS");
 
 	
 
