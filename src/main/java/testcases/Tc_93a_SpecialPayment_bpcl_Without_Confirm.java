@@ -12,7 +12,7 @@ import wrappers.ProjectWrapp;
 public class Tc_93a_SpecialPayment_bpcl_Without_Confirm  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC53a";
+		testCaseName="TC93a";
 		testDescription="SpecialPayment_bpcl_Without_Confirm";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
