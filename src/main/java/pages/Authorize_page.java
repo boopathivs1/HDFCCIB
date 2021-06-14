@@ -966,8 +966,8 @@ if(status.equalsIgnoreCase("A")){
 	.clickViewLink()
 	.authrecordFrame()
 	.clickreflink()
-	.getSimulatorFinalStatus(paytype);
-	getAuthorizeddate();
+	.getSimulatorFinalStatus(paytype)
+	.getNoREFAuthorizeddate(paytype);
 	
 	
 	
@@ -975,9 +975,9 @@ if(status.equalsIgnoreCase("A")){
 }
 
 else{
-	getAuthStatus("UP");
+	getSimulatorAuthStatus(paytype,"UP");
 	//getFinalStatus();		
-	getAuthorizeddate();
+	getNoREFAuthorizeddate(paytype);
 	
 }
 
