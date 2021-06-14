@@ -831,7 +831,7 @@ public Authorize_page getNoREFAuthorizeddate(String Paytype) throws InterruptedE
 String Valuedate=getTextByXpath("(.//input[contains(@onclick,'"+Paytype+"')]//following::span)[12]");
 
 
-//System.out.println(status);
+System.out.println(Valuedate);
 if(Valuedate.equalsIgnoreCase(dateMonthSlash())){
 
 	reportStep(Valuedate+ "Expected Authorizeddate has been displaying" ,"PASS");

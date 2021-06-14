@@ -68,8 +68,8 @@ public class Tc_127_GST_Payment_Verify_Future_date  extends ProjectWrapp {
 	.getGSTValuedate(Paytype)
 	.getGSTGracedate(Paytype)
 	.getSimulatorAuthStatus(Paytype,"A")
-	.get_gst_AuthStatus_grace_date(Paytype)
-	.getNorefBooked_Futuredate(Paytype);
+	.get_gst_AuthStatus_grace_date(Paytype);
+	//.getNorefBooked_Futuredate(Paytype);
 	defaultcontent();		
 	clickLogoutLink();
 
