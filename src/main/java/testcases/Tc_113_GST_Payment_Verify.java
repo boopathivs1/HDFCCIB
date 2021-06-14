@@ -64,8 +64,8 @@ public class Tc_113_GST_Payment_Verify  extends ProjectWrapp {
 	.clickViewLink()
 	.authrecordFrame()
 	.clickreflink()
-	.getValuedate()
-	.getGracedate(Graceperiod)
+	.getGSTValuedate(Paytype)
+	.getGSTGracedate(Paytype)
 	.getSimulatorAuthStatus(Paytype,"A")
 	.get_gst_AuthStatus_grace_date(Paytype);
 	defaultcontent();		
