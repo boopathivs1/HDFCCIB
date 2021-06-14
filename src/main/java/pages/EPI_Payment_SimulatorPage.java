@@ -15,8 +15,9 @@ public class EPI_Payment_SimulatorPage extends ProjectWrapp{
 	
 	public EPI_Payment_SimulatorPage FillEPISimulator(String MerchantNo, String date){
 	
+		String Merno= regvalue(MerchantNo);
 		 
-		enterByXpathExplict(prop.getProperty("enter.epi.simu.merchantNo"), MerchantNo+gettwoRandomNumberString());
+		enterByXpathExplict(prop.getProperty("enter.epi.simu.merchantNo"), Merno+gettwoRandomNumber_range_String(100,999));
 		enterByXpathExplict(prop.getProperty("enter.epi.simu.date.xpath"), GetTodayFoematDate()+" "+"12:30:45");
 		clickByXpathExplict(prop.getProperty("click.epi.submit.xpath"));
 		

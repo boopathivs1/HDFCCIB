@@ -50,6 +50,7 @@ public class NEFT_Add_Quick_Page extends ProjectWrapp{
 		contentFrames();
 		selectVisibileTextByXPath(prop.getProperty("click.paymode.neftrtgs.xpath"),paymode);
 		//selectVisibileTextByXPath(prop.getProperty("click.neft.rtgs.format.select.xpath"),selectformat);
+		Thread.sleep(2000);
 		selectVisibileTextByXPath(prop.getProperty("select.neft.company.xpath"),selectcompany);
 		Thread.sleep(2000);
 		selectVisibileTextByXPath(prop.getProperty("select.neft.branch.xpath"),selectbranch);
