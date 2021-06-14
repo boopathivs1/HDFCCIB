@@ -15,9 +15,11 @@ public class GST_Payment_SimulatorPage extends ProjectWrapp{
 	
 	public GST_Payment_SimulatorPage FillGSTSimulator(String TransID,String challonNo,String amount,String expirydate){
 	
+		String TransactionID = regvalue(TransID);
+		String ChallonNum =regvalue(challonNo);
 		
-		enterByXpathExplict(prop.getProperty("enter.gst.transactionid.xpath"), TransID+gettwoRandomNumberString());
-		enterByXpathExplict(prop.getProperty("enter.gst.challon.no.xpath"), challonNo+gettwoRandomNumberString());
+		enterByXpathExplict(prop.getProperty("enter.gst.transactionid.xpath"), TransactionID+gettwoRandomNumber_range_String(100,999));
+		enterByXpathExplict(prop.getProperty("enter.gst.challon.no.xpath"), ChallonNum+gettwoRandomNumber_range_String(100,999));
 		//enterByXpathExplict(prop.getProperty("enter.gst.amt.xpath"), amount);
 		enterByXpathExplict(prop.getProperty("enter.gst.expirydate.xpath"), GetTodayFoematDate());
 		clickByXpathExplict(prop.getProperty("enter.gst.submit.xpath"));
@@ -28,9 +30,11 @@ public class GST_Payment_SimulatorPage extends ProjectWrapp{
 	
 public GST_Payment_SimulatorPage FillGSTFuturedateSimulator(String TransID,String challonNo,String amount,String expirydate){
 	
+	String TransactionID = regvalue(TransID);
+	String ChallonNum =regvalue(challonNo);
 		
-		enterByXpathExplict(prop.getProperty("enter.gst.transactionid.xpath"), TransID+gettwoRandomNumberString());
-		enterByXpathExplict(prop.getProperty("enter.gst.challon.no.xpath"), challonNo+gettwoRandomNumberString());
+		enterByXpathExplict(prop.getProperty("enter.gst.transactionid.xpath"), TransactionID+gettwoRandomNumber_range_String(100,999));
+		enterByXpathExplict(prop.getProperty("enter.gst.challon.no.xpath"), ChallonNum+gettwoRandomNumber_range_String(100,999));
 		//enterByXpathExplict(prop.getProperty("enter.gst.amt.xpath"), amount);
 		enterByXpathExplict(prop.getProperty("enter.gst.expirydate.xpath"), GetFuturedate(futuredate));
 		clickByXpathExplict(prop.getProperty("enter.gst.submit.xpath"));

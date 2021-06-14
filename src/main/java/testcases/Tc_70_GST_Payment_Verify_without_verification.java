@@ -50,26 +50,26 @@ public class Tc_70_GST_Payment_Verify_without_verification  extends ProjectWrapp
 	.clickViewLink()
 	.authrecordFrame()
 	.clickreflink()
-	.clickfirstAuthRec()
+	.clickSimulatorAuthRec(Paytype)
 	
 	
 	
 	
-	.getAuthVerifyStatus("VP")
-	.CheckVerifyStatus()
+	.getGSTAuthVerifyStatus("VP",Paytype)
+	.CheckGSTVerifyStatus(Paytype)
 	.defaultcontents()
 	.contentFrame()	
 	.clickViewLink()
 	.authrecordFrame()
 	.clickreflink()
-	.clickfirstAuthRec()
+	.clickSimulatorAuthRec(Paytype)
 	.submitPwd(pwd)
 	.contentFrame()
 	.clickViewLink()
 	.authrecordFrame()
 	.clickreflink()
-	.getAuthStatus("A")
-	.checkStatus();
+	.getSimulatorAuthStatus(Paytype,"A")
+	.checkSimulatorStatus(Paytype);
 			
 	//.clickfirstAuthRec()
 	//.confirmRecord()

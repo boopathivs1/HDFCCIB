@@ -257,6 +257,24 @@ public Authorize_page getAuthVerifyStatus(String verifyStatus) throws Interrupte
 	}
 
 
+public Authorize_page getGSTAuthVerifyStatus(String verifyStatus,String Paytype) throws InterruptedException{	
+
+	String status=getTextByXpath(".//input[contains(@onclick,'"+Paytype+"')]/following::span[9]");
+	if(status.equalsIgnoreCase(verifyStatus)){
+		statusVerify(status);
+	}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("P")){
+		statusVerify(status);
+	}
+
+
+	else{
+		reportStep(status+ "Status has been displaying" ,"WARN");
+	}
+	return this;
+
+	}
+
+
 public Authorize_page getAuthEPIPCSVerifyStatus(String verifyStatus,String Paytype) throws InterruptedException{	
 
 	String status=getTextByXpath(".//input[contains(@onclick,'"+Paytype+"')]/following::span[9]");
@@ -286,6 +304,18 @@ public Authorize_page CheckVerifyStatus() throws InterruptedException{
 
 	}
 
+
+public Authorize_page CheckGSTVerifyStatus(String paytype) throws InterruptedException{	
+
+	String status=getTextByXpath(".//input[contains(@onclick,'"+paytype+"')]/following::span[9]");
+	if(status.contains("VP")){
+		reportStep(status+"Status has been dispalying","PASS");
+		clickAuthVerify();	
+	}
+	
+	return this;
+
+	}
 
 public Authorize_page CheckEPIPCSVerifyStatus(String paytype) throws InterruptedException{	
 

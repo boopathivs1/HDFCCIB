@@ -310,6 +310,29 @@ catch(Exception e){
 	}
 
 	
+	public static String gettwoRandomNumber_range() {
+	    // It will generate 6 digit random Number.
+	    // from 0 to 999999
+	   
+		  Random rnd = new Random();
+		    int number = rnd.nextInt(1000000);
+
+		    // this will convert any number sequence into 6 character.
+//		   # return String.format("%02d", number);
+		    String expected= String.format("%2d", number);
+		    
+		    String finalvalue =expected.substring(expected.length() - 2);
+		   // System.out.println(String.format("%2d", number));
+		  	
+		
+//	    Random rnd = new Random();
+//	    int number = rnd.nextInt(99);
+//
+//	    // this will convert any number sequence into 6 character.
+	    return finalvalue;
+	}
+
+	
 	public static String getRandomNumberString() {
 	    // It will generate 6 digit random Number.
 	    // from 0 to 999999
