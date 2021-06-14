@@ -30,7 +30,6 @@ public class Tc_100_Onscreen_grace_period_Verification_Quick  extends ProjectWra
 		try{
 			
 			
-			
 			getnewurl();
 			getnewurl();
 		new	HDFC_Login_Page(driver, test)

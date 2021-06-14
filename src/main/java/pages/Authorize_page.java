@@ -244,7 +244,7 @@ public Authorize_page getAuthVerifyStatus(String verifyStatus) throws Interrupte
 	String status=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[9]");
 	if(status.equalsIgnoreCase(verifyStatus)){
 		statusVerify(status);
-	}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("P")){
+	}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("P")||status.equalsIgnoreCase("Q")){
 		statusVerify(status);
 	}
 
@@ -262,7 +262,7 @@ public Authorize_page getAuthEPIPCSVerifyStatus(String verifyStatus,String Payty
 	String status=getTextByXpath(".//input[contains(@onclick,'"+Paytype+"')]/following::span[9]");
 	if(status.equalsIgnoreCase(verifyStatus)){
 		statusVerify(status);
-	}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("P")){
+	}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("P")||status.equalsIgnoreCase("Q")){
 		statusVerify(status);
 	}
 
