@@ -50,7 +50,7 @@ public class Tc_113_GST_Payment_Verify  extends ProjectWrapp {
 	.clickViewLink()
 	.authrecordFrame()
 	.clickreflink()
-	.clickfirstAuthRec()
+	.clickSimulatorAuthRec(Paytype)
 	.getSimulatorAuthVerifyStatus(Paytype,"VP")
 	.CheckGSTVerifyStatus(Paytype)
 	.defaultcontents()
