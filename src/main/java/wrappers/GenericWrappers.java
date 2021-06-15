@@ -800,8 +800,7 @@ return bizname;
 	}
 	
 	
-
-
+	
 	public Boolean VerifyElementpresentreturn(String xpath) {
 		try {
 			readywithtime(xpath);
@@ -4931,21 +4930,46 @@ reportStep("New window has opened", "PASS");
 	}
 	
 	}
+	
+	 public static String GetFutudate(int d)
+		{
+			DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy");
+		Date currentDate = new Date();
+		  Calendar c = Calendar.getInstance();
+		    c.setTime(currentDate);
+		c.add(Calendar.DATE, d); 
+		 Date currentDatePlusOne = c.getTime();
+		   // System.out.println(c.getTime());
+		    String Futuredate=dateFormat.format(currentDatePlusOne);
+		    int min = 10;
+		    int max = 99;
+
+		      int num = (int) (Math.random() * (max - min + 1)) + min;
+		      System.out.println(num);
+
+		    System.out.println(Futuredate);
+		    
+		    return Futuredate+num;
+
+		}
 	public void zip() throws Exception{
 
-	
-	  String sourceFolderName =  "D:\\Automation\\LsWeb_Sanity\\reports";
-      String outputFileName = "D:\\Automation\\LsWeb_Sanity\\reports\\report.zip";
+			
+			  String sourceFolderName ="D:\\AutomationWorkspace\\SAABCIB\\reports";
+			  
+			  String b="reports"+GetFutudate(0);
+		      String outputFileName ="D:\\AutomationWorkspace\\SAABCIB\\"+b+".zip";
 
-      FileOutputStream fos = new FileOutputStream(outputFileName);
-      ZipOutputStream zos = new ZipOutputStream(fos);
-      //level - the compression level (0-9)
-      zos.setLevel(9);
+		      FileOutputStream fos = new FileOutputStream(outputFileName);
+		      ZipOutputStream zos = new ZipOutputStream(fos);
+		      //level - the compression level (0-9)
+		      zos.setLevel(9);
 
-      addFolder(zos, sourceFolderName, sourceFolderName);
+		      addFolder(zos, sourceFolderName, sourceFolderName);
 
-      zos.close();
-  }
+		      zos.close();
+		  }
+
 	
 	public void selectedElementClick(String xpath,String xpathone,String text) throws Exception{
 

@@ -74,7 +74,7 @@ public class ProjectWrapp extends GenericWrappers{
 
 //		endResult();
 	
-		//zip();
+	//	zip();
 	}
 
 	@AfterTest(groups={"common"})
@@ -100,6 +100,7 @@ public class ProjectWrapp extends GenericWrappers{
 //closeAllBrowsers();
 	closeBrowser();
 
+	
 	endResult();
 
 	//	reportStep("Application has logged out Successfully", "PASS");
