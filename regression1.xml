@@ -154,7 +154,6 @@
 
       <class name="testcases.Tc_118_Onscreen_Payment_Verify_IMPS"/>
 
-      <class name="testcases.Tc_119_EPI_Payment2_Verify_Future_Grace_period"/>
       <class name="testcases.Tc_121_SpecialPayment_Verify_IOCL"/>
 
       <class name="testcases.Tc_122_Onscreen_Payment_ECMSPayment_Future_date"/>

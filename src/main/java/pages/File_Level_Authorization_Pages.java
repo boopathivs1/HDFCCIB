@@ -131,7 +131,7 @@ acceptAlert();
 		String status=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[7]");
 		if(status.equalsIgnoreCase(verifyStatus)){
 			statusVerify(status);
-		}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("C")){
+		}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("E")||status.equalsIgnoreCase("UP")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("C")||status.equalsIgnoreCase("Q")){
 			statusVerify(status);
 		}
 
