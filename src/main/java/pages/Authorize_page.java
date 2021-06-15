@@ -1015,7 +1015,7 @@ if(status.equalsIgnoreCase("A")){
 }
 
 else{
-	getAuthStatus("UP");
+	getSimulatorAuthStatus(paytype,"UP");
 	//getFinalStatus();		
 //	getAuthorizeddate();
 	
