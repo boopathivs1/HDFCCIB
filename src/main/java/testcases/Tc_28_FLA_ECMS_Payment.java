@@ -78,7 +78,7 @@ public class Tc_28_FLA_ECMS_Payment  extends ProjectWrapp {
 		
 		.filter_FileLevelAuth_Record(clientcode,transtype)
 		.clickfilenameSort()
-		.authorizeflaRecord(renamedfilename,otp)
+		.authorizeflaRecord(renamedfilename,Authotp)
 		.clickBackButton()
 
 

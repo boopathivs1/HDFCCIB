@@ -59,7 +59,7 @@ public class Tc_80_Onscreen_Payment_ECMSPayment_Verify_with_confirm  extends Pro
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

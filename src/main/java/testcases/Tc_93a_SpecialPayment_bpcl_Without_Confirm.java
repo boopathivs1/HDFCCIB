@@ -57,7 +57,7 @@ public class Tc_93a_SpecialPayment_bpcl_Without_Confirm  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

@@ -63,7 +63,7 @@ public class Tc_69_UPI_Payment_Without_Verification  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

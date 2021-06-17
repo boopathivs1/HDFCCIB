@@ -51,7 +51,7 @@ public class Tc_08_RTGS_Add_Quick  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

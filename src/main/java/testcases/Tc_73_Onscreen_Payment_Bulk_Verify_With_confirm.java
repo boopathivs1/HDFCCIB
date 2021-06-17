@@ -60,7 +60,7 @@ public class Tc_73_Onscreen_Payment_Bulk_Verify_With_confirm  extends ProjectWra
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

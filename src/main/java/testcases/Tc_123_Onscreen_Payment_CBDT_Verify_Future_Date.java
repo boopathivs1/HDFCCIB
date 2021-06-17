@@ -62,7 +62,7 @@ public class Tc_123_Onscreen_Payment_CBDT_Verify_Future_Date  extends ProjectWra
 .clickreflink()
 .getBooking_Futuredate()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

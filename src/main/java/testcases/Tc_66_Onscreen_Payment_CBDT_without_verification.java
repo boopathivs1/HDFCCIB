@@ -62,7 +62,7 @@ public class Tc_66_Onscreen_Payment_CBDT_without_verification  extends ProjectWr
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

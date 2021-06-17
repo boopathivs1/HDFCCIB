@@ -137,7 +137,7 @@ new	HDFC_Login_Page(driver, test)
 
 .filter_FileLevelAuth_Record(clientcode,transtype)
 .clickfilenameSort()
-.authorizeflaRecord(renamedfilename,otp)
+.authorizeflaRecord(renamedfilename,Authotp)
 .clickBackButton()
 
 

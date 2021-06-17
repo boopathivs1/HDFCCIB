@@ -58,7 +58,7 @@ public class Tc_110_Onscreen_Payment_CBECPayment_Verify_Grace_Period  extends Pr
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

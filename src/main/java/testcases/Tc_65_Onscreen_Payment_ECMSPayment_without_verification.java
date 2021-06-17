@@ -58,7 +58,7 @@ public class Tc_65_Onscreen_Payment_ECMSPayment_without_verification  extends Pr
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

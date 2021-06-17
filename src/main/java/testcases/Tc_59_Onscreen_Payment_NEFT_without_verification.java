@@ -61,7 +61,7 @@ public class Tc_59_Onscreen_Payment_NEFT_without_verification  extends ProjectWr
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

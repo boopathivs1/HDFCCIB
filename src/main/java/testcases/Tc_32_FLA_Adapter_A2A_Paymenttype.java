@@ -79,7 +79,7 @@ public class Tc_32_FLA_Adapter_A2A_Paymenttype  extends ProjectWrapp {
 		
 		.filter_FileLevelAuth_Record(clientcode,transtype)
 		.clickfilenameSort()
-		.authorizeflaRecord(renamedfilename,otp)
+		.authorizeflaRecord(renamedfilename,Authotp)
 		.clickBackButton()
 
 

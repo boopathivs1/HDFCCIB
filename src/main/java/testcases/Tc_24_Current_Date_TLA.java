@@ -91,7 +91,7 @@ new	HDFC_Login_Page(driver, test)
 .clickTLA_AuthLink()
 .filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
 .clickTransNoSort()
-.authorizeTlaRecord(otpcode)
+.authorizeTlaRecord(Authotp)
 
 .clickTLA_Link()
 .filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)

@@ -63,7 +63,7 @@ public class Tc_56_Onscreen_Payment_Single_Without_verify  extends ProjectWrapp 
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

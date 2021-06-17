@@ -53,7 +53,7 @@ public class Tc_13_CBDTPayment  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.clickSimulatorAuthRec(Paytype)
-	.submitPwd(pwd)
+	.submitPwd(Authotp)
 	.contentFrame()
 	.clickViewLink()
 	.authrecordFrame()

@@ -57,7 +57,7 @@ public class Tc_121_SpecialPayment_Verify_IOCL  extends ProjectWrapp {
 .clickreflink()
 .getBooking_Futuredate()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

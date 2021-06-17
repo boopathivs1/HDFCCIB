@@ -58,7 +58,7 @@ public class Tc_53_Onscreen_Payment_Verify_ECMSPayment  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

@@ -60,7 +60,7 @@ public class Tc_122_Onscreen_Payment_ECMSPayment_Future_date  extends ProjectWra
 .clickreflink()
 .getBooking_Futuredate()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

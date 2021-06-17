@@ -64,7 +64,7 @@ public class Tc_68_SpecialPayment_bpcl_without_verification  extends ProjectWrap
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

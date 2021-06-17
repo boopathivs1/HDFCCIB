@@ -62,7 +62,7 @@ public class Tc_46_Onscreen_Payment_Verify_IMPS  extends ProjectWrapp {
 		.authrecordFrame()
 		.clickreflink()
 		.clickfirstAuthRec()
-		.submitPwd(pwd)
+		.submitPwd(Authotp)
 		.contentFrame()
 		.clickViewLink()
 		.authrecordFrame()

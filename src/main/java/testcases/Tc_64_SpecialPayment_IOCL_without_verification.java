@@ -58,7 +58,7 @@ public class Tc_64_SpecialPayment_IOCL_without_verification  extends ProjectWrap
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

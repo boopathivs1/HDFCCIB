@@ -64,7 +64,7 @@ public class Tc_119_EPI_Payment2_Verify_Future_Grace_period  extends ProjectWrap
 	.clickreflink()
 	.getBooking_Futuredate()
 	.clickfirstAuthRec()
-	.submitPwd(pwd)
+	.submitPwd(Authotp)
 	.contentFrame()
 	.clickViewLink()
 	.authrecordFrame()

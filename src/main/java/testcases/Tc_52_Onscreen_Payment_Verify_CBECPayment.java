@@ -57,7 +57,7 @@ public class Tc_52_Onscreen_Payment_Verify_CBECPayment  extends ProjectWrapp {
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

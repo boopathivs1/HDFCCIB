@@ -60,7 +60,7 @@ public class Tc_114_Onscreen_Payment_Verify_Quick  extends ProjectWrapp {
 .clickreflink()
 .getBooking_Futuredate()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

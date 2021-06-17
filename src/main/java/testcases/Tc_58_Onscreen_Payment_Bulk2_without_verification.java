@@ -61,7 +61,7 @@ public class Tc_58_Onscreen_Payment_Bulk2_without_verification  extends ProjectW
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

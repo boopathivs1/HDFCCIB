@@ -61,7 +61,7 @@ public class Tc_101_Onscreen_Payment_Bulk_Verify_Grace_Period  extends ProjectWr
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

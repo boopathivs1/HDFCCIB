@@ -60,7 +60,7 @@ public class Tc_127_GST_Payment_Verify_Future_date  extends ProjectWrapp {
 	.clickreflink()
 	.getNoREfBooking_Futuredate(Paytype)
 	.clickSimulatorAuthRec(Paytype)
-	.submitPwd(pwd)
+	.submitPwd(Authotp)
 	.contentFrame()
 	.clickViewLink()
 	.authrecordFrame()

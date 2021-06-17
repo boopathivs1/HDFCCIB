@@ -60,7 +60,7 @@ public class Tc_74_Onscreen_Payment_NEFT_Verify_With_Confirm  extends ProjectWra
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

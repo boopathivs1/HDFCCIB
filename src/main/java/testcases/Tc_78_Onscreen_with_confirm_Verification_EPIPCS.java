@@ -61,7 +61,7 @@ public class Tc_78_Onscreen_with_confirm_Verification_EPIPCS  extends ProjectWra
 	.authrecordFrame()
 	.clickreflink()
 	.clickEPIPCSfirstAuthRec(Paytype)
-	.submitPwd(pwd)
+	.submitPwd(Authotp)
 	.contentFrame()
 	.clickViewLink()
 	.authrecordFrame()

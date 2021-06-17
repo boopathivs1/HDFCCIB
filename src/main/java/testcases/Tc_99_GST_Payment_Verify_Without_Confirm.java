@@ -59,7 +59,7 @@ public class Tc_99_GST_Payment_Verify_Without_Confirm  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.clickSimulatorAuthRec(Paytype)
-	.submitPwd(pwd)
+	.submitPwd(Authotp)
 	.contentFrame()
 	.clickViewLink()
 	.authrecordFrame()

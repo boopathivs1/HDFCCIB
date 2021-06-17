@@ -64,7 +64,7 @@ public class Tc_61_Onscreen_IMPSPayment_without_verification  extends ProjectWra
 		.authrecordFrame()
 		.clickreflink()
 		.clickfirstAuthRec()
-		.submitPwd(pwd)
+		.submitPwd(Authotp)
 		.contentFrame()
 		.clickViewLink()
 		.authrecordFrame()

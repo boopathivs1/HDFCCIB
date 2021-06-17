@@ -61,7 +61,7 @@ public class Tc_100_Onscreen_grace_period_Verification_Quick  extends ProjectWra
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

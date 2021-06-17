@@ -59,7 +59,7 @@ public class Tc_102_Onscreen_Payment_NEFT_verify_Grace_period  extends ProjectWr
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

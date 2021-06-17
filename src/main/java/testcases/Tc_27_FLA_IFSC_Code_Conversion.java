@@ -79,7 +79,7 @@ public class Tc_27_FLA_IFSC_Code_Conversion  extends ProjectWrapp {
 		
 		.filter_FileLevelAuth_Record(clientcode,transtype)
 		.clickfilenameSort()
-		.authorizeflaRecord(renamedfilename,otp)
+		.authorizeflaRecord(renamedfilename,Authotp)
 		.clickBackButton()
 
 

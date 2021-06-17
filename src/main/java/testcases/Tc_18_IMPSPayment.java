@@ -54,7 +54,7 @@ public class Tc_18_IMPSPayment  extends ProjectWrapp {
 		.authrecordFrame()
 		.clickreflink()
 		.clickfirstAuthRec()
-		.submitPwd(pwd)
+		.submitPwd(Authotp)
 		.contentFrame()
 		.clickViewLink()
 		.authrecordFrame()

@@ -61,7 +61,7 @@ public class Tc_109_Onscreen_Payment_CBDT_Verify_Grace_Period  extends ProjectWr
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

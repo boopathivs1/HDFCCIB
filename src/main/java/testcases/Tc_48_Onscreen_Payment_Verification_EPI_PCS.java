@@ -61,7 +61,7 @@ public class Tc_48_Onscreen_Payment_Verification_EPI_PCS  extends ProjectWrapp {
 	.authrecordFrame()
 	.clickreflink()
 	.clickEPIPCSfirstAuthRec(Paytype)
-	.submitPwd(pwd)
+	.submitPwd(Authotp)
 	.contentFrame()
 	.clickViewLink()
 	.authrecordFrame()

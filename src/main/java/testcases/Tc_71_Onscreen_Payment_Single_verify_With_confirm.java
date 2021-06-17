@@ -63,7 +63,7 @@ public class Tc_71_Onscreen_Payment_Single_verify_With_confirm  extends ProjectW
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

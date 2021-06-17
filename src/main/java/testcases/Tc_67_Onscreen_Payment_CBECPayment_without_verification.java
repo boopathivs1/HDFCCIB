@@ -62,7 +62,7 @@ public class Tc_67_Onscreen_Payment_CBECPayment_without_verification  extends Pr
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

@@ -116,7 +116,7 @@ ach_content_check(10,11, Renamedfilename_loc, sub_a,sub_b,sub_c,sub_d,ran_a,ran_
 		
 		.filter_FileLevelAuth_Record(clientcode,paytype)
 		.clickfilenameSort()
-		.authorizeflaRecord(renamedfilename,otp)
+		.authorizeflaRecord(renamedfilename,Authotp)
 		.clickBackButton()
 
 

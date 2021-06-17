@@ -59,7 +59,7 @@ public class Tc_72_Onscreen_Payment_Quick_Verify_With_confirm  extends ProjectWr
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

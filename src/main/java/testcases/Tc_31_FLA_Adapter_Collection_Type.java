@@ -99,7 +99,7 @@ public class Tc_31_FLA_Adapter_Collection_Type  extends ProjectWrapp {
 		
 		.filter_FileLevelAuth_Record(clientcode,transtype)
 		.clickfilenameSort()
-		.authorizeflaRecord(renamedfilename,otp)
+		.authorizeflaRecord(renamedfilename,Authotp)
 		.clickBackButton()
 
 

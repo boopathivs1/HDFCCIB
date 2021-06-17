@@ -61,7 +61,7 @@ public class Tc_106_Onscreen_grace_period_Verification_EPIPCS  extends ProjectWr
 	.authrecordFrame()
 	.clickreflink()
 	.clickEPIPCSfirstAuthRec(Paytype)
-	.submitPwd(pwd)
+	.submitPwd(Authotp)
 	.contentFrame()
 	.clickViewLink()
 	.authrecordFrame()

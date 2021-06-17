@@ -62,7 +62,7 @@ public class Tc_90_Onscreen_IMPSPayment_Without_confirm  extends ProjectWrapp {
 		.authrecordFrame()
 		.clickreflink()
 		.clickfirstAuthRec()
-		.submitPwd(pwd)
+		.submitPwd(Authotp)
 		.contentFrame()
 		.clickViewLink()
 		.authrecordFrame()

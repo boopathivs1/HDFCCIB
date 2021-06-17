@@ -48,7 +48,7 @@ public class Tc_23_Billpay extends ProjectWrapp {
 .filterBilpayAuthorize(SelectStatus,name)
 .clickViewLink()
 .clickBillpayfirstAuthRec()
-.AuthorizePwd(pwd)
+.AuthorizePwd(Authotp)
 .contentFrame()
 .Clickback()
 .filterBilpayAuthorize(SelectStatus,name)

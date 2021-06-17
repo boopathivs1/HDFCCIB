@@ -61,7 +61,7 @@ public class Tc_81_Onscreen_Payment_CBDT_Verify_With_Confirm  extends ProjectWra
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

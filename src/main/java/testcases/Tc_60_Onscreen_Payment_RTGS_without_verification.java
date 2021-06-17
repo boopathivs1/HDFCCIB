@@ -63,7 +63,7 @@ public class Tc_60_Onscreen_Payment_RTGS_without_verification  extends ProjectWr
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

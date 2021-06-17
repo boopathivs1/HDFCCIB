@@ -83,7 +83,7 @@ public class Tc_26_Current_Date_FTLA  extends ProjectWrapp {
 		.clickTLA_AuthLink()
 		.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno,renamedfilename, paytype)
 		.clickTransNoSort()
-		.authorizeFTlaRecord(otpcode)
+		.authorizeFTlaRecord(Authotp)
 
 		.clickTLA_Link()
 		.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,renamedfilename,paytype)

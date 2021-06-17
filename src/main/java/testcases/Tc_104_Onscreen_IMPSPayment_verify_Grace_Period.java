@@ -65,7 +65,7 @@ public class Tc_104_Onscreen_IMPSPayment_verify_Grace_Period  extends ProjectWra
 		.authrecordFrame()
 		.clickreflink()
 		.clickfirstAuthRec()
-		.submitPwd(pwd)
+		.submitPwd(Authotp)
 		.contentFrame()
 		.clickViewLink()
 		.authrecordFrame()

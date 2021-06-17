@@ -58,7 +58,7 @@ public class Tc_83_SpecialPayment_bpcl_Verify_With_confirm  extends ProjectWrapp
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

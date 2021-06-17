@@ -62,7 +62,7 @@ public class Tc_117_Onscreen_Payment_RTGS_verify_Future_Grace_Period  extends Pr
 .clickreflink()
 .getBooking_Futuredate()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

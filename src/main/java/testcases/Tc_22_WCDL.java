@@ -48,7 +48,8 @@ public class Tc_22_WCDL  extends ProjectWrapp {
 .clickWCDLAuthorize()
 .clickWCDLViewLink()
 .clickfirstAuthRec()
-.AuthorizePwd(pwd)
+
+.AuthorizePwd(Authotp)
 .contentFrame()
 .Clickback()
 .clickWCDLViewLink()

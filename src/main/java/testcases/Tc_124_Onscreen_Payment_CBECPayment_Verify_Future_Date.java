@@ -62,7 +62,7 @@ public class Tc_124_Onscreen_Payment_CBECPayment_Verify_Future_Date  extends Pro
 .clickreflink()
 .getBooking_Futuredate()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

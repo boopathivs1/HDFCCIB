@@ -58,7 +58,7 @@ public class Tc_111_SpecialPayment_bpcl_Verify_Grace_Period  extends ProjectWrap
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

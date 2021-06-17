@@ -57,7 +57,7 @@ public class Tc_79_SpecialPayment_IOCL_Verify_With_Confirm  extends ProjectWrapp
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

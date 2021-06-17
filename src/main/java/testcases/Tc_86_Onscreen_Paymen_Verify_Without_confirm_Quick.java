@@ -58,7 +58,7 @@ public class Tc_86_Onscreen_Paymen_Verify_Without_confirm_Quick  extends Project
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

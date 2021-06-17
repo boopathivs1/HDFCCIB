@@ -59,7 +59,7 @@ public class Tc_126_UPI_Payment_Verify_Future_Graceperiod  extends ProjectWrapp 
 .clickreflink()
 .getBooking_Futuredate()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

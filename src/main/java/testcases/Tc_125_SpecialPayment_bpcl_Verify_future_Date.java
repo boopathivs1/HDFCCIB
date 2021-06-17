@@ -59,7 +59,7 @@ public class Tc_125_SpecialPayment_bpcl_Verify_future_Date  extends ProjectWrapp
 .clickreflink()
 .getBooking_Futuredate()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

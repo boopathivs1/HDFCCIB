@@ -117,7 +117,7 @@ public class Tc_35_ECH_Payment_type  extends ProjectWrapp {
 		
 		.filter_FileLevelAuth_Record(clientcode,"All")
 		.clickfilenameSort()
-		.authorizeflaRecord(renamedfilename,otp)
+		.authorizeflaRecord(renamedfilename,Authotp)
 		.clickBackButton()
 		.filter_FileLevelAuth_Record(clientcode,"All")
 		.clickfilenameSort()

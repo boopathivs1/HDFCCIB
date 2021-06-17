@@ -62,7 +62,7 @@ public class Tc_115_Onscreen_Payment_Bulk_Future_Grace_Period  extends ProjectWr
 .clickreflink()
 .getBooking_Futuredate()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

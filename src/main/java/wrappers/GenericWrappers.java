@@ -110,7 +110,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
     public static String AuthUsername=null;
     public static List<String> statuscheck=null;
 
-
+    public static String Authotp=null;
 	public static Boolean LogoutStatus=null;
 	public static String usertype=null;
 	
@@ -129,6 +129,8 @@ public class GenericWrappers extends Reporter implements Wrappers {
 			datasheet = prop.getProperty("AjmanTestData");
 			Simulator = prop.getProperty("SimulatorUrl");
 			fileurl = prop.getProperty("filepath");
+			
+			Authotp = prop.getProperty("Authorizeotp");
 			
 			
 			

@@ -60,7 +60,7 @@ public class Tc_116_Onscreen_Payment_NEFT_verify_Future_Grace_period  extends Pr
 .clickreflink()
 .getBooking_Futuredate()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

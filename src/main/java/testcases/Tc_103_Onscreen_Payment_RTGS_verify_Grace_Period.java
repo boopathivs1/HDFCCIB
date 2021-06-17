@@ -61,7 +61,7 @@ public class Tc_103_Onscreen_Payment_RTGS_verify_Grace_Period  extends ProjectWr
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

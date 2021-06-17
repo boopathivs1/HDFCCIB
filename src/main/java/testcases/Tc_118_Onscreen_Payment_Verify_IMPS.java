@@ -64,7 +64,7 @@ public class Tc_118_Onscreen_Payment_Verify_IMPS  extends ProjectWrapp {
 		.getBooking_Futuredate()
 		.clickfirstAuthRec()
 		
-		.submitPwd(pwd)
+		.submitPwd(Authotp)
 		.contentFrame()
 		.clickViewLink()
 		.authrecordFrame()

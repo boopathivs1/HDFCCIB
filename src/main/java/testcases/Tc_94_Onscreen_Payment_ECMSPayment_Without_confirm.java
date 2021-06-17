@@ -58,7 +58,7 @@ public class Tc_94_Onscreen_Payment_ECMSPayment_Without_confirm  extends Project
 .authrecordFrame()
 .clickreflink()
 .clickfirstAuthRec()
-.submitPwd(pwd)
+.submitPwd(Authotp)
 .contentFrame()
 .clickViewLink()
 .authrecordFrame()

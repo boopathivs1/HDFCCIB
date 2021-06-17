@@ -48,7 +48,8 @@ public class Tc_21_FixedDeposit  extends ProjectWrapp {
 .clickFDAuthorize()
 .contentFrame()
 .clickfirstAuthRec()
-.AuthorizePwd(pwd)
+
+.AuthorizePwd(Authotp)
 .contentFrame()
 .Clickback()
 .ClickFDReview()

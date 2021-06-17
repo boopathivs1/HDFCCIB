@@ -119,7 +119,7 @@ public class Tc_34b_ACH_Payment_type_Credit  extends ProjectWrapp {
 		
 		.filter_FileLevelAuth_Record(clientcode,"All")
 		.clickfilenameSort()
-		.authorizeflaRecord(renamedfilename,otp)
+		.authorizeflaRecord(renamedfilename,Authotp)
 		.clickBackButton()
 
 

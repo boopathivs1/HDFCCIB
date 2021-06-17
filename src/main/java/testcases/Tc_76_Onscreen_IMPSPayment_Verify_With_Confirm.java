@@ -63,7 +63,7 @@ public class Tc_76_Onscreen_IMPSPayment_Verify_With_Confirm  extends ProjectWrap
 		.authrecordFrame()
 		.clickreflink()
 		.clickfirstAuthRec()
-		.submitPwd(pwd)
+		.submitPwd(Authotp)
 		.contentFrame()
 		.clickViewLink()
 		.authrecordFrame()

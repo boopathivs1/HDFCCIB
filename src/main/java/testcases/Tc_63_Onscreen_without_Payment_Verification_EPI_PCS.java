@@ -61,7 +61,7 @@ public class Tc_63_Onscreen_without_Payment_Verification_EPI_PCS  extends Projec
 	.authrecordFrame()
 	.clickreflink()
 	.clickEPIPCSfirstAuthRec(Paytype)
-	.submitPwd(pwd)
+	.submitPwd(Authotp)
 	.contentFrame()
 	.clickViewLink()
 	.authrecordFrame()
