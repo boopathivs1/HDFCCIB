@@ -1696,6 +1696,20 @@ return finalfilenaming;
 }
 
 
+
+
+public String filename_substring(String filesname2,int a,int b)
+{
+	String finalfilenaming;
+
+	finalfilenaming=filesname2.substring(a,b);			
+
+
+return finalfilenaming;
+}
+
+
+
 public String renamed_filename_year(String filesname1,int a,int b,String serial_startnumber)
 {
 	String finalfilenaming;
@@ -1824,7 +1838,35 @@ element.clear();
 	}
 }
 	
+public void clickByXpath_Explict(String xpathVal){
+	try {
+		jqueryload();
+	} catch (InterruptedException e1) {
+}
+//	
 	
+	
+	WebDriverWait wait;
+	//waitForElement(xpathVal,2);
+	try{
+	
+		Thread.sleep(1000);
+
+		WebElement element = driver.findElement(By.xpath(xpathVal));
+
+	    // waits until Home link is visible on the web page
+
+	  wait = new WebDriverWait(driver,50);
+	    wait.until(ExpectedConditions.elementToBeClickable(element));
+//element.clear();
+element.click();
+		reportStep("The element with xpath: "+xpathVal+" is clicked.", "PASS");
+	} 	
+	catch (Exception e) {
+		reportStep("The element with xpath: "+xpathVal+" could not be clicked.Because Element not found Exception has occured", "FAIL");
+	}
+}
+
 public void clickByXpathExplictWithouScreenShot(String xpathVal){
 //	if(frameStatus){
 //		

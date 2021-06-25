@@ -20,7 +20,23 @@ public class Cash_Management_Service extends ProjectWrapp{
 		
 		return this;
 	
+	
 	}
+	
+	
+
+	public Cash_Manage_UploadPages click_DisbursementLink() throws InterruptedException{
+		//Thread.sleep(20000);
+		LeftMenuFrames();
+		clickByXpathExplict(prop.getProperty("click.disbursement.link.xpath"));
+		defaultcontent();
+		return new Cash_Manage_UploadPages(driver, test);
+	
+	}
+	
+	
+	
+	
 	public File_Level_Authorization_Pages clickFLA_AuthLink() throws InterruptedException{
 		//Thread.sleep(20000);
 		clickByXpathExplict(prop.getProperty("click.filelevel.auth.link.xpath"));

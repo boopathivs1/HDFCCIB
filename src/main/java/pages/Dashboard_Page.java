@@ -61,6 +61,18 @@ public class Dashboard_Page  extends ProjectWrapp{
 				return new Cash_Management_Service(driver, test);
 			
 			}
+			
+			public Cash_Management_Service clickCashManageServiceLink_first() throws InterruptedException{
+				Thread.sleep(8000);
+				topFrames();
+				clickByXpathExplict(prop.getProperty("click.cash.manage.servoce.single.xpath"));
+				defaultcontent();
+				return new Cash_Management_Service(driver, test);
+			
+			}
+			
+			
+			
 			public Cash_Management_Service clickCashServiceLink() throws InterruptedException{
 				Thread.sleep(8000);
 				topFrames();

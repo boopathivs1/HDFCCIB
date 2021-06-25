@@ -55,6 +55,46 @@ public LogoutPages filter_FileLevel_Record(String clientcode,String trantype) th
 }
 
 	
+public LogoutPages filter_Cash_FileLevel_Record(String clientcode,String trantype,String filename) throws InterruptedException{
+	contentFrames();
+selectVisibileTextByXPath(prop.getProperty("select.filelevel.clientcode.xpath"),clientcode);
+selectVisibileTextByXPath(prop.getProperty("select.filelevel.pay.xpath"),trantype);
+
+
+Thread.sleep(10000);
+	clickByXpathExplict(prop.getProperty("click.file.level.view.link.xpath"));
+	
+	clickByXpathExplict(prop.getProperty("click.filelevel.filename.xpath"));
+	clickByXpathExplict(prop.getProperty("click.filelevel.filename.xpath"));
+	
+	
+	
+	
+String a=getTextByXpath("(.//input[contains(@onclick,'"+filename+"')]//following::span)[1]");
+if(a.equalsIgnoreCase("PA")){
+	reportStep("Pending for Authorizartion status has been displaying for this file","PASS");
+}
+/*	else if(a.equalsIgnoreCase("PV")){
+	reportStep("Pending for Verification status has been displaying for this file","PASS");
+}
+*/
+else{
+	clickByXpathExplict(".//input[contains(@onclick,'"+filename+"')]");
+	clickByXpathExplict(prop.getProperty("click.filelevel.download.xpath"));
+	Thread.sleep(5000);
+	acceptAlert();
+Thread.sleep(5000);
+
+//clickLogoutLink();
+
+	reportStep("Status not matching and files downloaded","FAIL");	
+
+}
+
+defaultcontent();
+return new LogoutPages(driver, test);
+	
+}
 	
 	
 	
