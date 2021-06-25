@@ -2928,6 +2928,50 @@ catch (Exception e) {
 }
 
 
+public void ach_content_check_lastString(int linenum, int index,String Renamedfilename_loc,int sub_a,int sub_b,int ran_a,int ran_b){
+try{
+String value3 =filespecific_cont(linenum,index,Renamedfilename_loc);
+
+
+String value4=removelast_String(value3, sub_a, sub_b, ran_a, ran_b);
+//removemiddle_String(value3,sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+
+//String value4=removeLastTwoString(value3);
+String final_row_1=value4;
+//+gettwoRandomNumberString();
+
+modifyFile(Renamedfilename_loc,value3,final_row_1);
+}
+catch (Exception e) {
+	// TODO: handle exception
+}
+
+}
+
+
+
+public void ach_content_check_lastString_returnval(int linenum, int index,String Renamedfilename_loc,int revval_subc,int revval_subd,int sub_a,int sub_b,int ran_a,int ran_b){
+try{
+String value3 =filespecific_cont(linenum,index,Renamedfilename_loc);
+String value5=value3.substring(revval_subc,revval_subd);
+
+String value4=removelast_String(value5, sub_a, sub_b, ran_a, ran_b);
+//removemiddle_String(value3,sub_a,sub_b,sub_c,sub_d,ran_a,ran_b);
+
+//String value4=removeLastTwoString(value3);
+String final_row_1=value4;
+//+gettwoRandomNumberString();
+
+modifyFile(Renamedfilename_loc,value5,final_row_1);
+}
+catch (Exception e) {
+	// TODO: handle exception
+}
+
+}
+
+
+
 
 
 public void content_check(int linenum, int index,String Renamedfilename_loc){
@@ -3007,6 +3051,46 @@ return finalval;
 }
 
 
+public String removelast_String(String value,int sub_a,int sub_b,int ran_a,int ran_b){
+	
+//	try{
+//		  s=a.substring(0, a.length() - 2);
+//    System.out.println(a.substring(0, a.length() - 2)  +"vvvvvvvvvvv");
+//  
+//	}
+//	catch (Exception e) {
+//		// TODO: handle exception
+//	}
+//	return s;
+    
+  
+	
+	
+	String value1 = value;
+String ss1 = null;
+String ss2=null;
+String finalval=null;	
+String randomnumber=null;
+try{
+//		  s=a.substring(0, a.length() - 2);
+
+		  ss1=value1.substring(sub_a,sub_b);
+		
+		System.out.println(ss1);
+
+   randomnumber=gettwoRandomNumber_range_String(ran_a,ran_b);
+  System.out.println(randomnumber);
+finalval=ss1+randomnumber;
+
+
+}
+catch (Exception e) {
+
+}
+	
+	
+return finalval;	
+}
 
 
 public String removeLastString_index(String a,int b){

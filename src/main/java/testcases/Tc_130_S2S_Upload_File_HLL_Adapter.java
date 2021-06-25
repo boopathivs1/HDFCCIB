@@ -66,25 +66,71 @@ System.out.println("++++++++++++");
 System.out.println(Renamedfilename_loc);
 System.out.println("++++++++++++");
 convention(actualfilename,Renamedfilename_loc);
-String currentdate=dateMonthSlash();
+
 int li_no=0;
-int va_in=22;
-String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
-System.out.println(value);
-System.out.println("oooooooooooo");
-modifyFile(Renamedfilename_loc,value,currentdate);
+int va_in=0;
+String value1 =filespecific_cont(li_no, va_in,Renamedfilename_loc);
+int g=13;
+int h=25;
+filenameonly=filename_substring(renamedfilename,g,h);
+//getrefnumer=filenameonly;
+String value3=value1.substring(1,5);
+String value2=value1.substring(0,1);
+String file1srowcol=value2+filenameonly+value3;
+System.out.println(file1srowcol);
+modifyFile(Renamedfilename_loc,value1,file1srowcol);
+
+
+
+
+
+int li1=1;
+int val0=0;
+String val4 =filespecific_cont(li1, val0,Renamedfilename_loc);
+String olddateval=val4.substring(1,11);
+modifyFile(Renamedfilename_loc,olddateval,dateMonthSlash());
+
+
+
+
+
+
+
+int sub_a=0;
+int sub_b=5;
+int revval_subc=1;
+int revval_subd=11;
+int ran_a=10000;
+int ran_b=99999;
+//ach_content_check_lastString(7,0, Renamedfilename_loc, sub_a,sub_b,ran_a,ran_b);
+//
+ach_content_check_lastString_returnval(7,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString_returnval(8,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString_returnval(9,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString_returnval(10,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString_returnval(11,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+
+
+
+//String currentdate=dateMonthSlash();
+//int li_no=0;
+//int va_in=22;
+//String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
+//System.out.println(value);
+//System.out.println("oooooooooooo");
+//modifyFile(Renamedfilename_loc,value,currentdate);
 
 
 
 //System.out.println("rrrrrrrrrrrrrrrrrrrrrrrr"+renamedfilename);
 //
 //
-//String filesname2=getfilename_one(filename);
-int g=13;
-int h=25;
-filenameonly=filename_substring(renamedfilename,g,h);
-getrefnumer=filenameonly;
-System.out.println("substring  is "+filenameonly);
+////String filesname2=getfilename_one(filename);
+//int g=13;
+//int h=25;
+//filenameonly=filename_substring(renamedfilename,g,h);
+//getrefnumer=filenameonly;
+//System.out.println("substring  is "+filenameonly);
 
 getSimulatorUrl();
 new GenS2S(driver, test)
