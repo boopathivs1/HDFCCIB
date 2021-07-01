@@ -197,6 +197,19 @@ public Authorize_page clickWCDLViewLink() throws InterruptedException{
 
 }
 
+public Authorize_page clickWCViewLink() throws InterruptedException{	
+	Thread.sleep(6000);
+	clickByXpathExplict(prop.getProperty("click.authorize.view.link.xpath"));
+	Thread.sleep(10000);
+	clickByXpathExplict(prop.getProperty("click.authorize.view.link.xpath"));
+	
+	//defaultcontent();
+	return this;
+
+}
+
+
+
 
 public Authorize_page clickreflink(){	
 	
