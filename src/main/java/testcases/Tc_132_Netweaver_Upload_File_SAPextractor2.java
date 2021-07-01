@@ -11,29 +11,28 @@ import pages.EPI_Payment_SimulatorPage;
 import pages.GenS2S;
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_131_S2S_RBI_Adapter  extends ProjectWrapp {
+public class Tc_132_Netweaver_Upload_File_SAPextractor2  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC131";
-		testDescription="S2S Upload File-RBI";
+		testCaseName="TC132";
+		testDescription="Netweaver_Upload_File_SAPextractor2";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC131";
+		testKeyword="TC132";
 		LogoutStatus=true;	
 		usertype="CIBUser";
-		SimulatorFileName="Gen_s2s_UPloadNEtw_GEneric.html";		
+		SimulatorFileName="Gen_s2s_UPload_Netweaver_INTER.html";		
 	}
-			
 			
 	@Test(groups={"sanity"},dataProvider="fetch")
 	public void checkAccSummary(String casename,String userid,String pwd,String domain
 			,String filename,String clientcode,
-		String totalIns,String totalamt,String transtype,String otp,
+		String totalamt,String transtype,
 			
-		String authuserid,String authpwd,String authdomain,String data0,String data2,
-		String data3,String data4,String data5,String datas0,String data1,String data10,
+		String authuserid,String authpwd,String authdomain,String Compname,String accno,
+		String paytype,String uploadtype,String otp,String totalIns,String data5,String datas0,String data1,String data10,
 		String data11,
 			String data12,String data14,String data15) throws Exception{
 	
@@ -88,7 +87,7 @@ System.out.println("substring  is "+filenameonly);
 
 getSimulatorUrl();
 new GenS2S(driver, test)
-.fillsubmit(Renamedfilename_loc);
+.Netweaverfillsubmit(Renamedfilename_loc);
 }
 
 		
@@ -111,37 +110,47 @@ throw new Exception();
 .filter_Cash_FileLevel_Record(clientcode,transtype, filenameonly)
 .clickLogoutLink();
 
-	
 	getnewurl();
 	new	HDFC_Login_Page(driver, test)
 	.fillCredentials(authuserid, authpwd,authdomain)
 	.clickCashServiceLink()
 	.clickDisbursementLink()
-	.clickFLA_AuthLink()
 
-	
-	.filter_FileLevelAuth_Record(clientcode,transtype)
-	.clickfilenameSort()
-	.authorizeflaRecord(filenameonly,Authotp)
-	.clickBackButton()
+	.clickTLA_AuthLink()
+	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
+	.clickTransNoSort()
+	.authorizeTlaRecord(Authotp)
+
+	.clickTLA_Link()
+	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
 
 
-	.filter_FileLevelAuth_Record(clientcode,transtype)
-	.clickfilenameSort()
-
+	.clickTransNoSort()
 	.getAuthStatus("A")
-	.authorize_CheckStatus_FLA(filenameonly,clientcode,transtype);
 
-	
-	
-//	.clickFla_ConfirmRecord(filename)
-//	.defaultFlaLink()
-//.clickFLA_Link()
-//	.filter_FileLevelAuth_Record(clientcode,transtype)
-//	.clickfilenameSort()		
-//	.getFinalStatus();
+	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
 
-
+	//.clicktla_ConfirmRecord()
+	//.clickTLA_Link()
+	//.filter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,uploadtype,paytype)
+	//.clickTransNoSort()
+	//.getAuthStatus("C")
+	//.defaultcontent_Switch()
+	//
+	//.clickTLA_Link()
+	//.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
+	//.clickTransNoSort()
+	//.getAuthStatus("C")
+	//
+	//.defaultcontent_Switch()
+	//
+	//
+	//
+	//.filter_TransLevelAuth_Record(Compname,"ALL", clientcode, accno,uploadtype, paytype)
+	//.clickTransNoSort()
+	//.getFinalStatus();
+	//
+	//
 
 
 	clickLogoutLink();
@@ -149,12 +158,11 @@ throw new Exception();
 
 	}
 	catch (Exception e) {
-	clickLogoutLink_FailCase();
-
+		clickLogoutLink_FailCase();
 	throw new Exception();
 
-
+	// TODO: handle exception
 	}
 
 	}
-	}
+}

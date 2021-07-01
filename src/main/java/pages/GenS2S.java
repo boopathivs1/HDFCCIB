@@ -27,6 +27,19 @@ verifyTextContainsByXpathexplictwait(prop.getProperty("file.uploaded.successfull
 	
 	}
 	
+	public GenS2S Netweaverfillsubmit(String url) throws InterruptedException{
+		//Thread.sleep(20000);
+		
+fileUploadByXpathExplict(prop.getProperty("file.upload.gens2s.xpath"),url);	
+
+		
+clickByXpath_Explict(prop.getProperty("file.upload.gens2s.submit.xpath"));
+//verifyTextByXpathExplicitwait(prop.getProperty("file.uploaded.successfully.xpath"),"SUCCESSFULLY");
+
+verifyTextContainsByXpathexplictwait(prop.getProperty("file.netweaver.uploaded.successfully.xpath"),"successfully");
+		return this;
+	
+	}
 	
 	
 	

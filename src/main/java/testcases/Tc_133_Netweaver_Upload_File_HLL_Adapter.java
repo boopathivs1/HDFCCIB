@@ -11,19 +11,19 @@ import pages.EPI_Payment_SimulatorPage;
 import pages.GenS2S;
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_132_S2S_Upload_File_SAPextractor2  extends ProjectWrapp {
+public class Tc_133_Netweaver_Upload_File_HLL_Adapter  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC132";
-		testDescription="S2S Upload File-SAPextractor adapter";
+		testCaseName="TC133";
+		testDescription="Netweaver_Upload_File_HLL_Adapter";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC132";
+		testKeyword="TC133";
 		LogoutStatus=true;	
 		usertype="CIBUser";
-		SimulatorFileName="Gen_s2s_UPloadNEtw_GEneric.html";		
+		SimulatorFileName="Gen_s2s_UPload_Netweaver_INTER.html";		
 	}
 			
 			
@@ -67,53 +67,74 @@ System.out.println(Renamedfilename_loc);
 System.out.println("++++++++++++");
 convention(actualfilename,Renamedfilename_loc);
 
-
-String currentdate=dateMonthSlash();
-int li_no=1;
+int li_no=0;
 int va_in=0;
-String value =filespecific_cont(li_no, va_in,Renamedfilename_loc);
-System.out.println(value);
-System.out.println("oooooooooooo");
-modifyFile(Renamedfilename_loc,value,currentdate);
-
+String value1 =filespecific_cont(li_no, va_in,Renamedfilename_loc);
 int g=13;
 int h=25;
 filenameonly=filename_substring(renamedfilename,g,h);
-getrefnumer=filenameonly;
-System.out.println("substring  is "+filenameonly);
+//getrefnumer=filenameonly;
+String value3=value1.substring(1,5);
+String value2=value1.substring(0,1);
+String file1srowcol=value2+filenameonly+value3;
+System.out.println(file1srowcol);
+modifyFile(Renamedfilename_loc,value1,file1srowcol);
+
+
+
+
+
+int li1=1;
+int val0=0;
+String val4 =filespecific_cont(li1, val0,Renamedfilename_loc);
+String olddateval=val4.substring(1,11);
+modifyFile(Renamedfilename_loc,olddateval,dateMonthSlash());
+
+
+
+
 
 
 
 int sub_a=0;
-int sub_b=4;
-//int revval_subc=0;
-//int revval_subd=11;
+int sub_b=5;
+int revval_subc=1;
+int revval_subd=11;
 int ran_a=10000;
 int ran_b=99999;
 //ach_content_check_lastString(7,0, Renamedfilename_loc, sub_a,sub_b,ran_a,ran_b);
 //
-
-ach_content_check_lastString(4,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(35,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(66,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(97,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(128,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(159,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-
-
-//ach_content_check_lastString_returnval(4,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString_returnval(7,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString_returnval(8,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString_returnval(9,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString_returnval(10,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString_returnval(11,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
 
 
 
+//String currentdate=dateMonthSlash();
+//int li_no=0;
+//int va_in=22;
+//String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
+//System.out.println(value);
+//System.out.println("oooooooooooo");
+//modifyFile(Renamedfilename_loc,value,currentdate);
 
 
 
-
-
+//System.out.println("rrrrrrrrrrrrrrrrrrrrrrrr"+renamedfilename);
+//
+//
+////String filesname2=getfilename_one(filename);
+//int g=13;
+//int h=25;
+//filenameonly=filename_substring(renamedfilename,g,h);
+//getrefnumer=filenameonly;
+//System.out.println("substring  is "+filenameonly);
 
 getSimulatorUrl();
 new GenS2S(driver, test)
-.fillsubmit(Renamedfilename_loc);
+.Netweaverfillsubmit(Renamedfilename_loc);
 }
 
 		
