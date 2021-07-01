@@ -11,7 +11,7 @@ import pages.EPI_Payment_SimulatorPage;
 import pages.GenS2S;
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_131_Netweaver_RBI_Adapter  extends ProjectWrapp {
+public class Tc_134_Netweaver_RBI_Adapter2  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC131";
@@ -20,10 +20,10 @@ public class Tc_131_Netweaver_RBI_Adapter  extends ProjectWrapp {
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC131";
+		testKeyword="TC134";
 		LogoutStatus=true;	
 		usertype="CIBUser";
-		SimulatorFileName="Gen_s2s_UPload_Netweaver_INTER.html";		
+		SimulatorFileName="Gen_s2s_UPloadNEtw_GEneric.html";		
 	}
 	
 
@@ -38,6 +38,7 @@ public class Tc_131_Netweaver_RBI_Adapter  extends ProjectWrapp {
 		String paytype,String uploadtype,String otp,String totalIns,String data5,String datas0,String data1,String data10,
 		String data11,
 			String data12,String data14,String data15) throws Exception{
+	
 		String filenameonly;
 		String renamedfilename;
 		try{
@@ -87,7 +88,6 @@ filenameonly=filename_substring(renamedfilename,g,h);
 getrefnumer=filenameonly;
 System.out.println("substring  is "+filenameonly);
 
-		
 getSimulatorUrl();
 new GenS2S(driver, test)
 .Netweaverfillsubmit(Renamedfilename_loc);

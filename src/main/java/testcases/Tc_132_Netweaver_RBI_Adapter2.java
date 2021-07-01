@@ -11,16 +11,16 @@ import pages.EPI_Payment_SimulatorPage;
 import pages.GenS2S;
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_131_Netweaver_RBI_Adapter  extends ProjectWrapp {
+public class Tc_132_Netweaver_RBI_Adapter2  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC131";
+		testCaseName="TC132";
 		testDescription="Netweaver_RBI_Adapter";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC131";
+		testKeyword="TC132";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 		SimulatorFileName="Gen_s2s_UPload_Netweaver_INTER.html";		
@@ -38,6 +38,7 @@ public class Tc_131_Netweaver_RBI_Adapter  extends ProjectWrapp {
 		String paytype,String uploadtype,String otp,String totalIns,String data5,String datas0,String data1,String data10,
 		String data11,
 			String data12,String data14,String data15) throws Exception{
+	
 		String filenameonly;
 		String renamedfilename;
 		try{
@@ -67,27 +68,47 @@ System.out.println("++++++++++++");
 System.out.println(Renamedfilename_loc);
 System.out.println("++++++++++++");
 convention(actualfilename,Renamedfilename_loc);
+
+
 String currentdate=dateMonthSlash();
-int li_no=0;
-int va_in=22;
-String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
+int li_no=1;
+int va_in=0;
+String value =filespecific_cont(li_no, va_in,Renamedfilename_loc);
 System.out.println(value);
 System.out.println("oooooooooooo");
 modifyFile(Renamedfilename_loc,value,currentdate);
 
-
-
-//System.out.println("rrrrrrrrrrrrrrrrrrrrrrrr"+renamedfilename);
-//
-//
-//String filesname2=getfilename_one(filename);
 int g=13;
 int h=25;
 filenameonly=filename_substring(renamedfilename,g,h);
 getrefnumer=filenameonly;
 System.out.println("substring  is "+filenameonly);
 
-		
+
+
+int sub_a=0;
+int sub_b=4;
+//int revval_subc=0;
+//int revval_subd=11;
+int ran_a=10000;
+int ran_b=99999;
+//ach_content_check_lastString(7,0, Renamedfilename_loc, sub_a,sub_b,ran_a,ran_b);
+//
+
+ach_content_check_lastString(4,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString(35,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString(66,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString(97,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString(128,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
+ach_content_check_lastString(159,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
+
+
+//ach_content_check_lastString_returnval(4,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+
+
+
+
+
 getSimulatorUrl();
 new GenS2S(driver, test)
 .Netweaverfillsubmit(Renamedfilename_loc);
