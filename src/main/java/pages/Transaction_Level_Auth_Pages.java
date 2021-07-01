@@ -61,6 +61,32 @@ public class Transaction_Level_Auth_Pages extends ProjectWrapp{
 	}
 
 
+	public Transaction_Level_Auth_Pages 
+	Preauthorize_CheckStatus_TLA(String Compname,String clientcode,String accno,String uploadtype,String paytype) throws InterruptedException{
+		String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
+
+		 if(status.equalsIgnoreCase("Z")||status.equalsIgnoreCase("J")||status.equalsIgnoreCase("Q")){
+			statusVerify(status);
+		}
+		
+		
+		else{
+			getAuthStatus("C");
+			//getFinalStatus();		
+			
+			
+		}
+		
+		
+		
+		
+	return this;	
+		
+	}
+
+
+	
+	
 	
 	public Transaction_Level_Auth_Pages filter_TransLevelAuth_Record(String compname,String status,String clientcode,String accno,String uploadtype,String paytype) throws InterruptedException{
 		contentFrames();
@@ -86,7 +112,7 @@ scrolltoelementJs("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following:
 		String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
 		if(status.equalsIgnoreCase(verifyStatus)){
 			statusVerify(status);
-		}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("C")||status.equalsIgnoreCase("Z")||status.equalsIgnoreCase("J")||status.equalsIgnoreCase("Q")){
+		}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("C")||status.equalsIgnoreCase("Z")||status.equalsIgnoreCase("J")||status.equalsIgnoreCase("Q")||status.equalsIgnoreCase("UP")){
 			statusVerify(status);
 		}
 

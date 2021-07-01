@@ -11,19 +11,19 @@ import pages.EPI_Payment_SimulatorPage;
 import pages.GenS2S;
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_133_Netweaver_RBI_Adapter3  extends ProjectWrapp {
+public class Tc_135_PreAuth_HLL_Adapter  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC133";
-		testDescription="Netweaver_RBI_Adapter";
+		testCaseName="TC135";
+		testDescription="PreAuth_HLL_Adapter ";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC133";
+		testKeyword="TC135";
 		LogoutStatus=true;	
 		usertype="CIBUser";
-		SimulatorFileName="Gen_s2s_UPload_Netweaver_INTER.html";		
+		SimulatorFileName="Gen_s2s_UPloadNEtw_GEneric.html";		
 	}
 	
 
@@ -133,10 +133,10 @@ ach_content_check_lastString_returnval(11,0, Renamedfilename_loc, revval_subc, r
 //getrefnumer=filenameonly;
 //System.out.println("substring  is "+filenameonly);
 
-	
+		
 getSimulatorUrl();
 new GenS2S(driver, test)
-.Netweaverfillsubmit(Renamedfilename_loc);
+.fillsubmit(Renamedfilename_loc);
 }
 
 		
@@ -165,19 +165,19 @@ throw new Exception();
 	.clickCashServiceLink()
 	.clickDisbursementLink()
 
-	.clickTLA_AuthLink()
-	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
-	.clickTransNoSort()
-	.authorizeTlaRecord(Authotp)
+.clickTLA_AuthLink()
+//	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
+//	.clickTransNoSort()
+//	.authorizeTlaRecord(Authotp)
 
 	.clickTLA_Link()
 	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
 
 
 	.clickTransNoSort()
-	.getAuthStatus("A")
+//	.getAuthStatus("A")
 
-	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
+	.Preauthorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
 
 	//.clicktla_ConfirmRecord()
 	//.clickTLA_Link()

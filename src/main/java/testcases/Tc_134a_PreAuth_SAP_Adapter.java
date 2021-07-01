@@ -11,11 +11,11 @@ import pages.EPI_Payment_SimulatorPage;
 import pages.GenS2S;
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_134a_Netweaver_RBI_Adapter2  extends ProjectWrapp {
+public class Tc_134a_PreAuth_SAP_Adapter  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC131";
-		testDescription="Netweaver_RBI_Adapter";
+		testCaseName="TC134a";
+		testDescription="PreAuth_SAP_Adapter";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
@@ -111,7 +111,7 @@ ach_content_check_lastString(159,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ra
 	
 getSimulatorUrl();
 new GenS2S(driver, test)
-.Netweaverfillsubmit(Renamedfilename_loc);
+.fillsubmit(Renamedfilename_loc);
 }
 
 		
@@ -140,19 +140,19 @@ throw new Exception();
 	.clickCashServiceLink()
 	.clickDisbursementLink()
 
-	.clickTLA_AuthLink()
-	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
-	.clickTransNoSort()
-	.authorizeTlaRecord(Authotp)
+.clickTLA_AuthLink()
+//	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
+//	.clickTransNoSort()
+//	.authorizeTlaRecord(Authotp)
 
 	.clickTLA_Link()
 	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
 
 
 	.clickTransNoSort()
-	.getAuthStatus("A")
+//	.getAuthStatus("A")
 
-	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
+	.Preauthorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
 
 	//.clicktla_ConfirmRecord()
 	//.clickTLA_Link()

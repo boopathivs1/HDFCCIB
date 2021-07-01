@@ -11,19 +11,19 @@ import pages.EPI_Payment_SimulatorPage;
 import pages.GenS2S;
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_132_Netweaver_RBI_Adapter2  extends ProjectWrapp {
+public class Tc_134_PreAuth_RBI_Adapter  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC132";
-		testDescription="Netweaver_RBI_Adapter";
+		testCaseName="TC134";
+		testDescription="PreAuth_RBI_Adapterr";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC132";
+		testKeyword="TC134";
 		LogoutStatus=true;	
 		usertype="CIBUser";
-		SimulatorFileName="Gen_s2s_UPload_Netweaver_INTER.html";		
+		SimulatorFileName="Gen_s2s_UPloadNEtw_GEneric.html";		
 	}
 	
 
@@ -68,50 +68,29 @@ System.out.println("++++++++++++");
 System.out.println(Renamedfilename_loc);
 System.out.println("++++++++++++");
 convention(actualfilename,Renamedfilename_loc);
-
-
 String currentdate=dateMonthSlash();
-int li_no=1;
-int va_in=0;
-String value =filespecific_cont(li_no, va_in,Renamedfilename_loc);
+int li_no=0;
+int va_in=22;
+String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
 System.out.println(value);
 System.out.println("oooooooooooo");
 modifyFile(Renamedfilename_loc,value,currentdate);
 
+
+
+//System.out.println("rrrrrrrrrrrrrrrrrrrrrrrr"+renamedfilename);
+//
+//
+//String filesname2=getfilename_one(filename);
 int g=13;
 int h=25;
 filenameonly=filename_substring(renamedfilename,g,h);
 getrefnumer=filenameonly;
 System.out.println("substring  is "+filenameonly);
 
-
-
-int sub_a=0;
-int sub_b=4;
-//int revval_subc=0;
-//int revval_subd=11;
-int ran_a=10000;
-int ran_b=99999;
-//ach_content_check_lastString(7,0, Renamedfilename_loc, sub_a,sub_b,ran_a,ran_b);
-//
-
-ach_content_check_lastString(4,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(35,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(66,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(97,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(128,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(159,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-
-
-//ach_content_check_lastString_returnval(4,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
-
-
-
-
-
 getSimulatorUrl();
 new GenS2S(driver, test)
-.Netweaverfillsubmit(Renamedfilename_loc);
+.fillsubmit(Renamedfilename_loc);
 }
 
 		
@@ -140,19 +119,19 @@ throw new Exception();
 	.clickCashServiceLink()
 	.clickDisbursementLink()
 
-	.clickTLA_AuthLink()
-	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
-	.clickTransNoSort()
-	.authorizeTlaRecord(Authotp)
+.clickTLA_AuthLink()
+//	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
+//	.clickTransNoSort()
+//	.authorizeTlaRecord(Authotp)
 
 	.clickTLA_Link()
 	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
 
 
 	.clickTransNoSort()
-	.getAuthStatus("A")
+//	.getAuthStatus("A")
 
-	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
+	.Preauthorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
 
 	//.clicktla_ConfirmRecord()
 	//.clickTLA_Link()
