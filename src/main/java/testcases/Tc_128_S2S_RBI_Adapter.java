@@ -93,6 +93,7 @@ new GenS2S(driver, test)
 
 		
 		catch (Exception e) {
+			System.out.println(e);
 throw new Exception();
 }
 		
