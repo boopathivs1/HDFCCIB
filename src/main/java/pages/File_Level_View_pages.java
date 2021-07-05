@@ -124,13 +124,6 @@ Thread.sleep(10000);
 	
 String a=getTextByXpath("(.//input[contains(@onclick,'"+filename+"')]//following::span)[1]");
 if(a.equalsIgnoreCase("PV")||a.equalsIgnoreCase("VF")){
-	reportStep(a+"status has been displaying for this file","PASS");
-}
-/*	else if(a.equalsIgnoreCase("PV")){
-	reportStep("Pending for Verification status has been displaying for this file","PASS");
-}
-*/
-else{
 	clickByXpathExplict(".//input[contains(@onclick,'"+filename+"')]");
 	clickByXpathExplict(prop.getProperty("click.filelevel.download.xpath"));
 	Thread.sleep(5000);
@@ -138,14 +131,17 @@ else{
 Thread.sleep(5000);
 
 //clickLogoutLink();
-
 	reportStep("Status not matching and files downloaded","FAIL");	
 
+
 }
+
 
 defaultcontent();
 return new LogoutPages(driver, test);
 	
+
+
 
 }
 
