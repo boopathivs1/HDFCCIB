@@ -113,7 +113,7 @@ try{
 		
 		.filter_FileLevelAuth_Record(clientcode,transtype)
 		.clickfilenameSort()
-		.authorizeflaRecord(filenameonly,Authotp)
+		.authorizeflaRecord(filenameonly,authpwd)
 		.clickBackButton()
 
 

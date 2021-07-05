@@ -123,7 +123,7 @@ try{
 //.CMSUploadFormSubmit(clientcode, totalIns, totalamt, transtype,true,Renamedfilename_loc)
 //.getrefnum()
 
-.filter_FileLevel_Record(clientcode,transtype)
+.filter_Cash_FileLevel_Record_preauth(clientcode,transtype,filenameonly)
 .clickLogoutLink();
 
 //getrefnumer="RBAU2703.128";

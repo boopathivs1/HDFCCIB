@@ -168,7 +168,7 @@ throw new Exception();
 	.clickTLA_AuthLink()
 	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
 	.clickTransNoSort()
-	.authorizeTlaRecord(Authotp)
+	.authorizeTlaRecord(authpwd)
 
 	.clickTLA_Link()
 	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)

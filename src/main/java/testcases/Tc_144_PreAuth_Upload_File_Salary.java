@@ -98,7 +98,8 @@ try{
 .clickCashManageServiceLink_first()
 .click_DisbursementLink()
 .click_File_Level_View_Link()
-.filter_FileLevel_Record(clientcode,transtype)
+.filter_Cash_FileLevel_Record_preauth(clientcode,transtype,filenameonly)
+//.filter_FileLevel_Record(clientcode,transtype)
 .clickLogoutLink();
 
 //getrefnumer="RBAU2703.128";

@@ -110,7 +110,7 @@ throw new Exception();
 .click_File_Level_View_Link()
 //.filter_FileLevel_Record(clientcode,transtype)
 
-.filter_Cash_FileLevel_Record(clientcode,transtype, filenameonly)
+.filter_Cash_FileLevel_Record_preauth(clientcode,transtype, filenameonly)
 .clickLogoutLink();
 
 	getnewurl();
