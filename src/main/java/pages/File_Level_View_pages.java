@@ -113,7 +113,7 @@ selectVisibileTextByXPath(prop.getProperty("select.filelevel.clientcode.xpath"),
 selectVisibileTextByXPath(prop.getProperty("select.filelevel.pay.xpath"),trantype);
 
 
-Thread.sleep(10000);
+Thread.sleep(40000);
 	clickByXpathExplict(prop.getProperty("click.file.level.view.link.xpath"));
 	
 	clickByXpathExplict(prop.getProperty("click.filelevel.filename.xpath"));
