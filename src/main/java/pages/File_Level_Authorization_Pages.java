@@ -163,7 +163,7 @@ acceptAlert();
 		String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[3]");
 
 		reportStep("Reference number for Booking date and Grace date "+getrefnumer,"PASS");
-		reportStep("Grace date before authorization"+Gracedate,"INFO");
+		reportStep("Holidaydate before authorization"+Gracedate,"INFO");
 		
 		
 //		if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
@@ -211,7 +211,7 @@ acceptAlert();
 			reportStep("Grace date before authorization"+Gracedate,"INFO");
 			
 			
-		if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
+		if(Gracedate.equalsIgnoreCase(GetFuturedate(d+1)))
 			{
 				reportStep("Grace date has been matching"+Gracedate,"INFO");
 					
@@ -221,7 +221,6 @@ acceptAlert();
 			}
 
 			return this;
-
 			}	
 	
 	public File_Level_Authorization_Pages clickBackButton() throws InterruptedException{
