@@ -172,6 +172,7 @@ throw new Exception();
 	.clickTLA_AuthLink()
 	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
 	.clickTransNoSort()
+	.cash_getBooking_Futuredate()
 	.authorizeTlaRecord(authpwd)
 
 	.clickTLA_Link()
