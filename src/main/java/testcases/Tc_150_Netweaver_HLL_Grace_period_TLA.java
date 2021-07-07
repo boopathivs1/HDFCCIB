@@ -11,15 +11,15 @@ import pages.EPI_Payment_SimulatorPage;
 import pages.GenS2S;
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_150_Netweaver_HLL_Before_Cut_off_TLA  extends ProjectWrapp {
+public class Tc_150_Netweaver_HLL_Grace_period_TLA  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC150";
-		testDescription="Netweaver_HLL_Before_Cut_off_TLA";
+		testDescription="150_Netweaver_HLL_Grace_period_TLA ";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Boopathi";
+		authors="Sreejith";
 		testKeyword="TC150";
 		LogoutStatus=true;	
 		usertype="CIBUser";
@@ -35,7 +35,7 @@ public class Tc_150_Netweaver_HLL_Before_Cut_off_TLA  extends ProjectWrapp {
 		String totalamt,String transtype,
 			
 		String authuserid,String authpwd,String authdomain,String Compname,String accno,
-		String paytype,String uploadtype,String otp,String totalIns,String data5,String datas0,String data1,String data10,
+		String paytype,String uploadtype,String otp,String grace_date_count,String data5,String datas0,String data1,String data10,
 		String data11,
 			String data12,String data14,String data15) throws Exception{
 		String filenameonly;
@@ -168,6 +168,8 @@ throw new Exception();
 	.clickTLA_AuthLink()
 	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
 	.clickTransNoSort()
+	.getValuedateTLA()
+	.getGracedateTLA(Integer.parseInt(regvalue(grace_date_count)))
 	.authorizeTlaRecord(authpwd)
 
 	.clickTLA_Link()
@@ -177,7 +179,8 @@ throw new Exception();
 	.clickTransNoSort()
 	.getAuthStatus("A")
 
-	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
+	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype)
+	. getGrace_currentdateTLA(currentdate);
 
 	//.clicktla_ConfirmRecord()
 	//.clickTLA_Link()

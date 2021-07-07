@@ -11,15 +11,15 @@ import pages.EPI_Payment_SimulatorPage;
 import pages.GenS2S;
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_153_Netweaver_HLL_Grace_period_TLA  extends ProjectWrapp {
+public class Tc_153_Netweaver_HLL_Before_Cut_off_TLA  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC153";
-		testDescription="153_Netweaver_HLL_Grace_period_TLA ";
+		testDescription="Netweaver_HLL_Before_Cut_off_TLA";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
-		authors="Sreejith";
+		authors="Boopathi";
 		testKeyword="TC153";
 		LogoutStatus=true;	
 		usertype="CIBUser";

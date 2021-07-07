@@ -263,6 +263,109 @@ defaultcontent();
 	
 	return this;
 }
+	
+	public Transaction_Level_Auth_Pages getValuedateTLA() throws InterruptedException{	
+		String Valuedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[8]");
+		reportStep("Reference number for upload date and Value date "+getrefnumer,"PASS");
+		reportStep("Upload date before authorization"+Valuedate,"INFO");
+		return this;
+
+		}
+	
+
+	public Transaction_Level_Auth_Pages getGracedateTLA(int d) throws InterruptedException{	
+
+	String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+
+	reportStep("Reference number for Booking date and Grace date "+getrefnumer,"PASS");
+	reportStep("Grace date before authorization"+Gracedate,"INFO");
+	
+	
+//	if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
+//	{
+//		reportStep("Grace date has been matching"+Gracedate,"INFO");
+//			
+//	}{
+//		reportStep("Grace date has not been matching"+Gracedate,"FAIL");
+//		
+//	}
+
+	return this;
+
+	}
+	public Transaction_Level_Auth_Pages getGrace_currentdateTLA(int d) throws InterruptedException{	
+
+		String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+
+		reportStep("Reference number for Booking date and Grace date "+getrefnumer,"PASS");
+		reportStep("Grace date before authorization"+Gracedate,"INFO");
+		
+		
+//		if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
+//		{
+//			reportStep("Grace date has been matching"+Gracedate,"INFO");
+//				
+//		}{
+//			reportStep("Grace date has not been matching"+Gracedate,"FAIL");
+//			
+//		}
+
+		return this;
+
+		}
+	
+	
+	public Transaction_Level_Auth_Pages cash_getBooking_TLAFuturedate() throws InterruptedException{	
+
+		String Bookingdate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[8]");
+		
+		String Futuredate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+
+
+		reportStep("Reference number for Booking date and Future date "+getrefnumer,"PASS");
+		reportStep("Booking date before authorization"+Bookingdate,"INFO");
+
+		reportStep("Value date before authorization with grace Period "+Futuredate+ "" ,"INFO");
+
+
+		//////System.out.println(status);
+		//if(Futuredate.equalsIgnoreCase(GetFuturedate(futuredate))){
+		////
+//			reportStep(Futuredate+ "Expected  Futuredate has been displaying" ,"PASS");
+		//}
+		//else{
+//			reportStep(Bookingdate+ "Expected  Futuredate has  not been displaying" ,"FAIL");
+		//}
+		return this;
+
+		}
+	
+	
+	public Transaction_Level_Auth_Pages cash_getBooked_TLAFuturedate() throws InterruptedException{	
+
+		String Bookingdate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[8]");
+
+		String Futudate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[9]");
+
+
+		reportStep("Booking date after authorization "+Bookingdate,"PASS");
+
+		reportStep("Value date after authorization "+Futudate,"PASS");
+
+
+
+		if(Futudate.equalsIgnoreCase(GetFuturedate(0))){
+
+			reportStep(Futudate+ "Expected  Future date has been displaying" ,"PASS");
+		}
+		else{
+			reportStep(Futudate+ "Expected  Future date has  not been displaying" ,"FAIL");
+		}
+		return this;
+
+		}
+	
+	
 	public Transaction_Level_Auth_Pages authorizeTlaRecord(String otp) throws InterruptedException{
 		
 		

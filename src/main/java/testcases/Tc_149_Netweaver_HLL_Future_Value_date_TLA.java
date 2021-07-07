@@ -172,7 +172,7 @@ throw new Exception();
 	.clickTLA_AuthLink()
 	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
 	.clickTransNoSort()
-	.cash_getBooking_Futuredate()
+	.cash_getBooking_TLAFuturedate()
 	.authorizeTlaRecord(authpwd)
 
 	.clickTLA_Link()
@@ -182,7 +182,8 @@ throw new Exception();
 	.clickTransNoSort()
 	.getAuthStatus("A")
 
-	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
+	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype)
+	.cash_getBooked_TLAFuturedate();
 
 	//.clicktla_ConfirmRecord()
 	//.clickTLA_Link()
