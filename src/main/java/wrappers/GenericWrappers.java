@@ -95,6 +95,8 @@ public class GenericWrappers extends Reporter implements Wrappers {
     public String StatementBalanceAmount;
     public String finalBalanceAmount;
     public static int futuredate=2;
+    public static int currentdate=0;
+    
     public static int todaydate=0;
     
     public static String SIrefnumer=null;

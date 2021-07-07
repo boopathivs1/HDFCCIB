@@ -29,8 +29,57 @@ public class File_Level_Authorization_Pages extends ProjectWrapp{
 	
 	return this;
 }
+	
+	
+
+public File_Level_Authorization_Pages cash_getValuedate() throws InterruptedException{	
+String Valuedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[11]");
+reportStep("Reference number for Booking date and Value date "+getrefnumer,"PASS");
+reportStep("Booking date before authorization"+Valuedate,"INFO");
+return this;
+
+}
+public File_Level_Authorization_Pages cash_getGracedate(int d) throws InterruptedException{	
+
+String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[12]");
+
+reportStep("Reference number for Booking date and Grace date "+getrefnumer,"PASS");
+reportStep("Booking date before authorization"+Gracedate,"INFO");
+
+return this;
+
+}
 
 	
+	
+	
+
+	public File_Level_Authorization_Pages cash_getBooking_Futuredate() throws InterruptedException{	
+
+		String Bookingdate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[2]");
+		
+		String Futuredate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[3]");
+
+
+		reportStep("Reference number for Booking date and Future date "+getrefnumer,"PASS");
+		reportStep("Booking date before authorization"+Bookingdate,"INFO");
+
+		reportStep("Value date before authorization with grace Period "+Futuredate+ "" ,"INFO");
+
+
+		//////System.out.println(status);
+		//if(Futuredate.equalsIgnoreCase(GetFuturedate(futuredate))){
+		////
+//			reportStep(Futuredate+ "Expected  Futuredate has been displaying" ,"PASS");
+		//}
+		//else{
+//			reportStep(Bookingdate+ "Expected  Futuredate has  not been displaying" ,"FAIL");
+		//}
+		return this;
+
+		}
+
+
 	
 	
 
@@ -72,6 +121,108 @@ acceptAlert();
 					return this;
 }
 	
+	
+	public File_Level_Authorization_Pages getValuedate() throws InterruptedException{	
+		String Valuedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[2]");
+		reportStep("Reference number for upload date and Value date "+getrefnumer,"PASS");
+		reportStep("Upload date before authorization"+Valuedate,"INFO");
+		return this;
+
+		}
+
+
+
+
+
+
+
+
+		public File_Level_Authorization_Pages getGracedate(int d) throws InterruptedException{	
+
+		String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[3]");
+
+		reportStep("Reference number for Booking date and Grace date "+getrefnumer,"PASS");
+		reportStep("Grace date before authorization"+Gracedate,"INFO");
+		
+		
+//		if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
+//		{
+//			reportStep("Grace date has been matching"+Gracedate,"INFO");
+//				
+//		}{
+//			reportStep("Grace date has not been matching"+Gracedate,"FAIL");
+//			
+//		}
+
+		return this;
+
+		}
+
+		public File_Level_Authorization_Pages getHolidaydate(int d) throws InterruptedException{	
+
+		String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[3]");
+
+		reportStep("Reference number for Booking date and Grace date "+getrefnumer,"PASS");
+		reportStep("Grace date before authorization"+Gracedate,"INFO");
+		
+		
+//		if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
+//		{
+//			reportStep("Grace date has been matching"+Gracedate,"INFO");
+//				
+//		}{
+//			reportStep("Grace date has not been matching"+Gracedate,"FAIL");
+//			
+//		}
+
+		return this;
+
+		}
+
+		
+		
+
+		public File_Level_Authorization_Pages getGrace_currentdate(int d) throws InterruptedException{	
+
+			String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[3]");
+
+			reportStep("Reference number for Booking date and Grace date "+getrefnumer,"PASS");
+			reportStep("Grace date before authorization"+Gracedate,"INFO");
+			
+			
+//			if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
+//			{
+//				reportStep("Grace date has been matching"+Gracedate,"INFO");
+//					
+//			}{
+//				reportStep("Grace date has not been matching"+Gracedate,"FAIL");
+//				
+//			}
+
+			return this;
+
+			}
+	
+		public File_Level_Authorization_Pages getHoliday_currentdate(int d) throws InterruptedException{	
+
+			String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[3]");
+
+			reportStep("Reference number for Booking date and Grace date "+getrefnumer,"PASS");
+			reportStep("Grace date before authorization"+Gracedate,"INFO");
+			
+			
+		if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
+			{
+				reportStep("Grace date has been matching"+Gracedate,"INFO");
+					
+			}{
+				reportStep("Grace date has not been matching"+Gracedate,"FAIL");
+				
+			}
+
+			return this;
+
+			}	
 	
 	public File_Level_Authorization_Pages clickBackButton() throws InterruptedException{
 		clickByXpathExplict(prop.getProperty("click.back.button.fla.xpath"));
@@ -317,6 +468,32 @@ acceptAlert();
 	}
 
 
+	public File_Level_Authorization_Pages cash_getBooked_Futuredate() throws InterruptedException{	
+
+		String Bookingdate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[2]");
+
+		String Futudate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[3]");
+
+
+		reportStep("Booking date after authorization "+Bookingdate,"PASS");
+
+		reportStep("Value date after authorization "+Futudate,"PASS");
+
+
+
+		if(Futudate.equalsIgnoreCase(GetFuturedate(0))){
+
+			reportStep(Futudate+ "Expected  Future date has been displaying" ,"PASS");
+		}
+		else{
+			reportStep(Futudate+ "Expected  Future date has  not been displaying" ,"FAIL");
+		}
+		return this;
+
+		}
+
+	
+	
 	public File_Level_Authorization_Pages authorize_CheckStatus_FLA_cash(String filename,String clientcode,String transtype) throws InterruptedException{
 		String status=getTextByXpath(".//input[contains(@onclick,'"+filename+"')]/following::span[7]");
 
