@@ -107,6 +107,31 @@ public class Transaction_Level_Auth_Pages extends ProjectWrapp{
 		
 	}
 
+	
+	public Transaction_Level_Auth_Pages 
+	PreauthorizeTLA_CheckStatus(String filename) throws InterruptedException{
+		String status=getTextByXpath("(.//table//input[contains(@value,'"+filename+"')]//following::td//span)[13]");
+		
+		System.out.println(status+"Expected status"+filename);
+
+		 if(status.equalsIgnoreCase("Z")||status.equalsIgnoreCase("J")||status.equalsIgnoreCase("Q")){
+			statusVerify(status);
+		}
+		
+		
+		else{
+			getTLAAuthStatus(filename,"C");
+			//getFinalStatus();		
+			
+			
+		}
+		
+		
+		
+		
+	return this;	
+		
+	}
 
 	
 	
@@ -167,6 +192,26 @@ scrolltoelementJs("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following:
 
 		}
 		
+	public Transaction_Level_Auth_Pages getTLAAuthStatus(String Filename,String verifyStatus) throws InterruptedException{	
+		scrolltoelementJs("(.//table//input[contains(@value,'"+Filename+"')]//following::td//span)[13]");
+		String status=getTextByXpath("(.//table//input[contains(@value,'"+Filename+"')]//following::td//span)[13]");
+				
+				System.out.println(status+"Actual status"+Filename);
+				if(status.equalsIgnoreCase(verifyStatus)){
+					statusVerify(status);
+				}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("C")||status.equalsIgnoreCase("Z")||status.equalsIgnoreCase("J")||status.equalsIgnoreCase("Q")||status.equalsIgnoreCase("UP")){
+					statusVerify(status);
+				}
+
+
+				else{
+					reportStep(status+ "Status has been displaying" ,"WARN");
+				}
+				return this;
+
+				}
+	
+	
 	
 	public Transaction_Level_Auth_Pages getftlaAuthStatus(String Filename,String verifyStatus) throws InterruptedException{	
 
