@@ -29,13 +29,12 @@ public class Tc_131_NetWeaver_RBI_Adapter  extends ProjectWrapp {
 			
 	@Test(groups={"sanity"},dataProvider="fetch")
 	public void checkAccSummary(String casename,String userid,String pwd,String domain
-			,String filename,String clientcode,
-		String totalIns,String totalamt,String transtype,String otp,
+			,String filename,String clientcode,String totalamt,String transtype,
 			
 		String authuserid,String authpwd,String authdomain,String data0,String data2,
 		String data3,String data4,String data5,String datas0,String data1,String data10,
 		String data11,
-			String data12,String data14,String data15) throws Exception{
+			String data12,String data14,String data15,String data16,String data17) throws Exception{
 	
 		String filenameonly;
 		String renamedfilename;
