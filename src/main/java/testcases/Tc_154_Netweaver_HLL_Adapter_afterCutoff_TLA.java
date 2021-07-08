@@ -105,11 +105,13 @@ int ran_a=10000;
 int ran_b=99999;
 //ach_content_check_lastString(7,0, Renamedfilename_loc, sub_a,sub_b,ran_a,ran_b);
 //
+ach_content_check_lastString_returnval(6,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+
 ach_content_check_lastString_returnval(7,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
 ach_content_check_lastString_returnval(8,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
 ach_content_check_lastString_returnval(9,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString_returnval(10,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString_returnval(11,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+//ach_content_check_lastString_returnval(10,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
+//ach_content_check_lastString_returnval(11,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
 
 
 
