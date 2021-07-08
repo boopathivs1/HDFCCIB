@@ -471,13 +471,13 @@ defaultcontent();
 
 
 
-		if(Futudate.equalsIgnoreCase(GetFuturedate(0))){
-
-			reportStep(Futudate+ "Expected  Future date has been displaying" ,"PASS");
-		}
-		else{
-			reportStep(Futudate+ "Expected  Future date has  not been displaying" ,"FAIL");
-		}
+//		if(Futudate.equalsIgnoreCase(GetFuturedate(0))){
+//
+//			reportStep(Futudate+ "Expected  Future date has been displaying" ,"PASS");
+//		}
+//		else{
+//			reportStep(Futudate+ "Expected  Future date has  not been displaying" ,"FAIL");
+//		}
 		return this;
 
 		}

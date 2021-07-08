@@ -187,7 +187,7 @@ acceptAlert();
 			String Gracedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[3]");
 
 			reportStep("Reference number for Booking date and Grace date "+getrefnumer,"PASS");
-			reportStep("Grace date before authorization"+Gracedate,"INFO");
+			reportStep("Grace date after authorization"+Gracedate,"INFO");
 			
 			
 //			if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
@@ -480,13 +480,13 @@ acceptAlert();
 
 
 
-		if(Futudate.equalsIgnoreCase(GetFuturedate(0))){
-
-			reportStep(Futudate+ "Expected  Future date has been displaying" ,"PASS");
-		}
-		else{
-			reportStep(Futudate+ "Expected  Future date has  not been displaying" ,"FAIL");
-		}
+//		if(Futudate.equalsIgnoreCase(GetFuturedate(0))){
+//
+//			reportStep(Futudate+ "Expected  Future date has been displaying" ,"PASS");
+//		}
+//		else{
+//			reportStep(Futudate+ "Expected  Future date has  not been displaying" ,"FAIL");
+//		}
 		return this;
 
 		}
