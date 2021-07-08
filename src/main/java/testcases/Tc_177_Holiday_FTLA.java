@@ -72,15 +72,18 @@ convention(actualfilename,Renamedfilename_loc);
 
 
 
+int futu_date = Integer.parseInt(regvalue(holiday_count));
 
 
-String currentdate=dateMonthSlash();
+String futuredate=GetFuturedate(futu_date);
+
+//String currentdate=dateMonthSlash();
 int li_no=0;
 int va_in=22;
 String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
 System.out.println(value);
 System.out.println("oooooooooooo");
-modifyFile(Renamedfilename_loc,value,currentdate);
+modifyFile(Renamedfilename_loc,value,futuredate);
 
 
 
