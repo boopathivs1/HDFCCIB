@@ -131,7 +131,7 @@ throw new Exception();
 	.clickTransNoSort()
 //	.getAuthStatus("A")
 
-	.Preauthorize_CheckStatus_TLA(Compname,clientcode,accno,filenameonly,paytype);
+	.PreauthorizeTLA_CheckStatus(filenameonly);
 
 	//.clicktla_ConfirmRecord()
 	//.clickTLA_Link()
