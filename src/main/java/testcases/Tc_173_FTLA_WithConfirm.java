@@ -11,16 +11,16 @@ import pages.EPI_Payment_SimulatorPage;
 import pages.GenS2S;
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_166_S2S_Upload_File_SAPextractor_Holiday  extends ProjectWrapp {
+public class Tc_173_FTLA_WithConfirm  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC166";
-		testDescription="S2S_Upload_File_SAPextractor_With_Holiday_FLA";
+		testCaseName="TC173";
+		testDescription="With Confirm_FTLA";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC166";
+		testKeyword="TC173";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 		SimulatorFileName="Gen_s2s_UPloadNEtw_GEneric.html";		
@@ -32,8 +32,8 @@ public class Tc_166_S2S_Upload_File_SAPextractor_Holiday  extends ProjectWrapp {
 			,String filename,String clientcode,
 		String totalIns,String totalamt,String transtype,String otp,
 			
-		String authuserid,String authpwd,String authdomain,String holiday_count,String data2,
-		String data3,String data4,String data5,String datas0,String data1,String data10,
+		String authuserid,String authpwd,String authdomain,String Compname,
+		String accno,String paytype,String grace_date_count,String data5,String datas0,String data1,String data10,
 		String data11,
 			String data12,String data14,String data15) throws Exception{
 	
@@ -57,7 +57,7 @@ String filesname1=getfilename_one(filename);
 System.out.println("Actual filename is "+filesname1);
 int startindex=0;
 int endindex=17;
-String  serial_startnumber="7";
+String  serial_startnumber="1";
  renamedfilename=renamed_filename_one(filesname1,startindex,endindex, serial_startnumber);
 System.out.println(renamedfilename);
 String actualfilename=fileurl+filename+filesname1;
@@ -68,53 +68,30 @@ System.out.println("++++++++++++");
 convention(actualfilename,Renamedfilename_loc);
 
 
-//String currentdate=dateMonthSlash();
-
-int futu_date = Integer.parseInt(regvalue(holiday_count));
 
 
-String futuredate=GetFuturedate(futu_date);
-int li_no=1;
-int va_in=0;
-String value =filespecific_cont(li_no, va_in,Renamedfilename_loc);
+
+
+
+String currentdate=dateMonthSlash();
+int li_no=0;
+int va_in=22;
+String value =filespecific_text(li_no, va_in,Renamedfilename_loc);
 System.out.println(value);
 System.out.println("oooooooooooo");
-modifyFile(Renamedfilename_loc,value,futuredate);
+modifyFile(Renamedfilename_loc,value,currentdate);
 
+
+
+//System.out.println("rrrrrrrrrrrrrrrrrrrrrrrr"+renamedfilename);
+//
+//
+//String filesname2=getfilename_one(filename);
 int g=13;
 int h=25;
 filenameonly=filename_substring(renamedfilename,g,h);
 getrefnumer=filenameonly;
 System.out.println("substring  is "+filenameonly);
-
-
-
-int sub_a=0;
-int sub_b=4;
-//int revval_subc=0;
-//int revval_subd=11;
-int ran_a=10000;
-int ran_b=99999;
-//ach_content_check_lastString(7,0, Renamedfilename_loc, sub_a,sub_b,ran_a,ran_b);
-//
-
-ach_content_check_lastString(4,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(35,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(66,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(97,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(128,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-ach_content_check_lastString(159,0, Renamedfilename_loc, sub_a, sub_b, ran_a, ran_b);
-
-
-//ach_content_check_lastString_returnval(4,0, Renamedfilename_loc, revval_subc, revval_subd, sub_a, sub_b, ran_a, ran_b);
-
-
-
-
-
-
-
-
 
 getSimulatorUrl();
 new GenS2S(driver, test)
@@ -123,6 +100,7 @@ new GenS2S(driver, test)
 
 		
 		catch (Exception e) {
+			System.out.println(e);
 throw new Exception();
 }
 		
@@ -147,48 +125,48 @@ throw new Exception();
 	.fillCredentials(authuserid, authpwd,authdomain)
 	.clickCashServiceLink()
 	.clickDisbursementLink()
-	.clickFLA_AuthLink()
 
+	.clickTLA_AuthLink()
+	.CashTLAfilter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno,filenameonly, paytype)
+	.clickTransNoSort()
+	//.getValuedateTLA()
+	//.getGracedateTLA(Integer.parseInt(regvalue(grace_date_count)))
 	
-	.filter_FileLevelAuth_Record(clientcode,transtype)
-	.clickfilenameSort()
-	.getValuedate()
-	.getHolidaydate(Integer.parseInt(regvalue(holiday_count)))
-	
-	.authorizeflaRecord(filenameonly,authpwd)
-	.clickBackButton()
+	.authorizeFTlaRecord(authpwd)
 
-
-	.filter_FileLevelAuth_Record(clientcode,transtype)
-	.clickfilenameSort()
-
-	.getAuthStatus("A")
-	.authorize_CheckStatus_FLA(filenameonly,clientcode,transtype)
-	.getHoliday_currentdate(Integer.parseInt(regvalue(holiday_count)));
-	
-
-	
-	
-//	.clickFla_ConfirmRecord(filename)
-//	.defaultFlaLink()
-//.clickFLA_Link()
-//	.filter_FileLevelAuth_Record(clientcode,transtype)
-//	.clickfilenameSort()		
-//	.getFinalStatus();
-
-
-
+	.clickTLA_Link()
+	.CashTLAfilter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,filenameonly,paytype)
+	.clickTransNoSort()
+	.getftlaAuthStatus(filenameonly,"A")
+	.CashAuthorizeFTLAStatus(filenameonly, Compname, clientcode, accno, paytype,filenameonly);
+	//. getGrace_currentdateTLA(currentdate);
+//	.clickFtla_ConfirmRecord()
+//	.clickTLA_Link()
+//	.filter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,renamedfilename,paytype)
+//	.clickTransNoSort()
+//	.getftlaAuthStatus(uploadtype,"C")
+//	.defaultcontent_Switch()
+//
+//	.clickTLA_Link()
+//	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,renamedfilename,paytype)
+//	.clickTransNoSort()
+//	.getftlaAuthStatus(uploadtype,"C")
+//
+//	.defaultcontent_Switch()
+//
+//	.filter_TransLevelAuth_Record(Compname,"ALL", clientcode, accno,renamedfilename, paytype)
+//	.clickTransNoSort()
+//	.getFTLAFinalStatus(uploadtype);
 
 	clickLogoutLink();
 
 
 	}
 	catch (Exception e) {
-	clickLogoutLink_FailCase();
-
+	clickLogoutLink();
 	throw new Exception();
 
-
+	// TODO: handle exception
 	}
 
 	}
