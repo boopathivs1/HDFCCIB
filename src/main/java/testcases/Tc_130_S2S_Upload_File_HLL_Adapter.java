@@ -74,9 +74,9 @@ int g=13;
 int h=25;
 filenameonly=filename_substring(renamedfilename,g,h);
 //getrefnumer=filenameonly;
-String value3=value1.substring(0,4);
-//String value2=value1.substring(0,1);
-String file1srowcol=filenameonly+value3;
+String value3=value1.substring(1,5);
+String value2=value1.substring(0,1);
+String file1srowcol=value2+filenameonly+value3;
 System.out.println(file1srowcol);
 modifyFile(Renamedfilename_loc,value1,file1srowcol);
 //
