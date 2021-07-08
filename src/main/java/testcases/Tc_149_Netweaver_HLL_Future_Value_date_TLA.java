@@ -93,7 +93,7 @@ int li1=1;
 int val0=0;
 String val4 =filespecific_cont(li1, val0,Renamedfilename_loc);
 String olddateval=val4.substring(1,11);
-modifyFile(Renamedfilename_loc,olddateval,GetFuturedate(futu_date));
+modifyFile(Renamedfilename_loc,olddateval,futuredate);
 
 
 
@@ -172,7 +172,7 @@ throw new Exception();
 	.clickTLA_AuthLink()
 	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
 	.clickTransNoSort()
-	.cash_getBooking_TLAFuturedate()
+	.cash_getBooking_TLAFuturedate(future_date_count)
 	.authorizeTlaRecord(authpwd)
 
 	.clickTLA_Link()

@@ -60,7 +60,30 @@ public class Transaction_Level_Auth_Pages extends ProjectWrapp{
 		
 	}
 
+	public Transaction_Level_Auth_Pages getHoliday_currentdate(int d,String paytype) throws InterruptedException{	
 
+		String Holidaydate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]/following::span[text()='"+paytype+"']//following::span[8])[1]");
+
+		reportStep("Reference number for Booking date and Holidaydate "+getrefnumer,"PASS");
+		reportStep("Holidaydate before authorization"+Holidaydate,"INFO");
+		
+		
+	if(Holidaydate.equalsIgnoreCase(GetFuturedate(d+1)))
+		{
+			reportStep("Holidaydate has been matching"+Holidaydate,"INFO");
+				
+		}{
+			reportStep("Holidaydate has not been matching"+Holidaydate,"FAIL");
+			
+		}
+
+		return this;
+		}	
+
+	
+	
+	
+	
 	public Transaction_Level_Auth_Pages 
 	Preauthorize_CheckStatus_TLA(String Compname,String clientcode,String accno,String uploadtype,String paytype) throws InterruptedException{
 		String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
@@ -106,6 +129,26 @@ Thread.sleep(8000);
 		
 		return this;
 			}
+	
+	public Transaction_Level_Auth_Pages CashTLAfilter_TransLevelAuth_Record(String compname,String status,String clientcode,String accno,String uploadtype,String paytype) throws InterruptedException{
+		contentFrames();
+		selectVisibileTextByXPath(prop.getProperty("select.translevel.company.xpath"),compname);
+		selectVisibileTextByXPath(prop.getProperty("trans.selectstatus.xpath"),status);
+		selectVisibileTextByXPath(prop.getProperty("select.trans.clientcode.xpath"),clientcode);
+		//selectVisibileTextByXPath(prop.getProperty("select.tla.acc.no.xpath"),accno);
+		
+		selectVisibileTextByXPath(prop.getProperty("select.filename.tla.xpath"),uploadtype);
+		
+		
+		selectVisibileTextByXPath(prop.getProperty("select.tla.paytype.xpath"),paytype);
+Thread.sleep(8000);		
+//		defaultcontent();
+		clickByXpathExplict(prop.getProperty("click.fla.view.xpath"));
+		
+		
+		return this;
+			}
+	
 	
 	public Transaction_Level_Auth_Pages getAuthStatus(String verifyStatus) throws InterruptedException{	
 scrolltoelementJs("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
@@ -186,6 +229,45 @@ scrolltoelementJs("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following:
 	
 	
 	
+	public Transaction_Level_Auth_Pages CashAuthorizeFTLAStatus(String renamedfilename, String Compname,String clientcode,String accno,String paytype, String uploadtype) throws InterruptedException{	
+
+		pageScroll1400("(.//input[contains(@onclick,'"+renamedfilename+"')])[1]//following::span[13]");
+		String status=getTextByXpath("(.//input[contains(@onclick,'"+renamedfilename+"')])[1]//following::span[13]");
+		
+		if(status.contains("A")){
+		//new Transaction_Level_Auth_Pages(driver,test);
+			clickFtla_ConfirmRecord()
+			.clickTLA_Link()
+			.CashTLAfilter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,renamedfilename,paytype)
+			.clickTransNoSort()
+			.getftlaAuthStatus(uploadtype,"C")
+			.defaultcontent_Switch()
+
+			.clickTLA_Link()
+			.CashTLAfilter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,renamedfilename,paytype)
+			.clickTransNoSort()
+			.getftlaAuthStatus(uploadtype,"C")
+
+			.defaultcontent_Switch()
+
+			.CashTLAfilter_TransLevelAuth_Record(Compname,"ALL", clientcode, accno,renamedfilename, paytype)
+			.clickTransNoSort()
+			.getFTLAFinalStatus(uploadtype);
+		}
+		else if(status.equalsIgnoreCase("Z")||status.equalsIgnoreCase("J")||status.equalsIgnoreCase("Q")){
+			statusVerify(status);
+		}
+		
+		
+		else{
+			getFTLAFinalStatus(uploadtype);
+			reportStep(status+ "Status has been displaying" ,"WARN");
+		}
+		return this;
+
+		}
+	
+
 	
 	public Transaction_Level_Auth_Pages defaultcontent_Switch() throws InterruptedException{	
 defaultcontent();
@@ -264,6 +346,41 @@ defaultcontent();
 	return this;
 }
 	
+	public Transaction_Level_Auth_Pages getValuedatePaytypeTLA(String paytype) throws InterruptedException{	
+		String Valuedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]/following::span[text()='"+paytype+"']//following::span[7])[1]");
+
+		reportStep("Reference number for upload date and Value date "+getrefnumer,"PASS");
+		reportStep("Upload date before authorization"+Valuedate,"INFO");
+		return this;
+
+		}
+	
+	public Transaction_Level_Auth_Pages getHolidaydateTLA(int d,String paytype) throws InterruptedException{	
+
+		String Holidaydate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]/following::span[text()='"+paytype+"']//following::span[8])[1]");
+
+
+		reportStep("Reference number for Booking date and Holidaydate "+getrefnumer,"PASS");
+		reportStep("Holidaydate before authorization"+Holidaydate,"INFO");
+		
+		
+//		if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
+//		{
+//			reportStep("Grace date has been matching"+Gracedate,"INFO");
+//				
+//		}{
+//			reportStep("Grace date has not been matching"+Gracedate,"FAIL");
+//			
+//		}
+
+		return this;
+
+		}
+
+	
+	
+	
+	
 	public Transaction_Level_Auth_Pages getValuedateTLA() throws InterruptedException{	
 		String Valuedate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[8]");
 		reportStep("Reference number for upload date and Value date "+getrefnumer,"PASS");
@@ -315,7 +432,7 @@ defaultcontent();
 		}
 	
 	
-	public Transaction_Level_Auth_Pages cash_getBooking_TLAFuturedate() throws InterruptedException{	
+	public Transaction_Level_Auth_Pages cash_getBooking_TLAFuturedate(String futuredate) throws InterruptedException{	
 
 		String Bookingdate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[8]");
 		

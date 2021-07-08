@@ -35,7 +35,7 @@ public class Tc_155_Netweaver_HLL_Holiday_TLA  extends ProjectWrapp {
 		String totalamt,String transtype,
 			
 		String authuserid,String authpwd,String authdomain,String Compname,String accno,
-		String paytype,String uploadtype,String otp,String totalIns,String data5,String datas0,String data1,String data10,
+		String paytype,String uploadtype,String otp,String paymentcode,String holiday_count,String datas0,String data1,String data10,
 		String data11,
 			String data12,String data14,String data15) throws Exception{
 		String filenameonly;
@@ -84,12 +84,16 @@ modifyFile(Renamedfilename_loc,value1,file1srowcol);
 
 
 
+int futu_date = Integer.parseInt(regvalue(holiday_count));
+
+
+String futuredate=GetFuturedate(futu_date);
 
 int li1=1;
 int val0=0;
 String val4 =filespecific_cont(li1, val0,Renamedfilename_loc);
 String olddateval=val4.substring(1,11);
-modifyFile(Renamedfilename_loc,olddateval,dateMonthSlash());
+modifyFile(Renamedfilename_loc,olddateval,futuredate);
 
 
 
@@ -168,6 +172,8 @@ throw new Exception();
 	.clickTLA_AuthLink()
 	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
 	.clickTransNoSort()
+	.getValuedatePaytypeTLA(paymentcode)
+	.getHolidaydateTLA(Integer.parseInt(regvalue(holiday_count)),paymentcode)
 	.authorizeTlaRecord(authpwd)
 
 	.clickTLA_Link()
@@ -177,7 +183,8 @@ throw new Exception();
 	.clickTransNoSort()
 	.getAuthStatus("A")
 
-	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
+	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype)
+	.getHoliday_currentdate(Integer.parseInt(regvalue(holiday_count)), paymentcode);
 
 	//.clicktla_ConfirmRecord()
 	//.clickTLA_Link()
