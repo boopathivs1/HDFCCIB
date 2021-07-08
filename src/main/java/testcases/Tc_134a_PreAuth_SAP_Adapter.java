@@ -146,13 +146,13 @@ throw new Exception();
 //	.authorizeTlaRecord(Authotp)
 
 	.clickTLA_Link()
-	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
+	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,filenameonly,paytype)
 
 
 	.clickTransNoSort()
 //	.getAuthStatus("A")
 
-	.Preauthorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
+	.Preauthorize_CheckStatus_TLA(Compname,clientcode,accno,filenameonly,paytype);
 
 	//.clicktla_ConfirmRecord()
 	//.clickTLA_Link()

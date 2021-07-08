@@ -166,20 +166,20 @@ throw new Exception();
 	.clickDisbursementLink()
 
 	.clickTLA_AuthLink()
-	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
+	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, filenameonly, paytype)
 	.clickTransNoSort()
 	.getValuedateTLA()
 	.getGracedateTLA(Integer.parseInt(regvalue(grace_date_count)))
 	.authorizeTlaRecord(authpwd)
 
 	.clickTLA_Link()
-	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
+	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,filenameonly,paytype)
 
 
 	.clickTransNoSort()
 	.getAuthStatus("A")
 
-	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype)
+	.authorize_CheckStatus_TLA(Compname,clientcode,accno,filenameonly,paytype)
 	. getGrace_currentdateTLA(currentdate);
 
 	//.clicktla_ConfirmRecord()

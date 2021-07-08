@@ -170,20 +170,20 @@ throw new Exception();
 	.clickDisbursementLink()
 
 	.clickTLA_AuthLink()
-	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
+	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, filenameonly, paytype)
 	.clickTransNoSort()
 	.getValuedatePaytypeTLA(paymentcode)
 	.getHolidaydateTLA(Integer.parseInt(regvalue(holiday_count)),paymentcode)
 	.authorizeTlaRecord(authpwd)
 
 	.clickTLA_Link()
-	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
+	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,filenameonly,paytype)
 
 
 	.clickTransNoSort()
 	.getAuthStatus("A")
 
-	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype)
+	.authorize_CheckStatus_TLA(Compname,clientcode,accno,filenameonly,paytype)
 	.getHoliday_currentdate(Integer.parseInt(regvalue(holiday_count)), paymentcode);
 
 	//.clicktla_ConfirmRecord()
