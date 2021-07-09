@@ -74,7 +74,7 @@ String value1 =filespecific_cont(li_no, va_in,Renamedfilename_loc);
 int g=13;
 int h=25;
 filenameonly=filename_substring(renamedfilename,g,h);
-//getrefnumer=filenameonly;
+getrefnumer=filenameonly;
 String value3=value1.substring(1,5);
 String value2=value1.substring(0,1);
 String file1srowcol=value2+filenameonly+value3;
@@ -166,18 +166,18 @@ throw new Exception();
 	.clickDisbursementLink()
 
 	.clickTLA_AuthLink()
-	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
+	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno,filenameonly, paytype)
 	.clickTransNoSort()
 	.authorizeTlaRecord(authpwd)
 
 	.clickTLA_Link()
-	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
+	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,filenameonly,paytype)
 
 
 	.clickTransNoSort()
-	.getAuthStatus("A")
+	.getAuthStatus_tla("A")
 
-	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
+	.authorize_CheckStatus_TL(Compname,clientcode,accno,filenameonly,paytype);
 
 	//.clicktla_ConfirmRecord()
 	//.clickTLA_Link()

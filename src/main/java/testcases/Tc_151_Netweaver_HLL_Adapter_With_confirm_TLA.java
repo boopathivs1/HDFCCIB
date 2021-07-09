@@ -175,9 +175,9 @@ throw new Exception();
 
 
 	.clickTransNoSort()
-	.getAuthStatus("A")
+	.getAuthStatus_tla("A")
 
-	.authorize_CheckStatus_TLA(Compname,clientcode,accno,filenameonly,paytype);
+	.authorize_CheckStatus_TL(Compname,clientcode,accno,filenameonly,paytype);
 
 	//.clicktla_ConfirmRecord()
 	//.clickTLA_Link()

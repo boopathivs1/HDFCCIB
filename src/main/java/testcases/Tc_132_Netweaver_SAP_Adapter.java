@@ -141,18 +141,18 @@ throw new Exception();
 	.clickDisbursementLink()
 
 	.clickTLA_AuthLink()
-	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno, uploadtype, paytype)
+	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno,filenameonly, paytype)
 	.clickTransNoSort()
 	.authorizeTlaRecord(authpwd)
 
 	.clickTLA_Link()
-	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
+	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,filenameonly,paytype)
 
 
 	.clickTransNoSort()
-	.getAuthStatus("A")
+	.getAuthStatus_tla("A")
 
-	.authorize_CheckStatus_TLA(Compname,clientcode,accno,uploadtype,paytype);
+	.authorize_CheckStatus_TL(Compname,clientcode,accno,filenameonly,paytype);
 
 	//.clicktla_ConfirmRecord()
 	//.clickTLA_Link()

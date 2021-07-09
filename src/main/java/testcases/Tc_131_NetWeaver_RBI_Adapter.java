@@ -31,8 +31,8 @@ public class Tc_131_NetWeaver_RBI_Adapter  extends ProjectWrapp {
 	public void checkAccSummary(String casename,String userid,String pwd,String domain
 			,String filename,String clientcode,String totalamt,String transtype,
 			
-		String authuserid,String authpwd,String authdomain,String data0,String data2,
-		String data3,String data4,String data5,String datas0,String data1,String data10,
+		String authuserid,String authpwd,String authdomain,String compname,String accno,
+		String paytype,String data4,String data5,String datas0,String data1,String data10,
 		String data11,
 			String data12,String data14,String data15,String data16,String data17) throws Exception{
 	
@@ -118,31 +118,42 @@ throw new Exception();
 	.fillCredentials(authuserid, authpwd,authdomain)
 	.clickCashServiceLink()
 	.clickDisbursementLink()
-	.clickFLA_AuthLink()
 
-	
-	.filter_FileLevelAuth_Record(clientcode,transtype)
-	.clickfilenameSort()
-	.authorizeflaRecord(filenameonly,authpwd)
-	.clickBackButton()
+	.clickTLA_AuthLink()
+	.filter_TransLevelAuth_Record(compname,"Pending for first Authorisation", clientcode, accno,filenameonly, paytype)
+	.clickTransNoSort()
+	.authorizeTlaRecord(authpwd)
 
-
-	.filter_FileLevelAuth_Record(clientcode,transtype)
-	.clickfilenameSort()
-
-	.getAuthStatus("A")
-	.authorize_CheckStatus_FLA(filenameonly,clientcode,transtype);
-
-	
-	
-//	.clickFla_ConfirmRecord(filename)
-//	.defaultFlaLink()
-//.clickFLA_Link()
-//	.filter_FileLevelAuth_Record(clientcode,transtype)
-//	.clickfilenameSort()		
-//	.getFinalStatus();
+	.clickTLA_Link()
+	.filter_TransLevelAuth_Record(compname,"ALL",clientcode,accno,filenameonly,paytype)
 
 
+	.clickTransNoSort()
+	.getAuthStatus_tla("A")
+
+	.authorize_CheckStatus_TL(compname,clientcode,accno,filenameonly,paytype);
+
+	//.clicktla_ConfirmRecord()
+	//.clickTLA_Link()
+	//.filter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,uploadtype,paytype)
+	//.clickTransNoSort()
+	//.getAuthStatus("C")
+	//.defaultcontent_Switch()
+	//
+	//.clickTLA_Link()
+	//.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
+	//.clickTransNoSort()
+	//.getAuthStatus("C")
+	//
+	//.defaultcontent_Switch()
+	//
+	//
+	//
+	//.filter_TransLevelAuth_Record(Compname,"ALL", clientcode, accno,uploadtype, paytype)
+	//.clickTransNoSort()
+	//.getFinalStatus();
+	//
+	//
 
 
 	clickLogoutLink();
@@ -150,12 +161,11 @@ throw new Exception();
 
 	}
 	catch (Exception e) {
-	clickLogoutLink_FailCase();
-
+		clickLogoutLink_FailCase();
 	throw new Exception();
 
-
+	// TODO: handle exception
 	}
 
 	}
-	}
+}
