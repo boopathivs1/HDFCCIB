@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+     
+      <class name="testcases.Tc_128_S2S_RBI_Adapter"/>
+     
+     <class name="testcases.Tc_129_S2S_Upload_File_SAPextractor"/>
+     
+    <class name="testcases.Tc_130_S2S_Upload_File_HLL_Adapter"/>
+      <class name="testcases.Tc_131_NetWeaver_RBI_Adapter"/>
+      
+      
+     <class name="testcases.Tc_132_Netweaver_SAP_Adapter"/>
+      
+      <class name="testcases.Tc_133_Netweaver_HLL_Adapter"/>
+      
+      <class name="testcases.Tc_134_PreAuth_RBI_Adapter"/>
+      <class name="testcases.Tc_134a_PreAuth_SAP_Adapter"/>
+      <class name="testcases.Tc_135_PreAuth_HLL_Adapter"/>
+      <class name="testcases.Tc_138_S2S_Upload_File_Borker"/>
+     <class name="testcases.Tc_139_S2S_Upload_File_Salary"/>
+   
+      <class name="testcases.Tc_140_S2S_Upload_File_collectiion_Adapter"/>
+      <class name="testcases.Tc_141_Netweaver_Upload_File_Borker2"/>
+      
+      <class name="testcases.Tc_141a_NetWeaver_Upload_File_Salary"/>
+      
+      <class name="testcases.Tc_143_PreAuth_Upload_File_Borker"/>
+      <class name="testcases.Tc_144_PreAuth_Upload_File_Salary"/>
+      <class name="testcases.Tc_145_PreAuth_Upload_File_collectiion_Adapter"/>
+      
+      <class name="testcases.Tc_149_Netweaver_HLL_Future_Value_date_TLA"/>
+      <class name="testcases.Tc_150_Netweaver_HLL_Grace_period_TLA"/>
+      <class name="testcases.Tc_151_Netweaver_HLL_Adapter_With_confirm_TLA"/>
+      
+      <class name="testcases.Tc_152_Netweaver_HLL_Adapter_Without_confirm_TLA"/>
+      
+     
+      <class name="testcases.Tc_153_Netweaver_HLL_Before_Cut_off_TLA"/>
+      <class name="testcases.Tc_154_Netweaver_HLL_Adapter_afterCutoff_TLA"/>
+      
+      <class name="testcases.Tc_155_Netweaver_HLL_Holiday_TLA"/>
+      <class name="testcases.Tc_157_Netweaver_HLL_Adapter_Without_confirm_TLA"/>
+      <class name="testcases.Tc_160_S2S_Upload_File_SAPextractor_FutureDate_FLA"/>
+     
+      <class name="testcases.Tc_161_S2S_Upload_File_SAPextractor_Grace"/>
+     
+     
+      <class name="testcases.Tc_162_S2S_Upload_File_SAPextractor_With_confirm_FLA"/>
+      <class name="testcases.Tc_163_S2S_Upload_File_SAPextractor_WithOut_confirm_FLA"/>
+      <class name="testcases.Tc_164_S2S_Upload_File_SAPextractor_BeforeCutoff_FLA"/>
+      
+      <class name="testcases.Tc_165_S2S_Upload_File_SAPextractor_After_Cut_off_FLA"/>
+      <class name="testcases.Tc_166_S2S_Upload_File_SAPextractor_Holiday"/>
+     
+      <class name="testcases.Tc_168_S2S_Upload_File_SAP_EOD_FLA"/>
+      <class name="testcases.Tc_171_Future_Value_date_FTLA"/>
+      <class name="testcases.Tc_172_GracePeriod_FTLA"/>
+      
+      <class name="testcases.Tc_173_FTLA_WithConfirm"/>
+      <class name="testcases.Tc_174_FTLA_WithoutConfirm"/>
+      <class name="testcases.Tc_175_FTLA_Before_Cutoff"/>
+      
+      <class name="testcases.Tc_176_FTLA_After_Cutoff"/>
+      
+      <class name="testcases.Tc_177_Holiday_FTLA"/>
+      <class name="testcases.Tc_179_FTLA_EOD"/>
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
