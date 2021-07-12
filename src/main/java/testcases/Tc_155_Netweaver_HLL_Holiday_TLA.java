@@ -82,7 +82,7 @@ System.out.println(file1srowcol);
 modifyFile(Renamedfilename_loc,value1,file1srowcol);
 
 
-
+//String currentdate=dateMonthSlash();
 
 int futu_date = Integer.parseInt(regvalue(holiday_count));
 

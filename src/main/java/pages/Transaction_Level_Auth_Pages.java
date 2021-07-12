@@ -210,9 +210,12 @@ Thread.sleep(8000);
 		contentFrames();
 		selectVisibileTextByXPath(prop.getProperty("select.translevel.company.xpath"),compname);
 		selectVisibileTextByXPath(prop.getProperty("trans.selectstatus.xpath"),status);
+		
+		Thread.sleep(4000);
 		selectVisibileTextByXPath(prop.getProperty("select.trans.clientcode.xpath"),clientcode);
 		//selectVisibileTextByXPath(prop.getProperty("select.tla.acc.no.xpath"),accno);
-		
+
+		Thread.sleep(4000);
 		selectVisibileTextByXPath(prop.getProperty("select.filename.tla.xpath"),uploadtype);
 		
 		
