@@ -193,7 +193,7 @@ public class Transaction_Level_Auth_Pages extends ProjectWrapp{
 		selectVisibileTextByXPath(prop.getProperty("trans.selectstatus.xpath"),status);
 		selectVisibileTextByXPath(prop.getProperty("select.trans.clientcode.xpath"),clientcode);
 		selectVisibileTextByXPath(prop.getProperty("select.tla.acc.no.xpath"),accno);
-		
+		Thread.sleep(3000);	
 		selectVisibileTextByXPath(prop.getProperty("select.filename.tla.xpath"),uploadtype);
 		
 		

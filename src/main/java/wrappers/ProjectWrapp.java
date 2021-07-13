@@ -37,7 +37,7 @@ public class ProjectWrapp extends GenericWrappers{
 
 	@BeforeSuite(groups={"common"})
 	public void beforeSuite() throws IOException{
-		//del();
+		del();
 		String os = System.getProperty("os.name").toLowerCase();
 
 		startResult();

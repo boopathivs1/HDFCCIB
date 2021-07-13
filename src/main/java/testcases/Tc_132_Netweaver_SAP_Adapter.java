@@ -81,7 +81,7 @@ modifyFile(Renamedfilename_loc,value,currentdate);
 int g=13;
 int h=25;
 filenameonly=filename_substring(renamedfilename,g,h);
-getrefnumer=filenameonly;
+getrefnumer=renamedfilename;
 System.out.println("substring  is "+filenameonly);
 
 
@@ -131,7 +131,7 @@ throw new Exception();
 .click_File_Level_View_Link()
 //.filter_FileLevel_Record(clientcode,transtype)
 
-.filter_Cash_FileLevel_Record(clientcode,transtype, filenameonly)
+.filter_Cash_FileLevel_Record(clientcode,transtype, renamedfilename)
 .clickLogoutLink();
 
 	getnewurl();
@@ -141,18 +141,18 @@ throw new Exception();
 	.clickDisbursementLink()
 
 	.clickTLA_AuthLink()
-	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno,filenameonly, paytype)
+	.filter_TransLevelAuth_Record(Compname,"Pending for first Authorisation", clientcode, accno,renamedfilename, paytype)
 	.clickTransNoSort()
 	.authorizeTlaRecord(authpwd)
 
 	.clickTLA_Link()
-	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,filenameonly,paytype)
+	.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,renamedfilename,paytype)
 
 
 	.clickTransNoSort()
 	.getAuthStatus_tla("A")
 
-	.authorize_CheckStatus_TL(Compname,clientcode,accno,filenameonly,paytype);
+	.authorize_CheckStatus_TL(Compname,clientcode,accno,renamedfilename,paytype);
 
 	//.clicktla_ConfirmRecord()
 	//.clickTLA_Link()
