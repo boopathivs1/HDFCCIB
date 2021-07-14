@@ -328,8 +328,15 @@ acceptAlert();
 		}
 
 
+	public File_Level_Authorization_Pages clickReversefile()
+	{
 	
+		clickByXpath_Explict(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[7]");
+		
+		clickByXpath_Explict("  ");
 	
+return this;
+}
 	
 	
 	
@@ -410,6 +417,25 @@ acceptAlert();
 		}
 	
 	
+	public File_Level_Authorization_Pages ifsc_Status_reverse_download() throws InterruptedException{	
+
+		String status=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]/following::span[7]");
+		if(status.equalsIgnoreCase("UP")){
+			
+			
+			
+			
+			
+		}
+			
+		
+		
+		return this;
+	
+		
+		
+		
+	}
 	
 	
 	public File_Level_Authorization_Pages ifsc_Auth_Status(String renamedfilename,String clientcode,String transtype) throws InterruptedException{	
