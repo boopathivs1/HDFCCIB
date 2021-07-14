@@ -116,17 +116,17 @@ public class Transaction_Level_Auth_Pages extends ProjectWrapp{
 		String Holidaydate=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]/following::span[text()='"+paytype+"']//following::span[8])[1]");
 
 		reportStep("Reference number for Booking date and Holidaydate "+getrefnumer,"PASS");
-		reportStep("Holidaydate before authorization"+Holidaydate,"INFO");
+		reportStep("Holidaydate after authorization"+Holidaydate,"INFO");
 		
 		
-	if(Holidaydate.equalsIgnoreCase(GetFuturedate(d+1)))
-		{
-			reportStep("Holidaydate has been matching"+Holidaydate,"INFO");
-				
-		}{
-			reportStep("Holidaydate has not been matching"+Holidaydate,"FAIL");
-			
-		}
+//	if(Holidaydate.equalsIgnoreCase(GetFuturedate(d+1)))
+//		{
+//			reportStep("Holidaydate has been matching"+Holidaydate,"INFO");
+//				
+//		}{
+//			reportStep("Holidaydate has not been matching"+Holidaydate,"FAIL");
+//			
+//		}
 
 		return this;
 		}	
@@ -563,14 +563,14 @@ defaultcontent();
 		reportStep("Grace date before authorization"+Gracedate,"INFO");
 		
 		
-//		if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
-//		{
-//			reportStep("Grace date has been matching"+Gracedate,"INFO");
-//				
-//		}{
-//			reportStep("Grace date has not been matching"+Gracedate,"FAIL");
-//			
-//		}
+	if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
+		{
+			reportStep("Grace date has been matching"+Gracedate,"INFO");
+							
+		}{
+			reportStep("Grace date has not been matching"+Gracedate,"FAIL");
+			
+		}
 
 		return this;
 

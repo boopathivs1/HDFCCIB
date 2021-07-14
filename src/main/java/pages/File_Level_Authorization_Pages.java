@@ -190,14 +190,14 @@ acceptAlert();
 			reportStep("Grace date after authorization"+Gracedate,"INFO");
 			
 			
-//			if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
-//			{
-//				reportStep("Grace date has been matching"+Gracedate,"INFO");
-//					
-//			}{
-//				reportStep("Grace date has not been matching"+Gracedate,"FAIL");
-//				
-//			}
+			if(Gracedate.equalsIgnoreCase(GetFuturedate(d)))
+			{
+				reportStep("Grace date has been matching"+Gracedate,"INFO");
+					
+			}{
+				reportStep("Grace date has not been matching"+Gracedate,"FAIL");
+				
+			}
 
 			return this;
 
@@ -210,15 +210,15 @@ acceptAlert();
 			reportStep("Reference number for Booking date and Grace date "+getrefnumer,"PASS");
 			reportStep("Grace date before authorization"+Gracedate,"INFO");
 			
-			
-		if(Gracedate.equalsIgnoreCase(GetFuturedate(d+1)))
-			{
-				reportStep("Grace date has been matching"+Gracedate,"INFO");
-					
-			}{
-				reportStep("Grace date has not been matching"+Gracedate,"FAIL");
-				
-			}
+//			
+//		if(Gracedate.equalsIgnoreCase(GetFuturedate(d+1)))
+//			{
+//				reportStep("Grace date has been matching"+Gracedate,"INFO");
+//					
+//			}{
+//				reportStep("Grace date has not been matching"+Gracedate,"FAIL");
+//				
+//			}
 
 			return this;
 			}	
