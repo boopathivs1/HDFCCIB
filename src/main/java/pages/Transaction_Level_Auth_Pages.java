@@ -732,6 +732,7 @@ public Transaction_Level_Auth_Pages ReverseTlaRecord() throws InterruptedExcepti
 		
 		
 		clickByXpathExplict("(.//input[contains(@onclick,'"+getrefnumer+"')])[1]");
+		scrolltoelementJs(prop.getProperty("click.Reversefile.download.xpath"));
 		clickByXpathExplict(prop.getProperty("click.Reversefile.download.xpath"));
 		
 		//clickByXpathExplictWithouScreenShot(prop.getProperty("click.authorize.flapages.xpath"));

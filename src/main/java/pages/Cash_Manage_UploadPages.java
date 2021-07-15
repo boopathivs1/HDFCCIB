@@ -93,6 +93,15 @@ public Cash_Manage_UploadPages getrefnumAch(int a,int b) throws InterruptedExcep
 	
 	
 	
+	public File_Level_View_pages click_Transaction_Level_View_Link() throws InterruptedException{
+		LeftMenuFrames();
+		clickByXpathExplict(prop.getProperty("click.TLV.view.xpath"));
+	
+	
+	defaultcontent();
+	return new File_Level_View_pages(driver, test);
+	
+	}
 	
 	
 	
