@@ -54,6 +54,39 @@ public LogoutPages filter_FileLevel_Record(String clientcode,String trantype) th
 		
 }
 
+public LogoutPages filter_S2SReverseFileLevel_Record(String clientcode,String trantype) throws InterruptedException{
+	contentFrames();
+selectVisibileTextByXPath(prop.getProperty("select.filelevel.clientcode.xpath"),clientcode);
+selectVisibileTextByXPath(prop.getProperty("select.filelevel.pay.xpath"),trantype);
+
+
+Thread.sleep(10000);
+	clickByXpathExplict(prop.getProperty("click.file.level.view.link.xpath"));
+	
+	clickByXpathExplict(prop.getProperty("click.filelevel.filename.xpath"));
+	clickByXpathExplict(prop.getProperty("click.filelevel.filename.xpath"));
+	
+	
+	
+	
+//String a=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//following::span)[1]");
+//if(a.equalsIgnoreCase("PA")){
+//	reportStep("Pending for Authorizartion status has been displaying for this file","PASS");
+//}
+///*	else if(a.equalsIgnoreCase("PV")){
+//	reportStep("Pending for Verification status has been displaying for this file","PASS");
+//}
+//*/
+//else{
+
+//clickLogoutLink();
+
+return new LogoutPages(driver, test);
+	
+}
+
+
+
 
 public LogoutPages filter_TransactionLevel_Record(String Company ,String status ,String clientcode,String Uploadtype,String PaymentType) throws InterruptedException{
 	contentFrames();
@@ -68,37 +101,7 @@ selectVisibileTextByXPath(prop.getProperty("select.tla.paytype.xpath"),PaymentTy
 Thread.sleep(10000);
 	clickByXpathExplict(prop.getProperty("click.file.level.view.link.xpath"));
 	
-//	clickByXpathExplict(prop.getProperty("click.filelevel.filename.xpath"));
-//	clickByXpathExplict(prop.getProperty("click.filelevel.filename.xpath"));
-//	
-	
-	
-	
-//String a=getTextByXpath(".//input[contains(@onclick,'"+getrefnumer+"')]");
-//if(a.equalsIgnoreCase("PA")){
-//	reportStep("Pending for Authorizartion status has been displaying for this file","PASS");
-//	clickByXpathExplict(".//input[contains(@onclick,'"+getrefnumer+"')]");
-//	clickByXpathExplict(prop.getProperty("click.Reversefile.download.xpath"));
-//}
-///*	else if(a.equalsIgnoreCase("PV")){
-//	reportStep("Pending for Verification status has been displaying for this file","PASS");
-//}
-//*/
-//else{
-	scrolltoelementJs(".//input[contains(@onclick,'"+getrefnumer+"')]");
-	clickByXpathExplict(".//input[contains(@onclick,'"+getrefnumer+"')]");
-	clickByXpathExplict(prop.getProperty("click.Reversefile.download.xpath"));
-//	Thread.sleep(5000);
-//	acceptAlert();
-//Thread.sleep(5000);
-//
-////clickLogoutLink();
-//
-//	reportStep("Status not matching and files downloaded","FAIL");	
 
-
-
-defaultcontent();
 return new LogoutPages(driver, test);
 	
 }
@@ -138,7 +141,7 @@ String a=getTextByXpath("(.//input[contains(@onclick,'"+getrefnumer+"')]//follow
 //
 //}
 
-defaultcontent();
+
 return new LogoutPages(driver, test);
 	
 }

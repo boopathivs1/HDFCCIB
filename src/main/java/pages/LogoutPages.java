@@ -27,6 +27,40 @@ String reference=getTextByXpath(prop.getProperty("get.refnum.fundtrans.xpath"));
 	
 
 	
+	public LogoutPages ReverseTlaRecord() throws InterruptedException{
+		
+		
+		
+		scrolltoelementJs(".//input[contains(@onclick,'"+getrefnumer+"')]");
+		clickByXpathExplict(".//input[contains(@onclick,'"+getrefnumer+"')]");
+		clickByXpathExplict(prop.getProperty("click.Reversefile.download.xpath"));
+		
+		//clickByXpathExplictWithouScreenShot(prop.getProperty("click.authorize.flapages.xpath"));
+		
+	defaultcontent();
+
+
+
+
+					return this;
+	}
+	
+public LogoutPages ReverseS2SFlaRecord() throws InterruptedException{
+		
+		
+	scrolltoelementJs(".//input[contains(@onclick,'"+getrefnumer+"')]");
+	clickByXpathExplict(".//input[contains(@onclick,'"+getrefnumer+"')]");
+	clickByXpathExplict(prop.getProperty("click.s2s.reverse.doenload.xpath"));
+	Thread.sleep(5000);
+	defaultcontent();
+	
+	
+	
+
+					return this;
+}
+
+	
 public LogoutPages getrefnumber() throws InterruptedException{
 		
 		
@@ -50,7 +84,7 @@ public LogoutPages getrefnumber() throws InterruptedException{
 	}
 				
 			
-	
+
 	
 	
 	public LogoutPages clickLogout() throws InterruptedException{
