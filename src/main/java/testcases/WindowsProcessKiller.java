@@ -1,15 +1,20 @@
 package testcases;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
+import org.apache.commons.io.FileUtils;
 
 public class WindowsProcessKiller {
 
 	// command used to get list of running task
-	private static final String TASKLIST = "tasklist";
+	public static final String TASKLIST = "tasklist";
 	// command used to kill a task
-	private static final String KILL = "taskkill /IM ";
+	public static final String KILL = "taskkill /IM ";
 
+
+	
 	public boolean isProcessRunning(String serviceName) {
 
 		try {
@@ -40,9 +45,20 @@ public class WindowsProcessKiller {
 		}
 
 	}
-
-	public static void main(String[] args) {
+	
+	public static void main(String[] args) throws InterruptedException {
+	
+			File source = new File("E:/workspacegit/version 2/GitLabWorkSpace/Clayfin_Automation/HDFCWEB_CIB/testfiles");
+			File dest = new File("E:/workspacegit/version 2/GitLabWorkSpace/Clayfin_Automation/HDFCWEB_CIB/CE/ENC 130721/cs/PICKDIR");
+			try {
+			    FileUtils.copyDirectory(source, dest);
+			} catch (IOException e) {
+			    e.printStackTrace();
+			}
 		
+		
+
+			Thread.sleep(20000);
 		String cmd2 =  "cmd /c start cmd.exe /K \"cd CE\\ENC 130721\\cs && start startup.bat\"";
 //		String cmd3 =  "cmd /c start cmd.exe /K \"cd CE\\ENC 130721\\cs\"";
 String filename="CBDTBULK0709.331";
