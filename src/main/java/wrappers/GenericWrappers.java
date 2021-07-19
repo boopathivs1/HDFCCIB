@@ -102,7 +102,11 @@ public class GenericWrappers extends Reporter implements Wrappers {
     
     public static String only_Checksum_Pick_Path=null;
     public static String Only_Check_SumDROPDIR=null;
+    public static String generic_enc_old_clearfiles=null;
+    public static String generic_enc_old_encfiles=null;
     
+    public static String generic_enc_new_clearfiles=null;
+    public static String generic_enc_new_encfiles=null;
     
     
     
@@ -152,9 +156,15 @@ public class GenericWrappers extends Reporter implements Wrappers {
 			
 			
 			Only_Check_SumDROPDIR=prop.getProperty("OnlyCheckSumDROPDIR");
-					
+			
+			generic_enc_old_clearfiles=prop.getProperty("genericenc_clear_old");
+			generic_enc_old_encfiles=prop.getProperty("genericenc_encfile_old");
 			
 			
+			generic_enc_new_clearfiles=prop.getProperty("genericenc_clear_new");
+					generic_enc_new_encfiles=prop.getProperty("genericenc_encfile_new");
+		    
+		    
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -254,6 +264,68 @@ public class GenericWrappers extends Reporter implements Wrappers {
 		
 		
 	}
+
+	
+	
+	
+	
+	
+	
+	public void Start_bat_generic_enc_old(){
+		
+		String cmd2 =  "cmd /c start cmd.exe /K \"cd CE\\ENC 130721\\GenericEncryption_Client && start encryptdaemon.bat\"";
+//		String cmd3 =  "cmd /c start cmd.exe /K \"cd CE\\ENC 130721\\cs\"";
+//String filename="CBDTBULK0709.331";
+
+		try {
+			Runtime.getRuntime().exec(cmd2);
+
+			
+			System.out.println("Sleep Expires...");
+		Thread.sleep(20000);
+				
+		
+		
+		System.out.println("Horaaaa!!! cmd executed!!!!!");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+		}
+
+		
+		
+		
+	}
+
+	
+	
+	public void Start_bat_generic_enc_new(){
+		
+		String cmd2 =  "cmd /c start cmd.exe /K \"cd CE\\ENC 130721\\NewGenericEncryption_Client && start encryptdaemon.bat\"";
+//		String cmd3 =  "cmd /c start cmd.exe /K \"cd CE\\ENC 130721\\cs\"";
+//String filename="CBDTBULK0709.331";
+
+		try {
+			Runtime.getRuntime().exec(cmd2);
+
+			
+			System.out.println("Sleep Expires...");
+		Thread.sleep(20000);
+				
+		
+		
+		System.out.println("Horaaaa!!! cmd executed!!!!!");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+		}
+
+		
+		
+		
+	}
+
+	
 	
 public void service_killer(){
 	
