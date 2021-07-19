@@ -78,7 +78,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.google.common.base.Function;
 import com.relevantcodes.extentreports.ExtentTest;
 
-
+import testcases.WindowsProcessKiller;
 import utils.Reporter;
 
 public class GenericWrappers extends Reporter implements Wrappers {
@@ -99,6 +99,13 @@ public class GenericWrappers extends Reporter implements Wrappers {
     
     public static int todaydate=0;
     
+    
+    public static String only_Checksum_Pick_Path=null;
+    public static String Only_Check_SumDROPDIR=null;
+    
+    
+    
+    
     public static String SIrefnumer=null;
     public static String SIpayDate=null;
     public static boolean frameStatus;
@@ -118,6 +125,14 @@ public class GenericWrappers extends Reporter implements Wrappers {
 	
 	public static int Graceperiod=2;
 	public static int F=2;
+	
+	public static final String TASKLIST = "tasklist";
+	// command used to kill a task
+	public static final String KILL = "taskkill /IM ";
+
+	
+	
+	
 	public GenericWrappers() {
 		
 		Properties prop = new Properties();
@@ -133,8 +148,11 @@ public class GenericWrappers extends Reporter implements Wrappers {
 			fileurl = prop.getProperty("filepath");
 			
 			Authotp = prop.getProperty("Authorizeotp");
+			only_Checksum_Pick_Path = prop.getProperty("OnlyCheckSumPickDIR");
 			
 			
+			Only_Check_SumDROPDIR=prop.getProperty("OnlyCheckSumDROPDIR");
+					
 			
 			
 
@@ -147,6 +165,126 @@ public class GenericWrappers extends Reporter implements Wrappers {
 		
 		
 		}
+	public boolean isProcessRunning(String serviceName) {
+
+		try {
+			Process pro = Runtime.getRuntime().exec(TASKLIST);
+			BufferedReader reader = new BufferedReader(new InputStreamReader(pro.getInputStream()));
+			String line;
+			while ((line = reader.readLine()) != null) {
+				// System.out.println(line);
+				if (line.startsWith(serviceName)) {
+					return true;
+				}
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return false;
+	}
+
+	
+	public static void killProcess(String serviceName) {
+
+		try {
+			Runtime.getRuntime().exec(KILL + serviceName);
+			System.out.println(serviceName+" killed successfully!");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+
+	
+	public void copy_file(String sourcepath,String Destinationpath) throws InterruptedException{
+
+		File source = new File(sourcepath);
+		File dest = new File(Destinationpath);
+
+		
+		
+//		File source = new File("E:\\workspacegit\\version 2\\GitLabWorkSpace\\Clayfin_Automation\\HDFCWEB_CIB\\testfiles");
+	//	File dest = new File("E:\\workspacegit\\version 2\\GitLabWorkSpace\\Clayfin_Automation\\HDFCWEB_CIB\\CE\\ENC 130721\\cs\\PICKDIR");
+		try {
+		    FileUtils.copyDirectory(source, dest);
+		} catch (Exception e) {
+		    e.printStackTrace();
+		}
+	
+	
+	//	Thread.sleep(20000);
+	}
+	
+	
+	public void Start_bat_Execution(){
+		
+		String cmd2 =  "cmd /c start cmd.exe /K \"cd CE\\ENC 130721\\cs && start startup.bat\"";
+//		String cmd3 =  "cmd /c start cmd.exe /K \"cd CE\\ENC 130721\\cs\"";
+//String filename="CBDTBULK0709.331";
+
+		
+	
+		String killCmd2 = "taskkill /f /im cmd /c";
+		
+		try {
+			Runtime.getRuntime().exec(cmd2);
+
+			
+//			Runtime.getRuntime().exec(cmd3);
+
+		//	Thread.sleep(2000);
+			System.out.println("Sleep Expires...");
+		//	Thread.sleep(2000);
+	//	Runtime.getRuntime().exec(killCmd2);
+		Thread.sleep(20000);
+				
+		
+//		Runtime.getRuntime().exec(killCmd2);
+		
+		System.out.println("Horaaaa!!! cmd executed!!!!!");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+		}
+
+		
+		
+		
+	}
+	
+public void service_killer(){
+	
+//	WindowsProcessKiller pKiller = new WindowsProcessKiller();
+
+	// To kill a command prompt
+	String processName = "cmd.exe";
+	boolean isRunning =isProcessRunning(processName);
+
+	System.out.println("is " + processName + " running : " + isRunning);
+
+	if (isRunning) {
+		killProcess(processName);
+	}
+	else {
+		System.out.println("Not able to find the process : "+processName);
+	}
+}
+	
+	
+	
+
+
+
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	public static String randomStringGeneration() throws InterruptedException {
