@@ -22,6 +22,15 @@ public class Dashboard_Page  extends ProjectWrapp{
 	}
 
 	
+	public AccountServices_Page clickAccountService() throws InterruptedException{
+		//Thread.sleep(20000);
+		topFrames();
+		clickByXpathExplict(prop.getProperty("click.account.service.xpath"));
+		defaultcontent();
+		return new AccountServices_Page(driver, test);
+	
+	}
+	
 
 	public ServicePage clickService() throws InterruptedException{
 		topFrames();
