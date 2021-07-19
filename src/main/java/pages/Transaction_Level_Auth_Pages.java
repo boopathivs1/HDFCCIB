@@ -61,62 +61,7 @@ public class Transaction_Level_Auth_Pages extends ProjectWrapp{
 	}
 
 	
-	public Transaction_Level_Auth_Pages 
-	Reverseauthorize_CheckStatus_TLA(String Compname,String clientcode,String accno,String uploadtype,String paytype) throws InterruptedException{
-		String status=getTextByXpath("(.//input[contains(@value,'"+getrefnumer+"')])[2]//following::span[13]");
-
-		if(status.equalsIgnoreCase("A")){
-
-			
-			new Transaction_Level_Auth_Pages(driver, test)
-			.clicktla_ConfirmRecord()
-			.clickTLA_Link()
-			.filter_TransLevelAuth_Record(Compname,"Confirmed",clientcode,accno,uploadtype,paytype)
-			.clickTransNoSort()
-			.getAuthStatus("C")
-			.defaultcontent_Switch()
-
-			.clickTLA_Link()
-			.filter_TransLevelAuth_Record(Compname,"ALL",clientcode,accno,uploadtype,paytype)
-			.clickTransNoSort()
-			.getAuthStatus("C")
-			.defaultcontent_Switch()
-			
-			.filter_TransLevelAuth_Record(Compname,"ALL", clientcode, accno,uploadtype, paytype)
-			.clickTransNoSort()
-			.getFinalStatus()
-			.ReverseTlaRecord();
-
 		
-		
-		
-		}
-		else if(status.equalsIgnoreCase("Z")||status.equalsIgnoreCase("J")||status.equalsIgnoreCase("Q")){
-			ReverseTlaRecord();
-			statusVerify(status);
-			
-			
-			
-		}
-		
-		
-		else{
-			ReverseTlaRecord();
-			getAuthStatus("C");
-			
-			//getFinalStatus();		
-			
-			
-		}
-		
-		
-		
-		
-	return this;	
-		
-	}
-
-	
 	
 	public Transaction_Level_Auth_Pages 
 	authorize_CheckStatus_TL(String Compname,String clientcode,String accno,String uploadtype,String paytype) throws InterruptedException{

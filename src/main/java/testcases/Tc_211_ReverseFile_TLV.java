@@ -79,7 +79,7 @@ getnewurl();
 .getrefnum()
 .click_Transaction_Level_View_Link()
 .filter_TransactionLevel_Record(Company, status, clientcode,getrefnumer,PaymentType)
-
+.ReverseTlaRecord()
 
 .clickLogoutLink();
 

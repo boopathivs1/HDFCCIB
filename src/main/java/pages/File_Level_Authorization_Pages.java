@@ -416,6 +416,25 @@ return this;
 
 		}
 	
+public File_Level_Authorization_Pages ReverseFlaRecord() throws InterruptedException{
+		
+		
+		
+		clickByXpathExplict("(.//input[contains(@onclick,'"+getrefnumer+"')])[1]");
+		scrolltoelementJs(prop.getProperty("click.s2s.reverse.doenload.xpath"));
+		clickByXpathExplict(prop.getProperty("click.s2s.reverse.doenload.xpath"));
+		
+		//clickByXpathExplictWithouScreenShot(prop.getProperty("click.authorize.flapages.xpath"));
+		
+	defaultcontent();
+	
+	
+	
+
+					return this;
+}
+	
+		
 	
 	public File_Level_Authorization_Pages ifsc_Status_reverse_download() throws InterruptedException{	
 
