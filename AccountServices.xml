@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+     
+      <class name="testcases.Tc_244_AccountSummary_Balance_Report"/>
+      <class name="testcases.Tc_245_AccountSummary_Balance_Download"/>
+      <class name="testcases.Tc_246_AccountSummary_HistoricalBalance_Report"/>
+      <class name="testcases.Tc_247_AccountSummary_HistoricalBalance_Download"/>
+       <class name="testcases.Tc_248_AccountSummary_DealerBalance_Report"/>
+       <class name="testcases.Tc_249_AccountSummary_DealerBalance_Download"/>
+     
+       <class name="testcases.Tc_252_AccountSummary_Consolidate_Format_Download"/>
+          <class name="testcases.Tc_253_AccountSummary_Consolidate_DownloadType"/>
+          <class name="testcases.Tc_254_AccountSummary_Statement_Format_Create"/>
+            <class name="testcases.Tc_255_AccountSummary_Cheque_Status_Enquiry_Initiate"/>
+          
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
