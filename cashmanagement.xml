@@ -51,6 +51,80 @@
       
       <class name="testcases.Tc_173_FTLA_WithConfirm"/>
       <class name="testcases.Tc_174_FTLA_WithoutConfirm"/>
+      
+              <class name="testcases.Tc_180_CooperativeIfscCode_FTLA"/>
+      <class name="testcases.Tc_181_IfscCode_FTLA"/>
+      
+      <class name="testcases.Tc_182_ECMS_FTLA"/>
+      
+      
+        <class name="testcases.Tc_201_GenericEnc_OldWithChecksum"/>
+      <class name="testcases.Tc_201_S2S_Upload_File_SAPextractor"/>
+      <class name="testcases.Tc_201_S2S_Upload_File_Borker"/>
+      <class name="testcases.Tc_201_S2S_Upload_File_HLL_Adapter"/>
+      
+      <class name="testcases.Tc_201_S2S_Upload_File_Salary"/>
+     
+     
+     
+     <class name="testcases.Tc_202_S2S_Upload_File_SAPextractor"/>
+      <class name="testcases.Tc_202_GenericEnc_newWithChecksum_RBI"/>
+      <class name="testcases.Tc_202_S2S_Upload_File_Salary"/>
+      <class name="testcases.Tc_202_S2S_Upload_File_Borker"/>
+      <class name="testcases.Tc_202_S2S_Upload_File_HLL_Adapter"/>
+     
+     
+     
+     
+       <class name="testcases.Tc_203_S2S_Upload_File_HLL_Adapter_only_checksum"/>
+            <class name="testcases.Tc_203_S2S_Upload_File_SAPextractor_Only_checksum"/> 
+      <class name="testcases.Tc_203_OnlyChecksumRBI"/>
+           <class name="testcases.Tc_203_S2S_Upload_File_Salary_onlychecksum"/>
+       <class name="testcases.Tc_203_S2S_Upload_File_Borker_onlychecksum"/>
+      
+      
+      
+      
+      
+      
+      
+      <class name="testcases.Tc_206_S2S_Upload_File_Salary"/>
+      <class name="testcases.Tc_206_gene_enc_old_RBI"/>
+      <class name="testcases.Tc_206_S2S_Upload_File_Borker"/>
+     
+      <class name="testcases.Tc_206_S2S_Upload_File_SAP"/>
+      
+      <class name="testcases.Tc_206_S2S_Upload_File_HLL_Adapter"/>
+     
+     
+     
+      <class name="testcases.Tc_207_S2S_Upload_File_HLL_Adapter"/>
+      <class name="testcases.Tc_207_S2S_Upload_File_SAPextractor"/>
+      
+      <class name="testcases.Tc_207_S2S_Upload_File_Salary"/>
+      
+      
+      
+      <class name="testcases.Tc_207_S2S_Upload_File_Borker"/>
+      
+      <class name="testcases.Tc_207_gene_enc_new_RBI"/>
+     
+     
+     
+      <class name="testcases.Tc_209_S2S_Reverse_File_FLV"/>
+      <class name="testcases.Tc_210_S2S_Reverse_File_FLA"/>
+     
+     
+      <class name="testcases.Tc_211_ReverseFile_TLV"/>
+     
+      <class name="testcases.Tc_212_ReverseFile_TLA"/>
+     
+     
+     
+      <class name="testcases.Tc_213_MessageCentre_Control_File"/>
+            <class name="testcases.Tc_227_Stop_Cheque_Payment_Create_Authorize_Review"/>
+      <class name="testcases.Tc_230_Cheque_Book_Request"/>
+      
      
     </classes>
   </test> <!-- Test -->
