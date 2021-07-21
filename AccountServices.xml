@@ -4,6 +4,7 @@
   <test  name="Testsss" thread-count="1" parallel="classes">
     <classes>
      
+     
       <class name="testcases.Tc_244_AccountSummary_Balance_Report"/>
       <class name="testcases.Tc_245_AccountSummary_Balance_Download"/>
       <class name="testcases.Tc_246_AccountSummary_HistoricalBalance_Report"/>

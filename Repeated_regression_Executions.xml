@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+  <test name="Testsss" thread-count="1" parallel="classes">
+    <classes>
+    
+    
+    
+          <class name="testcases.Tc_22_WCDL"/>
+     
+      <class name="testcases.Tc_23_Billpay"/>
+    
+    <class name="testcases.Tc_41_Onscreen_Payment_Verification_Single"/>
+
+      <class name="testcases.Tc_42_Onscreen_Payment_Verify_Quick"/>
+
+      <class name="testcases.Tc_43_Onscreen_Payment_Verify_Bulk"/>
+
+      <class name="testcases.Tc_44_Onscreen_Payment_Verify_NEFT"/>
+      <class name="testcases.Tc_45_Onscreen_Payment_Verify_RTGS"/>
+
+      <class name="testcases.Tc_46_Onscreen_Payment_Verify_IMPS"/>
+
+      <class name="testcases.Tc_47_EPI_Payment_Verify"/>
+         
+      <class name="testcases.Tc_62_EPI_Payment_without_verification"/>
+      
+
+      <class name="testcases.Tc_63_Onscreen_without_Payment_Verification_EPI_PCS"/>
+
+      <class name="testcases.Tc_64_SpecialPayment_IOCL_without_verification"/>
+           <class name="testcases.Tc_69_UPI_Payment_Without_Verification"/>
+
+      <class name="testcases.Tc_70_GST_Payment_Verify_without_verification"/>
+
+      <class name="testcases.Tc_72_Onscreen_Payment_Quick_Verify_With_confirm"/>
+      <class name="testcases.Tc_73_Onscreen_Payment_Bulk_Verify_With_confirm"/>
+
+      <class name="testcases.Tc_74_Onscreen_Payment_NEFT_Verify_With_Confirm"/>
+
+      <class name="testcases.Tc_75_Onscreen_Payment_RTGS_Verify_With_Confirm"/>
+
+
+
+     
+      <class name="testcases.Tc_80_Onscreen_Payment_ECMSPayment_Verify_with_confirm"/>
+
+  <class name="testcases.Tc_81_Onscreen_Payment_CBDT_Verify_With_Confirm"/>
+      <class name="testcases.Tc_82_Onscreen_Payment_CBECPayment_Verify_With_Confirm"/>
+
+
+      <class name="testcases.Tc_86_Onscreen_Paymen_Verify_Without_confirm_Quick"/>
+      <class name="testcases.Tc_87_Onscreen_Payment_Bulk"/>
+
+      <class name="testcases.Tc_88_Onscreen_Payment_NEFT"/>
+
+      <class name="testcases.Tc_89_Onscreen_Payment_RTGS_Without_confirm"/>
+
+
+
+
+
+      <class name="testcases.Tc_100_Onscreen_grace_period_Verification_Quick"/>
+      <class name="testcases.Tc_101_Onscreen_Payment_Bulk_Verify_Grace_Period"/>
+
+      <class name="testcases.Tc_102_Onscreen_Payment_NEFT_verify_Grace_period"/>
+
+      <class name="testcases.Tc_103_Onscreen_Payment_RTGS_verify_Grace_Period"/>
+
+      <class name="testcases.Tc_105_EPI_Payment2_Verify_Grace_period"/>
+      <class name="testcases.Tc_113_GST_Payment_Verify"/>
+      <class name="testcases.Tc_114_Onscreen_Payment_Verify_Quick"/>
+
+
+      <class name="testcases.Tc_115_Onscreen_Payment_Bulk_Future_Grace_Period"/>
+      <class name="testcases.Tc_116_Onscreen_Payment_NEFT_verify_Future_Grace_period"/>
+      <class name="testcases.Tc_117_Onscreen_Payment_RTGS_verify_Future_Grace_Period"/>
+
+      <class name="testcases.Tc_118_Onscreen_Payment_Verify_IMPS"/>
+
+ <class name="testcases.Tc_127_GST_Payment_Verify_Future_date"/>
+      
+
+
+
+
+
+
+
+  <class name="testcases.Tc_128_S2S_RBI_Adapter"/>
+     
+      
+      <class name="testcases.Tc_133_Netweaver_HLL_Adapter"/>
+      
+      <class name="testcases.Tc_134_PreAuth_RBI_Adapter"/>
+      <class name="testcases.Tc_134a_PreAuth_SAP_Adapter"/>
+      <class name="testcases.Tc_135_PreAuth_HLL_Adapter"/>
+ 
+            <class name="testcases.Tc_136_Benecode_validation_RBI"/>
+ 
+                <class name="testcases.Tc_137_BenecodeValidation_SAP"/>
+      <class name="testcases.Tc_137a_Benecodevalidation_HLL"/>
+ 
+           <class name="testcases.Tc_137_BenecodeValidation_SAP"/>
+      <class name="testcases.Tc_137a_Benecodevalidation_HLL"/>
+ 
+      <class name="testcases.Tc_138_S2S_Upload_File_Borker"/>
+     <class name="testcases.Tc_139_S2S_Upload_File_Salary"/>
+   
+      <class name="testcases.Tc_140_S2S_Upload_File_collectiion_Adapter"/>
+      <class name="testcases.Tc_143_PreAuth_Upload_File_Borker"/>
+
+
+
+
+      <class name="testcases.Tc_145_PreAuth_Upload_File_collectiion_Adapter"/>
+      
+      <class name="testcases.Tc_149_Netweaver_HLL_Future_Value_date_TLA"/>
+      <class name="testcases.Tc_150_Netweaver_HLL_Grace_period_TLA"/>
+      <class name="testcases.Tc_151_Netweaver_HLL_Adapter_With_confirm_TLA"/>
+      
+      <class name="testcases.Tc_152_Netweaver_HLL_Adapter_Without_confirm_TLA"/>
+
+
+
+      
+              <class name="testcases.Tc_180_CooperativeIfscCode_FTLA"/>
+      <class name="testcases.Tc_181_IfscCode_FTLA"/>
+      
+      <class name="testcases.Tc_182_ECMS_FTLA"/>
+      
+      <class name="testcases.Tc_206_S2S_Upload_File_Salary"/>
+      <class name="testcases.Tc_206_gene_enc_old_RBI"/>
+      <class name="testcases.Tc_206_S2S_Upload_File_Borker"/>
+     
+      <class name="testcases.Tc_206_S2S_Upload_File_SAP"/>
+      
+      <class name="testcases.Tc_206_S2S_Upload_File_HLL_Adapter"/>
+     
+     
+     
+      <class name="testcases.Tc_207_S2S_Upload_File_HLL_Adapter"/>
+      <class name="testcases.Tc_207_S2S_Upload_File_SAPextractor"/>
+      
+      <class name="testcases.Tc_207_S2S_Upload_File_Salary"/>
+      
+      
+      
+      <class name="testcases.Tc_207_S2S_Upload_File_Borker"/>
+      
+      <class name="testcases.Tc_207_gene_enc_new_RBI"/>
+     
+     
+     
+      <class name="testcases.Tc_209_S2S_Reverse_File_FLV"/>
+      <class name="testcases.Tc_210_S2S_Reverse_File_FLA"/>
+     
+     
+      <class name="testcases.Tc_211_ReverseFile_TLV"/>
+     
+      <class name="testcases.Tc_212_ReverseFile_TLA"/>
+     
+     
+     
+     
+       <class name="testcases.Tc_252_AccountSummary_Consolidate_Format_Download"/>
+          <class name="testcases.Tc_253_AccountSummary_Consolidate_DownloadType"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

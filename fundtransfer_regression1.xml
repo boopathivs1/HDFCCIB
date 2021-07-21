@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+    
+       <class name="testcases.Tc_41_Onscreen_Payment_Verification_Single"/>
+
+      <class name="testcases.Tc_42_Onscreen_Payment_Verify_Quick"/>
+
+      <class name="testcases.Tc_43_Onscreen_Payment_Verify_Bulk"/>
+
+      <class name="testcases.Tc_44_Onscreen_Payment_Verify_NEFT"/>
+      <class name="testcases.Tc_45_Onscreen_Payment_Verify_RTGS"/>
+
+      <class name="testcases.Tc_46_Onscreen_Payment_Verify_IMPS"/>
+
+      <class name="testcases.Tc_47_EPI_Payment_Verify"/>
+           <class name="testcases.Tc_48_Onscreen_Payment_Verification_EPI_PCS"/>
+
+      
+      <class name="testcases.Tc_49_SpecialPayment_Verify_IOCL"/>
+
+      <class name="testcases.Tc_50_SpecialPayment_Verify_bpcl"/>
+      <class name="testcases.Tc_51_Onscreen_Payment_Verify_CBDT"/>
+
+
+      <class name="testcases.Tc_52_Onscreen_Payment_Verify_CBECPayment"/>
+
+
+      <class name="testcases.Tc_53_Onscreen_Payment_Verify_ECMSPayment"/>
+      <class name="testcases.Tc_54_UPI_Payment_Verify"/>
+      <class name="testcases.Tc_55_GST_Payment_Verify"/>
+
+      <class name="testcases.Tc_56_Onscreen_Payment_Single_Without_verify"/>
+
+      <class name="testcases.Tc_57_Onscreen_Payment_Quick_Without_Verificaton"/>
+
+
+      <class name="testcases.Tc_58_Onscreen_Payment_Bulk2_without_verification"/>
+      <class name="testcases.Tc_59_Onscreen_Payment_NEFT_without_verification"/>
+      <class name="testcases.Tc_60_Onscreen_Payment_RTGS_without_verification"/>
+
+      <class name="testcases.Tc_61_Onscreen_IMPSPayment_without_verification"/>
+
+      <class name="testcases.Tc_62_EPI_Payment_without_verification"/>
+      
+
+      <class name="testcases.Tc_63_Onscreen_without_Payment_Verification_EPI_PCS"/>
+
+      <class name="testcases.Tc_64_SpecialPayment_IOCL_without_verification"/>
+      <class name="testcases.Tc_65_Onscreen_Payment_ECMSPayment_without_verification"/>
+
+      <class name="testcases.Tc_66_Onscreen_Payment_CBDT_without_verification"/>
+
+
+      <class name="testcases.Tc_67_Onscreen_Payment_CBECPayment_without_verification"/>
+
+      <class name="testcases.Tc_68_SpecialPayment_bpcl_without_verification"/>
+
+      <class name="testcases.Tc_69_UPI_Payment_Without_Verification"/>
+
+      <class name="testcases.Tc_70_GST_Payment_Verify_without_verification"/>
+
+      <class name="testcases.Tc_71_Onscreen_Payment_Single_verify_With_confirm"/>
+      <class name="testcases.Tc_72_Onscreen_Payment_Quick_Verify_With_confirm"/>
+      <class name="testcases.Tc_73_Onscreen_Payment_Bulk_Verify_With_confirm"/>
+
+      <class name="testcases.Tc_74_Onscreen_Payment_NEFT_Verify_With_Confirm"/>
+
+      <class name="testcases.Tc_75_Onscreen_Payment_RTGS_Verify_With_Confirm"/>
+
+
+
+      <class name="testcases.Tc_76_Onscreen_IMPSPayment_Verify_With_Confirm"/>
+
+      <class name="testcases.Tc_77_EPI_Payment2_Verify_with_confirm"/>
+  <class name="testcases.Tc_78_Onscreen_with_confirm_Verification_EPIPCS"/>
+
+      <class name="testcases.Tc_79_SpecialPayment_IOCL_Verify_With_Confirm"/>
+
+      <class name="testcases.Tc_80_Onscreen_Payment_ECMSPayment_Verify_with_confirm"/>
+
+   
+
+
+
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
