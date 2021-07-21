@@ -13,13 +13,13 @@ import wrappers.ProjectWrapp;
 public class Tc_202_S2S_Upload_File_Borker  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC203d";
-		testDescription="S2S_Upload_File Brokerpayout_Paymenttype";
+		testCaseName="TC202d";
+		testDescription="GenericEnc-NewWithChecksum-Broker";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC203d";
+		testKeyword="TC202d";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 		SimulatorFileName="Gen_s2s_UPloadNEtw_GEneric.html";		

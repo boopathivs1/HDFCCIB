@@ -13,13 +13,13 @@ import wrappers.ProjectWrapp;
 public class Tc_202_S2S_Upload_File_Salary  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC203e";
-		testDescription="S2S_Upload_File_Salary_onlychecksum";
+		testCaseName="TC202e";
+		testDescription="GenericEnc-NewWithChecksum-Salary";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC203e";
+		testKeyword="TC202e";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 		SimulatorFileName="Gen_s2s_UPloadNEtw_GEneric.html";

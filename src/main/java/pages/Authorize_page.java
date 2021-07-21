@@ -21,7 +21,15 @@ public class Authorize_page extends ProjectWrapp{
 		return this;
 	}
 	
-	
+	public Authorize_page clickChequebookAuthorize() throws InterruptedException{
+		
+		
+		clickByXpathExplict(prop.getProperty("click.checquebook.Authorize"));
+		defaultcontent();
+		
+		return this;
+
+	}
 	
 
 	public Authorize_page clickBillpayView() throws InterruptedException{
@@ -37,6 +45,28 @@ public class Authorize_page extends ProjectWrapp{
 	
 	return this;
 }
+	
+	public Authorize_page fillChequeAuthorizeReqform(String company,String branch,String acc) throws InterruptedException{
+		
+		
+		selectVisibileTextByXPath(prop.getProperty("select.company.dropdown.xpath"),company);
+		
+		selectVisibileTextByXPath(prop.getProperty("select.branch.dropdown.xpath"),branch);
+		
+		selectVisibileTextByXPath(prop.getProperty("select.acc.dropdown.xpath"),acc);
+
+		
+		clickByXpathExplict(prop.getProperty("click.chequebook.search.xpath"));
+		
+		
+		return this;
+	}
+	
+	public Authorize_page AuthIFrame() throws InterruptedException{
+		locateFrameByXpath(".//iframe[@id='iframe']");
+		
+		return this;
+	}
 
 	public Authorize_page clickFDAuthorize() throws InterruptedException{
 	
@@ -221,6 +251,14 @@ clickByXpathExplict(prop.getProperty("click.authorize.refnum.link.xpath"));
 public Authorize_page clickfirstAuthRec(){	
 	
 	clickByXpathExplict(".//input[contains(@onclick,'"+getrefnumer+"')]");
+//clickByXpathExplict(prop.getProperty("select.auth.recone.xpath"));
+	return this;
+
+}
+
+public Authorize_page clickChequebookAuthRec(){	
+	
+	clickByXpathExplict(".//td//input[@value='"+getrefnumer+"']");
 //clickByXpathExplict(prop.getProperty("select.auth.recone.xpath"));
 	return this;
 
@@ -418,7 +456,23 @@ defaultcontent();
 	return this;
 
 }
+public Authorize_page AuthorizeCheqReq(String pwd) throws InterruptedException{	
+	
+	
+//	driver.findElement(By.xpath(".//span[text()='Password']")).click();
 
+	clickByXpathExplict(prop.getProperty("click.authorize.cheqre.xpath"));
+Thread.sleep(4000);
+	
+	enterByXpathExplict(prop.getProperty("enter.authpwd.xpath"),pwd);	
+
+clickByXpathExplict(prop.getProperty("click.authsubmit.xpath"));
+
+defaultcontent();
+
+	return this;
+
+}
 
 
 public Authorize_page defaultcontents(){	

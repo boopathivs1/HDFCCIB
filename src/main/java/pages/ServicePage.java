@@ -23,6 +23,27 @@ public class ServicePage extends ProjectWrapp{
 	
 	}
 	
+
+	public ChequeBookReqPage clickChequebookReq() throws InterruptedException{
+		
+		LeftMenuFrames();
+		clickByXpathExplict(prop.getProperty("click.chequebookReq.xpath"));
+		
+		return new ChequeBookReqPage(driver, test);
+	
+	}
+	
+
+
+	public Authorize_page clickChequeReq() throws InterruptedException{
+		
+		LeftMenuFrames();
+		clickByXpathExplict(prop.getProperty("click.chequebookReq.xpath"));
+		
+		return new Authorize_page(driver, test);
+	
+	}
+	
 			
 	public Authorize_page clickFixeddeposit() throws InterruptedException{
 		LeftMenuFrames();

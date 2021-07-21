@@ -14,13 +14,13 @@ import wrappers.ProjectWrapp;
 public class Tc_201_S2S_Upload_File_HLL_Adapter  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC203c";
-		testDescription="S2S Upload File-HLL Adapter";
+		testCaseName="TC201c";
+		testDescription="GenericEnc-OldWithChecksum-HLL";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC203c";
+		testKeyword="TC201c";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 		SimulatorFileName="Gen_s2s_UPloadNEtw_GEneric.html";		

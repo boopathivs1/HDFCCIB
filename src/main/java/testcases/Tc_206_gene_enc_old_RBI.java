@@ -17,7 +17,7 @@ public class Tc_206_gene_enc_old_RBI  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC206a";
-		testDescription="GenericEnc-New-OLD-RBI";
+		testDescription="GenericEnc-Old-RBI";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
