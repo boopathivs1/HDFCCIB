@@ -19,6 +19,12 @@
       <class name="testcases.Tc_134_PreAuth_RBI_Adapter"/>
       <class name="testcases.Tc_134a_PreAuth_SAP_Adapter"/>
       <class name="testcases.Tc_135_PreAuth_HLL_Adapter"/>
+ 
+       <class name="testcases.Tc_136_Benecode_validation_RBI"/>
+ 
+                <class name="testcases.Tc_137_BenecodeValidation_SAP"/>
+      <class name="testcases.Tc_137a_Benecodevalidation_HLL"/>
+ 
       <class name="testcases.Tc_138_S2S_Upload_File_Borker"/>
      <class name="testcases.Tc_139_S2S_Upload_File_Salary"/>
    
