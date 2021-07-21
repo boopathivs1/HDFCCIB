@@ -11,6 +11,11 @@ public class LogoutPages extends ProjectWrapp{
 		this.driver = driver;
 		this.test = test;
 	}
+	
+	
+
+			
+	
 
 	public LogoutPages getrefnum() throws InterruptedException{
 		

@@ -17,7 +17,7 @@ public class Tc_202_GenericEnc_newWithChecksum_RBI  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC202a";
-		testDescription="GenericEncription_newWithChecksum_RBI";
+		testDescription="GenericEnc-NewWithChecksum-RBI";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";

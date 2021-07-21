@@ -14,13 +14,13 @@ import wrappers.ProjectWrapp;
 public class Tc_202_S2S_Upload_File_SAPextractor  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC203b";
-		testDescription="S2S_Upload_File_SAPextractor_Only_checksum";
+		testCaseName="TC202b";
+		testDescription="GenericEnc-NewWithChecksum-SAP";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC203b";
+		testKeyword="TC202b";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 		SimulatorFileName="Gen_s2s_UPloadNEtw_GEneric.html";		

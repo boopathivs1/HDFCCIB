@@ -126,6 +126,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
     public static String Authotp=null;
 	public static Boolean LogoutStatus=null;
 	public static String usertype=null;
+	public static String Template= null;
 	
 	public static int Graceperiod=2;
 	public static int F=2;
