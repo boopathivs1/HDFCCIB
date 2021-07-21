@@ -37,11 +37,6 @@
       
       <class name="testcases.Tc_152_Netweaver_HLL_Adapter_Without_confirm_TLA"/>
       
-     
-      <class name="testcases.Tc_153_Netweaver_HLL_Before_Cut_off_TLA"/>
-      <class name="testcases.Tc_154_Netweaver_HLL_Adapter_afterCutoff_TLA"/>
-      
-      <class name="testcases.Tc_155_Netweaver_HLL_Holiday_TLA"/>
       <class name="testcases.Tc_157_Netweaver_HLL_Adapter_Without_confirm_TLA"/>
       <class name="testcases.Tc_160_S2S_Upload_File_SAPextractor_FutureDate_FLA"/>
      
@@ -50,23 +45,12 @@
      
       <class name="testcases.Tc_162_S2S_Upload_File_SAPextractor_With_confirm_FLA"/>
       <class name="testcases.Tc_163_S2S_Upload_File_SAPextractor_WithOut_confirm_FLA"/>
-      <class name="testcases.Tc_164_S2S_Upload_File_SAPextractor_BeforeCutoff_FLA"/>
-      
-      <class name="testcases.Tc_165_S2S_Upload_File_SAPextractor_After_Cut_off_FLA"/>
-      <class name="testcases.Tc_166_S2S_Upload_File_SAPextractor_Holiday"/>
      
-      <class name="testcases.Tc_168_S2S_Upload_File_SAP_EOD_FLA"/>
       <class name="testcases.Tc_171_Future_Value_date_FTLA"/>
       <class name="testcases.Tc_172_GracePeriod_FTLA"/>
       
       <class name="testcases.Tc_173_FTLA_WithConfirm"/>
       <class name="testcases.Tc_174_FTLA_WithoutConfirm"/>
-      <class name="testcases.Tc_175_FTLA_Before_Cutoff"/>
-      
-      <class name="testcases.Tc_176_FTLA_After_Cutoff"/>
-      
-      <class name="testcases.Tc_177_Holiday_FTLA"/>
-      <class name="testcases.Tc_179_FTLA_EOD"/>
      
     </classes>
   </test> <!-- Test -->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test" thread-count="1" parallel="classes">
+    <classes>
+ 
+      <class name="testcases.Tc_153_Netweaver_HLL_Before_Cut_off_TLA"/>
+      <class name="testcases.Tc_154_Netweaver_HLL_Adapter_afterCutoff_TLA"/>
+      
+      <class name="testcases.Tc_155_Netweaver_HLL_Holiday_TLA"/>
+      <class name="testcases.Tc_164_S2S_Upload_File_SAPextractor_BeforeCutoff_FLA"/>
+      
+      <class name="testcases.Tc_165_S2S_Upload_File_SAPextractor_After_Cut_off_FLA"/>
+      <class name="testcases.Tc_166_S2S_Upload_File_SAPextractor_Holiday"/>
+            <class name="testcases.Tc_168_S2S_Upload_File_SAP_EOD_FLA"/>
+      
+      <class name="testcases.Tc_175_FTLA_Before_Cutoff"/>
+      
+      <class name="testcases.Tc_176_FTLA_After_Cutoff"/>
+      
+      <class name="testcases.Tc_177_Holiday_FTLA"/>
+      <class name="testcases.Tc_179_FTLA_EOD"/>
+    
+
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
