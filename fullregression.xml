@@ -5,7 +5,7 @@
   <test name="Testsss" thread-count="1" parallel="classes">
     <classes>
     
-      <class name="testcases.Tc_41_Onscreen_Payment_Verification_Single"/>
+    <class name="testcases.Tc_41_Onscreen_Payment_Verification_Single"/>
 
       <class name="testcases.Tc_42_Onscreen_Payment_Verify_Quick"/>
 
@@ -82,7 +82,7 @@
 
       <class name="testcases.Tc_80_Onscreen_Payment_ECMSPayment_Verify_with_confirm"/>
 
-      <class name="testcases.Tc_81_Onscreen_Payment_CBDT_Verify_With_Confirm"/>
+  <class name="testcases.Tc_81_Onscreen_Payment_CBDT_Verify_With_Confirm"/>
       <class name="testcases.Tc_82_Onscreen_Payment_CBECPayment_Verify_With_Confirm"/>
 
 
@@ -174,6 +174,139 @@
 
 
 
+
+  <class name="testcases.Tc_128_S2S_RBI_Adapter"/>
+     
+     <class name="testcases.Tc_129_S2S_Upload_File_SAPextractor"/>
+     
+    <class name="testcases.Tc_130_S2S_Upload_File_HLL_Adapter"/>
+      <class name="testcases.Tc_131_NetWeaver_RBI_Adapter"/>
+      
+      
+     <class name="testcases.Tc_132_Netweaver_SAP_Adapter"/>
+      
+      <class name="testcases.Tc_133_Netweaver_HLL_Adapter"/>
+      
+      <class name="testcases.Tc_134_PreAuth_RBI_Adapter"/>
+      <class name="testcases.Tc_134a_PreAuth_SAP_Adapter"/>
+      <class name="testcases.Tc_135_PreAuth_HLL_Adapter"/>
+      <class name="testcases.Tc_138_S2S_Upload_File_Borker"/>
+     <class name="testcases.Tc_139_S2S_Upload_File_Salary"/>
+   
+      <class name="testcases.Tc_140_S2S_Upload_File_collectiion_Adapter"/>
+      <class name="testcases.Tc_141_Netweaver_Upload_File_Borker2"/>
+      
+      <class name="testcases.Tc_141a_NetWeaver_Upload_File_Salary"/>
+      
+      <class name="testcases.Tc_143_PreAuth_Upload_File_Borker"/>
+      <class name="testcases.Tc_144_PreAuth_Upload_File_Salary"/>
+      <class name="testcases.Tc_145_PreAuth_Upload_File_collectiion_Adapter"/>
+      
+      <class name="testcases.Tc_149_Netweaver_HLL_Future_Value_date_TLA"/>
+      <class name="testcases.Tc_150_Netweaver_HLL_Grace_period_TLA"/>
+      <class name="testcases.Tc_151_Netweaver_HLL_Adapter_With_confirm_TLA"/>
+      
+      <class name="testcases.Tc_152_Netweaver_HLL_Adapter_Without_confirm_TLA"/>
+      
+      <class name="testcases.Tc_157_Netweaver_HLL_Adapter_Without_confirm_TLA"/>
+      <class name="testcases.Tc_160_S2S_Upload_File_SAPextractor_FutureDate_FLA"/>
+     
+      <class name="testcases.Tc_161_S2S_Upload_File_SAPextractor_Grace"/>
+     
+     
+      <class name="testcases.Tc_162_S2S_Upload_File_SAPextractor_With_confirm_FLA"/>
+      <class name="testcases.Tc_163_S2S_Upload_File_SAPextractor_WithOut_confirm_FLA"/>
+     
+      <class name="testcases.Tc_171_Future_Value_date_FTLA"/>
+      <class name="testcases.Tc_172_GracePeriod_FTLA"/>
+      
+      <class name="testcases.Tc_173_FTLA_WithConfirm"/>
+      <class name="testcases.Tc_174_FTLA_WithoutConfirm"/>
+      
+              <class name="testcases.Tc_180_CooperativeIfscCode_FTLA"/>
+      <class name="testcases.Tc_181_IfscCode_FTLA"/>
+      
+      <class name="testcases.Tc_182_ECMS_FTLA"/>
+      
+      
+        <class name="testcases.Tc_201_GenericEnc_OldWithChecksum"/>
+      <class name="testcases.Tc_201_S2S_Upload_File_SAPextractor"/>
+      <class name="testcases.Tc_201_S2S_Upload_File_Borker"/>
+      <class name="testcases.Tc_201_S2S_Upload_File_HLL_Adapter"/>
+      
+      <class name="testcases.Tc_201_S2S_Upload_File_Salary"/>
+     
+     
+     
+     <class name="testcases.Tc_202_S2S_Upload_File_SAPextractor"/>
+      <class name="testcases.Tc_202_GenericEnc_newWithChecksum_RBI"/>
+      <class name="testcases.Tc_202_S2S_Upload_File_Salary"/>
+      <class name="testcases.Tc_202_S2S_Upload_File_Borker"/>
+      <class name="testcases.Tc_202_S2S_Upload_File_HLL_Adapter"/>
+     
+     
+     
+     
+       <class name="testcases.Tc_203_S2S_Upload_File_HLL_Adapter_only_checksum"/>
+            <class name="testcases.Tc_203_S2S_Upload_File_SAPextractor_Only_checksum"/> 
+      <class name="testcases.Tc_203_OnlyChecksumRBI"/>
+           <class name="testcases.Tc_203_S2S_Upload_File_Salary_onlychecksum"/>
+       <class name="testcases.Tc_203_S2S_Upload_File_Borker_onlychecksum"/>
+      
+      
+      
+      
+      
+      
+      
+      <class name="testcases.Tc_206_S2S_Upload_File_Salary"/>
+      <class name="testcases.Tc_206_gene_enc_old_RBI"/>
+      <class name="testcases.Tc_206_S2S_Upload_File_Borker"/>
+     
+      <class name="testcases.Tc_206_S2S_Upload_File_SAP"/>
+      
+      <class name="testcases.Tc_206_S2S_Upload_File_HLL_Adapter"/>
+     
+     
+     
+      <class name="testcases.Tc_207_S2S_Upload_File_HLL_Adapter"/>
+      <class name="testcases.Tc_207_S2S_Upload_File_SAPextractor"/>
+      
+      <class name="testcases.Tc_207_S2S_Upload_File_Salary"/>
+      
+      
+      
+      <class name="testcases.Tc_207_S2S_Upload_File_Borker"/>
+      
+      <class name="testcases.Tc_207_gene_enc_new_RBI"/>
+     
+     
+     
+      <class name="testcases.Tc_209_S2S_Reverse_File_FLV"/>
+      <class name="testcases.Tc_210_S2S_Reverse_File_FLA"/>
+     
+     
+      <class name="testcases.Tc_211_ReverseFile_TLV"/>
+     
+      <class name="testcases.Tc_212_ReverseFile_TLA"/>
+     
+     
+     
+      <class name="testcases.Tc_213_MessageCentre_Control_File"/>
+            <class name="testcases.Tc_227_Stop_Cheque_Payment_Create_Authorize_Review"/>
+      <class name="testcases.Tc_230_Cheque_Book_Request"/>
+         <class name="testcases.Tc_244_AccountSummary_Balance_Report"/>
+      <class name="testcases.Tc_245_AccountSummary_Balance_Download"/>
+      <class name="testcases.Tc_246_AccountSummary_HistoricalBalance_Report"/>
+      <class name="testcases.Tc_247_AccountSummary_HistoricalBalance_Download"/>
+       <class name="testcases.Tc_248_AccountSummary_DealerBalance_Report"/>
+       <class name="testcases.Tc_249_AccountSummary_DealerBalance_Download"/>
+     
+       <class name="testcases.Tc_252_AccountSummary_Consolidate_Format_Download"/>
+          <class name="testcases.Tc_253_AccountSummary_Consolidate_DownloadType"/>
+          <class name="testcases.Tc_254_AccountSummary_Statement_Format_Create"/>
+            <class name="testcases.Tc_255_AccountSummary_Cheque_Status_Enquiry_Initiate"/>
+          
 
 
 
