@@ -2241,6 +2241,15 @@ element.click();
 		
 		}
 	
+	public void msg_contentFrames() throws InterruptedException{
+		locateFrameByXpath(".//frame[@name='content']");
+		
+		}
+	
+	
+	
+	
+	
 	public void authrecFrames() throws InterruptedException{
 		locateFrameByXpath(".//iframe[@id='summaryDetailsFrameid']");
 		
@@ -2510,6 +2519,8 @@ public void loadendtimecalc(String xpath,String loadmsg) throws InterruptedExcep
 			 wait = new WebDriverWait(driver,60);
 			
 			WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathVal)));
+			//Thread.sleep(1000);
+
 			element.clear();
 			element.sendKeys(data);
 			
@@ -2526,6 +2537,9 @@ public void loadendtimecalc(String xpath,String loadmsg) throws InterruptedExcep
 
 		}
 	}
+
+	
+	
 	
 	public void enterByXpathExplict_noclear(String xpathVal, String data) {
 		

@@ -20,7 +20,12 @@ public class Dashboard_Page  extends ProjectWrapp{
 		return new FundTransfers_Page(driver, test);
 	
 	}
-
+	public Stop_Checkque_PaymentPage clickserviceslink() throws InterruptedException{
+		topFrames();
+		clickByXpathExplict(prop.getProperty("click.services.link.xpath"));
+defaultcontent();
+		return new Stop_Checkque_PaymentPage(driver,test);
+	}	
 	
 	public AccountServices_Page clickAccountService() throws InterruptedException{
 		//Thread.sleep(20000);

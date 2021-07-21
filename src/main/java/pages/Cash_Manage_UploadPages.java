@@ -4,6 +4,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.relevantcodes.extentreports.ExtentTest;
 
+import testcases.MessageCentre;
 import wrappers.ProjectWrapp;
 
 public class Cash_Manage_UploadPages  extends ProjectWrapp{
@@ -67,6 +68,14 @@ clickByXpathExplictWithouScreenShot(prop.getProperty("click.cms.upload.xpath"));
 				defaultcontent();
 				return this;
 			}
+	
+public MessageCentre navigatemsg(){
+	
+	
+	
+	return new MessageCentre(driver, test);
+	}
+
 public Cash_Manage_UploadPages getrefnumAch(int a,int b) throws InterruptedException{
 		
 		
