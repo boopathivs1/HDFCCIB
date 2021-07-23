@@ -47,6 +47,25 @@ defaultcontent();
 	}
 
 	
+	public CorpBeneficiary_Page clickAdministration() throws InterruptedException{
+		topFrames();
+		clickByXpathExplict(prop.getProperty("click.administration.xpath"));
+		defaultcontent();
+		
+		return new CorpBeneficiary_Page(driver, test);
+	
+	}
+	
+	public CorpBeneficiary_Page clickAuthAdministration() throws InterruptedException{
+		topFrames();
+		clickByXpathExplict(prop.getProperty("click.authorizer.administration.xpath"));
+		defaultcontent();
+		
+		return new CorpBeneficiary_Page(driver, test);
+	
+	}
+
+	
 	public WCDLPage clickWorkingCapital() throws InterruptedException{
 		topFrames();
 		clickByXpathExplict(prop.getProperty("click.Working.capital.xpath"));

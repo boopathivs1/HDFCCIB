@@ -130,6 +130,8 @@ public class GenericWrappers extends Reporter implements Wrappers {
 	
 	public static int Graceperiod=2;
 	public static int F=2;
+	public static String Benefcode= null;
+	public static String Benefname= null;
 	
 	public static final String TASKLIST = "tasklist";
 	// command used to kill a task

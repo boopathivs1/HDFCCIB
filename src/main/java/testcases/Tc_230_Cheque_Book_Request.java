@@ -51,8 +51,11 @@ public class Tc_230_Cheque_Book_Request  extends ProjectWrapp {
 
 .AuthorizeCheqReq(Authotp)
 .contentFrame()
-.Clickback();
-
+.Clickback()
+.ClickChequeReview()
+.contentFrame()
+.fillChequeAuthorizeReqform(company, branch, acc)
+.GetFinalStatus();
 defaultcontent();		
 clickLogoutLink();
 

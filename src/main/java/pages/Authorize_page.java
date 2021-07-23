@@ -62,7 +62,32 @@ public class Authorize_page extends ProjectWrapp{
 		return this;
 	}
 	
-	public Authorize_page AuthIFrame() throws InterruptedException{
+	
+public Authorize_page GetFinalStatus() throws InterruptedException{
+		
+
+	String status=getTextByXpath(".//input[@value='"+getrefnumer+"']//following::td[4]");
+	//		clickByXpathExplict(prop.getProperty("click.auth.button.stopchq.xpath"));
+
+if(status.contains("PCD")){
+
+reportStep(status+"has been displaying","PASS");
+
+}else if(status.contains("UDP"))
+{
+reportStep(status+"has not been displaying","WARN");
+}
+else
+{
+	reportStep(status+"has not been displaying","FAIL");
+}
+
+	
+	return this;
+}		
+	
+
+public Authorize_page AuthIFrame() throws InterruptedException{
 		locateFrameByXpath(".//iframe[@id='iframe']");
 		
 		return this;
@@ -96,6 +121,18 @@ public class Authorize_page extends ProjectWrapp{
 		
 		return this;
 	}
+	
+public Authorize_page ClickChequeReview() throws InterruptedException{
+		
+		LeftMenuFrames();
+		clickByXpathExplict(prop.getProperty("click.cheque.review.xpath"));
+		
+		defaultcontent();
+		
+		return this;
+	}
+
+
 	
 	
 	public Authorize_page ClickWCDLReport() throws InterruptedException{
