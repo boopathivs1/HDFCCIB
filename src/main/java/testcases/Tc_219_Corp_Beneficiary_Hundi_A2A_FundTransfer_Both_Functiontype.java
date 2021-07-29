@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.HDFC_Login_Page;
 import wrappers.ProjectWrapp;
-public class Tc_216_Corp_Beneficiary_InternalFundTransfer_Both_function_type  extends ProjectWrapp {
+public class Tc_219_Corp_Beneficiary_Hundi_A2A_FundTransfer_Both_Functiontype  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC216";
-		testDescription="Corp_Beneficiary_InternalFundTransfer_Both_function_type ";
+		testDescription="Corp_Beneficiary_Hundi_A2A_FundTransfer_Both_Functiontype";
 		browserName="Chrome";
 		dataSheetName="HDFCCIB";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC216";
+		testKeyword="TC219";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
