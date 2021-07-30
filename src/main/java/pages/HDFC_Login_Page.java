@@ -22,4 +22,14 @@ public Dashboard_Page fillCredentials(String userid,String pwd,String groupid){
 	return new Dashboard_Page(driver, test);
 }
 
+
+public ForgotPassword_Page clickForgotPwd() throws InterruptedException{
+	
+	clickByXpathExplict(prop.getProperty("click.forgotpwd.xpath"));
+
+	
+	return new ForgotPassword_Page(driver, test);
+
+}
+
 }
