@@ -83,8 +83,8 @@ public class Tc_202_S2S_Upload_File_Salary  extends ProjectWrapp {
 			Start_bat_Execution();
 			service_killer();
 
-
-			copy_file(Only_Check_SumDROPDIR+"//"+renamedfilename,generic_enc_new_clearfiles);
+			copyfileonly(Only_Check_SumDROPDIR+"//"+renamedfilename,generic_enc_new_clearfiles+"//"+renamedfilename);
+//			copy_file(Only_Check_SumDROPDIR+"//"+renamedfilename,generic_enc_new_clearfiles);
 			Start_bat_generic_enc_new();
 			service_killer();
 			String finaldropfilepath=generic_enc_new_encfiles+"/"+renamedfilename;

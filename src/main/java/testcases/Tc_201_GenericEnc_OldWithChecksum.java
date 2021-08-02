@@ -88,13 +88,37 @@ int h=25;
 filenameonly=filename_substring(renamedfilename,g,h);
 getrefnumer=filenameonly;
 
+System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!111");
+System.out.println(fileurl+filename);
+
+
 
 copy_file(fileurl+filename,only_Checksum_Pick_Path);
 Start_bat_Execution();
 service_killer();
 
+System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!111");
+System.out.println(Only_Check_SumDROPDIR+"/"+renamedfilename);
 
-copy_file(Only_Check_SumDROPDIR+"//"+renamedfilename,generic_enc_old_clearfiles);
+
+
+//Only_Check_SumDROPDIR+"/"+renamedfilename
+
+//copy_file(Only_Check_SumDROPDIR+"//"+renamedfilename,generic_enc_old_clearfiles);
+
+
+copyfileonly(Only_Check_SumDROPDIR+"//"+renamedfilename,generic_enc_old_clearfiles+"//"+renamedfilename);
+//File src = new File("C:\\Users\\Boopathi\\Desktop\\New folder (5)\\CORPD01_RBEE_RBEE3007.176");
+//File dest = new File("C:\\Users\\Boopathi\\Desktop\\New folder (6)\\CORPD01_RBEE_RBEE3007.176");
+
+
+//////////////////
+
+
+
+//copy_file(Only_Check_SumDROPDIR+"//"+renamedfilename,generic_enc_old_clearfiles);
+
+
 Start_bat_generic_enc_old();
 service_killer();
 String finaldropfilepath=generic_enc_old_encfiles+"/"+renamedfilename;
