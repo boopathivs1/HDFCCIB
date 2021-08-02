@@ -188,6 +188,47 @@ enterByXpath_keysEnter(prop.getProperty("enter.reliance.accno.xpath"));
 		return this;
 	}
 	
+	
+	
+public CorpBeneficiary_Page fillCorpBeneInternal_FundTransferform(String Benecode,String Benename,String paytype,String address,String city,String Country,String ifsc,String creditacc)throws InterruptedException{
+		
+		contentFrames();
+		enterByXpathExplict(prop.getProperty("enter.benecode.xpath"),Benecode);
+		
+		enterByXpathExplict(prop.getProperty("enter.benename.xpath"),Benename);
+		
+		selectVisibileTextByXPath(prop.getProperty("select.bene.paytype.xpath"),paytype);
+		
+		clickByXpathExplict(prop.getProperty("click.others.radiobtn"));
+		
+		clickByXpathExplict(prop.getProperty("click.other.benefunctiontype.xpath"));
+		
+		enterByXpathExplict(prop.getProperty("enter.name.address.xpath"),address);
+		
+		enterByXpathExplict(prop.getProperty("enter.city.xpath"),city);
+		
+		selectVisibileTextByXPath(prop.getProperty("select.country.xpath"),Country);
+		
+//		enterByXpathExplict(prop.getProperty("enter.ifsc.code.xpath"),ifsc);
+//		
+//		
+//		clickByXpathExplict(prop.getProperty("click.ifsc.search.xpath"));
+//		Thread.sleep(3000);
+//		acceptAlert();
+//		Thread.sleep(3000);
+		
+		enterByXpathExplict(prop.getProperty("enter.bene.inteecreditacc.xpath"),creditacc);
+		
+		//enterByXpathExplict(prop.getProperty("enter.bene.inter.branch.xpath"),Branchname);
+		
+		clickByXpathExplict(prop.getProperty("enter.bene.inter.branch.xpath"));
+		
+		clickByXpathExplict(prop.getProperty("click.bene.proceed.xpath"));
+
+		
+		return this;
+	}
+
 
 	public CorpBeneficiary_Page VerifyBeneCreationSuccess() throws InterruptedException{
 		

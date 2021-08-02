@@ -45,7 +45,46 @@ defaultcontent();
 		return new ServicePage(driver, test);
 	
 	}
+	public ThirdParty_Page clickCommercialCreditcard() throws InterruptedException{
+		topFrames();
+		clickByXpathExplict(prop.getProperty("click.commercial.creditcard.xpath"));
+		defaultcontent();
+		
+		return new ThirdParty_Page(driver, test);
+	
+	}
+	
+	
 
+	public ThirdParty_Page clickServiceLINK() throws InterruptedException{
+		topFrames();
+		clickByXpathExplict(prop.getProperty("click.service.xpath"));
+		defaultcontent();
+		
+		return new ThirdParty_Page(driver, test);
+	
+	}
+	
+	
+	
+	public ThirdParty_Page clickSME() throws InterruptedException{
+		topFrames();
+		clickByXpathExplict(prop.getProperty("click.SME.xpath"));
+		defaultcontent();
+		
+		return new ThirdParty_Page(driver, test);
+	
+	}
+	
+	
+	public ThirdParty_Page clickNACHOutward() throws InterruptedException{
+		topFrames();
+		clickByXpathExplict(prop.getProperty("click.NACH.outward.xpath"));
+		defaultcontent();
+		
+		return new ThirdParty_Page(driver, test);
+	
+	}
 	
 	public CorpBeneficiary_Page clickAdministration() throws InterruptedException{
 		topFrames();
