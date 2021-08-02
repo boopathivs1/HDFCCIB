@@ -27,7 +27,7 @@
   <class name="testcases.Tc_254_AccountSummary_Statement_Format_Create"/>
    <class name="testcases.Tc_255_AccountSummary_Cheque_Status_Enquiry_Initiate"/>
    
-     <class name="testcases.Tc_325_Commercial_Credit_Card"/>
+ <class name="testcases.Tc_325_Commercial_Credit_Card"/>
        <class name="testcases.Tc_326_NACH_Outward_Dashboard"/>
     
       <class name="testcases.Tc_327_SME"/>
@@ -46,7 +46,7 @@
      
          
     
-      <class name="testcases.Tc_325_Commercial_Credit_Card"/>
+    
       
      
       
