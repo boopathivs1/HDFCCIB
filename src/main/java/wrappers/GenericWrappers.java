@@ -232,6 +232,29 @@ public class GenericWrappers extends Reporter implements Wrappers {
 	}
 	
 	
+	
+	public void copyfileonly(String fromloc,String toloc) throws IOException{
+	
+	
+//	   File src = new File("C:\\Users\\Boopathi\\Desktop\\New folder (5)\\CORPD01_RBEE_RBEE3007.176");
+//       File dest = new File("C:\\Users\\Boopathi\\Desktop\\New folder (6)\\CORPD01_RBEE_RBEE3007.176");
+  
+	try{	
+		File src = new File(fromloc);
+  File dest = new File(toloc);
+	
+	
+	
+       // using copy(InputStream,Path Target); method
+       Files.copy(src.toPath(), dest.toPath());
+		// TODO: handle exception
+	}
+	catch (Exception e) {
+reportStep("file copy error", "FAIL");
+}
+	
+}
+	
 	public void Start_bat_Execution(){
 		
 		String cmd2 =  "cmd /c start cmd.exe /K \"cd CE\\ENC 130721\\cs && start startup.bat\"";
@@ -3862,7 +3885,6 @@ public void VerifyElementenabledORdisabled(String xpath,String msg1,String statu
 	}
 
 	
-	@Override
 	public void enterByXpath(String xpathValue, String data) {
 		try {
 			driver.findElement(By.xpath(xpathValue)).clear();
@@ -3887,6 +3909,29 @@ public void VerifyElementenabledORdisabled(String xpath,String msg1,String statu
 
 	}
 
+	public void enterByXpath_keysEnter(String xpathValue) {
+		try {
+
+			driver.findElement(By.xpath(xpathValue)).sendKeys(Keys.ENTER);	
+			reportStep("The element with xpath: could  be entered.Because TimeOut Exception has occured", "PASS");
+
+		} 
+		
+		catch (NoSuchElementException e) {
+			reportStep("The element with xpath: "+xpathValue+" could not be entered.Because NO Such Element Exception has occured", "FAIL");
+		}
+		
+		catch (TimeoutException e) {
+			reportStep("The element with xpath: "+xpathValue+" could not be entered.Because TimeOut Exception has occured", "FAIL");
+		}
+		
+		
+		
+		catch (Exception e) {
+			reportStep("Unknown exception occured while entering in the field :"+xpathValue, "FAIL");
+		}
+
+	}
 	
 	@Override
 	public boolean verifyTitle(String title){

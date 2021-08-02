@@ -84,8 +84,9 @@ public class Tc_201_S2S_Upload_File_Borker  extends ProjectWrapp {
 			Start_bat_Execution();
 			service_killer();
 
+			copyfileonly(Only_Check_SumDROPDIR+"//"+renamedfilename,generic_enc_old_clearfiles+"//"+renamedfilename);
 
-			copy_file(Only_Check_SumDROPDIR+"//"+renamedfilename,generic_enc_old_clearfiles);
+//			copy_file(Only_Check_SumDROPDIR+"//"+renamedfilename,generic_enc_old_clearfiles);
 			Start_bat_generic_enc_old();
 			service_killer();
 			String finaldropfilepath=generic_enc_old_encfiles+"/"+renamedfilename;
