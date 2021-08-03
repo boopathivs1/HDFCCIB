@@ -1041,7 +1041,7 @@ public Authorize_page getSimulatorAuthStatus(String paytype ,String verifyStatus
 String status=getTextByXpath("(.//input[contains(@onclick,'"+paytype+"')]//following::span)[9]");
 if(status.equalsIgnoreCase(verifyStatus)){
 	statusVerify(status);
-}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")){
+}else if(status.equalsIgnoreCase("E")||status.equalsIgnoreCase("R")||status.equalsIgnoreCase("U")||status.equalsIgnoreCase("Q")){
 	statusVerify(status);
 }
 

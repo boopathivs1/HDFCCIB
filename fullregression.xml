@@ -294,6 +294,22 @@
      
      
       <class name="testcases.Tc_213_MessageCentre_Control_File"/>
+      
+      
+       <class name="testcases.Tc_216_Corp_Beneficiary_InternalFundTransfer_Both_function_type"/>
+       <class name="testcases.Tc_217_Corp_Beneficiary_NEFT_Both_function_type"/>
+        <class name="testcases.Tc_218_Corp_Beneficiary_RTGS_Both_function_type"/>
+      <class name="testcases.Tc_219_Corp_Beneficiary_Hundi_A2A_FundTransfer_Both_Functiontype"/>
+       <class name="testcases.Tc_220_Corp_Beneficiary_HUNDINEFT_Both_function_type"/>
+      <class name="testcases.Tc_221_Corp_Beneficiary_HUNDIRTGS_Both_function_type"/>
+      <class name="testcases.Tc_222_Screen_new_ECMS_Both_function_type"/>
+       <class name="testcases.Tc_223_Reliance_Both_function_type"/>
+<class name="testcases.Tc_224_Beneficiary_file_upload"/>
+      
+      
+      
+      
+      
             <class name="testcases.Tc_227_Stop_Cheque_Payment_Create_Authorize_Review"/>
       <class name="testcases.Tc_230_Cheque_Book_Request"/>
          <class name="testcases.Tc_244_AccountSummary_Balance_Report"/>
@@ -317,6 +333,15 @@
 
 
 
+ <class name="testcases.Tc_325_Commercial_Credit_Card"/>
+       <class name="testcases.Tc_326_NACH_Outward_Dashboard"/>
+    
+      <class name="testcases.Tc_327_SME"/>
+      <class name="testcases.Tc_329_ForgotPassword"/>
+     
+      <class name="testcases.Tc_330_AccessRET"/>
+      
+     
 
 
 

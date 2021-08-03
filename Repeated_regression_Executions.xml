@@ -160,7 +160,11 @@
       <class name="testcases.Tc_211_ReverseFile_TLV"/>
      
       <class name="testcases.Tc_212_ReverseFile_TLA"/>
+            <class name="testcases.Tc_216_Corp_Beneficiary_InternalFundTransfer_Both_function_type"/>
+       <class name="testcases.Tc_217_Corp_Beneficiary_NEFT_Both_function_type"/>
+        <class name="testcases.Tc_218_Corp_Beneficiary_RTGS_Both_function_type"/>
      
+     <class name="testcases.Tc_224_Beneficiary_file_upload"/>
      
      
      
